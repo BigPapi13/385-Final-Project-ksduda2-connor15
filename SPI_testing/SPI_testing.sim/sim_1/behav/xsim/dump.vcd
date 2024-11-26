@@ -1,0 +1,696 @@
+$date
+   Tue Nov 26 15:29:00 2024
+$end
+$version
+  2022.2
+$end
+$timescale
+  1ps
+$end
+$scope module testbench_spi $end
+$var reg 32 ! test_cycles [31:0] $end
+$var reg 1 " chip_clock $end
+$var reg 1 # SIGNAL_CLOCK $end
+$var reg 1 $ SIGNAL_SS $end
+$var reg 1 % SIGNAL_DATA $end
+$var reg 1 & reset_spi $end
+$var reg 1 ' spi_ready $end
+$var reg 1 ( reset_spi2 $end
+$var reg 1 ) spi_ready2 $end
+$var reg 1 * proc_word $end
+$var reg 1 + proc_word2 $end
+$var reg 1 , process_next_word $end
+$var reg 1 - process_next_word2 $end
+$var reg 8 . data [7:0] $end
+$var reg 1 / recv_new_word_present $end
+$var reg 8 0 recv_tmp [7:0] $end
+$var reg 8 1 recv_data [7:0] $end
+$var reg 1 2 test_signal_control $end
+$var reg 1 3 test_signal $end
+$var reg 1 4 reset_div $end
+$var reg 1 5 divider_ready $end
+$var reg 1 6 divided_master_clock $end
+$scope module clkdiv $end
+$var wire 1 7 clk_in $end
+$var reg 1 6 clk_out $end
+$var wire 1 8 do_reset $end
+$var reg 1 5 is_ready $end
+$var reg 2 9 divcounter [1:0] $end
+$upscope $end
+$scope module spi_master $end
+$var wire 1 : master_clock $end
+$var reg 1 # SCLK_OUT $end
+$var wire 1 ; SCLK_IN $end
+$var reg 1 $ SS_OUT $end
+$var wire 1 < SS_IN $end
+$var reg 1 % OUTPUT_SIGNAL $end
+$var reg 1 * processing_word $end
+$var wire 1 = process_next_word $end
+$var wire 8 > data_word_send [7:0] $end
+$var wire 1 ? INPUT_SIGNAL $end
+$var reg 8 @ data_word_recv [7:0] $end
+$var wire 1 A do_reset $end
+$var reg 1 ' is_ready $end
+$var reg 1 B is_ready_logic $end
+$var reg 1 C activate_ss $end
+$var reg 1 D activate_sclk $end
+$var reg 1 E status_ignore_first_edge $end
+$var reg 1 F rising_sclk_edge $end
+$var reg 1 G falling_sclk_edge $end
+$var reg 8 H data_word_recv_logic [7:0] $end
+$var reg 7 I bit_counter [6:0] $end
+$var reg 3 J spi_status [2:0] $end
+$var reg 1 K delay_pol $end
+$var reg 1 L get_number_edge $end
+$var reg 1 M switch_number_edge $end
+$var reg 1 N SS $end
+$scope module spi_edge_pos $end
+$var wire 1 ; sig $end
+$var wire 1 : clk $end
+$var reg 1 F pe $end
+$var reg 1 O sig_dly $end
+$upscope $end
+$scope module spi_edge_neg $end
+$var wire 1 ; sig $end
+$var wire 1 : clk $end
+$var reg 1 G ne $end
+$var reg 1 P sig_dly $end
+$upscope $end
+$upscope $end
+$scope module spi_slave $end
+$var wire 1 Q master_clock $end
+$var reg 1 R SCLK_OUT $end
+$var wire 1 S SCLK_IN $end
+$var reg 1 T SS_OUT $end
+$var wire 1 U SS_IN $end
+$var reg 1 V OUTPUT_SIGNAL $end
+$var reg 1 + processing_word $end
+$var wire 1 W process_next_word $end
+$var wire 8 X data_word_send [7:0] $end
+$var wire 1 Y INPUT_SIGNAL $end
+$var reg 8 0 data_word_recv [7:0] $end
+$var wire 1 Z do_reset $end
+$var reg 1 ) is_ready $end
+$var reg 1 [ is_ready_logic $end
+$var reg 1 \ activate_ss $end
+$var reg 1 ] activate_sclk $end
+$var reg 1 ^ status_ignore_first_edge $end
+$var reg 1 _ rising_sclk_edge $end
+$var reg 1 ` falling_sclk_edge $end
+$var reg 8 a data_word_recv_logic [7:0] $end
+$var reg 7 b bit_counter [6:0] $end
+$var reg 3 c spi_status [2:0] $end
+$var reg 1 d delay_pol $end
+$var reg 1 e get_number_edge $end
+$var reg 1 f switch_number_edge $end
+$var reg 1 g SS $end
+$scope module spi_edge_pos $end
+$var wire 1 S sig $end
+$var wire 1 Q clk $end
+$var reg 1 _ pe $end
+$var reg 1 h sig_dly $end
+$upscope $end
+$scope module spi_edge_neg $end
+$var wire 1 S sig $end
+$var wire 1 Q clk $end
+$var reg 1 ` ne $end
+$var reg 1 i sig_dly $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 !
+1"
+0#
+1$
+0%
+1&
+1'
+1(
+1)
+0*
+0+
+0,
+0-
+b0 .
+x/
+bx 0
+bx 1
+x2
+x3
+14
+15
+06
+17
+18
+b0 9
+1:
+0;
+z<
+0=
+b0 >
+z?
+bx @
+1A
+1B
+0C
+0D
+0E
+0F
+xG
+bx H
+b111 I
+b0 J
+xK
+xL
+xM
+xN
+xO
+xP
+1Q
+xR
+0S
+xT
+1U
+0V
+0W
+bz X
+0Y
+1Z
+1[
+0\
+0]
+0^
+0_
+x`
+bx a
+b111 b
+b0 c
+xd
+xe
+xf
+xg
+xh
+xi
+$end
+#31250
+b10 !
+0"
+0%
+0&
+0(
+1,
+1-
+b1 .
+bx 1
+04
+07
+08
+0:
+1=
+b1 >
+0A
+0Q
+1W
+0Z
+#62500
+b11 !
+1"
+0&
+0(
+1,
+1-
+04
+17
+b1 9
+1:
+0F
+0G
+0O
+0P
+1Q
+0_
+0`
+0h
+0i
+#93750
+b100 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#125000
+b101 !
+1"
+0#
+0&
+0(
+1,
+1-
+04
+16
+17
+b10 9
+1:
+1;
+1F
+0G
+0O
+0P
+1Q
+0h
+0i
+#156250
+b110 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#187500
+b111 !
+1"
+0&
+0(
+1,
+1-
+04
+17
+b11 9
+1:
+0F
+0G
+1O
+1P
+1Q
+0h
+0i
+#218750
+b1000 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#250000
+b1001 !
+1"
+0#
+0&
+0(
+1,
+1-
+04
+06
+17
+b0 9
+1:
+0;
+0F
+1G
+1O
+1P
+1Q
+0h
+0i
+#281250
+b1010 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#312500
+b1011 !
+1"
+0&
+0(
+1,
+1-
+04
+17
+b1 9
+1:
+0F
+0G
+0O
+0P
+1Q
+0h
+0i
+#343750
+b1100 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#375000
+b1101 !
+1"
+0#
+0&
+0(
+1,
+1-
+04
+16
+17
+b10 9
+1:
+1;
+1F
+0G
+0O
+0P
+1Q
+0h
+0i
+#406250
+b1110 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#437500
+b1111 !
+1"
+0&
+0(
+1,
+1-
+04
+17
+b11 9
+1:
+0F
+0G
+1O
+1P
+1Q
+0h
+0i
+#468750
+b10000 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#500000
+b10001 !
+1"
+0#
+0&
+0(
+1,
+1-
+04
+06
+17
+b0 9
+1:
+0;
+0F
+1G
+1O
+1P
+1Q
+0h
+0i
+#531250
+b10010 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#562500
+b10011 !
+1"
+0&
+0(
+1,
+1-
+04
+17
+b1 9
+1:
+0F
+0G
+0O
+0P
+1Q
+0h
+0i
+#593750
+b10100 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#625000
+b10101 !
+1"
+0#
+0&
+0(
+1,
+1-
+04
+16
+17
+b10 9
+1:
+1;
+1F
+0G
+0O
+0P
+1Q
+0h
+0i
+#656250
+b10110 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#687500
+b10111 !
+1"
+0&
+0(
+1,
+1-
+04
+17
+b11 9
+1:
+0F
+0G
+1O
+1P
+1Q
+0h
+0i
+#718750
+b11000 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#750000
+b11001 !
+1"
+0#
+0&
+0(
+1,
+1-
+04
+06
+17
+b0 9
+1:
+0;
+0F
+1G
+1O
+1P
+1Q
+0h
+0i
+#781250
+b11010 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#812500
+b11011 !
+1"
+0&
+0(
+1,
+1-
+04
+17
+b1 9
+1:
+0F
+0G
+0O
+0P
+1Q
+0h
+0i
+#843750
+b11100 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#875000
+b11101 !
+1"
+0#
+0&
+0(
+1,
+1-
+04
+16
+17
+b10 9
+1:
+1;
+1F
+0G
+0O
+0P
+1Q
+0h
+0i
+#906250
+b11110 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#937500
+b11111 !
+1"
+0&
+0(
+1,
+1-
+04
+17
+b11 9
+1:
+0F
+0G
+1O
+1P
+1Q
+0h
+0i
+#968750
+b100000 !
+0"
+0&
+0(
+1,
+1-
+04
+07
+0:
+0Q
+#1000000
+b100001 !
+1"
+0#
+0&
+0(
+1,
+1-
+04
+06
+17
+b0 9
+1:
+0;
+0F
+1G
+1O
+1P
+1Q
+0h
+0i
