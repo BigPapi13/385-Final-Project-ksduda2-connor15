@@ -1,10 +1,11 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  \
+"../../../../SPI_testing.srcs/sources_1/new/ADXL345.sv" \
 "../../../../SPI_testing.srcs/sources_1/new/clock_divider.sv" \
 "../../../../SPI_testing.srcs/sources_1/new/neg_edge_det.sv" \
 "../../../../SPI_testing.srcs/sources_1/new/pos_edge_det.sv" \
 "../../../../SPI_testing.srcs/sources_1/new/spi_module.sv" \
-"../../../../SPI_testing.srcs/sim_1/new/SPI_testbench.sv" \
+"../../../../SPI_testing.srcs/sim_1/new/testbench_adxl345.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

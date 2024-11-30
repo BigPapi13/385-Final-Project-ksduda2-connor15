@@ -10,7 +10,7 @@
 `define TEST_BYTE_LED_ON 'sd7
 `define TEST_BYTE_LED_OFF 'sd15
 
-`define SPI_CLK_DIV 'sd2
+`define SPI_CLK_DIV 'sd4
 
 module testbench_spi;
 
@@ -33,20 +33,16 @@ module testbench_spi;
 	logic process_next_word2;
 	logic [`SPI_WORD_LEN - 1:0] data;
 	
-	logic recv_new_word_present;
 	logic [`SPI_WORD_LEN - 1:0] recv_tmp;
 	logic [`SPI_WORD_LEN - 1:0] recv_data;
 	
 	logic test_signal_control;
-	logic test_signal;
 	
 	logic reset_div;
 	logic divider_ready;
 	logic divided_master_clock; 
 	//Clock divider module
 	clock_divider #( .DIV_N(`SPI_CLK_DIV) )	clkdiv ( .clk_in(chip_clock), .clk_out(divided_master_clock), .do_reset(reset_div), .is_ready(divider_ready) );
-
-	assign test_signal = test_signal_control;
 
 	spi_module 
 	#( .SPI_MASTER (1'b1) )
@@ -100,8 +96,6 @@ module testbench_spi;
 		reset_spi2 <= 1'b1;
 		
 		data <= 'sd0;
-		
-		//data <= `TEST_BYTE;
 		
 		chip_clock = 1'b0; //blocking
 
