@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="collision_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="collision_test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1,101.334 ns"></ZoomStartTime>
+      <ZoomEndTime time="2,269.335 ns"></ZoomEndTime>
+      <Cursor1Time time="2,301.334 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="172"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="39" />
+   <wvobject fp_name="/collision_test/widthA" type="array">
+      <obj_property name="ElementShortName">widthA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">widthA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/heightA" type="array">
+      <obj_property name="ElementShortName">heightA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">heightA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/posA_x" type="array">
+      <obj_property name="ElementShortName">posA_x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">posA_x[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/posA_y" type="array">
+      <obj_property name="ElementShortName">posA_y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">posA_y[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/vela_x" type="array">
+      <obj_property name="ElementShortName">vela_x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">vela_x[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/vela_y" type="array">
+      <obj_property name="ElementShortName">vela_y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">vela_y[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/uA_x" type="array">
+      <obj_property name="ElementShortName">uA_x[15:0]</obj_property>
+      <obj_property name="ObjectShortName">uA_x[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/uA_y" type="array">
+      <obj_property name="ElementShortName">uA_y[15:0]</obj_property>
+      <obj_property name="ObjectShortName">uA_y[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/vA_x" type="array">
+      <obj_property name="ElementShortName">vA_x[15:0]</obj_property>
+      <obj_property name="ObjectShortName">vA_x[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/vA_y" type="array">
+      <obj_property name="ElementShortName">vA_y[15:0]</obj_property>
+      <obj_property name="ObjectShortName">vA_y[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/widthB" type="array">
+      <obj_property name="ElementShortName">widthB[7:0]</obj_property>
+      <obj_property name="ObjectShortName">widthB[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/heightB" type="array">
+      <obj_property name="ElementShortName">heightB[7:0]</obj_property>
+      <obj_property name="ObjectShortName">heightB[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/posB_x" type="array">
+      <obj_property name="ElementShortName">posB_x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">posB_x[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/posB_y" type="array">
+      <obj_property name="ElementShortName">posB_y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">posB_y[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/velB_x" type="array">
+      <obj_property name="ElementShortName">velB_x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">velB_x[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/velB_y" type="array">
+      <obj_property name="ElementShortName">velB_y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">velB_y[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/uB_x" type="array">
+      <obj_property name="ElementShortName">uB_x[15:0]</obj_property>
+      <obj_property name="ObjectShortName">uB_x[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/uB_y" type="array">
+      <obj_property name="ElementShortName">uB_y[15:0]</obj_property>
+      <obj_property name="ObjectShortName">uB_y[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/vB_x" type="array">
+      <obj_property name="ElementShortName">vB_x[15:0]</obj_property>
+      <obj_property name="ObjectShortName">vB_x[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/vB_y" type="array">
+      <obj_property name="ElementShortName">vB_y[15:0]</obj_property>
+      <obj_property name="ObjectShortName">vB_y[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/is_collision" type="logic">
+      <obj_property name="ElementShortName">is_collision</obj_property>
+      <obj_property name="ObjectShortName">is_collision</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/separate_min_uB" type="logic">
+      <obj_property name="ElementShortName">separate_min_uB</obj_property>
+      <obj_property name="ObjectShortName">separate_min_uB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/separate_max_uB" type="logic">
+      <obj_property name="ElementShortName">separate_max_uB</obj_property>
+      <obj_property name="ObjectShortName">separate_max_uB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/separate_min_vB" type="logic">
+      <obj_property name="ElementShortName">separate_min_vB</obj_property>
+      <obj_property name="ObjectShortName">separate_min_vB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/separate_max_vB" type="logic">
+      <obj_property name="ElementShortName">separate_max_vB</obj_property>
+      <obj_property name="ObjectShortName">separate_max_vB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/separate_min_uA" type="logic">
+      <obj_property name="ElementShortName">separate_min_uA</obj_property>
+      <obj_property name="ObjectShortName">separate_min_uA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/separate_max_uA" type="logic">
+      <obj_property name="ElementShortName">separate_max_uA</obj_property>
+      <obj_property name="ObjectShortName">separate_max_uA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/separate_min_vA" type="logic">
+      <obj_property name="ElementShortName">separate_min_vA</obj_property>
+      <obj_property name="ObjectShortName">separate_min_vA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/separate_max_vA" type="logic">
+      <obj_property name="ElementShortName">separate_max_vA</obj_property>
+      <obj_property name="ObjectShortName">separate_max_vA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/max_uB" type="array">
+      <obj_property name="ElementShortName">max_uB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">max_uB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/min_uB" type="array">
+      <obj_property name="ElementShortName">min_uB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">min_uB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/max_vB" type="array">
+      <obj_property name="ElementShortName">max_vB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">max_vB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/min_vB" type="array">
+      <obj_property name="ElementShortName">min_vB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">min_vB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/max_uA" type="array">
+      <obj_property name="ElementShortName">max_uA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">max_uA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/min_uA" type="array">
+      <obj_property name="ElementShortName">min_uA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">min_uA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/max_vA" type="array">
+      <obj_property name="ElementShortName">max_vA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">max_vA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/min_vA" type="array">
+      <obj_property name="ElementShortName">min_vA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">min_vA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/halfWidthA" type="logic">
+      <obj_property name="ElementShortName">halfWidthA</obj_property>
+      <obj_property name="ObjectShortName">halfWidthA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/collision_test/cd_inst/halfWidthB" type="logic">
+      <obj_property name="ElementShortName">halfWidthB</obj_property>
+      <obj_property name="ObjectShortName">halfWidthB</obj_property>
+   </wvobject>
+</wave_config>
