@@ -1,13 +1,13 @@
 `timescale 1ns/1ps
 
-`define SPI_WORD_LEN 8
+`define SPI_WORD_LEN 16
 
 `define CLK_DIV_COMM 'sd2
 
 `define TEST_BYTE_LED_ON 'sd7
 `define TEST_BYTE_LED_OFF 'sd15
 
-`define SPI_CLK_DIV 'sd4        // SPI CLCK should be limited to 5mhz for the ADXL345 according to the datasheet.
+`define SPI_CLK_DIV 'sd5        // SPI CLCK should be limited to 5mhz for the ADXL345 according to the datasheet.
 
 // define register addresses:
 `define BW_RATE_ADDR 6'h2C
@@ -23,21 +23,25 @@
 module ADXL345_com ( 
 	input logic MASTER_CLK,        // base clock
 	input logic reset,
+	output logic spi_ready,
 	output logic SCLK_OUT,         // SIGNAL_CLOCK_OUT
-	output logic SIGNAL_SS_OUT,
-	output logic SIGNAL_DATA_OUT,     // high when Master output sdaata
+	output logic SIGNAL_SS_OUT,    // Connects to ADXL345 CS Pin
+	output logic mosi,     
 	//input logic SCLK_IN,           // SIGNAL_CLOCK_IN, divided clock
 	input logic SIGNAL_SS_IN,      // shouldnt matter, is master
-	input logic SIGNAL_DATA_IN,    // High when master receives data
-    output logic [`SPI_WORD_LEN - 1:0] data_mosi,
-	input logic [`SPI_WORD_LEN - 1:0] data_miso,
-	input logic cs,                // ADXL345 CS Pin
-	output logic [`SPI_WORD_LEN - 1:0] DATA_OUT    // accelerometer read data
-
+	input logic miso, 
+    output logic [`SPI_WORD_LEN - 1:0] data_word_send,   // the full word that is being sent serially on mosi
+	output logic [`SPI_WORD_LEN - 1:0] data_word_recv,    // the full word that is received serially on miso
+	output logic [7:0] DATA_STREAM,    // accelerometer read data
+	output logic [7:0] DATAX0,
+	output logic [7:0] DATAX1,
+	output logic [7:0] DATAY0,
+	output logic [7:0] DATAY1,
+	output logic [7:0] DATAZ0,
+	output logic [7:0] DATAZ1
 	);       
 	
 	logic reset_spi;
-	logic spi_ready;
 
 	logic proc_word;
 	logic process_next_word;
@@ -46,7 +50,8 @@ module ADXL345_com (
     logic [`SPI_WORD_LEN - 1:0] send_data;
     
     logic [2:0] read_axis_counter;
-		
+    logic [2:0] store_data_counter;
+    		
 	logic test_signal_control;
 	assign TEST_SIGNAL_OUT = test_signal_control;
 	
@@ -58,21 +63,22 @@ module ADXL345_com (
 	clock_divider #( .DIV_N(`SPI_CLK_DIV) )	clkdiv ( .clk_in(MASTER_CLK), .clk_out(divided_master_clock), .do_reset(reset_div), .is_ready(divider_ready) );
 	
 spi_module 
-	#( .SPI_MASTER (1'b1), .CPOL(1'b1), .CPHA(1'b1))
+	#( .SPI_MASTER (1'b1), .CPOL(1'b1), .CPHA(1'b1), .SPI_WORD_LEN(`SPI_WORD_LEN))
 	spi_master
 	( .master_clock(MASTER_CLK),         // NOT divided 
 	.SCLK_OUT(SCLK_OUT),                 // to pass to slave clock
   	.SCLK_IN(divided_master_clock),      // divided, for passing to slaves
   	.SS_OUT(SIGNAL_SS_OUT),
   	.SS_IN(),
-	.OUTPUT_SIGNAL(SIGNAL_DATA_OUT),
+	.OUTPUT_SIGNAL(mosi),
 	.processing_word(proc_word),         
 	.process_next_word(process_next_word),
-	.data_word_send(data_mosi),
-	.INPUT_SIGNAL(SIGNAL_DATA_IN),
-	.data_word_recv(data_miso),
+	.data_word_send(data_word_send),
+	.INPUT_SIGNAL(miso),
+	.data_word_recv(data_word_recv),
 	.do_reset(reset_spi),
 	.is_ready(spi_ready) );
+	
 	
 	/*
 	   References: https://www.analog.com/media/en/technical-documentation/data-sheets/adxl345.pdf
@@ -107,13 +113,9 @@ spi_module
    typedef enum logic [4:0] {
         RESET,
         CONFIG_BW_RATE_ADDRESS,
-        CONFIG_BW_RATE_DATA,
         CONFIG_DATA_FORMAT_ADDRESS,
-        CONFIG_DATA_FORMAT_DATA,
         CONFIG_POWER_CTL_ADDRESS,
-        CONFIG_POWER_CTL_DATA,
         CONFIG_FIFO_CTL_ADDRESS,
-        CONFIG_FIFO_CTL_DATA,
         READ_AXIS_DATA,
         DONE
     } state;
@@ -131,16 +133,12 @@ spi_module
         case (current_state)
             RESET: begin
                 if (!reset && divider_ready && spi_ready) begin
+                    read_axis_counter = 0;
                     next_state = CONFIG_BW_RATE_ADDRESS;
                 end
             end
 
             CONFIG_BW_RATE_ADDRESS: begin
-                if (!proc_word && !process_next_word) begin
-                    next_state = CONFIG_BW_RATE_DATA;
-                end
-            end
-            CONFIG_BW_RATE_DATA: begin
                 if (!proc_word && !process_next_word) begin
                     next_state = CONFIG_DATA_FORMAT_ADDRESS;
                 end
@@ -148,21 +146,11 @@ spi_module
 
             CONFIG_DATA_FORMAT_ADDRESS: begin
                 if (!proc_word && !process_next_word) begin
-                    next_state = CONFIG_DATA_FORMAT_DATA;
-                end
-            end
-            CONFIG_DATA_FORMAT_DATA: begin
-                if (!proc_word && !process_next_word) begin
                     next_state = CONFIG_POWER_CTL_ADDRESS;
                 end
-            end            
+            end           
 
             CONFIG_POWER_CTL_ADDRESS: begin
-                if (!proc_word && !process_next_word) begin
-                    next_state = CONFIG_POWER_CTL_DATA;
-                end
-            end
-            CONFIG_POWER_CTL_DATA: begin
                 if (!proc_word && !process_next_word) begin
                     next_state = CONFIG_FIFO_CTL_ADDRESS;
                 end
@@ -170,13 +158,7 @@ spi_module
 
             CONFIG_FIFO_CTL_ADDRESS: begin
                 if (!proc_word && !process_next_word) begin
-                    next_state = CONFIG_FIFO_CTL_DATA;
-                end
-            end
-            CONFIG_FIFO_CTL_DATA: begin
-                if (!proc_word && !process_next_word) begin
-                    //next_state = READ_AXIS_DATA;
-                    $finish;
+                    next_state = READ_AXIS_DATA;
                 end
             end
             
@@ -195,70 +177,61 @@ spi_module
                     end
                 end
             end
+            
 
             DONE: begin
                 // Maintain state or handle data
             end
         endcase
+        
+        
+      
     end
     
     
-    // keep note of this line for potential problems:
-    // Originally this was desigend to update data_mosi sequentially at each state transition, but the problem was it would send the the last states output in the current state
-    // now this will alawys just assign data_mosi to whatever send data will be, so essentially there is no difference between those two variables.
-    assign data_mosi = send_data;      // always set data_mosi to whatever send_data is.
+    
+    assign data_word_send = send_data;      // always set data_word_send to whatever send_data is.
     
     // State Outputs
     always_comb begin
                 
-    send_data = 0;  //default to no data being sent.
+    send_data = 8'b0;  //default to no data being sent.
     
     case (current_state)
             RESET: begin
-                DATA_OUT = 1'b0;
             
                 //do reset stuff
                 
                 reset_div = 1'b1;
-                process_next_word = 1'b0;
                 reset_spi = 1'b1;
-                data_mosi = 'sd0;
+                send_data = 8'b0;
+                
             end
 
             CONFIG_BW_RATE_ADDRESS: begin
-                send_data = {1'b0, 1'b0, `BW_RATE_ADDR};
-            end
-            CONFIG_BW_RATE_DATA: begin
-                send_data = 8'b00001101;
+                send_data = {1'b0, 1'b0, `BW_RATE_ADDR, 8'b00001101};
             end
 
             CONFIG_DATA_FORMAT_ADDRESS: begin
-               send_data = {1'b0, 1'b0, `DATA_FORMAT_ADDR};
-            end
-            CONFIG_DATA_FORMAT_DATA: begin
-                send_data = 8'b00000101;
+               send_data = {1'b0, 1'b0, `DATA_FORMAT_ADDR, 8'b00000101};
             end
 
             CONFIG_POWER_CTL_ADDRESS: begin
-                send_data = {1'b0, 1'b0, `POWER_CTL_ADDR};
-            end
-            CONFIG_POWER_CTL_DATA: begin
-                send_data = 8'b00001000;
+                send_data = {1'b0, 1'b0, `POWER_CTL_ADDR, 8'b00001000};
             end
 
             CONFIG_FIFO_CTL_ADDRESS: begin
-                send_data = {1'b0, 1'b0, `FIFO_CTL_ADDR};         
-            end
-            CONFIG_FIFO_CTL_DATA: begin
-                send_data = 8'b10000000;
+                send_data = {1'b0, 1'b0, `FIFO_CTL_ADDR, 8'b10000000};         
             end
 
             READ_AXIS_DATA: begin
-                send_data = {1'b1, 1'b0, `DATAX0_ADDR + read_axis_counter};
+                send_data = {1'b1, 1'b0, `DATAX0_ADDR + read_axis_counter, 8'b0};
             end
+            
 
             DONE: begin
                 // Maintain state or handle data
+                send_data = 8'b0;
             end
         endcase
     end
@@ -267,8 +240,19 @@ spi_module
     always_ff @(posedge MASTER_CLK) begin
     
         // will not be able to enter the FSM till reset signal is sent.
-        if(reset)
+        if(reset) begin
+            store_data_counter <= 3'b0;
             current_state <= RESET;
+            process_next_word <= 1'b0;
+            DATA_STREAM <= 8'b0;
+            DATAX0 <= 8'b0;
+            DATAX1 <= 8'b0;
+            DATAY0 <= 8'b0;
+            DATAY1 <= 8'b0;
+            DATAZ0 <= 8'b0;
+            DATAZ1 <= 8'b0;
+            
+        end
         else begin
             current_state <= next_state;
         end
@@ -281,19 +265,41 @@ spi_module
                 if (!proc_word) begin
                     if (!process_next_word) begin
                         // Load the next word to send
-                        //data_mosi <= send_data;   // NOTE: MOVED this into combinational section because otherwise the data_msoi being sent will always be the data from the last state.
+                        //data_word_send <= send_data;   // NOTE: MOVED this into combinational section because otherwise the data being sent will always be the data from the last state.
                     end
                     process_next_word <= 1'b1;
                 end 
                 else if (proc_word && process_next_word) begin
                     process_next_word <= 1'b0;
-                    recv_data <= data_miso;
+                    recv_data <= data_word_recv;
                 end
             end
         end
+        
+        DATAX0 <= DATAX0;
+        DATAX1 <= DATAX1;
+        DATAY0 <= DATAY0;
+        DATAY1 <= DATAY1;
+        DATAZ0 <= DATAZ0;
+        DATAZ1 <= DATAZ1;
+        
+        if (current_state == READ_AXIS_DATA && proc_word && process_next_word && 
+            recv_data[7:0] != data_word_recv[7:0]) begin  // start counting when new data is discovered
+            DATA_STREAM <= data_word_recv[7:0];
+            store_data_counter <= store_data_counter + 1;
             
-        if (current_state == READ_AXIS_DATA && proc_word && process_next_word) begin
-            DATA_OUT <= recv_data;
+            case(store_data_counter)
+                3'd0: DATAX0 <= data_word_recv[7:0];
+                3'd1: DATAX1 <= data_word_recv[7:0];
+                3'd2: DATAY0 <= data_word_recv[7:0];
+                3'd3: DATAY1 <= data_word_recv[7:0];
+                3'd4: DATAZ0 <= data_word_recv[7:0];
+                3'd5: begin 
+                DATAZ1 <= data_word_recv[7:0];
+                store_data_counter <= 3'd0;
+                end
+            endcase
+                
         end
     end
 

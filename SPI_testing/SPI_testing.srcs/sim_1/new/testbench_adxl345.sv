@@ -22,27 +22,35 @@
 timeunit 10ns;
 timeprecision 1ns;
 
+`define BW_RATE_ADDR 6'h2C
+`define DATA_FORMAT_ADDR 6'h31
+`define POWER_CTL_ADDR 6'h2D
+`define FIFO_CTL_ADDR 6'h38
+`define DATAX0_ADDR 6'h32
+
 module testbench_adxl345();
 
 	logic clk;
 	
-	logic miso_en;
+	logic miso;
 	logic sclk;
 	logic reset;
 	logic ss;
-	logic mosi_en;
-	logic [7:0] miso_data;
-	logic [7:0] mosi_data;
+	logic mosi;
+	logic [15:0] recv_word_master;
+	logic [15:0] send_word_master;
+	logic [15:0] recv_word_slave;
+	logic [15:0] send_word_slave;
 	logic [7:0] accelerometer_data;
 	logic slave_ready;
+		
+	logic [7:0] x0;
+	logic [7:0] x1;
+	logic [7:0] y0;
+	logic [7:0] y1;
+	logic [7:0] z0;
+	logic [7:0] z1;
 	
-	logic cs;  //CS pin is the serial enable pin, this must go low before transmission/read. and high after transmission/read.
-	
-	always
-	begin : CLOCK_GEN
-	   #1 clk = ~clk;
-    end
-
     // Contains the SPI master control
     ADXL345_com accelerometer_master(
     .MASTER_CLK(clk),
@@ -50,39 +58,75 @@ module testbench_adxl345();
     .SIGNAL_SS_IN(),
     .SCLK_OUT(sclk),
     .SIGNAL_SS_OUT(ss),
-    .SIGNAL_DATA_OUT(mosi_en),
-    .SIGNAL_DATA_IN(miso_en),
-    .data_miso(miso_data),
-    .data_mosi(mosi_data),
-    .DATA_OUT(accelerometer_data),
-    .cs(cs)
+    .mosi(mosi),
+    .miso(miso),
+    .data_word_recv(recv_word_master),
+    .data_word_send(send_word_master),
+    .DATA_STREAM(accelerometer_data),
+    .DATAX0(x0),
+    .DATAX1(x1),
+    .DATAY0(y0),
+    .DATAY1(y1),
+    .DATAZ0(z0),
+    .DATAZ1(z1)
         );
      
-   logic proc_word;
-   logic process_next_word; 
+   logic proc_word_slave;
+   logic process_next_word_slave; 
    //Simulated ADXL345 SPI Slave:
-   spi_module#(.SPI_MASTER (1'b0)) simulated_ADXL345(
+   spi_module#(.SPI_MASTER (1'b0), .SPI_WORD_LEN(16)) simulated_ADXL345(
    .master_clock(clk),
    .SCLK_OUT(),
    .SCLK_IN(sclk),
    .SS_OUT(),
    .SS_IN(ss),
-   .OUTPUT_SIGNAL(miso_en),
-   .processing_word(proc_word),
-   .process_next_word(process_next_word),
-   .data_word_send(miso_data),
+   .OUTPUT_SIGNAL(miso),
+   .INPUT_SIGNAL(mosi),
+   .processing_word(proc_word_slave),
+   .process_next_word(process_next_word_slave),
+   .data_word_send(send_word_slave),
+   .data_word_recv(recv_word_slave),
    .do_reset(reset),
    .is_ready(slave_ready));
-   
-    
-    
+       
    initial 
    begin : SIM
         reset = 1'b1;
         clk = 0;
-        #5;
-        reset = 1'b0;
+        send_word_slave = 15'b0;
+        process_next_word_slave = 1'b0;
+        // slave and master ready
+        #1000;
+        reset = 1'b0;   
    end 
-    
+   
+   	always
+	begin : CLOCK_GEN
+	   #1 clk = ~clk;
+	   if(!proc_word_slave) begin
+           if(recv_word_slave[15:8] == {1'b1, 1'b0, `DATAX0_ADDR}) begin
+            send_word_slave = {8'b0,8'b00000101};
+           end
+           if(recv_word_slave[15:8] == {1'b1, 1'b0, (`DATAX0_ADDR + 1'b1)}) begin
+            send_word_slave = {8'b0,8'b00000110};
+           end
+          if(recv_word_slave[15:8] == {1'b1, 1'b0, (`DATAX0_ADDR + 2'b10)}) begin
+            send_word_slave = {8'b0,8'b00000111};
+           end
+                     if(recv_word_slave[15:8] == {1'b1, 1'b0, (`DATAX0_ADDR + 2'b11)}) begin
+            send_word_slave = {8'b0,8'b00000100};
+           end
+                     if(recv_word_slave[15:8] == {1'b1, 1'b0, (`DATAX0_ADDR + 3'b100)}) begin
+            send_word_slave = {8'b0,8'b00001001};
+           end
+                     if(recv_word_slave[15:8] == {1'b1, 1'b0, (`DATAX0_ADDR + 3'b101)}) begin
+            send_word_slave = {8'b0,8'b00001010};
+           end
+          process_next_word_slave = 1'b1;
+       end
+       
+       else if (proc_word_slave && process_next_word_slave)  process_next_word_slave <= 1'b0;
+       
+    end
     
 endmodule

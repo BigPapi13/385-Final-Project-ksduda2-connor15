@@ -10,7 +10,7 @@ module spi_module
 	parameter CPHA = 1'b0,
 	parameter INVERT_DATA_ORDER = 1'b0,
 	parameter SPI_MASTER = 1'b1,
-	parameter SPI_WORD_LEN = 8 )
+	parameter SPI_WORD_LEN = 8  )
 
 	( input logic master_clock,
 	output logic SCLK_OUT,
@@ -47,6 +47,7 @@ module spi_module
 	assign data_word_recv = data_word_recv_logic;
 	
 	assign processing_word = (spi_status == `SPI_STATUS_IDLE) ? 1'b0 : 1'b1;
+	
 	
 	generate 
 	
@@ -100,11 +101,16 @@ module spi_module
 				
 					`SPI_STATUS_IDLE: begin
 						
+						
 						if(process_next_word && delay_pol) begin
-							status_ignore_first_edge <= 1'b0;
 							activate_ss <= 1'b1;
-							activate_sclk <= 1'b1;	
 							spi_status <= `SPI_STATUS_CYCLE_BITS;	
+                            status_ignore_first_edge <= 1'b0;
+                            
+                            
+                            activate_sclk <= 1'b1;	
+
+
 						end
 						
 					end

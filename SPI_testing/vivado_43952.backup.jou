@@ -1,0 +1,118 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Nov 28 22:00:13 2024
+# Process ID: 43952
+# Current directory: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/385-Final-Project-ksduda2-connor15/SPI_testing
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent52780 C:\Users\conno\Documents\Stuff\UIUC\2024-2025\FALL\ECE385\final\385-Final-Project-ksduda2-connor15\SPI_testing\SPI_testing.xpr
+# Log file: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/385-Final-Project-ksduda2-connor15/SPI_testing/vivado.log
+# Journal file: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/385-Final-Project-ksduda2-connor15/SPI_testing\vivado.jou
+# Running On: Connors_laptop, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 12, Host memory: 34042 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/385-Final-Project-ksduda2-connor15/SPI_testing/SPI_testing.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+source testbench_adxl345.tcl
+current_wave_config {Untitled 1}
+add_wave {{/testbench_adxl345/accelerometer_master/process_next_word}} 
+relaunch_sim
+close_sim
+launch_simulation
+source testbench_adxl345.tcl
+close_sim
+launch_simulation
+launch_simulation
+source testbench_adxl345.tcl
+current_wave_config {Untitled 3}
+add_wave {{/testbench_adxl345/accelerometer_master/reset}} 
+relaunch_sim
+current_wave_config {Untitled 3}
+add_wave {{/testbench_adxl345/accelerometer_master/current_state}} 
+current_wave_config {Untitled 3}
+add_wave {{/testbench_adxl345/accelerometer_master/next_state}} 
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+launch_simulation
+source testbench_adxl345.tcl
+add_bp {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/385-Final-Project-ksduda2-connor15/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv} 131
+remove_bps -file {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/385-Final-Project-ksduda2-connor15/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv} -line 131
+add_bp {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/385-Final-Project-ksduda2-connor15/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv} 131
+add_bp {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/385-Final-Project-ksduda2-connor15/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv} 128
+remove_bps -file {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/385-Final-Project-ksduda2-connor15/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv} -line 131
+close_sim
+launch_simulation
+launch_simulation
+open_project C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/lab5/lab5.xpr
+update_compile_order -fileset sources_1
+close_project
+launch_simulation
+source testbench_adxl345.tcl
+open_project C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/lab5/lab5.xpr
+update_compile_order -fileset sources_1
+current_project SPI_testing
+current_wave_config {Untitled 5}
+add_wave {{/testbench_adxl345/accelerometer_master/current_state}} 
+current_wave_config {Untitled 5}
+add_wave {{/testbench_adxl345/accelerometer_master/next_state}} 
+relaunch_sim
+close_sim
+launch_simulation
+source testbench_adxl345.tcl
+current_wave_config {Untitled 9}
+add_wave {{/testbench_adxl345/accelerometer_master/current_state}} 
+current_wave_config {Untitled 9}
+add_wave {{/testbench_adxl345/accelerometer_master/next_state}} 
+relaunch_sim
+current_wave_config {Untitled 9}
+add_wave {{/testbench_adxl345/accelerometer_master/spi_ready}} 
+current_wave_config {Untitled 9}
+add_wave {{/testbench_adxl345/accelerometer_master/divider_ready}} 
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 9}
+add_wave {{/testbench_adxl345/accelerometer_master/spi_master/delay_pol}} 
+relaunch_sim
+current_wave_config {Untitled 9}
+add_wave {{/testbench_adxl345/accelerometer_master/MASTER_CLK}} 
+current_wave_config {Untitled 9}
+add_wave {{/testbench_adxl345/accelerometer_master/divided_master_clock}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 9}
+add_wave {{/testbench_adxl345/accelerometer_master/send_data}} 
+current_wave_config {Untitled 9}
+add_wave {{/testbench_adxl345/accelerometer_master/recv_data}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+relaunch_sim
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source testbench_adxl345.tcl
+current_project lab5
+close_project
+close_sim
+launch_simulation
+source testbench_adxl345.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
