@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date                      : Thu Dec  5 14:31:02 2024
+| Date                      : Thu Dec  5 15:19:29 2024
 | Host                      : Connors_laptop running 64-bit major release  (build 9200)
 | Command                   : report_io -file adxl345_top_io_placed.rpt
 | Design                    : adxl345_top
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            30 |
+|            31 |
 +---------------+
 
 
@@ -159,7 +159,7 @@ Table of Contents
 | G14        |                    |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | G15        |                    | High Range | IO_L18N_T2_15                | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | G16        |                    | High Range | IO_L14P_T2_SRCC_15           | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| G17        |                    | High Range | IO_L14N_T2_SRCC_15           | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| G17        | test_clock         | High Range | IO_L14N_T2_SRCC_15           | OUTPUT      | LVCMOS25    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | G18        |                    | High Range | IO_L21N_T3_DQS_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | H1         |                    |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | H2         |                    | High Range | IO_L20N_T3_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

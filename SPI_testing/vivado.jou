@@ -657,3 +657,95 @@ refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
 run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
 wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
 display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+close_sim
+launch_simulation
+source testbench_adxl345.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+relaunch_sim
+refresh_design
+set_property package_pin "" [get_ports [list  test_clock]]
+place_ports test_clock G17
+set_property IOSTANDARD LVCMOS25 [get_ports [list test_clock]]
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.runs/impl_1/adxl345_top.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.runs/impl_1/adxl345_top.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.runs/impl_1/adxl345_top.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 8192 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+startgroup 
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_0 ]
+endgroup
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 16 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {data_word_recv_OBUF[0]} {data_word_recv_OBUF[1]} {data_word_recv_OBUF[2]} {data_word_recv_OBUF[3]} {data_word_recv_OBUF[4]} {data_word_recv_OBUF[5]} {data_word_recv_OBUF[6]} {data_word_recv_OBUF[7]} {data_word_recv_OBUF[8]} {data_word_recv_OBUF[9]} {data_word_recv_OBUF[10]} {data_word_recv_OBUF[11]} {data_word_recv_OBUF[12]} {data_word_recv_OBUF[13]} {data_word_recv_OBUF[14]} {data_word_recv_OBUF[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {x0_OBUF[0]} {x0_OBUF[1]} {x0_OBUF[2]} {x0_OBUF[3]} {x0_OBUF[4]} {x0_OBUF[5]} {x0_OBUF[6]} {x0_OBUF[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list clk_IBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list miso_IBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list mosi_OBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list sclk_OBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list ss_OBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list test_clock_OBUF ]]
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.runs/impl_1/adxl345_top.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.runs/impl_1/adxl345_top.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.runs/impl_1/adxl345_top.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {test_clock_OBUF} }
+set_property CAPTURE_COMPARE_VALUE eq1'bX [get_hw_probes miso_IBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property CAPTURE_COMPARE_VALUE eq1'bR [get_hw_probes test_clock_OBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+close_sim
+launch_simulation
+source testbench_adxl345.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim

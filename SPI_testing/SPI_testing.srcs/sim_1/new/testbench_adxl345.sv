@@ -44,12 +44,9 @@ module testbench_adxl345();
 	logic [7:0] accelerometer_data;
 	logic slave_ready;
 		
-	logic [7:0] x0;
-	logic [7:0] x1;
-	logic [7:0] y0;
-	logic [7:0] y1;
-	logic [7:0] z0;
-	logic [7:0] z1;
+	logic [15:0] x;
+	logic [15:0] y;
+	logic [15:0] z;
 	
     // Contains the SPI master control
     ADXL345_com accelerometer_master(
@@ -63,12 +60,9 @@ module testbench_adxl345();
     .data_word_recv(recv_word_master),
     .data_word_send(send_word_master),
     .DATA_STREAM(accelerometer_data),
-    .DATAX0(x0),
-    .DATAX1(x1),
-    .DATAY0(y0),
-    .DATAY1(y1),
-    .DATAZ0(z0),
-    .DATAZ1(z1)
+    .DATAX(x),
+    .DATAY(y),
+    .DATAZ(z)
         );
      
    logic proc_word_slave;
@@ -88,16 +82,24 @@ module testbench_adxl345();
    .data_word_recv(recv_word_slave),
    .do_reset(reset),
    .is_ready(slave_ready));
+   
+   logic reset_div2;
+   logic divider_ready2;
+   logic test_clock;
+   clock_divider #( .DIV_N(20) )	slow_test_clock ( .clk_in(clk), .clk_out(test_clock), .do_reset(reset_div2), .is_ready(divider_ready2) );
+
        
    initial 
    begin : SIM
         reset = 1'b1;
+        reset_div2 = 1'b1;
         clk = 0;
         send_word_slave = 15'b0;
         process_next_word_slave = 1'b0;
         // slave and master ready
         #1000;
-        reset = 1'b0;   
+        reset = 1'b0; 
+        reset_div2 = 1'b0;  
    end 
    
    	always
