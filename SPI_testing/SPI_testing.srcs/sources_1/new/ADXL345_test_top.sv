@@ -35,21 +35,23 @@ module adxl345_top(
 	output logic ss,
 	output logic mosi,
 	output logic [15:0] data_word_recv,
-	output logic [7:0] x0
+	output logic [15:0] x,
+	output logic test_clock
 	);
 	
     logic reset;
 	logic master_ready;
 	
-    //logic [7:0] x0;
-	logic [7:0] x1;
-	logic [7:0] y0;
-	logic [7:0] y1;
-	logic [7:0] z0;
-	logic [7:0] z1;
+	logic [15:0] y;
+	logic [15:0] z;
 	
 	logic [15:0] data_word_send;
 	logic [15:0] accelerometer_data;
+	logic reset_div;
+	logic divider_ready;
+	
+    clock_divider #( .DIV_N(20) )	slow_test_clock ( .clk_in(clk), .clk_out(test_clock), .do_reset(reset_div), .is_ready(divider_ready) );
+
 	
 
     // Contains the SPI master control
@@ -65,12 +67,9 @@ module adxl345_top(
     .data_word_send(data_word_send),
     .spi_ready(master_ready),
     .DATA_STREAM(accelerometer_data),
-    .DATAX0(x0),
-    .DATAX1(x1),
-    .DATAY0(y0),
-    .DATAY1(y1),
-    .DATAZ0(z0),
-    .DATAZ1(z1)
+    .DATAX(x),
+    .DATAY(y),
+    .DATAZ(z)
         );
 
    
@@ -81,9 +80,11 @@ module adxl345_top(
    always_comb begin
     if(start_button) begin
         reset = 1'b0;
+        reset_div = 1'b0;
     end
     else begin
         reset = 1'b1;
+        reset_div = 1'b1;
     end
    end
    

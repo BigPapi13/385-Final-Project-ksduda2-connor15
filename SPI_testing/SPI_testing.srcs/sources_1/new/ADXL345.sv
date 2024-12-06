@@ -33,13 +33,17 @@ module ADXL345_com (
     output logic [`SPI_WORD_LEN - 1:0] data_word_send,   // the full word that is being sent serially on mosi
 	output logic [`SPI_WORD_LEN - 1:0] data_word_recv,    // the full word that is received serially on miso
 	output logic [7:0] DATA_STREAM,    // accelerometer read data
-	output logic [7:0] DATAX0,
-	output logic [7:0] DATAX1,
-	output logic [7:0] DATAY0,
-	output logic [7:0] DATAY1,
-	output logic [7:0] DATAZ0,
-	output logic [7:0] DATAZ1
-	);       
+	output logic [15:0] DATAX,
+	output logic [15:0] DATAY,
+	output logic [15:0] DATAZ
+	);    
+	
+	logic [7:0] DATAX0;
+	logic [7:0] DATAX1;
+	logic [7:0] DATAY0;
+	logic [7:0] DATAY1;
+	logic [7:0] DATAZ0;
+	logic [7:0] DATAZ1;  
 	
 	logic reset_spi;
 
@@ -96,7 +100,7 @@ spi_module
 	   4) This is the command byte, the next date byte (or bytes of MB is enabled) is for data,
 	    and this either data read from the register on MISO or data written to the register on MOSI.
 	    
-	   So in essence every read/write is broken into 2 bytes (at least for what i plan on implementing)
+	   So in essence every read/write is broken into 2 bytes (at least for what i plan on implementing). This means we are using 16 bit words where half of the word might be a respones.
 	   
 	   - Uses a FIFO system, this system contains 32 readings and can be configured in a couple of ways. The simplest and best way for this right now is to use the FIFO Stream mode, which 
 	   stores the last 32 bits in the chips memory and when new measurements come in it overwrites the oldest measurements.
@@ -252,6 +256,10 @@ spi_module
             DATAZ0 <= 8'b0;
             DATAZ1 <= 8'b0;
             
+            DATAX <= 16'b0;
+            DATAY <= 16'b0;
+            DATAZ <= 16'b0;
+            
         end
         else begin
             current_state <= next_state;
@@ -276,12 +284,17 @@ spi_module
             end
         end
         
+        //prevent latching
         DATAX0 <= DATAX0;
         DATAX1 <= DATAX1;
         DATAY0 <= DATAY0;
         DATAY1 <= DATAY1;
         DATAZ0 <= DATAZ0;
         DATAZ1 <= DATAZ1;
+        
+        DATAX <= DATAX;
+        DATAY <= DATAY;
+        DATAZ <= DATAZ;
         
         if (current_state == READ_AXIS_DATA && proc_word && process_next_word && 
             recv_data[7:0] != data_word_recv[7:0]) begin  // start counting when new data is discovered
@@ -297,6 +310,10 @@ spi_module
                 3'd5: begin 
                 DATAZ1 <= data_word_recv[7:0];
                 store_data_counter <= 3'd0;
+                // Update DATAX, Y and Z
+                DATAX <= {DATAX1, DATAX0};
+                DATAY <= {DATAY1, DATAY0};
+                DATAZ <= {data_word_recv[7:0], DATAZ0}; //Z1 needs to be data_word_recv cuz it is updated this frame
                 end
             endcase
                 
