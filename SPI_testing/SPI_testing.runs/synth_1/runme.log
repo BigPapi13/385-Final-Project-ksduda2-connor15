@@ -1,0 +1,526 @@
+
+*** Running vivado
+    with args -log adxl345_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source adxl345_top.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source adxl345_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 374.598 ; gain = 52.668
+Command: read_checkpoint -auto_incremental -incremental C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/utils_1/imports/synth_1/adxl345_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/utils_1/imports/synth_1/adxl345_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top adxl345_top -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 82168
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'TEST_SIGNAL_OUT', assumed default net type 'wire' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:56]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1180.324 ; gain = 408.973
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'adxl345_top' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345_test_top.sv:29]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/clock_divider.sv:3]
+	Parameter DIV_N bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (0#1) [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/clock_divider.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ADXL345_com' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider__parameterized0' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/clock_divider.sv:3]
+	Parameter DIV_N bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider__parameterized0' (0#1) [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/clock_divider.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'spi_module' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/spi_module.sv:8]
+	Parameter CPOL bound to: 1'b1 
+	Parameter CPHA bound to: 1'b1 
+	Parameter SPI_MASTER bound to: 1'b1 
+	Parameter SPI_WORD_LEN bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pos_edge_det' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/pos_edge_det.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'pos_edge_det' (0#1) [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/pos_edge_det.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'neg_edge_det' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/neg_edge_det.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'neg_edge_det' (0#1) [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/neg_edge_det.sv:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/spi_module.sv:100]
+INFO: [Synth 8-6155] done synthesizing module 'spi_module' (0#1) [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/spi_module.sv:8]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:133]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:200]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:291]
+INFO: [Synth 8-6155] done synthesizing module 'ADXL345_com' (0#1) [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:23]
+WARNING: [Synth 8-689] width (16) of port connection 'DATA_STREAM' does not match port width (8) of module 'ADXL345_com' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345_test_top.sv:73]
+INFO: [Synth 8-6155] done synthesizing module 'adxl345_top' (0#1) [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345_test_top.sv:29]
+WARNING: [Synth 8-87] always_comb on 'read_axis_counter_reg' did not result in combinational logic [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:136]
+WARNING: [Synth 8-87] always_comb on 'reset_div_reg' did not result in combinational logic [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:63]
+WARNING: [Synth 8-87] always_comb on 'reset_spi_reg' did not result in combinational logic [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:79]
+WARNING: [Synth 8-7129] Port SS_IN in module spi_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIGNAL_SS_IN in module ADXL345_com is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1272.281 ; gain = 500.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1272.281 ; gain = 500.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1272.281 ; gain = 500.930
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1272.281 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc]
+WARNING: [Vivado 12-584] No ports matched 'miso_data[7]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'miso_data[6]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'miso_data[5]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'miso_data[4]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'miso_data[3]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'miso_data[2]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'miso_data[1]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'miso_data[0]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[7]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[6]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[5]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[4]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[3]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[2]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[1]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[0]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[0]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[2]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[3]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[4]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[5]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[6]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[7]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[7]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[6]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[5]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[4]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[3]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[2]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[1]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[0]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[7]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[6]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[5]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[4]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[3]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[2]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[1]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi_data[0]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[7]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[6]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[5]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[4]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[3]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[2]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[1]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[0]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[7]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'accelerometer_data[1]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[6]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[5]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[4]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[3]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[2]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[1]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[0]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[15]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[14]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[13]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[12]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[11]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[10]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[9]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[8]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[8]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[9]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[10]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[11]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[12]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[13]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[14]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data_word_send[15]'. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/constrs_1/new/pinmap.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/adxl345_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/adxl345_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1377.328 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1377.328 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'spi_status_reg' in module 'spi_module'
+WARNING: [Synth 8-3936] Found unconnected internal register 'recv_data_reg' and it is trimmed from '16' to '8' bits. [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:274]
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'ADXL345_com'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                                0 |                              000
+                 iSTATE0 |                                1 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'spi_status_reg' using encoding 'sequential' in module 'spi_module'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   RESET |                              000 |                            00000
+  CONFIG_BW_RATE_ADDRESS |                              001 |                            00001
+CONFIG_DATA_FORMAT_ADDRESS |                              010 |                            00010
+CONFIG_POWER_CTL_ADDRESS |                              011 |                            00011
+ CONFIG_FIFO_CTL_ADDRESS |                              100 |                            00100
+          READ_AXIS_DATA |                              101 |                            00101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'ADXL345_com'
+WARNING: [Synth 8-327] inferring latch for variable 'read_axis_counter_reg' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:136]
+WARNING: [Synth 8-327] inferring latch for variable 'reset_spi_reg' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'reset_div_reg' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:63]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   15 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               15 Bit    Registers := 1     
+	                8 Bit    Registers := 8     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 4     
+	   6 Input   16 Bit        Muxes := 1     
+	   2 Input   15 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 2     
+	   7 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 15    
+	   6 Input    1 Bit        Muxes := 3     
+	   7 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'accelerometer_master/reset_spi_reg/Q' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:264]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:264]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:264]
+WARNING: [Synth 8-3332] Sequential element (accelerometer_master/reset_spi_reg__0) is unused and will be removed from module adxl345_top.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'accelerometer_master/reset_div_reg/Q' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:262]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:262]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.srcs/sources_1/new/ADXL345.sv:262]
+WARNING: [Synth 8-3332] Sequential element (accelerometer_master/reset_div_reg__0) is unused and will be removed from module adxl345_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     9|
+|3     |LUT1   |    20|
+|4     |LUT2   |    10|
+|5     |LUT3   |     8|
+|6     |LUT4   |    19|
+|7     |LUT5   |    16|
+|8     |LUT6   |    18|
+|9     |FDRE   |    83|
+|10    |LD     |     3|
+|11    |IBUF   |     3|
+|12    |OBUF   |    28|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1377.328 ; gain = 605.977
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 6 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:29 . Memory (MB): peak = 1377.328 ; gain = 500.930
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1377.328 ; gain = 605.977
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1377.328 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1377.328 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  LD => LDCE: 3 instances
+
+Synth Design complete, checksum: 18a0c0e8
+INFO: [Common 17-83] Releasing license: Synthesis
+46 Infos, 85 Warnings, 78 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 1377.328 ; gain = 977.848
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.runs/synth_1/adxl345_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file adxl345_top_utilization_synth.rpt -pb adxl345_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  5 15:11:56 2024...
