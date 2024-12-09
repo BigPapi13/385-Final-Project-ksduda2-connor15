@@ -10,6 +10,19 @@
 //    University of Illinois ECE Department                              --
 //-------------------------------------------------------------------------
 
+$ # Set to true for synthesis, false for simulation
+$ SYNTHESIS_MODE = True
+
+
+$ from svpy import *
+$ from structs import OBB, Juice, JOBB
+
+$$$
+if SYNTHESIS_MODE == True:
+    reg_clk = "vsync"
+else:
+    reg_clk = "Clk"
+$$$
 
 module mb_usb_hdmi_top(
     input logic Clk,
@@ -143,13 +156,81 @@ module mb_usb_hdmi_top(
         .S(ballsizesig)
     );
     
+    // First OBB register
+    $ obb1 = OBB("obb1")
+    $ obb1_ld = OBB("obb1_ld")
+    $ ld = OBB("ld")
+
+    $ obb1.declare()
+    $ obb1_ld.declare()
+    obb_reg #(.X_INIT(11), .Y_INIT(53), .X_VEL_INIT(-0.3), .Y_VEL_INIT(0.5), .OMEGA_INIT(0.03)) obb1(
+        $$ld.module_assign(obb1_ld)$$,
+        $$OBB.module_assign(obb1)$$,
+        .load(1'b1),
+        .reset(reset_ah),
+        .clk($$reg_clk$$)
+    );
+
+    // Second OBB register
+    $ obb2 = OBB("obb2")
+    $ obb2_ld = OBB("obb2_ld")
+
+    $ obb2.declare()
+    $ obb2_ld.declare()
+    obb_reg #(.X_INIT(44), .Y_INIT(13), .X_VEL_INIT(0.2), .Y_VEL_INIT(0.7), .WIDTH_INIT(15), .HEIGHT_INIT(5), .OMEGA_INIT(0.01)) obb2(
+        $$ld.module_assign(obb2_ld)$$,
+        $$OBB.module_assign(obb2)$$,
+        .load(1'b1),
+        .reset(reset_ah),
+        .clk($$reg_clk$$)
+    );
+
+    // Logic for determining next state
+    $ prev = OBB("prev")
+    $ next = OBB("next")
+    obb_updater obb1_updater(
+        $$next.module_assign(obb1_ld)$$,
+        $$prev.module_assign(obb1)$$
+    );
+
+    obb_updater obb2_updater(
+        $$next.module_assign(obb2_ld)$$,
+        $$prev.module_assign(obb2)$$
+    );
+
+    // DID SOMEONE SAY JUICE????
+    // ITS JUICIN' TIME
+    
+    // Juicer for register 1
+    $ jobb1 = JOBB("obb1")
+    $ juice1 = Juice("obb1")
+    $ juice1.declare()
+    $ jobb1.OBB = obb1
+    $ jobb1.Juice = juice1
+
+    juicer juicer1(
+        $$OBB.module_assign(obb1)$$,
+        $$Juice.module_assign(juice1)$$
+    );
+
+    // Juicer for register 2
+    $ jobb2 = JOBB("obb2")
+    $ juice2 = Juice("obb2")
+    $ juice2.declare()
+    $ jobb2.OBB = obb2
+    $ jobb2.Juice = juice2
+
+    juicer juicer2(
+        $$OBB.module_assign(obb2)$$,
+        $$Juice.module_assign(juice2)$$
+    );
+
     //Color Mapper Module   
     color_mapper color_instance(
-        .BallX(ballxsig),
-        .BallY(ballysig),
+        $$jobb1.module_assign(jobb1)$$,
+        $$jobb2.module_assign(jobb2)$$,
         .DrawX(drawX),
         .DrawY(drawY),
-        .Ball_size(ballsizesig),
         .Red(red),
         .Green(green),
         .Blue(blue)

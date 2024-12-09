@@ -7,20 +7,35 @@ from svmath import *
 #   - Oriented bounding box
 #   - Used for the physics objects
 
-OBB_outputs = [
-    Fixed(8, 0, "widthA"),
-    Fixed(8, 0, "heightA"),
-    Vec2(7, 25, "posA"),
-    Vec2(6, 26, "velA"),
-    Vec2(2, 14, "uA"),
-    Vec2(2, 14, "vA"),
+OBB = Struct("OBB", [
+    Fixed(8, 0, "width"),
+    Fixed(8, 0, "height"),
+    Vec2(8, 24, "pos"),
+    Vec2(6, 26, "vel"),
+    Fixed(4, 7, "angle"),
+    Fixed(4, 7, "omega")
+])
 
-    Fixed(8, 0, "widthB"),
-    Fixed(8, 0, "heightB"),
-    Vec2(7, 25, "posB"),
-    Vec2(6, 26, "velB"),
-    Vec2(2, 14, "uB"),
-    Vec2(2, 14, "vB")
-]
 
-OBB = Struct("OBB", [], OBB_outputs)
+#> Juice
+#   - Bundle of processed OBB data
+#   - Nice and juicy
+Juice = Struct("Juice", [
+    Vec2(2, 14, "u"),
+    Vec2(2, 14, "v"),
+
+    Vec2(7, 14, "Point0"),
+    Vec2(7, 14, "Point1"),
+    Vec2(7, 14, "Point2"),
+    Vec2(7, 14, "Point3"),
+    Fixed(OBB.width.integer_bits - 1, 0, "halfWidth"),
+    Fixed(OBB.height.integer_bits - 1, 0, "halfHeight")
+])
+
+#> JOBB
+#   - Juiced Oriented Bounding Box
+#   - Contains an OBB's data and its juice
+JOBB = Struct("JOBB", [
+    OBB,
+    Juice
+])

@@ -14,86 +14,200 @@
 //-------------------------------------------------------------------------
 
 
-module  color_mapper ( input  logic [9:0] BallX, BallY, DrawX, DrawY, Ball_size,
-                       output logic [3:0]  Red, Green, Blue );
+
+
+module  color_mapper (
+    input logic signed [7 : 0] obb1_width,
+input logic signed [7 : 0] obb1_height,
+input logic signed [31 : 0] obb1_pos_x, input logic signed [31 : 0] obb1_pos_y,
+input logic signed [31 : 0] obb1_vel_x, input logic signed [31 : 0] obb1_vel_y,
+input logic signed [10 : 0] obb1_angle,
+input logic signed [10 : 0] obb1_omega,
+input logic signed [15 : 0] obb1_u_x, input logic signed [15 : 0] obb1_u_y,
+input logic signed [15 : 0] obb1_v_x, input logic signed [15 : 0] obb1_v_y,
+input logic signed [20 : 0] obb1_Point0_x, input logic signed [20 : 0] obb1_Point0_y,
+input logic signed [20 : 0] obb1_Point1_x, input logic signed [20 : 0] obb1_Point1_y,
+input logic signed [20 : 0] obb1_Point2_x, input logic signed [20 : 0] obb1_Point2_y,
+input logic signed [20 : 0] obb1_Point3_x, input logic signed [20 : 0] obb1_Point3_y,
+input logic signed [6 : 0] obb1_halfWidth,
+input logic signed [6 : 0] obb1_halfHeight,
+    input logic signed [7 : 0] obb2_width,
+input logic signed [7 : 0] obb2_height,
+input logic signed [31 : 0] obb2_pos_x, input logic signed [31 : 0] obb2_pos_y,
+input logic signed [31 : 0] obb2_vel_x, input logic signed [31 : 0] obb2_vel_y,
+input logic signed [10 : 0] obb2_angle,
+input logic signed [10 : 0] obb2_omega,
+input logic signed [15 : 0] obb2_u_x, input logic signed [15 : 0] obb2_u_y,
+input logic signed [15 : 0] obb2_v_x, input logic signed [15 : 0] obb2_v_y,
+input logic signed [20 : 0] obb2_Point0_x, input logic signed [20 : 0] obb2_Point0_y,
+input logic signed [20 : 0] obb2_Point1_x, input logic signed [20 : 0] obb2_Point1_y,
+input logic signed [20 : 0] obb2_Point2_x, input logic signed [20 : 0] obb2_Point2_y,
+input logic signed [20 : 0] obb2_Point3_x, input logic signed [20 : 0] obb2_Point3_y,
+input logic signed [6 : 0] obb2_halfWidth,
+input logic signed [6 : 0] obb2_halfHeight, 
+    input  logic [9:0] DrawX, DrawY,
+    output logic [3:0]  Red, Green, Blue
+);
     
-    logic ball_on;
+    logic obb1_on;
+    logic obb2_on;
 	 
- /* Old Ball: Generated square box by checking if the current pixel is within a square of length
-    2*BallS, centered at (BallX, BallY).  Note that this requires unsigned comparisons.
-	 
-    if ((DrawX >= BallX - Ball_size) &&
-       (DrawX <= BallX + Ball_size) &&
-       (DrawY >= BallY - Ball_size) &&
-       (DrawY <= BallY + Ball_size))
-       )
+    // Rescaled versions of DrawX and DrawY
+logic signed [31 : 0] DrawXs;
+logic signed [31 : 0] DrawYs;
+assign DrawXs = DrawX << 22;
+assign DrawYs = DrawY << 22;
 
-     New Ball: Generates (pixelated) circle by using the standard circle formula.  Note that while 
-     this single line is quite powerful descriptively, it causes the synthesis tool to use up three
-     of the 120 available multipliers on the chip!  Since the multiplicants are required to be signed,
-	  we have to first cast them from logic to int (signed by default) before they are multiplied). */
-	  
-    int DistX, DistY, Size;
-    assign DistX = DrawX - BallX;
-    assign DistY = DrawY - BallY;
-    assign Size = Ball_size;
+    // Determine if point is in first square
+logic signed [31 : 0] DrawXRel1;
+logic signed [31 : 0] DrawYRel1;
+logic signed [31 : 0] opnet_199;
+assign opnet_199 = DrawXs - obb1_pos_x;
+assign DrawXRel1 = opnet_199;
+logic signed [31 : 0] opnet_200;
+assign opnet_200 = DrawYs - obb1_pos_y;
+assign DrawYRel1 = opnet_200;
 
-    logic [15:0] rotation[2][2];           // basis vectors for rotation
-    assign rotation[0][0] = 16'b0000000000100000;  // u basis vector
-    assign rotation[1][0] = 16'b0000000000100000;
+logic signed [31 : 0] u_projection1;
+logic signed [31 : 0] v_projection1;
 
-    assign rotation[0][1] = 16'b1111111111100000;  // v basis vector
-    assign rotation[1][1] = 16'b0000000000100000;
+always_comb begin
+        // Need to determine if DrawXs and DrawXy are in the square
+        // Steps:
+        //  - Get Pixel position relative to square position
+        //  - Project onto u and v axes
+        //  - Compare to half width and half height
+opnet_201 = DrawXRel1 * obb1_u_x;
+opnet_202 = DrawYRel1 * obb1_u_y;
+opnet_203 = opnet_201 + opnet_202;
+u_projection1 = opnet_203 >>> 14;
+opnet_204 = DrawXRel1 * obb1_v_x;
+opnet_205 = DrawYRel1 * obb1_v_y;
+opnet_206 = opnet_204 + opnet_205;
+v_projection1 = opnet_206 >>> 14;
 
-    // get current pixel in basis vector of square
-    //logic [9:0] dx;
-    //logic [9:0] dy;
-    logic [15:0] r [2];
-    logic [15:0] r_uv [2];
-    logic [9:0] DistU;
-    logic [9:0] DistV;
+        obb1_on = 0;
+        if (u_projection1 > -(obb1_halfWidth << 24) && u_projection1 < (obb1_halfWidth << 24) && v_projection1 > -(obb1_halfHeight << 24) && v_projection1 < (obb1_halfHeight << 24) 
+        ) begin
+            obb1_on = 1;
+        end
 
-    always_comb
-    begin:get_basis
-        // Step 1: Convert x and y coordinates of pixel into 16-bit format
-        //dx = DrawX - BallX;
-        //dy = DrawY - BallY;
-        r[0] = {DistX, 6'b0};
-        r[1] = {DistY, 6'b0};
+end
+logic signed [47 : 0] opnet_201;
+logic signed [47 : 0] opnet_202;
+logic signed [47 : 0] opnet_203;
+logic signed [47 : 0] opnet_204;
+logic signed [47 : 0] opnet_205;
+logic signed [47 : 0] opnet_206;
 
-        // Step 2 apply rotation
-        // (done in instantiated coordinate rotator)
+    // Determine if point is in second square
+logic signed [31 : 0] DrawXRel2;
+logic signed [31 : 0] DrawYRel2;
+logic signed [31 : 0] opnet_207;
+assign opnet_207 = DrawXs - obb2_pos_x;
+assign DrawXRel2 = opnet_207;
+logic signed [31 : 0] opnet_208;
+assign opnet_208 = DrawYs - obb2_pos_y;
+assign DrawYRel2 = opnet_208;
 
-        // Step 3: Truncate bits
-        DistU = r_uv[0][15:6];
-        DistV = r_uv[1][15:6];
-    end
+logic signed [31 : 0] u_projection2;
+logic signed [31 : 0] v_projection2;
 
-    vec_mat_multiplier coordinate_rotator(
-        .mat(rotation),
-        .vec(r),
-        .out(r_uv)
+always_comb begin
+        // Need to determine if DrawXs and DrawXy are in the square
+        // Steps:
+        //  - Get Pixel position relative to square position
+        //  - Project onto u and v axes
+        //  - Compare to half width and half height
+opnet_209 = DrawXRel2 * obb2_u_x;
+opnet_210 = DrawYRel2 * obb2_u_y;
+opnet_211 = opnet_209 + opnet_210;
+u_projection2 = opnet_211 >>> 14;
+opnet_212 = DrawXRel2 * obb2_v_x;
+opnet_213 = DrawYRel2 * obb2_v_y;
+opnet_214 = opnet_212 + opnet_213;
+v_projection2 = opnet_214 >>> 14;
+
+        obb2_on = 0;
+        if (u_projection2 > -(obb2_halfWidth << 24) && u_projection2 < (obb2_halfWidth << 24) && v_projection2 > -(obb2_halfHeight << 24) && v_projection2 < (obb2_halfHeight << 24) 
+        ) begin
+            obb2_on = 1;
+        end
+
+end
+logic signed [47 : 0] opnet_209;
+logic signed [47 : 0] opnet_210;
+logic signed [47 : 0] opnet_211;
+logic signed [47 : 0] opnet_212;
+logic signed [47 : 0] opnet_213;
+logic signed [47 : 0] opnet_214;
+
+    logic is_collision;
+
+    collision_detector cm_cd_inst(
+        .obb1_width(obb1_width),
+.obb1_height(obb1_height),
+.obb1_pos_x(obb1_pos_x),
+.obb1_pos_y(obb1_pos_y),
+.obb1_vel_x(obb1_vel_x),
+.obb1_vel_y(obb1_vel_y),
+.obb1_angle(obb1_angle),
+.obb1_omega(obb1_omega),
+.obb1_u_x(obb1_u_x),
+.obb1_u_y(obb1_u_y),
+.obb1_v_x(obb1_v_x),
+.obb1_v_y(obb1_v_y),
+.obb1_Point0_x(obb1_Point0_x),
+.obb1_Point0_y(obb1_Point0_y),
+.obb1_Point1_x(obb1_Point1_x),
+.obb1_Point1_y(obb1_Point1_y),
+.obb1_Point2_x(obb1_Point2_x),
+.obb1_Point2_y(obb1_Point2_y),
+.obb1_Point3_x(obb1_Point3_x),
+.obb1_Point3_y(obb1_Point3_y),
+.obb1_halfWidth(obb1_halfWidth),
+.obb1_halfHeight(obb1_halfHeight),
+        .obb2_width(obb2_width),
+.obb2_height(obb2_height),
+.obb2_pos_x(obb2_pos_x),
+.obb2_pos_y(obb2_pos_y),
+.obb2_vel_x(obb2_vel_x),
+.obb2_vel_y(obb2_vel_y),
+.obb2_angle(obb2_angle),
+.obb2_omega(obb2_omega),
+.obb2_u_x(obb2_u_x),
+.obb2_u_y(obb2_u_y),
+.obb2_v_x(obb2_v_x),
+.obb2_v_y(obb2_v_y),
+.obb2_Point0_x(obb2_Point0_x),
+.obb2_Point0_y(obb2_Point0_y),
+.obb2_Point1_x(obb2_Point1_x),
+.obb2_Point1_y(obb2_Point1_y),
+.obb2_Point2_x(obb2_Point2_x),
+.obb2_Point2_y(obb2_Point2_y),
+.obb2_Point3_x(obb2_Point3_x),
+.obb2_Point3_y(obb2_Point3_y),
+.obb2_halfWidth(obb2_halfWidth),
+.obb2_halfHeight(obb2_halfHeight),
+        .is_collision(is_collision)
     );
 
     always_comb
-    begin:Ball_on_proc
-        if ( (DistU*DistU) <= (Size * Size) && (DistV*DistV) <= (Size * Size))
-            ball_on = 1'b1;
-        else 
-            ball_on = 1'b0;
-     end 
-       
-    always_comb
     begin:RGB_Display
-        if ((ball_on == 1'b1)) begin 
-            Red = 4'ha;
+        if ((obb1_on == 1'b1) || (obb2_on == 1'b1)) begin
+            Red = 4'hf;
             Green = 4'hf;
-            Blue = 4'h3;
+            Blue = 4'hf;
+
+            if (is_collision) begin
+                Green = 4'h0;
+                Blue = 4'h0;
+            end
         end       
         else begin 
-            Red = 4'hf - DrawX[9:6]; 
-            Green = 4'hf - DrawX[9:6];
-            Blue = 4'hf - DrawX[9:6];
+            Red = 4'h4; 
+            Green = 4'h3;
+            Blue = 4'h7;
         end      
     end 
     
