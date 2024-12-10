@@ -197,82 +197,82 @@ logic signed [22 : 0] opnet_135;
 assign opnet_135 = opnet_73 - (posB_x >>> 11);
 logic signed [22 : 0] opnet_136;
 assign opnet_136 = opnet_74 - (posB_y >>> 11);
-logic signed [31 : 0] fixed_16;
-logic signed [31 : 0] fixed_17;
+logic signed [31 : 0] fixed_0;
+logic signed [31 : 0] fixed_1;
 logic signed [38 : 0] opnet_137;
 assign opnet_137 = opnet_135 * uB_x;
 logic signed [38 : 0] opnet_138;
 assign opnet_138 = opnet_136 * uB_y;
 logic signed [38 : 0] opnet_139;
 assign opnet_139 = opnet_137 + opnet_138;
-assign fixed_16 = opnet_139 >>> 3;
+assign fixed_0 = opnet_139 >>> 3;
 logic signed [38 : 0] opnet_140;
 assign opnet_140 = opnet_135 * vB_x;
 logic signed [38 : 0] opnet_141;
 assign opnet_141 = opnet_136 * vB_y;
 logic signed [38 : 0] opnet_142;
 assign opnet_142 = opnet_140 + opnet_141;
-assign fixed_17 = opnet_142 >>> 3;
+assign fixed_1 = opnet_142 >>> 3;
 logic signed [22 : 0] opnet_143;
 assign opnet_143 = opnet_81 - (posB_x >>> 11);
 logic signed [22 : 0] opnet_144;
 assign opnet_144 = opnet_82 - (posB_y >>> 11);
-logic signed [31 : 0] fixed_18;
-logic signed [31 : 0] fixed_19;
+logic signed [31 : 0] fixed_2;
+logic signed [31 : 0] fixed_3;
 logic signed [38 : 0] opnet_145;
 assign opnet_145 = opnet_143 * uB_x;
 logic signed [38 : 0] opnet_146;
 assign opnet_146 = opnet_144 * uB_y;
 logic signed [38 : 0] opnet_147;
 assign opnet_147 = opnet_145 + opnet_146;
-assign fixed_18 = opnet_147 >>> 3;
+assign fixed_2 = opnet_147 >>> 3;
 logic signed [38 : 0] opnet_148;
 assign opnet_148 = opnet_143 * vB_x;
 logic signed [38 : 0] opnet_149;
 assign opnet_149 = opnet_144 * vB_y;
 logic signed [38 : 0] opnet_150;
 assign opnet_150 = opnet_148 + opnet_149;
-assign fixed_19 = opnet_150 >>> 3;
+assign fixed_3 = opnet_150 >>> 3;
 logic signed [22 : 0] opnet_151;
 assign opnet_151 = opnet_90 - (posB_x >>> 11);
 logic signed [22 : 0] opnet_152;
 assign opnet_152 = opnet_91 - (posB_y >>> 11);
-logic signed [31 : 0] fixed_20;
-logic signed [31 : 0] fixed_21;
+logic signed [31 : 0] fixed_4;
+logic signed [31 : 0] fixed_5;
 logic signed [38 : 0] opnet_153;
 assign opnet_153 = opnet_151 * uB_x;
 logic signed [38 : 0] opnet_154;
 assign opnet_154 = opnet_152 * uB_y;
 logic signed [38 : 0] opnet_155;
 assign opnet_155 = opnet_153 + opnet_154;
-assign fixed_20 = opnet_155 >>> 3;
+assign fixed_4 = opnet_155 >>> 3;
 logic signed [38 : 0] opnet_156;
 assign opnet_156 = opnet_151 * vB_x;
 logic signed [38 : 0] opnet_157;
 assign opnet_157 = opnet_152 * vB_y;
 logic signed [38 : 0] opnet_158;
 assign opnet_158 = opnet_156 + opnet_157;
-assign fixed_21 = opnet_158 >>> 3;
+assign fixed_5 = opnet_158 >>> 3;
 logic signed [22 : 0] opnet_159;
 assign opnet_159 = opnet_98 - (posB_x >>> 11);
 logic signed [22 : 0] opnet_160;
 assign opnet_160 = opnet_99 - (posB_y >>> 11);
-logic signed [31 : 0] fixed_22;
-logic signed [31 : 0] fixed_23;
+logic signed [31 : 0] fixed_6;
+logic signed [31 : 0] fixed_7;
 logic signed [38 : 0] opnet_161;
 assign opnet_161 = opnet_159 * uB_x;
 logic signed [38 : 0] opnet_162;
 assign opnet_162 = opnet_160 * uB_y;
 logic signed [38 : 0] opnet_163;
 assign opnet_163 = opnet_161 + opnet_162;
-assign fixed_22 = opnet_163 >>> 3;
+assign fixed_6 = opnet_163 >>> 3;
 logic signed [38 : 0] opnet_164;
 assign opnet_164 = opnet_159 * vB_x;
 logic signed [38 : 0] opnet_165;
 assign opnet_165 = opnet_160 * vB_y;
 logic signed [38 : 0] opnet_166;
 assign opnet_166 = opnet_164 + opnet_165;
-assign fixed_23 = opnet_166 >>> 3;
+assign fixed_7 = opnet_166 >>> 3;
 
 
 // Find max u and v values for rect A
@@ -287,14 +287,14 @@ logic signed [31 : 0] max_vA_23;    // Max of points 2 and 3
 always_comb begin
 
 // Max u
-max_uA_01 = fixed_16;
-if (fixed_18 > fixed_16) begin
-    max_uA_01 = fixed_18;
+max_uA_01 = fixed_0;
+if (fixed_2 > fixed_0) begin
+    max_uA_01 = fixed_2;
 end
 
-max_uA_23 = fixed_20;
-if (fixed_22 > fixed_20) begin
-    max_uA_01 = fixed_22;
+max_uA_23 = fixed_4;
+if (fixed_6 > fixed_4) begin
+    max_uA_01 = fixed_6;
 end
 
 max_uA = max_uA_01;
@@ -303,14 +303,14 @@ if (max_uA_23 > max_uA_01) begin
 end
 
 // Max v
-max_vA_01 = fixed_17;
-if (fixed_19 > fixed_17) begin
-    max_vA_01 = fixed_19;
+max_vA_01 = fixed_1;
+if (fixed_3 > fixed_1) begin
+    max_vA_01 = fixed_3;
 end
 
-max_vA_23 = fixed_21;
-if (fixed_23 > fixed_21) begin
-    max_vA_01 = fixed_23;
+max_vA_23 = fixed_5;
+if (fixed_7 > fixed_5) begin
+    max_vA_01 = fixed_7;
 end
 
 max_vA = max_vA_01;
@@ -332,14 +332,14 @@ logic signed [31 : 0] min_vA_23;    // Min of points 2 and 3
 always_comb begin
 
 // Min u
-min_uA_01 = fixed_16;
-if (fixed_18 < fixed_16) begin
-    min_uA_01 = fixed_18;
+min_uA_01 = fixed_0;
+if (fixed_2 < fixed_0) begin
+    min_uA_01 = fixed_2;
 end
 
-min_uA_23 = fixed_20;
-if (fixed_22 < fixed_20) begin
-    min_uA_01 = fixed_22;
+min_uA_23 = fixed_4;
+if (fixed_6 < fixed_4) begin
+    min_uA_01 = fixed_6;
 end
 
 min_uA = min_uA_01;
@@ -348,14 +348,14 @@ if (min_uA_23 < min_uA_01) begin
 end
 
 // Min v
-min_vA_01 = fixed_17;
-if (fixed_19 < fixed_17) begin
-    min_vA_01 = fixed_19;
+min_vA_01 = fixed_1;
+if (fixed_3 < fixed_1) begin
+    min_vA_01 = fixed_3;
 end
 
-min_vA_23 = fixed_21;
-if (fixed_23 < fixed_21) begin
-    min_vA_01 = fixed_23;
+min_vA_23 = fixed_5;
+if (fixed_7 < fixed_5) begin
+    min_vA_01 = fixed_7;
 end
 
 min_vA = min_vA_01;
@@ -410,82 +410,82 @@ logic signed [22 : 0] opnet_167;
 assign opnet_167 = opnet_108 - (posA_x >>> 11);
 logic signed [22 : 0] opnet_168;
 assign opnet_168 = opnet_109 - (posA_y >>> 11);
-logic signed [31 : 0] fixed_24;
-logic signed [31 : 0] fixed_25;
+logic signed [31 : 0] fixed_8;
+logic signed [31 : 0] fixed_9;
 logic signed [38 : 0] opnet_169;
 assign opnet_169 = opnet_167 * uA_x;
 logic signed [38 : 0] opnet_170;
 assign opnet_170 = opnet_168 * uA_y;
 logic signed [38 : 0] opnet_171;
 assign opnet_171 = opnet_169 + opnet_170;
-assign fixed_24 = opnet_171 >>> 3;
+assign fixed_8 = opnet_171 >>> 3;
 logic signed [38 : 0] opnet_172;
 assign opnet_172 = opnet_167 * vA_x;
 logic signed [38 : 0] opnet_173;
 assign opnet_173 = opnet_168 * vA_y;
 logic signed [38 : 0] opnet_174;
 assign opnet_174 = opnet_172 + opnet_173;
-assign fixed_25 = opnet_174 >>> 3;
+assign fixed_9 = opnet_174 >>> 3;
 logic signed [22 : 0] opnet_175;
 assign opnet_175 = opnet_116 - (posA_x >>> 11);
 logic signed [22 : 0] opnet_176;
 assign opnet_176 = opnet_117 - (posA_y >>> 11);
-logic signed [31 : 0] fixed_26;
-logic signed [31 : 0] fixed_27;
+logic signed [31 : 0] fixed_10;
+logic signed [31 : 0] fixed_11;
 logic signed [38 : 0] opnet_177;
 assign opnet_177 = opnet_175 * uA_x;
 logic signed [38 : 0] opnet_178;
 assign opnet_178 = opnet_176 * uA_y;
 logic signed [38 : 0] opnet_179;
 assign opnet_179 = opnet_177 + opnet_178;
-assign fixed_26 = opnet_179 >>> 3;
+assign fixed_10 = opnet_179 >>> 3;
 logic signed [38 : 0] opnet_180;
 assign opnet_180 = opnet_175 * vA_x;
 logic signed [38 : 0] opnet_181;
 assign opnet_181 = opnet_176 * vA_y;
 logic signed [38 : 0] opnet_182;
 assign opnet_182 = opnet_180 + opnet_181;
-assign fixed_27 = opnet_182 >>> 3;
+assign fixed_11 = opnet_182 >>> 3;
 logic signed [22 : 0] opnet_183;
 assign opnet_183 = opnet_125 - (posA_x >>> 11);
 logic signed [22 : 0] opnet_184;
 assign opnet_184 = opnet_126 - (posA_y >>> 11);
-logic signed [31 : 0] fixed_28;
-logic signed [31 : 0] fixed_29;
+logic signed [31 : 0] fixed_12;
+logic signed [31 : 0] fixed_13;
 logic signed [38 : 0] opnet_185;
 assign opnet_185 = opnet_183 * uA_x;
 logic signed [38 : 0] opnet_186;
 assign opnet_186 = opnet_184 * uA_y;
 logic signed [38 : 0] opnet_187;
 assign opnet_187 = opnet_185 + opnet_186;
-assign fixed_28 = opnet_187 >>> 3;
+assign fixed_12 = opnet_187 >>> 3;
 logic signed [38 : 0] opnet_188;
 assign opnet_188 = opnet_183 * vA_x;
 logic signed [38 : 0] opnet_189;
 assign opnet_189 = opnet_184 * vA_y;
 logic signed [38 : 0] opnet_190;
 assign opnet_190 = opnet_188 + opnet_189;
-assign fixed_29 = opnet_190 >>> 3;
+assign fixed_13 = opnet_190 >>> 3;
 logic signed [22 : 0] opnet_191;
 assign opnet_191 = opnet_133 - (posA_x >>> 11);
 logic signed [22 : 0] opnet_192;
 assign opnet_192 = opnet_134 - (posA_y >>> 11);
-logic signed [31 : 0] fixed_30;
-logic signed [31 : 0] fixed_31;
+logic signed [31 : 0] fixed_14;
+logic signed [31 : 0] fixed_15;
 logic signed [38 : 0] opnet_193;
 assign opnet_193 = opnet_191 * uA_x;
 logic signed [38 : 0] opnet_194;
 assign opnet_194 = opnet_192 * uA_y;
 logic signed [38 : 0] opnet_195;
 assign opnet_195 = opnet_193 + opnet_194;
-assign fixed_30 = opnet_195 >>> 3;
+assign fixed_14 = opnet_195 >>> 3;
 logic signed [38 : 0] opnet_196;
 assign opnet_196 = opnet_191 * vA_x;
 logic signed [38 : 0] opnet_197;
 assign opnet_197 = opnet_192 * vA_y;
 logic signed [38 : 0] opnet_198;
 assign opnet_198 = opnet_196 + opnet_197;
-assign fixed_31 = opnet_198 >>> 3;
+assign fixed_15 = opnet_198 >>> 3;
 
 
 // Find max u and v values for rect B
@@ -500,14 +500,14 @@ logic signed [31 : 0] max_vB_23;    // Max of points 2 and 3
 always_comb begin
 
 // Max u
-max_uB_01 = fixed_24;
-if (fixed_26 > fixed_24) begin
-    max_uB_01 = fixed_26;
+max_uB_01 = fixed_8;
+if (fixed_10 > fixed_8) begin
+    max_uB_01 = fixed_10;
 end
 
-max_uB_23 = fixed_28;
-if (fixed_30 > fixed_28) begin
-    max_uB_01 = fixed_30;
+max_uB_23 = fixed_12;
+if (fixed_14 > fixed_12) begin
+    max_uB_01 = fixed_14;
 end
 
 max_uB = max_uB_01;
@@ -516,14 +516,14 @@ if (max_uB_23 > max_uB_01) begin
 end
 
 // Max v
-max_vB_01 = fixed_25;
-if (fixed_27 > fixed_25) begin
-    max_vB_01 = fixed_27;
+max_vB_01 = fixed_9;
+if (fixed_11 > fixed_9) begin
+    max_vB_01 = fixed_11;
 end
 
-max_vB_23 = fixed_29;
-if (fixed_31 > fixed_29) begin
-    max_vB_01 = fixed_31;
+max_vB_23 = fixed_13;
+if (fixed_15 > fixed_13) begin
+    max_vB_01 = fixed_15;
 end
 
 max_vB = max_vB_01;
@@ -545,14 +545,14 @@ logic signed [31 : 0] min_vB_23;    // Min of points 2 and 3
 always_comb begin
 
 // Min u
-min_uB_01 = fixed_24;
-if (fixed_26 < fixed_24) begin
-    min_uB_01 = fixed_26;
+min_uB_01 = fixed_8;
+if (fixed_10 < fixed_8) begin
+    min_uB_01 = fixed_10;
 end
 
-min_uB_23 = fixed_28;
-if (fixed_30 < fixed_28) begin
-    min_uB_01 = fixed_30;
+min_uB_23 = fixed_12;
+if (fixed_14 < fixed_12) begin
+    min_uB_01 = fixed_14;
 end
 
 min_uB = min_uB_01;
@@ -561,14 +561,14 @@ if (min_uB_23 < min_uB_01) begin
 end
 
 // Min v
-min_vB_01 = fixed_25;
-if (fixed_27 < fixed_25) begin
-    min_vB_01 = fixed_27;
+min_vB_01 = fixed_9;
+if (fixed_11 < fixed_9) begin
+    min_vB_01 = fixed_11;
 end
 
-min_vB_23 = fixed_29;
-if (fixed_31 < fixed_29) begin
-    min_vB_01 = fixed_31;
+min_vB_23 = fixed_13;
+if (fixed_15 < fixed_13) begin
+    min_vB_01 = fixed_15;
 end
 
 min_vB = min_vB_01;

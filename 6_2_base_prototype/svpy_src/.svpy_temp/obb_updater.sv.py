@@ -98,13 +98,11 @@ svpy.inline_state = False
 svwrite(") begin\n")
 dump_queue()
 next.angle.assign(next_angle_uncorrected - (2*math.pi))        
-svwrite("    end\n")
-dump_queue()
-svwrite("    if (")
+svwrite("    end else if (")
 svpy.inline_state = True
 svwrite(next_angle_uncorrected)
 svpy.inline_state = False
-svwrite(" < 11'b0) begin\n")
+svwrite(" < 11'sb0) begin\n")
 dump_queue()
 next.angle.assign(next_angle_uncorrected + (2*math.pi))
 svwrite("    end\n")

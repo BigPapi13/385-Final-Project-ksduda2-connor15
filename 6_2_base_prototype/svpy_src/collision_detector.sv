@@ -32,10 +32,11 @@ $ points2 = [obb2.Point0, obb2.Point1, obb2.Point2, obb2.Point3]
 $$$
 points1_u = []
 points1_v = []
+i = 0
 for point in points1:
     relative = point - obb2.pos
-    point_u = Fixed(7, 25)
-    point_v = Fixed(7, 25)
+    point_u = Fixed(8, 24, f"Point1_{i}_u")
+    point_v = Fixed(8, 24, f"Point1_{i}_v")
 
     point_u.declare()
     point_v.declare()
@@ -45,6 +46,7 @@ for point in points1:
 
     points1_u.append(point_u)
     points1_v.append(point_v)
+    i += 1
 $$$
 
 
@@ -67,7 +69,7 @@ end
 
 max_uA_23 = $$points1_u[2]$$;
 if ($$points1_u[3]$$ > $$points1_u[2]$$) begin
-    max_uA_01 = $$points1_u[3]$$;
+    max_uA_23 = $$points1_u[3]$$;
 end
 
 max_uA = max_uA_01;
@@ -83,7 +85,7 @@ end
 
 max_vA_23 = $$points1_v[2]$$;
 if ($$points1_v[3]$$ > $$points1_v[2]$$) begin
-    max_vA_01 = $$points1_v[3]$$;
+    max_vA_23 = $$points1_v[3]$$;
 end
 
 max_vA = max_vA_01;
@@ -112,7 +114,7 @@ end
 
 min_uA_23 = $$points1_u[2]$$;
 if ($$points1_u[3]$$ < $$points1_u[2]$$) begin
-    min_uA_01 = $$points1_u[3]$$;
+    min_uA_23 = $$points1_u[3]$$;
 end
 
 min_uA = min_uA_01;
@@ -128,7 +130,7 @@ end
 
 min_vA_23 = $$points1_v[2]$$;
 if ($$points1_v[3]$$ < $$points1_v[2]$$) begin
-    min_vA_01 = $$points1_v[3]$$;
+    min_vA_23 = $$points1_v[3]$$;
 end
 
 min_vA = min_vA_01;
@@ -156,30 +158,35 @@ heightB_fixed.declare()
 heightB_fixed.assign(obb2.halfHeight)
 $$$
 
-$ begin_comb()
-separate_min_uA = 1'b0;
-if (min_uA >= widthB_fixed) begin
-    separate_min_uA = 1'b1;
+// Find penetration values for each axis
+$$$
+min_uA = Fixed(8, 24, "min_uA")
+max_uA = Fixed(8, 24, "max_uA")
+min_vA = Fixed(8, 24, "min_vA")
+max_vA = Fixed(8, 24, "max_vA")
+pen_min_uA = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_min_uA")
+pen_max_uA = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_max_uA")
+pen_min_vA = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_min_vA")
+pen_max_vA = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_max_vA")
+$$$
+
+logic signed [31:0] pen_min_uA;
+logic signed [31:0] pen_max_uA;
+logic signed [31:0] pen_min_vA;
+logic signed [31:0] pen_max_vA;
+
+always_comb begin
+    pen_min_uA = widthB_fixed - min_uA;
+    pen_max_uA = max_uA + widthB_fixed;
+    pen_min_vA = heightB_fixed - min_vA;
+    pen_max_vA = max_vA + heightB_fixed;
 end
 
-separate_max_uA = 1'b0;
-if (max_uA <= -widthB_fixed) begin
-    separate_max_uA = 1'b1;
-end
-
-separate_min_vA = 1'b0;
-if (min_vA >= heightB_fixed) begin
-    separate_min_vA = 1'b1;
-end
-
-separate_max_vA = 1'b0;
-if (max_vA <= -heightB_fixed) begin
-    separate_max_vA = 1'b1;
-end
-
-$ end_comb()
-
-
+// If the penetration is negative, then there's separation
+assign separate_min_uA = pen_min_uA[31];
+assign separate_max_uA = pen_max_uA[31];
+assign separate_min_vA = pen_min_vA[31];
+assign separate_max_vA = pen_max_vA[31];
 
 //// TEST 2: B onto A
 
@@ -187,10 +194,11 @@ $ end_comb()
 $$$
 points2_u = []
 points2_v = []
+i = 0
 for point in points2:
     relative = point - obb1.pos    
-    point_u = Fixed(7, 25)
-    point_v = Fixed(7, 25)
+    point_u = Fixed(8, 24, f"Point2_{i}_u")
+    point_v = Fixed(8, 24, f"Point2_{i}_v")
 
     point_u.declare()
     point_v.declare()
@@ -200,6 +208,8 @@ for point in points2:
 
     points2_u.append(point_u)
     points2_v.append(point_v)
+
+    i += 1
 $$$
 
 
@@ -222,7 +232,7 @@ end
 
 max_uB_23 = $$points2_u[2]$$;
 if ($$points2_u[3]$$ > $$points2_u[2]$$) begin
-    max_uB_01 = $$points2_u[3]$$;
+    max_uB_23 = $$points2_u[3]$$;
 end
 
 max_uB = max_uB_01;
@@ -238,7 +248,7 @@ end
 
 max_vB_23 = $$points2_v[2]$$;
 if ($$points2_v[3]$$ > $$points2_v[2]$$) begin
-    max_vB_01 = $$points2_v[3]$$;
+    max_vB_23 = $$points2_v[3]$$;
 end
 
 max_vB = max_vB_01;
@@ -267,7 +277,7 @@ end
 
 min_uB_23 = $$points2_u[2]$$;
 if ($$points2_u[3]$$ < $$points2_u[2]$$) begin
-    min_uB_01 = $$points2_u[3]$$;
+    min_uB_23 = $$points2_u[3]$$;
 end
 
 min_uB = min_uB_01;
@@ -283,7 +293,7 @@ end
 
 min_vB_23 = $$points2_v[2]$$;
 if ($$points2_v[3]$$ < $$points2_v[2]$$) begin
-    min_vB_01 = $$points2_v[3]$$;
+    min_vB_23 = $$points2_v[3]$$;
 end
 
 min_vB = min_vB_01;
@@ -311,33 +321,102 @@ heightA_fixed.declare()
 heightA_fixed.assign(obb1.halfHeight)
 $$$
 
-$ begin_comb()
-separate_min_uB = 1'b0;
-if (min_uB >= widthA_fixed) begin
-    separate_min_uB = 1'b1;
+// Find penetration values for each axis
+$$$
+min_uB = Fixed(8, 24, "min_uB")
+max_uB = Fixed(8, 24, "max_uB")
+min_vB = Fixed(8, 24, "min_vB")
+max_vB = Fixed(8, 24, "max_vB")
+pen_min_uB = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_min_uB")
+pen_max_uB = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_max_uB")
+pen_min_vB = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_min_vB")
+pen_max_vB = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_max_vB")
+$$$
+
+logic signed [31:0] pen_min_uB;
+logic signed [31:0] pen_max_uB;
+logic signed [31:0] pen_min_vB;
+logic signed [31:0] pen_max_vB;
+
+always_comb begin
+    pen_min_uB = widthA_fixed - min_uB;
+    pen_max_uB = max_uB + widthA_fixed;
+    pen_min_vB = heightA_fixed - min_vB;
+    pen_max_vB = max_vB + heightA_fixed;
 end
 
-separate_max_uB = 1'b0;
-if (max_uB <= -widthA_fixed) begin
-    separate_max_uB = 1'b1;
-end
-
-separate_min_vB = 1'b0;
-if (min_vB >= heightA_fixed) begin
-    separate_min_vB = 1'b1;
-end
-
-separate_max_vB = 1'b0;
-if (max_vB <= -heightA_fixed) begin
-    separate_max_vB = 1'b1;
-end
-
-$ end_comb()
+// If the penetration is negative, then there's separation
+assign separate_min_uB = pen_min_uB[31];
+assign separate_max_uB = pen_max_uB[31];
+assign separate_min_vB = pen_min_vB[31];
+assign separate_max_vB = pen_max_vB[31];
 
 ////// TYING IT ALL TOGETHER
 
+// Find minimum penetration
+
+logic signed [31:0] min_pen_uA;
+logic signed [31:0] min_pen_vA;
+logic signed [31:0] min_pen_uB;
+logic signed [31:0] min_pen_vB;
+
+logic signed [31:0] min_pen_u;
+logic signed [31:0] min_pen_v;
+
+logic signed [31:0] min_pen;
+
+
+// Notes on confusing naming here:
+//  - min_pen_<> is the minimum penetration value found
+//  - pen_min or pen_max corresponds to the penetration value from the min or max u/v values
+always_comb begin
+
+// First pass
+min_pen_uA = pen_min_uA;
+if (pen_max_uA < pen_min_uA) begin
+    min_pen_uA = pen_max_uA;
+end
+
+min_pen_vA = pen_min_vA;
+if (pen_max_vA < pen_min_vA) begin
+    min_pen_vA = pen_max_vA;
+end
+
+min_pen_uB = pen_min_uB;
+if (pen_max_uB < pen_min_uB) begin
+    min_pen_uB = pen_max_uB;
+end
+
+min_pen_vB = pen_min_vB;
+if (pen_max_vB < pen_min_vB) begin
+    min_pen_vB = pen_max_vB;
+end
+
+// Second pass
+min_pen_u = min_pen_uA;
+if (min_pen_uB < min_pen_uA) begin
+    min_pen_u = min_pen_uB;
+end
+
+min_pen_v = min_pen_vA;
+if (min_pen_vB < min_pen_vA) begin
+    min_pen_v = min_pen_vB;
+end
+
+// Final pass
+min_pen = min_pen_u;
+if (min_pen_v < min_pen_u) begin
+    min_pen = min_pen_v;
+end
+
+end
+
+/*
 $ begin_comb()
 is_collision = ~(separate_min_uA | separate_max_uA | separate_min_vA | separate_max_vA | separate_min_uB | separate_max_uB | separate_min_vB | separate_max_vB);
 $ end_comb()
+*/
 
+// If any penetrations is negative, there is no collision
+assign is_collision = ~min_pen[31];
 endmodule

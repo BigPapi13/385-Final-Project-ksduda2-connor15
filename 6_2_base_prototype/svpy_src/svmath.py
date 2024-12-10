@@ -305,7 +305,7 @@ def to_bits(value, integer_bits=16, precision_bits=0):
 
     
 
-    return f"{bits}'b" + output
+    return f"{bits}'sb" + output
 
 
 # Cluster of nets

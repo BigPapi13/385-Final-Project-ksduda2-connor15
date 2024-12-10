@@ -25,10 +25,10 @@ input logic signed [10 : 0] obb1_angle,
 input logic signed [10 : 0] obb1_omega,
 input logic signed [15 : 0] obb1_u_x, input logic signed [15 : 0] obb1_u_y,
 input logic signed [15 : 0] obb1_v_x, input logic signed [15 : 0] obb1_v_y,
-input logic signed [20 : 0] obb1_Point0_x, input logic signed [20 : 0] obb1_Point0_y,
-input logic signed [20 : 0] obb1_Point1_x, input logic signed [20 : 0] obb1_Point1_y,
-input logic signed [20 : 0] obb1_Point2_x, input logic signed [20 : 0] obb1_Point2_y,
-input logic signed [20 : 0] obb1_Point3_x, input logic signed [20 : 0] obb1_Point3_y,
+input logic signed [21 : 0] obb1_Point0_x, input logic signed [21 : 0] obb1_Point0_y,
+input logic signed [21 : 0] obb1_Point1_x, input logic signed [21 : 0] obb1_Point1_y,
+input logic signed [21 : 0] obb1_Point2_x, input logic signed [21 : 0] obb1_Point2_y,
+input logic signed [21 : 0] obb1_Point3_x, input logic signed [21 : 0] obb1_Point3_y,
 input logic signed [6 : 0] obb1_halfWidth,
 input logic signed [6 : 0] obb1_halfHeight,
     input logic signed [7 : 0] obb2_width,
@@ -39,10 +39,10 @@ input logic signed [10 : 0] obb2_angle,
 input logic signed [10 : 0] obb2_omega,
 input logic signed [15 : 0] obb2_u_x, input logic signed [15 : 0] obb2_u_y,
 input logic signed [15 : 0] obb2_v_x, input logic signed [15 : 0] obb2_v_y,
-input logic signed [20 : 0] obb2_Point0_x, input logic signed [20 : 0] obb2_Point0_y,
-input logic signed [20 : 0] obb2_Point1_x, input logic signed [20 : 0] obb2_Point1_y,
-input logic signed [20 : 0] obb2_Point2_x, input logic signed [20 : 0] obb2_Point2_y,
-input logic signed [20 : 0] obb2_Point3_x, input logic signed [20 : 0] obb2_Point3_y,
+input logic signed [21 : 0] obb2_Point0_x, input logic signed [21 : 0] obb2_Point0_y,
+input logic signed [21 : 0] obb2_Point1_x, input logic signed [21 : 0] obb2_Point1_y,
+input logic signed [21 : 0] obb2_Point2_x, input logic signed [21 : 0] obb2_Point2_y,
+input logic signed [21 : 0] obb2_Point3_x, input logic signed [21 : 0] obb2_Point3_y,
 input logic signed [6 : 0] obb2_halfWidth,
 input logic signed [6 : 0] obb2_halfHeight, 
     input  logic [9:0] DrawX, DrawY,
@@ -192,8 +192,7 @@ logic signed [47 : 0] opnet_214;
         .is_collision(is_collision)
     );
 
-    always_comb
-    begin:RGB_Display
+always_comb begin
         if ((obb1_on == 1'b1) || (obb2_on == 1'b1)) begin
             Red = 4'hf;
             Green = 4'hf;
@@ -208,7 +207,19 @@ logic signed [47 : 0] opnet_214;
             Red = 4'h4; 
             Green = 4'h3;
             Blue = 4'h7;
-        end      
-    end 
+        end
+
+        // Draw end points
+
+opnet_215 = obb1_Point0_x - (DrawXs >>> 10);
+opnet_216 = obb1_Point0_y - (DrawYs >>> 10);
+        if (opnet_215 >= 22'sb1111111100000000000000 && opnet_215 <= 22'sb0000000100000000000000 && opnet_216 >= 22'sb1111111100000000000000 && opnet_216 <= 22'sb0000000100000000000000) begin
+            Red = 4'hf;
+            Green = 4'hc;
+            Blue = 4'h0;
+        end
+end
+logic signed [21 : 0] opnet_215;
+logic signed [21 : 0] opnet_216;
     
 endmodule

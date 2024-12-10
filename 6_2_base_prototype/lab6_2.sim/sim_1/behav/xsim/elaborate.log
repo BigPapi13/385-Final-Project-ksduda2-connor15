@@ -11,7 +11,7 @@ WARNING: [VRFC 10-5021] port 'lmb_rst' is not connected on this instance [C:/Use
 WARNING: [VRFC 10-5021] port 'lmb_rst' is not connected on this instance [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/sim/mb_block.v:2884]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv" Line 14. Module mb_usb_hdmi_top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv" Line 17. Module mb_usb_hdmi_top doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv" Line 2. Module hex_driver_default doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv" Line 12. Module nibble_to_hex doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv" Line 12. Module nibble_to_hex doesn't have a timescale but at least one module in design has a timescale.
@@ -24,13 +24,19 @@ WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv" Line 12. Module nibble_to_hex doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/VGA_controller.sv" Line 26. Module vga_controller doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/square.sv" Line 17. Module square doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv" Line 4. Module obb_reg(X_INIT=11,Y_INIT=53,X_VEL_INIT=3,Y_VEL_INIT=0.5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv" Line 4. Module obb_reg(X_INIT=10,X_VEL_INIT=0.3,Y_VEL_INIT=-0.1,OMEGA_INIT=-0.04) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv" Line 4. Module obb_reg(X_INIT=20,X_VEL_INIT=-0.2,Y_VEL_INIT=0.5,WIDTH_INIT=15,HEIGHT_INIT=5,OMEGA_INIT=0.1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv" Line 4. Module obb_updater doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv" Line 4. Module obb_updater doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/the_juicer.sv" Line 7. Module juicer doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/cosine.sv" Line 2. Module cos doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/sine.sv" Line 2. Module sin doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/the_juicer.sv" Line 7. Module juicer doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/cosine.sv" Line 2. Module cos doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/sine.sv" Line 2. Module sin doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv" Line 19. Module color_mapper doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv" Line 14. Module mb_usb_hdmi_top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv" Line 3. Module collision_detector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv" Line 17. Module mb_usb_hdmi_top doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv" Line 2. Module hex_driver_default doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv" Line 12. Module nibble_to_hex doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv" Line 12. Module nibble_to_hex doesn't have a timescale but at least one module in design has a timescale.
@@ -45,12 +51,18 @@ WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv" Line 12. Module nibble_to_hex doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/VGA_controller.sv" Line 26. Module vga_controller doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/square.sv" Line 17. Module square doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv" Line 4. Module obb_reg(X_INIT=11,Y_INIT=53,X_VEL_INIT=3,Y_VEL_INIT=0.5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv" Line 4. Module obb_reg(X_INIT=10,X_VEL_INIT=0.3,Y_VEL_INIT=-0.1,OMEGA_INIT=-0.04) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv" Line 4. Module obb_reg(X_INIT=20,X_VEL_INIT=-0.2,Y_VEL_INIT=0.5,WIDTH_INIT=15,HEIGHT_INIT=5,OMEGA_INIT=0.1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv" Line 4. Module obb_updater doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv" Line 4. Module obb_updater doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/the_juicer.sv" Line 7. Module juicer doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/cosine.sv" Line 2. Module cos doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/sine.sv" Line 2. Module sin doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/the_juicer.sv" Line 7. Module juicer doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/cosine.sv" Line 2. Module cos doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/sine.sv" Line 2. Module sin doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv" Line 19. Module color_mapper doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv" Line 3. Module collision_detector doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package std.standard
@@ -490,11 +502,13 @@ Compiling module unisims_ver.OBUFDS(IOSTANDARD="TMDS_33")
 Compiling module xil_defaultlib.hdmi_tx_v1_0(C_RED_WIDTH=4,C_GRE...
 Compiling module xil_defaultlib.hdmi_tx_0
 Compiling module xil_defaultlib.square
-Compiling module xil_defaultlib.obb_reg(X_INIT=11,Y_INIT=53,X_VE...
+Compiling module xil_defaultlib.obb_reg(X_INIT=10,X_VEL_INIT=0.3...
+Compiling module xil_defaultlib.obb_reg(X_INIT=20,X_VEL_INIT=-0....
 Compiling module xil_defaultlib.obb_updater
 Compiling module xil_defaultlib.cos
 Compiling module xil_defaultlib.sin
 Compiling module xil_defaultlib.juicer
+Compiling module xil_defaultlib.collision_detector
 Compiling module xil_defaultlib.color_mapper
 Compiling module xil_defaultlib.mb_usb_hdmi_top
 Compiling module xil_defaultlib.main_test

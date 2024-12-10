@@ -17,6 +17,7 @@ verilog xil_defaultlib  --include "../../../../../../lab6_1/lab6_1.gen/sources_1
 sv xil_defaultlib  --include "../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ipshared/ec67/hdl" --include "../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ipshared/7698" --include "../../../../lab6_2.gen/sources_1/ip/clk_wiz_0" \
 "../../../../lab6_2_provided/design_source/Color_Mapper.sv" \
 "../../../../lab6_2_provided/design_source/VGA_controller.sv" \
+"../../../../lab6_2_provided/design_source/collision_detector.sv" \
 "../../../../lab6_2_provided/design_source/cosine.sv" \
 "../../../../lab6_2_provided/design_source/hex_driver.sv" \
 "../../../../lab6_2_provided/design_source/mb_usb_hdmi_top.sv" \

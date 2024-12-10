@@ -164,7 +164,7 @@ logic signed [31 : 0] obb1_ld_vel_x;
 logic signed [31 : 0] obb1_ld_vel_y;
 logic signed [10 : 0] obb1_ld_angle;
 logic signed [10 : 0] obb1_ld_omega;
-    obb_reg #(.X_INIT(11), .Y_INIT(53), .X_VEL_INIT(-0.3), .Y_VEL_INIT(0.5), .OMEGA_INIT(0.03)) obb1(
+    obb_reg #(.X_INIT(10), .Y_INIT(32), .X_VEL_INIT(0.3), .Y_VEL_INIT(-0.1), .OMEGA_INIT(-0.04)) obb1(
         .ld_width(obb1_ld_width),
 .ld_height(obb1_ld_height),
 .ld_pos_x(obb1_ld_pos_x),
@@ -204,7 +204,7 @@ logic signed [31 : 0] obb2_ld_vel_x;
 logic signed [31 : 0] obb2_ld_vel_y;
 logic signed [10 : 0] obb2_ld_angle;
 logic signed [10 : 0] obb2_ld_omega;
-    obb_reg #(.X_INIT(44), .Y_INIT(13), .X_VEL_INIT(0.2), .Y_VEL_INIT(0.7), .WIDTH_INIT(15), .HEIGHT_INIT(5), .OMEGA_INIT(0.01)) obb2(
+    obb_reg #(.X_INIT(20), .Y_INIT(32), .X_VEL_INIT(-0.2), .Y_VEL_INIT(0.5), .WIDTH_INIT(15), .HEIGHT_INIT(5), .OMEGA_INIT(0.1)) obb2(
         .ld_width(obb2_ld_width),
 .ld_height(obb2_ld_height),
 .ld_pos_x(obb2_ld_pos_x),
@@ -273,14 +273,14 @@ logic signed [15 : 0] obb1_u_x;
 logic signed [15 : 0] obb1_u_y;
 logic signed [15 : 0] obb1_v_x;
 logic signed [15 : 0] obb1_v_y;
-logic signed [20 : 0] obb1_Point0_x;
-logic signed [20 : 0] obb1_Point0_y;
-logic signed [20 : 0] obb1_Point1_x;
-logic signed [20 : 0] obb1_Point1_y;
-logic signed [20 : 0] obb1_Point2_x;
-logic signed [20 : 0] obb1_Point2_y;
-logic signed [20 : 0] obb1_Point3_x;
-logic signed [20 : 0] obb1_Point3_y;
+logic signed [21 : 0] obb1_Point0_x;
+logic signed [21 : 0] obb1_Point0_y;
+logic signed [21 : 0] obb1_Point1_x;
+logic signed [21 : 0] obb1_Point1_y;
+logic signed [21 : 0] obb1_Point2_x;
+logic signed [21 : 0] obb1_Point2_y;
+logic signed [21 : 0] obb1_Point3_x;
+logic signed [21 : 0] obb1_Point3_y;
 logic signed [6 : 0] obb1_halfWidth;
 logic signed [6 : 0] obb1_halfHeight;
 
@@ -314,14 +314,14 @@ logic signed [15 : 0] obb2_u_x;
 logic signed [15 : 0] obb2_u_y;
 logic signed [15 : 0] obb2_v_x;
 logic signed [15 : 0] obb2_v_y;
-logic signed [20 : 0] obb2_Point0_x;
-logic signed [20 : 0] obb2_Point0_y;
-logic signed [20 : 0] obb2_Point1_x;
-logic signed [20 : 0] obb2_Point1_y;
-logic signed [20 : 0] obb2_Point2_x;
-logic signed [20 : 0] obb2_Point2_y;
-logic signed [20 : 0] obb2_Point3_x;
-logic signed [20 : 0] obb2_Point3_y;
+logic signed [21 : 0] obb2_Point0_x;
+logic signed [21 : 0] obb2_Point0_y;
+logic signed [21 : 0] obb2_Point1_x;
+logic signed [21 : 0] obb2_Point1_y;
+logic signed [21 : 0] obb2_Point2_x;
+logic signed [21 : 0] obb2_Point2_y;
+logic signed [21 : 0] obb2_Point3_x;
+logic signed [21 : 0] obb2_Point3_y;
 logic signed [6 : 0] obb2_halfWidth;
 logic signed [6 : 0] obb2_halfHeight;
 
