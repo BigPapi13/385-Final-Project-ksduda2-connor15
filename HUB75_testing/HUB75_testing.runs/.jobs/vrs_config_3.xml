@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="display_buffer_bram_synth_1" LaunchDir="C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/display_buffer_bram_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
