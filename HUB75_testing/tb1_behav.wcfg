@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb1_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb1" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="323,524.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="323,596.001 ns"></ZoomEndTime>
+      <Cursor1Time time="323,584.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="199"></NameColumnWidth>
+      <ValueColumnWidth column_width="80"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="36" />
+   <wvobject fp_name="/tb1/n_reset" type="logic">
+      <obj_property name="ElementShortName">n_reset</obj_property>
+      <obj_property name="ObjectShortName">n_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/hub75_red" type="array">
+      <obj_property name="ElementShortName">hub75_red[1:0]</obj_property>
+      <obj_property name="ObjectShortName">hub75_red[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/hub75_green" type="array">
+      <obj_property name="ElementShortName">hub75_green[1:0]</obj_property>
+      <obj_property name="ObjectShortName">hub75_green[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/hub75_blue" type="array">
+      <obj_property name="ElementShortName">hub75_blue[1:0]</obj_property>
+      <obj_property name="ObjectShortName">hub75_blue[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/hub75_addr" type="array">
+      <obj_property name="ElementShortName">hub75_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">hub75_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/hub75_latch" type="logic">
+      <obj_property name="ElementShortName">hub75_latch</obj_property>
+      <obj_property name="ObjectShortName">hub75_latch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/hub75_clk" type="logic">
+      <obj_property name="ElementShortName">hub75_clk</obj_property>
+      <obj_property name="ObjectShortName">hub75_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/hub75_oe" type="logic">
+      <obj_property name="ElementShortName">hub75_oe</obj_property>
+      <obj_property name="ObjectShortName">hub75_oe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/spi_ss" type="logic">
+      <obj_property name="ElementShortName">spi_ss</obj_property>
+      <obj_property name="ObjectShortName">spi_ss</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/spi_miso" type="logic">
+      <obj_property name="ElementShortName">spi_miso</obj_property>
+      <obj_property name="ObjectShortName">spi_miso</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/user_led" type="logic">
+      <obj_property name="ElementShortName">user_led</obj_property>
+      <obj_property name="ObjectShortName">user_led</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/temp" type="logic">
+      <obj_property name="ElementShortName">temp</obj_property>
+      <obj_property name="ObjectShortName">temp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/write_buffer_count" type="array">
+      <obj_property name="ElementShortName">write_buffer_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_buffer_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/write_bit_count" type="array">
+      <obj_property name="ElementShortName">write_bit_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_bit_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/this_line_x" type="array">
+      <obj_property name="ElementShortName">this_line_x[5:0]</obj_property>
+      <obj_property name="ObjectShortName">this_line_x[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/this_line_red" type="array">
+      <obj_property name="ElementShortName">this_line_red[0:63][1:0]</obj_property>
+      <obj_property name="ObjectShortName">this_line_red[0:63][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/this_line_green" type="array">
+      <obj_property name="ElementShortName">this_line_green[0:63][1:0]</obj_property>
+      <obj_property name="ObjectShortName">this_line_green[0:63][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/this_line_blue" type="array">
+      <obj_property name="ElementShortName">this_line_blue[0:63][1:0]</obj_property>
+      <obj_property name="ObjectShortName">this_line_blue[0:63][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/latched_line_red" type="array">
+      <obj_property name="ElementShortName">latched_line_red[0:63][1:0]</obj_property>
+      <obj_property name="ObjectShortName">latched_line_red[0:63][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/latched_line_green" type="array">
+      <obj_property name="ElementShortName">latched_line_green[0:63][1:0]</obj_property>
+      <obj_property name="ObjectShortName">latched_line_green[0:63][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/latched_line_blue" type="array">
+      <obj_property name="ElementShortName">latched_line_blue[0:63][1:0]</obj_property>
+      <obj_property name="ObjectShortName">latched_line_blue[0:63][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/BITS_PER_PIXEL" type="array">
+      <obj_property name="ElementShortName">BITS_PER_PIXEL[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BITS_PER_PIXEL[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/period" type="array">
+      <obj_property name="ElementShortName">period[31:0]</obj_property>
+      <obj_property name="ObjectShortName">period[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/BITS_PER_RGB" type="array">
+      <obj_property name="ElementShortName">BITS_PER_RGB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BITS_PER_RGB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/dut/row_addr" type="array">
+      <obj_property name="ElementShortName">row_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">row_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/spi_clk" type="logic">
+      <obj_property name="ElementShortName">spi_clk</obj_property>
+      <obj_property name="ObjectShortName">spi_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/spi_mosi" type="logic">
+      <obj_property name="ElementShortName">spi_mosi</obj_property>
+      <obj_property name="ObjectShortName">spi_mosi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/dut/read_addr" type="array">
+      <obj_property name="ElementShortName">read_addr[10:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/dut/read_data_top" type="array">
+      <obj_property name="ElementShortName">read_data_top[15:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data_top[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/dut/sync_pdp_ram/write_addr" type="array">
+      <obj_property name="ElementShortName">write_addr[11:0]</obj_property>
+      <obj_property name="ObjectShortName">write_addr[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/dut/sync_pdp_ram/write_en" type="logic">
+      <obj_property name="ElementShortName">write_en</obj_property>
+      <obj_property name="ObjectShortName">write_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/dut/read_data_bottom" type="array">
+      <obj_property name="ElementShortName">read_data_bottom[15:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data_bottom[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/dut/write_pixel_clk" type="logic">
+      <obj_property name="ElementShortName">write_pixel_clk</obj_property>
+      <obj_property name="ObjectShortName">write_pixel_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/dut/write_addr" type="array">
+      <obj_property name="ElementShortName">write_addr[11:0]</obj_property>
+      <obj_property name="ObjectShortName">write_addr[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/write_pixel_count" type="array">
+      <obj_property name="ElementShortName">write_pixel_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_pixel_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb1/dut/bit_count" type="array">
+      <obj_property name="ElementShortName">bit_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_count[31:0]</obj_property>
+   </wvobject>
+</wave_config>
