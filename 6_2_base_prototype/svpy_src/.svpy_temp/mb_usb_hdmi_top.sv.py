@@ -28,7 +28,7 @@ dump_queue()
 svwrite("\n")
 dump_queue()
 # Set to true for synthesis, false for simulation
-SYNTHESIS_MODE = True
+SYNTHESIS_MODE = False
 svwrite("\n")
 dump_queue()
 svwrite("\n")
@@ -37,7 +37,7 @@ from svpy import *
 from structs import OBB, Juice, JOBB
 svwrite("\n")
 dump_queue()
-if SYNTHESIS_MODE == True:
+if SYNTHESIS_MODE == False:
     reg_clk = "vsync"
 else:
     reg_clk = "Clk"
@@ -316,7 +316,7 @@ svwrite("\n")
 dump_queue()
 obb1.declare()
 obb1_ld.declare()
-svwrite("    obb_reg #(.X_INIT(11), .Y_INIT(53), .X_VEL_INIT(-0.3), .Y_VEL_INIT(0.5), .OMEGA_INIT(0.03)) obb1(\n")
+svwrite("    obb_reg #(.X_INIT(10), .Y_INIT(32), .X_VEL_INIT(0.3), .Y_VEL_INIT(-0.1), .OMEGA_INIT(-0.04)) obb1(\n")
 dump_queue()
 svwrite("        ")
 svpy.inline_state = True
@@ -352,7 +352,7 @@ svwrite("\n")
 dump_queue()
 obb2.declare()
 obb2_ld.declare()
-svwrite("    obb_reg #(.X_INIT(44), .Y_INIT(13), .X_VEL_INIT(0.2), .Y_VEL_INIT(0.7), .WIDTH_INIT(15), .HEIGHT_INIT(5), .OMEGA_INIT(0.01)) obb2(\n")
+svwrite("    obb_reg #(.X_INIT(20), .Y_INIT(32), .X_VEL_INIT(-0.2), .Y_VEL_INIT(0.5), .WIDTH_INIT(15), .HEIGHT_INIT(5), .OMEGA_INIT(0.1)) obb2(\n")
 dump_queue()
 svwrite("        ")
 svpy.inline_state = True

@@ -237,10 +237,7 @@ svwrite("    );\n")
 dump_queue()
 svwrite("\n")
 dump_queue()
-svwrite("    always_comb\n")
-dump_queue()
-svwrite("    begin:RGB_Display\n")
-dump_queue()
+begin_comb()
 svwrite("        if ((obb1_on == 1'b1) || (obb2_on == 1'b1)) begin\n")
 dump_queue()
 svwrite("            Red = 4'hf;\n")
@@ -269,10 +266,59 @@ svwrite("            Green = 4'h3;\n")
 dump_queue()
 svwrite("            Blue = 4'h7;\n")
 dump_queue()
-svwrite("        end      \n")
+svwrite("        end\n")
 dump_queue()
-svwrite("    end \n")
+svwrite("\n")
 dump_queue()
+svwrite("        // Draw end points\n")
+dump_queue()
+svwrite("\n")
+dump_queue()
+Point0_dx = (obb1.Point0.x - DrawXs)
+Point0_dy = (obb1.Point0.y - DrawYs)
+svwrite("        if (")
+svpy.inline_state = True
+svwrite(Point0_dx)
+svpy.inline_state = False
+svwrite(" >= ")
+svpy.inline_state = True
+svwrite(resize(-1, Point0_dx))
+svpy.inline_state = False
+svwrite(" && ")
+svpy.inline_state = True
+svwrite(Point0_dx)
+svpy.inline_state = False
+svwrite(" <= ")
+svpy.inline_state = True
+svwrite(resize(1, Point0_dx))
+svpy.inline_state = False
+svwrite(" && ")
+svpy.inline_state = True
+svwrite(Point0_dy)
+svpy.inline_state = False
+svwrite(" >= ")
+svpy.inline_state = True
+svwrite(resize(-1, Point0_dy))
+svpy.inline_state = False
+svwrite(" && ")
+svpy.inline_state = True
+svwrite(Point0_dy)
+svpy.inline_state = False
+svwrite(" <= ")
+svpy.inline_state = True
+svwrite(resize(1, Point0_dy))
+svpy.inline_state = False
+svwrite(") begin\n")
+dump_queue()
+svwrite("            Red = 4'hf;\n")
+dump_queue()
+svwrite("            Green = 4'hc;\n")
+dump_queue()
+svwrite("            Blue = 4'h0;\n")
+dump_queue()
+svwrite("        end\n")
+dump_queue()
+end_comb()
 svwrite("    \n")
 dump_queue()
 svwrite("endmodule\n")

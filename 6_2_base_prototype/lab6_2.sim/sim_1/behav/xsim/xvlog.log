@@ -1,15 +1,28 @@
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module color_mapper
-WARNING: [VRFC 10-3380] identifier 'opnet_137' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:64]
-WARNING: [VRFC 10-3380] identifier 'opnet_138' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:65]
-WARNING: [VRFC 10-3380] identifier 'opnet_139' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:66]
-WARNING: [VRFC 10-3380] identifier 'opnet_139' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:67]
-WARNING: [VRFC 10-3380] identifier 'opnet_140' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:68]
-WARNING: [VRFC 10-3380] identifier 'opnet_141' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:69]
-WARNING: [VRFC 10-3380] identifier 'opnet_142' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:70]
-WARNING: [VRFC 10-3380] identifier 'opnet_142' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:71]
+WARNING: [VRFC 10-3380] identifier 'opnet_201' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:80]
+WARNING: [VRFC 10-3380] identifier 'opnet_202' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:81]
+WARNING: [VRFC 10-3380] identifier 'opnet_203' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:82]
+WARNING: [VRFC 10-3380] identifier 'opnet_203' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:83]
+WARNING: [VRFC 10-3380] identifier 'opnet_204' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:84]
+WARNING: [VRFC 10-3380] identifier 'opnet_205' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:85]
+WARNING: [VRFC 10-3380] identifier 'opnet_206' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:86]
+WARNING: [VRFC 10-3380] identifier 'opnet_206' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:87]
+WARNING: [VRFC 10-3380] identifier 'opnet_209' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:122]
+WARNING: [VRFC 10-3380] identifier 'opnet_210' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:123]
+WARNING: [VRFC 10-3380] identifier 'opnet_211' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:124]
+WARNING: [VRFC 10-3380] identifier 'opnet_211' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:125]
+WARNING: [VRFC 10-3380] identifier 'opnet_212' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:126]
+WARNING: [VRFC 10-3380] identifier 'opnet_213' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:127]
+WARNING: [VRFC 10-3380] identifier 'opnet_214' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:128]
+WARNING: [VRFC 10-3380] identifier 'opnet_214' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:129]
+WARNING: [VRFC 10-3380] identifier 'opnet_215' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:214]
+WARNING: [VRFC 10-3380] identifier 'opnet_216' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:215]
+WARNING: [VRFC 10-3380] identifier 'opnet_215' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:216]
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/VGA_controller.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module vga_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module collision_detector
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/cosine.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cos
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv" into library xil_defaultlib
@@ -21,19 +34,19 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kobes/OneDrive/Deskt
 INFO: [VRFC 10-311] analyzing module obb_reg
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module obb_updater
-WARNING: [VRFC 10-3380] identifier 'opnet_146' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:35]
-WARNING: [VRFC 10-3380] identifier 'opnet_146' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:37]
-WARNING: [VRFC 10-3380] identifier 'opnet_147' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:42]
-WARNING: [VRFC 10-3380] identifier 'opnet_147' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:44]
+WARNING: [VRFC 10-3380] identifier 'opnet_219' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:32]
+WARNING: [VRFC 10-3380] identifier 'opnet_219' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:34]
+WARNING: [VRFC 10-3380] identifier 'opnet_220' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:39]
+WARNING: [VRFC 10-3380] identifier 'opnet_220' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:41]
+WARNING: [VRFC 10-3380] identifier 'opnet_222' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:54]
+WARNING: [VRFC 10-3380] identifier 'opnet_222' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:55]
+WARNING: [VRFC 10-3380] identifier 'opnet_223' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:57]
+WARNING: [VRFC 10-3380] identifier 'opnet_223' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:58]
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/sine.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sin
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/square.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module square
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/the_juicer.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module juicer
-WARNING: [VRFC 10-3380] identifier 'opnet_148' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/the_juicer.sv:32]
-WARNING: [VRFC 10-3380] identifier 'opnet_148' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/the_juicer.sv:33]
-WARNING: [VRFC 10-3380] identifier 'opnet_149' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/the_juicer.sv:36]
-WARNING: [VRFC 10-3380] identifier 'opnet_149' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/the_juicer.sv:37]
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/main_test.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module main_test

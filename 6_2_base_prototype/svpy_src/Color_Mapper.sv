@@ -114,8 +114,7 @@ module  color_mapper (
         .is_collision(is_collision)
     );
 
-    always_comb
-    begin:RGB_Display
+    $ begin_comb()
         if ((obb1_on == 1'b1) || (obb2_on == 1'b1)) begin
             Red = 4'hf;
             Green = 4'hf;
@@ -130,7 +129,17 @@ module  color_mapper (
             Red = 4'h4; 
             Green = 4'h3;
             Blue = 4'h7;
-        end      
-    end 
+        end
+
+        // Draw end points
+
+        $ Point0_dx = (obb1.Point0.x - DrawXs)
+        $ Point0_dy = (obb1.Point0.y - DrawYs)
+        if ($$Point0_dx$$ >= $$resize(-1, Point0_dx)$$ && $$Point0_dx$$ <= $$resize(1, Point0_dx)$$ && $$Point0_dy$$ >= $$resize(-1, Point0_dy)$$ && $$Point0_dy$$ <= $$resize(1, Point0_dy)$$) begin
+            Red = 4'hf;
+            Green = 4'hc;
+            Blue = 4'h0;
+        end
+    $ end_comb()
     
 endmodule

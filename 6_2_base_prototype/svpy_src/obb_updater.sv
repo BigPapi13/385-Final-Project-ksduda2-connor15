@@ -37,8 +37,7 @@ $ begin_comb()
     $ next.angle.assign(next_angle_uncorrected)
     if ($$next_angle_uncorrected$$ > $$to_bits(2*math.pi, next_angle_uncorrected.integer_bits, next_angle_uncorrected.precision)$$) begin
         $ next.angle.assign(next_angle_uncorrected - (2*math.pi))        
-    end
-    if ($$next_angle_uncorrected$$ < 11'b0) begin
+    end else if ($$next_angle_uncorrected$$ < 11'sb0) begin
         $ next.angle.assign(next_angle_uncorrected + (2*math.pi))
     end
 $ end_comb()

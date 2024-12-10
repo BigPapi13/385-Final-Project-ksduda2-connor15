@@ -24,10 +24,10 @@ Juice = Struct("Juice", [
     Vec2(2, 14, "u"),
     Vec2(2, 14, "v"),
 
-    Vec2(7, 14, "Point0"),
-    Vec2(7, 14, "Point1"),
-    Vec2(7, 14, "Point2"),
-    Vec2(7, 14, "Point3"),
+    Vec2(8, 14, "Point0"),
+    Vec2(8, 14, "Point1"),
+    Vec2(8, 14, "Point2"),
+    Vec2(8, 14, "Point3"),
     Fixed(OBB.width.integer_bits - 1, 0, "halfWidth"),
     Fixed(OBB.height.integer_bits - 1, 0, "halfHeight")
 ])
@@ -38,4 +38,11 @@ Juice = Struct("Juice", [
 JOBB = Struct("JOBB", [
     OBB,
     Juice
+])
+
+#> Contact
+#   - Describes a contact in a collision
+#   - Components are the normal vector and the contact point location
+Contact = Struct("Contact", [
+    
 ])
