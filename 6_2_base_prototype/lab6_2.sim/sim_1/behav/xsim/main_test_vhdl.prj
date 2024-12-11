@@ -1,0 +1,19 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/sim/mb_block_microblaze_0_0.vhd" \
+"../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_v10_0/sim/mb_block_dlmb_v10_0.vhd" \
+"../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_v10_0/sim/mb_block_ilmb_v10_0.vhd" \
+"../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/sim/mb_block_dlmb_bram_if_cntlr_0.vhd" \
+"../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/sim/mb_block_ilmb_bram_if_cntlr_0.vhd" \
+"../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_axi_intc_0/sim/mb_block_microblaze_0_axi_intc_0.vhd" \
+"../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_mdm_1_0/sim/mb_block_mdm_1_0.vhd" \
+"../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/sim/mb_block_rst_clk_wiz_1_100M_0.vhd" \
+"../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/sim/mb_block_axi_uartlite_0_0.vhd" \
+"../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_1/sim/mb_block_axi_gpio_0_1.vhd" \
+"../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_2/sim/mb_block_axi_gpio_0_2.vhd" \
+"../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/sim/mb_block_axi_gpio_0_3.vhd" \
+"../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_axi_timer_0_0/sim/mb_block_axi_timer_0_0.vhd" \
+"../../../../../../lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_axi_quad_spi_0_0/sim/mb_block_axi_quad_spi_0_0.vhd" \
+
+# Do not sort compile order
+nosort

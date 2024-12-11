@@ -10,13 +10,11 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source mb_usb_hdmi_top.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 373.609 ; gain = 71.598
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/hdmi_tx_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.cache/ip 
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 413.863 ; gain = 15.371
 Command: read_checkpoint -auto_incremental -incremental C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.srcs/utils_1/imports/synth_1/mb_intro_top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.srcs/utils_1/imports/synth_1/mb_intro_top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -29,39 +27,83 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 19664
+INFO: [Synth 8-7075] Helper process launched with PID 46648
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-6901] identifier 'opnet_201' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:80]
+WARNING: [Synth 8-6901] identifier 'opnet_202' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:81]
+WARNING: [Synth 8-6901] identifier 'opnet_203' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:82]
+WARNING: [Synth 8-6901] identifier 'opnet_201' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:82]
+WARNING: [Synth 8-6901] identifier 'opnet_202' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:82]
+WARNING: [Synth 8-6901] identifier 'opnet_203' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:83]
+WARNING: [Synth 8-6901] identifier 'opnet_204' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:84]
+WARNING: [Synth 8-6901] identifier 'opnet_205' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:85]
+WARNING: [Synth 8-6901] identifier 'opnet_206' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:86]
+WARNING: [Synth 8-6901] identifier 'opnet_204' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:86]
+WARNING: [Synth 8-6901] identifier 'opnet_205' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:86]
+WARNING: [Synth 8-6901] identifier 'opnet_206' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:87]
+WARNING: [Synth 8-6901] identifier 'opnet_209' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:122]
+WARNING: [Synth 8-6901] identifier 'opnet_210' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:123]
+WARNING: [Synth 8-6901] identifier 'opnet_211' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:124]
+WARNING: [Synth 8-6901] identifier 'opnet_209' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:124]
+WARNING: [Synth 8-6901] identifier 'opnet_210' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:124]
+WARNING: [Synth 8-6901] identifier 'opnet_211' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:125]
+WARNING: [Synth 8-6901] identifier 'opnet_212' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:126]
+WARNING: [Synth 8-6901] identifier 'opnet_213' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:127]
+WARNING: [Synth 8-6901] identifier 'opnet_214' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:128]
+WARNING: [Synth 8-6901] identifier 'opnet_212' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:128]
+WARNING: [Synth 8-6901] identifier 'opnet_213' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:128]
+WARNING: [Synth 8-6901] identifier 'opnet_214' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:129]
+WARNING: [Synth 8-6901] identifier 'opnet_215' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:214]
+WARNING: [Synth 8-6901] identifier 'opnet_216' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:215]
+WARNING: [Synth 8-6901] identifier 'opnet_215' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:216]
+WARNING: [Synth 8-6901] identifier 'opnet_215' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:216]
+WARNING: [Synth 8-6901] identifier 'opnet_216' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:216]
+WARNING: [Synth 8-6901] identifier 'opnet_216' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:216]
+WARNING: [Synth 8-11065] parameter 'X_INIT_SCALED' becomes localparam in 'obb_reg' with formal parameter declaration list [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:34]
+WARNING: [Synth 8-11065] parameter 'Y_INIT_SCALED' becomes localparam in 'obb_reg' with formal parameter declaration list [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:35]
+WARNING: [Synth 8-11065] parameter 'X_VEL_INIT_SCALED' becomes localparam in 'obb_reg' with formal parameter declaration list [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:36]
+WARNING: [Synth 8-11065] parameter 'Y_VEL_INIT_SCALED' becomes localparam in 'obb_reg' with formal parameter declaration list [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:37]
+WARNING: [Synth 8-11065] parameter 'ANGLE_INIT_SCALED' becomes localparam in 'obb_reg' with formal parameter declaration list [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:38]
+WARNING: [Synth 8-11065] parameter 'OMEGA_INIT_SCALED' becomes localparam in 'obb_reg' with formal parameter declaration list [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:39]
+WARNING: [Synth 8-6901] identifier 'opnet_219' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:32]
+WARNING: [Synth 8-6901] identifier 'opnet_219' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:34]
+WARNING: [Synth 8-6901] identifier 'opnet_220' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:39]
+WARNING: [Synth 8-6901] identifier 'opnet_220' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:41]
+WARNING: [Synth 8-6901] identifier 'opnet_222' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:54]
+WARNING: [Synth 8-6901] identifier 'opnet_222' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:55]
+WARNING: [Synth 8-6901] identifier 'opnet_223' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:57]
+WARNING: [Synth 8-6901] identifier 'opnet_223' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:58]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1219.055 ; gain = 408.184
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1218.352 ; gain = 409.297
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_hdmi_top' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv:14]
-INFO: [Synth 8-6157] synthesizing module 'hex_driver' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'hex_driver' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_hdmi_top' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'hex_driver' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'hex_driver' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:2]
 INFO: [Synth 8-6157] synthesizing module 'mb_block' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:936]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_uartlite_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_uartlite_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_clk_wiz_1_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_clk_wiz_1_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_2' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_2' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_3' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_axi_gpio_0_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_3' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_axi_gpio_0_3_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_1' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_1' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_mdm_1_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_mdm_1_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_intc_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_intc_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_uartlite_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_uartlite_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_clk_wiz_1_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_clk_wiz_1_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_2' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_2' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_3' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_gpio_0_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_3' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_gpio_0_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_1' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_1' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_mdm_1_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_mdm_1_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_intc_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_intc_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_periph_0' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1602]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1TK4492' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1TK4492' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
@@ -79,46 +121,46 @@ INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1QRRYF7' [c:/Users/ko
 INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1QRRYF7' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:804]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_5YIJ0K' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2926]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_5YIJ0K' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2926]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_xbar_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_xbar_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_xbar_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_xbar_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_xbar_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_xbar_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'mb_block_xbar_0' is unconnected for instance 'xbar' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'mb_block_xbar_0' is unconnected for instance 'xbar' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'mb_block_xbar_0' has 40 connections declared, but only 38 given [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_periph_0' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1602]
 INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2692]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_v10_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_dlmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_v10_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_v10_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_v10_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_dlmb_v10_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2838]
 WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'mb_block_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2838]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_v10_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_ilmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_v10_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_v10_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_v10_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_ilmb_v10_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2884]
 WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'mb_block_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2884]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_lmb_bram_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_lmb_bram_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_lmb_bram_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_lmb_bram_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_lmb_bram_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_lmb_bram_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'rsta_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
 WARNING: [Synth 8-7071] port 'rstb_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
 WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'mb_block_lmb_bram_0' has 16 connections declared, but only 14 given [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
 INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2692]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
 WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'mb_block_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_quad_spi_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_quad_spi_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_quad_spi_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_quad_spi_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'io0_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
 WARNING: [Synth 8-7071] port 'io1_o' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
 WARNING: [Synth 8-7071] port 'io1_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
 WARNING: [Synth 8-7071] port 'sck_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
 WARNING: [Synth 8-7071] port 'ss_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
 WARNING: [Synth 8-7023] instance 'spi_usb' of module 'mb_block_axi_quad_spi_0_0' has 33 connections declared, but only 28 given [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_timer_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_axi_timer_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_timer_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/mb_block_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_timer_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_timer_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_timer_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'generateout0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
 WARNING: [Synth 8-7071] port 'generateout1' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
 WARNING: [Synth 8-7071] port 'pwm0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
@@ -128,139 +170,159 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/ko
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.srcs/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block_xlconcat_0_0' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_xlconcat_0_0/synth/mb_block_xlconcat_0_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:936]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/VGA_controller.sv:26]
 INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/VGA_controller.sv:26]
-WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv:97]
-WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv:97]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/hdmi_tx_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-44580-Kobe_Laptop/realtime/hdmi_tx_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'square' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/square.sv:18]
-INFO: [Synth 8-6155] done synthesizing module 'square' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/square.sv:18]
-INFO: [Synth 8-6157] synthesizing module 'color_mapper' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'vec_mat_multiplier' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/matrix.sv:52]
-INFO: [Synth 8-6155] done synthesizing module 'vec_mat_multiplier' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/matrix.sv:52]
-INFO: [Synth 8-6155] done synthesizing module 'color_mapper' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:17]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_hdmi_top' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv:14]
-WARNING: [Synth 8-3936] Found unconnected internal register 'p00_0_reg' and it is trimmed from '32' to '21' bits. [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/matrix.sv:71]
-WARNING: [Synth 8-3936] Found unconnected internal register 'p01_1_reg' and it is trimmed from '32' to '21' bits. [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/matrix.sv:72]
-WARNING: [Synth 8-3936] Found unconnected internal register 'p10_0_reg' and it is trimmed from '32' to '21' bits. [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/matrix.sv:73]
-WARNING: [Synth 8-3936] Found unconnected internal register 'p11_1_reg' and it is trimmed from '32' to '21' bits. [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/matrix.sv:74]
-WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In89[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In103[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv:100]
+WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv:100]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'square' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/square.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'square' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/square.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'obb_reg' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:4]
+	Parameter X_INIT bound to: 10 - type: integer 
+	Parameter Y_INIT bound to: 32 - type: integer 
+	Parameter X_VEL_INIT bound to: 0.300000 - type: double 
+	Parameter Y_VEL_INIT bound to: -0.100000 - type: double 
+	Parameter OMEGA_INIT bound to: -0.040000 - type: double 
+INFO: [Synth 8-6155] done synthesizing module 'obb_reg' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'obb_reg__parameterized0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:4]
+	Parameter X_INIT bound to: 20 - type: integer 
+	Parameter Y_INIT bound to: 32 - type: integer 
+	Parameter X_VEL_INIT bound to: -0.200000 - type: double 
+	Parameter Y_VEL_INIT bound to: 0.500000 - type: double 
+	Parameter WIDTH_INIT bound to: 15 - type: integer 
+	Parameter HEIGHT_INIT bound to: 5 - type: integer 
+	Parameter OMEGA_INIT bound to: 0.100000 - type: double 
+INFO: [Synth 8-6155] done synthesizing module 'obb_reg__parameterized0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'obb_updater' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'obb_updater' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'juicer' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/the_juicer.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'cos' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/cosine.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'cos' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/cosine.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'sin' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/sine.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'sin' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/sine.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'juicer' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/the_juicer.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'color_mapper' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'collision_detector' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'collision_detector' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'color_mapper' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_hdmi_top' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv:17]
+WARNING: [Synth 8-7129] Port obb1_width[7] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_width[6] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_width[5] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_width[4] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_width[3] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_width[2] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_width[1] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_width[0] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_height[7] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_height[6] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_height[5] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_height[4] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_height[3] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_height[2] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_height[1] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_height[0] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[31] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[30] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[29] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[28] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[27] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[26] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[25] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[24] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[23] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[22] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[21] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[20] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[19] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[18] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[17] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[16] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[15] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[14] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[13] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[12] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[11] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[10] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[9] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[8] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[7] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[6] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[5] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[4] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[3] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[2] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[1] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_x[0] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[31] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[30] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[29] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[28] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[27] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[26] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[25] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[24] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[23] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[22] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[21] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[20] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[19] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[18] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[17] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[16] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[15] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[14] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[13] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[12] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[11] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[10] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[9] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[8] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[7] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[6] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[5] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[4] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[3] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[2] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[1] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_vel_y[0] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_angle[10] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_angle[9] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_angle[8] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_angle[7] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_angle[6] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_angle[5] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_angle[4] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_angle[3] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_angle[2] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_angle[1] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_angle[0] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_omega[10] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_omega[9] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_omega[8] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_omega[7] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_omega[6] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_omega[5] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_omega[4] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_omega[3] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port obb1_omega[2] in module collision_detector is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1323.348 ; gain = 512.477
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1336.895 ; gain = 527.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1323.348 ; gain = 512.477
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1336.895 ; gain = 527.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1323.348 ; gain = 512.477
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1336.895 ; gain = 527.840
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 1323.348 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 1336.895 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -316,25 +378,25 @@ Parsing XDC File [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado
 Finished Parsing XDC File [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1385.246 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1442.496 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1385.246 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1442.496 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/spi_usb' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1385.246 ; gain = 574.375
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1443.277 ; gain = 634.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1385.246 ; gain = 574.375
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1443.277 ; gain = 634.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -380,30 +442,41 @@ Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/xlconcat_0. (constrain
 Applied set_property KEEP_HIERARCHY = SOFT for vga_to_hdmi. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for clk_wiz. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1385.246 ; gain = 574.375
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1443.277 ; gain = 634.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1385.246 ; gain = 574.375
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1443.277 ; gain = 634.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   16 Bit       Adders := 2     
-	   2 Input   11 Bit       Adders := 2     
+	   2 Input   48 Bit       Adders := 4     
+	   2 Input   32 Bit       Adders := 12    
+	   3 Input   32 Bit       Adders := 8     
+	   3 Input   22 Bit       Adders := 34    
+	   2 Input   11 Bit       Adders := 8     
 	   2 Input   10 Bit       Adders := 10    
-	   3 Input   10 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 4     
 +---Registers : 
+	               32 Bit    Registers := 8     
+	               11 Bit    Registers := 4     
 	               10 Bit    Registers := 6     
+	                8 Bit    Registers := 4     
 	                1 Bit    Registers := 2     
++---Multipliers : 
+	              16x32  Multipliers := 8     
 +---Muxes : 
+	   2 Input   32 Bit        Muxes := 45    
+	   2 Input   11 Bit        Muxes := 4     
 	   2 Input   10 Bit        Muxes := 8     
 	   5 Input   10 Bit        Muxes := 2     
 	   4 Input    8 Bit        Muxes := 2     
 	   2 Input    8 Bit        Muxes := 2     
 	   5 Input    4 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 3     
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -420,29 +493,255 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP color_instance/Red3, operation Mode is: A*B.
-DSP Report: operator color_instance/Red3 is absorbed into DSP color_instance/Red3.
-DSP Report: Generating DSP color_instance/coordinate_rotator/out[0]1, operation Mode is: (A:0xffe0)*B.
-DSP Report: operator color_instance/coordinate_rotator/out[0]1 is absorbed into DSP color_instance/coordinate_rotator/out[0]1.
-DSP Report: Generating DSP color_instance/Red3, operation Mode is: A*B.
-DSP Report: operator color_instance/Red3 is absorbed into DSP color_instance/Red3.
-WARNING: [Synth 8-3917] design mb_usb_hdmi_top has port hex_segA[7] driven by constant 1
-WARNING: [Synth 8-3917] design mb_usb_hdmi_top has port hex_segB[7] driven by constant 1
+DSP Report: Generating DSP opnet_228, operation Mode is: A*B.
+DSP Report: operator opnet_228 is absorbed into DSP opnet_228.
+DSP Report: Generating DSP opnet_227, operation Mode is: A*B.
+DSP Report: operator opnet_227 is absorbed into DSP opnet_227.
+DSP Report: Generating DSP opnet_231, operation Mode is: A*B.
+DSP Report: operator opnet_231 is absorbed into DSP opnet_231.
+DSP Report: Generating DSP opnet_230, operation Mode is: A*B.
+DSP Report: operator opnet_230 is absorbed into DSP opnet_230.
+DSP Report: Generating DSP opnet_236, operation Mode is: A*B.
+DSP Report: operator opnet_236 is absorbed into DSP opnet_236.
+DSP Report: Generating DSP opnet_239, operation Mode is: A*B.
+DSP Report: operator opnet_239 is absorbed into DSP opnet_239.
+DSP Report: Generating DSP opnet_244, operation Mode is: A*B.
+DSP Report: operator opnet_244 is absorbed into DSP opnet_244.
+DSP Report: Generating DSP opnet_247, operation Mode is: A*B.
+DSP Report: operator opnet_247 is absorbed into DSP opnet_247.
+DSP Report: Generating DSP opnet_228, operation Mode is: A*B.
+DSP Report: operator opnet_228 is absorbed into DSP opnet_228.
+DSP Report: Generating DSP opnet_227, operation Mode is: A*B.
+DSP Report: operator opnet_227 is absorbed into DSP opnet_227.
+DSP Report: Generating DSP opnet_231, operation Mode is: A*B.
+DSP Report: operator opnet_231 is absorbed into DSP opnet_231.
+DSP Report: Generating DSP opnet_230, operation Mode is: A*B.
+DSP Report: operator opnet_230 is absorbed into DSP opnet_230.
+DSP Report: Generating DSP opnet_236, operation Mode is: A*B.
+DSP Report: operator opnet_236 is absorbed into DSP opnet_236.
+DSP Report: Generating DSP opnet_239, operation Mode is: A*B.
+DSP Report: operator opnet_239 is absorbed into DSP opnet_239.
+DSP Report: Generating DSP opnet_244, operation Mode is: A*B.
+DSP Report: operator opnet_244 is absorbed into DSP opnet_244.
+DSP Report: Generating DSP opnet_247, operation Mode is: A*B.
+DSP Report: operator opnet_247 is absorbed into DSP opnet_247.
+DSP Report: Generating DSP opnet_3, operation Mode is: A*B.
+DSP Report: operator opnet_3 is absorbed into DSP opnet_3.
+DSP Report: Generating DSP opnet_5, operation Mode is: C+A*B.
+DSP Report: operator opnet_5 is absorbed into DSP opnet_5.
+DSP Report: operator opnet_4 is absorbed into DSP opnet_5.
+DSP Report: Generating DSP opnet_11, operation Mode is: A*B.
+DSP Report: operator opnet_11 is absorbed into DSP opnet_11.
+DSP Report: Generating DSP opnet_13, operation Mode is: C+A*B.
+DSP Report: operator opnet_13 is absorbed into DSP opnet_13.
+DSP Report: operator opnet_12 is absorbed into DSP opnet_13.
+DSP Report: Generating DSP opnet_19, operation Mode is: A*B.
+DSP Report: operator opnet_19 is absorbed into DSP opnet_19.
+DSP Report: Generating DSP opnet_21, operation Mode is: C+A*B.
+DSP Report: operator opnet_21 is absorbed into DSP opnet_21.
+DSP Report: operator opnet_20 is absorbed into DSP opnet_21.
+DSP Report: Generating DSP opnet_27, operation Mode is: A*B.
+DSP Report: operator opnet_27 is absorbed into DSP opnet_27.
+DSP Report: Generating DSP opnet_29, operation Mode is: C+A*B.
+DSP Report: operator opnet_29 is absorbed into DSP opnet_29.
+DSP Report: operator opnet_28 is absorbed into DSP opnet_29.
+DSP Report: Generating DSP opnet_35, operation Mode is: A*B.
+DSP Report: operator opnet_35 is absorbed into DSP opnet_35.
+DSP Report: Generating DSP opnet_37, operation Mode is: C+A*B.
+DSP Report: operator opnet_37 is absorbed into DSP opnet_37.
+DSP Report: operator opnet_36 is absorbed into DSP opnet_37.
+DSP Report: Generating DSP opnet_43, operation Mode is: A*B.
+DSP Report: operator opnet_43 is absorbed into DSP opnet_43.
+DSP Report: Generating DSP opnet_45, operation Mode is: C+A*B.
+DSP Report: operator opnet_45 is absorbed into DSP opnet_45.
+DSP Report: operator opnet_44 is absorbed into DSP opnet_45.
+DSP Report: Generating DSP opnet_51, operation Mode is: A*B.
+DSP Report: operator opnet_51 is absorbed into DSP opnet_51.
+DSP Report: Generating DSP opnet_53, operation Mode is: C+A*B.
+DSP Report: operator opnet_53 is absorbed into DSP opnet_53.
+DSP Report: operator opnet_52 is absorbed into DSP opnet_53.
+DSP Report: Generating DSP opnet_59, operation Mode is: A*B.
+DSP Report: operator opnet_59 is absorbed into DSP opnet_59.
+DSP Report: Generating DSP opnet_61, operation Mode is: C+A*B.
+DSP Report: operator opnet_61 is absorbed into DSP opnet_61.
+DSP Report: operator opnet_60 is absorbed into DSP opnet_61.
+DSP Report: Generating DSP opnet_6, operation Mode is: A*B.
+DSP Report: operator opnet_6 is absorbed into DSP opnet_6.
+DSP Report: Generating DSP opnet_8, operation Mode is: C+A*B.
+DSP Report: operator opnet_8 is absorbed into DSP opnet_8.
+DSP Report: operator opnet_7 is absorbed into DSP opnet_8.
+DSP Report: Generating DSP opnet_14, operation Mode is: A*B.
+DSP Report: operator opnet_14 is absorbed into DSP opnet_14.
+DSP Report: Generating DSP opnet_16, operation Mode is: C+A*B.
+DSP Report: operator opnet_16 is absorbed into DSP opnet_16.
+DSP Report: operator opnet_15 is absorbed into DSP opnet_16.
+DSP Report: Generating DSP opnet_22, operation Mode is: A*B.
+DSP Report: operator opnet_22 is absorbed into DSP opnet_22.
+DSP Report: Generating DSP opnet_24, operation Mode is: C+A*B.
+DSP Report: operator opnet_24 is absorbed into DSP opnet_24.
+DSP Report: operator opnet_23 is absorbed into DSP opnet_24.
+DSP Report: Generating DSP opnet_30, operation Mode is: A*B.
+DSP Report: operator opnet_30 is absorbed into DSP opnet_30.
+DSP Report: Generating DSP opnet_32, operation Mode is: C+A*B.
+DSP Report: operator opnet_32 is absorbed into DSP opnet_32.
+DSP Report: operator opnet_31 is absorbed into DSP opnet_32.
+DSP Report: Generating DSP opnet_38, operation Mode is: A*B.
+DSP Report: operator opnet_38 is absorbed into DSP opnet_38.
+DSP Report: Generating DSP opnet_40, operation Mode is: C+A*B.
+DSP Report: operator opnet_40 is absorbed into DSP opnet_40.
+DSP Report: operator opnet_39 is absorbed into DSP opnet_40.
+DSP Report: Generating DSP opnet_46, operation Mode is: A*B.
+DSP Report: operator opnet_46 is absorbed into DSP opnet_46.
+DSP Report: Generating DSP opnet_48, operation Mode is: C+A*B.
+DSP Report: operator opnet_48 is absorbed into DSP opnet_48.
+DSP Report: operator opnet_47 is absorbed into DSP opnet_48.
+DSP Report: Generating DSP opnet_54, operation Mode is: A*B.
+DSP Report: operator opnet_54 is absorbed into DSP opnet_54.
+DSP Report: Generating DSP opnet_56, operation Mode is: C+A*B.
+DSP Report: operator opnet_56 is absorbed into DSP opnet_56.
+DSP Report: operator opnet_55 is absorbed into DSP opnet_56.
+DSP Report: Generating DSP opnet_62, operation Mode is: A*B.
+DSP Report: operator opnet_62 is absorbed into DSP opnet_62.
+DSP Report: Generating DSP opnet_64, operation Mode is: C+A*B.
+DSP Report: operator opnet_64 is absorbed into DSP opnet_64.
+DSP Report: operator opnet_63 is absorbed into DSP opnet_64.
+DSP Report: Generating DSP Red8, operation Mode is: A*B.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: Generating DSP Red8, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: Generating DSP Red8, operation Mode is: A*B.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: Generating DSP Red8, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: Generating DSP Red7, operation Mode is: A*B.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: Generating DSP Red7, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: Generating DSP Red7, operation Mode is: A*B.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: Generating DSP Red7, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: Generating DSP Red8, operation Mode is: A*B.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: Generating DSP Red8, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: Generating DSP Red8, operation Mode is: A*B.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: Generating DSP Red8, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: operator Red8 is absorbed into DSP Red8.
+DSP Report: Generating DSP Red7, operation Mode is: A*B.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: Generating DSP Red7, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: Generating DSP Red7, operation Mode is: A*B.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: Generating DSP Red7, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Red7 is absorbed into DSP Red7.
+DSP Report: operator Red7 is absorbed into DSP Red7.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1385.246 ; gain = 574.375
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 1443.277 ; gain = 634.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
+ROM: Preliminary Mapping Report
++------------+----------------+---------------+----------------+
+|Module Name | RTL Object     | Depth x Width | Implemented As | 
++------------+----------------+---------------+----------------+
+|cos         | ROM            | 1024x16       | LUT            | 
+|sin         | ROM            | 1024x15       | LUT            | 
+|juicer      | cos_inst_1/ROM | 1024x16       | LUT            | 
+|juicer      | sin_inst_1/ROM | 1024x15       | LUT            | 
+|juicer      | cos_inst_1/ROM | 1024x16       | LUT            | 
+|juicer      | sin_inst_1/ROM | 1024x15       | LUT            | 
++------------+----------------+---------------+----------------+
+
+
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name        | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|color_mapper       | A*B          | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|vec_mat_multiplier | (A:0xffe0)*B | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B          | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++-------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B            | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -453,19 +752,19 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'Clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 1385.246 ; gain = 574.375
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:37 . Memory (MB): peak = 1443.277 ; gain = 634.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1394.402 ; gain = 583.531
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:38 . Memory (MB): peak = 1443.277 ; gain = 634.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1394.402 ; gain = 583.531
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 1454.547 ; gain = 645.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -483,50 +782,111 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:56 . Memory (MB): peak = 1396.105 ; gain = 585.234
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:44 . Memory (MB): peak = 1469.102 ; gain = 660.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:56 . Memory (MB): peak = 1396.105 ; gain = 585.234
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:44 . Memory (MB): peak = 1469.102 ; gain = 660.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:56 . Memory (MB): peak = 1396.105 ; gain = 585.234
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1469.102 ; gain = 660.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:56 . Memory (MB): peak = 1396.105 ; gain = 585.234
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1469.102 ; gain = 660.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:56 . Memory (MB): peak = 1396.105 ; gain = 585.234
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1469.102 ; gain = 660.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:56 . Memory (MB): peak = 1396.105 ; gain = 585.234
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1469.102 ; gain = 660.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 DSP Final Report (the ' indicates corresponding REG is set)
-+-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name        | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|color_mapper       | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|vec_mat_multiplier | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|juicer             | A*B          | 30     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 18     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 3      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 3      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 3      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 3      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 18     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 2      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 2      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 3      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 30     | 3      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
 Report BlackBoxes: 
@@ -576,43 +936,45 @@ Report Cell Usage:
 |18    |mb_block_rst_clk_wiz_1_100M    |     1|
 |19    |mb_block_xbar                  |     1|
 |20    |BUFG                           |     1|
-|21    |CARRY4                         |    29|
-|22    |DSP48E1                        |     3|
-|23    |LUT1                           |     3|
-|24    |LUT2                           |    73|
-|25    |LUT3                           |    30|
-|26    |LUT4                           |    49|
-|27    |LUT5                           |    35|
-|28    |LUT6                           |    79|
-|29    |FDCE                           |    22|
-|30    |FDRE                           |    50|
-|31    |FDSE                           |     7|
-|32    |IBUF                           |     4|
-|33    |OBUF                           |    29|
+|21    |CARRY4                         |   576|
+|22    |DSP48E1                        |    64|
+|24    |LUT1                           |   251|
+|25    |LUT2                           |   911|
+|26    |LUT3                           |   625|
+|27    |LUT4                           |  1128|
+|28    |LUT5                           |   179|
+|29    |LUT6                           |  1944|
+|30    |MUXF7                          |   363|
+|31    |MUXF8                          |   167|
+|32    |FDCE                           |    22|
+|33    |FDRE                           |   212|
+|34    |FDSE                           |    55|
+|35    |IBUF                           |     4|
+|36    |OBUF                           |    29|
 +------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:56 . Memory (MB): peak = 1396.105 ; gain = 585.234
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1469.102 ; gain = 660.047
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:52 . Memory (MB): peak = 1396.105 ; gain = 523.336
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:57 . Memory (MB): peak = 1396.105 ; gain = 585.234
+Synthesis finished with 0 errors, 0 critical warnings and 360 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:43 . Memory (MB): peak = 1469.102 ; gain = 553.664
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1469.102 ; gain = 660.047
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1408.152 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1481.242 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1170 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1411.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1485.059 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 58255f26
+Synth Design complete, checksum: aa325d0a
 INFO: [Common 17-83] Releasing license: Synthesis
-112 Infos, 137 Warnings, 1 Critical Warnings and 0 Errors encountered.
+124 Infos, 175 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:01:16 . Memory (MB): peak = 1411.793 ; gain = 977.977
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:50 . Memory (MB): peak = 1485.059 ; gain = 1050.984
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/mb_usb_hdmi_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mb_usb_hdmi_top_utilization_synth.rpt -pb mb_usb_hdmi_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec  4 18:09:57 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 10 10:48:04 2024...

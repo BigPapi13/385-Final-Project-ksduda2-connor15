@@ -11,7 +11,7 @@ module basis_generator
     $$v.declare("output")$$
 );
 
-always_comb begin
+$ begin_comb()
 $$$
 u.x.assign(cos(angle))
 u.y.assign(sin(angle))
@@ -20,6 +20,6 @@ v.x.assign(-u.y)
 v.y.assign(u.x)
 $$$
 
-end
+$ end_comb()
 
 endmodule

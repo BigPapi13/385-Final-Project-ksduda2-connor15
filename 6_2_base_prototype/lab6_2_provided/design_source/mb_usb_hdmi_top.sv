@@ -11,6 +11,9 @@
 //-------------------------------------------------------------------------
 
 
+
+
+
 module mb_usb_hdmi_top(
     input logic Clk,
     input logic reset_rtl_0,
@@ -143,13 +146,258 @@ module mb_usb_hdmi_top(
         .S(ballsizesig)
     );
     
+    // First OBB register
+
+logic signed [7 : 0] obb1_width;
+logic signed [7 : 0] obb1_height;
+logic signed [31 : 0] obb1_pos_x;
+logic signed [31 : 0] obb1_pos_y;
+logic signed [31 : 0] obb1_vel_x;
+logic signed [31 : 0] obb1_vel_y;
+logic signed [10 : 0] obb1_angle;
+logic signed [10 : 0] obb1_omega;
+logic signed [7 : 0] obb1_ld_width;
+logic signed [7 : 0] obb1_ld_height;
+logic signed [31 : 0] obb1_ld_pos_x;
+logic signed [31 : 0] obb1_ld_pos_y;
+logic signed [31 : 0] obb1_ld_vel_x;
+logic signed [31 : 0] obb1_ld_vel_y;
+logic signed [10 : 0] obb1_ld_angle;
+logic signed [10 : 0] obb1_ld_omega;
+    obb_reg #(.X_INIT(10), .Y_INIT(32), .X_VEL_INIT(0.3), .Y_VEL_INIT(-0.1), .OMEGA_INIT(-0.04)) obb1(
+        .ld_width(obb1_ld_width),
+.ld_height(obb1_ld_height),
+.ld_pos_x(obb1_ld_pos_x),
+.ld_pos_y(obb1_ld_pos_y),
+.ld_vel_x(obb1_ld_vel_x),
+.ld_vel_y(obb1_ld_vel_y),
+.ld_angle(obb1_ld_angle),
+.ld_omega(obb1_ld_omega),
+        .width(obb1_width),
+.height(obb1_height),
+.pos_x(obb1_pos_x),
+.pos_y(obb1_pos_y),
+.vel_x(obb1_vel_x),
+.vel_y(obb1_vel_y),
+.angle(obb1_angle),
+.omega(obb1_omega),
+        .load(1'b1),
+        .reset(reset_ah),
+        .clk(vsync)
+    );
+
+    // Second OBB register
+
+logic signed [7 : 0] obb2_width;
+logic signed [7 : 0] obb2_height;
+logic signed [31 : 0] obb2_pos_x;
+logic signed [31 : 0] obb2_pos_y;
+logic signed [31 : 0] obb2_vel_x;
+logic signed [31 : 0] obb2_vel_y;
+logic signed [10 : 0] obb2_angle;
+logic signed [10 : 0] obb2_omega;
+logic signed [7 : 0] obb2_ld_width;
+logic signed [7 : 0] obb2_ld_height;
+logic signed [31 : 0] obb2_ld_pos_x;
+logic signed [31 : 0] obb2_ld_pos_y;
+logic signed [31 : 0] obb2_ld_vel_x;
+logic signed [31 : 0] obb2_ld_vel_y;
+logic signed [10 : 0] obb2_ld_angle;
+logic signed [10 : 0] obb2_ld_omega;
+    obb_reg #(.X_INIT(20), .Y_INIT(32), .X_VEL_INIT(-0.2), .Y_VEL_INIT(0.5), .WIDTH_INIT(15), .HEIGHT_INIT(5), .OMEGA_INIT(0.1)) obb2(
+        .ld_width(obb2_ld_width),
+.ld_height(obb2_ld_height),
+.ld_pos_x(obb2_ld_pos_x),
+.ld_pos_y(obb2_ld_pos_y),
+.ld_vel_x(obb2_ld_vel_x),
+.ld_vel_y(obb2_ld_vel_y),
+.ld_angle(obb2_ld_angle),
+.ld_omega(obb2_ld_omega),
+        .width(obb2_width),
+.height(obb2_height),
+.pos_x(obb2_pos_x),
+.pos_y(obb2_pos_y),
+.vel_x(obb2_vel_x),
+.vel_y(obb2_vel_y),
+.angle(obb2_angle),
+.omega(obb2_omega),
+        .load(1'b1),
+        .reset(reset_ah),
+        .clk(vsync)
+    );
+
+    // Logic for determining next state
+    obb_updater obb1_updater(
+        .next_width(obb1_ld_width),
+.next_height(obb1_ld_height),
+.next_pos_x(obb1_ld_pos_x),
+.next_pos_y(obb1_ld_pos_y),
+.next_vel_x(obb1_ld_vel_x),
+.next_vel_y(obb1_ld_vel_y),
+.next_angle(obb1_ld_angle),
+.next_omega(obb1_ld_omega),
+        .prev_width(obb1_width),
+.prev_height(obb1_height),
+.prev_pos_x(obb1_pos_x),
+.prev_pos_y(obb1_pos_y),
+.prev_vel_x(obb1_vel_x),
+.prev_vel_y(obb1_vel_y),
+.prev_angle(obb1_angle),
+.prev_omega(obb1_omega)
+    );
+
+    obb_updater obb2_updater(
+        .next_width(obb2_ld_width),
+.next_height(obb2_ld_height),
+.next_pos_x(obb2_ld_pos_x),
+.next_pos_y(obb2_ld_pos_y),
+.next_vel_x(obb2_ld_vel_x),
+.next_vel_y(obb2_ld_vel_y),
+.next_angle(obb2_ld_angle),
+.next_omega(obb2_ld_omega),
+        .prev_width(obb2_width),
+.prev_height(obb2_height),
+.prev_pos_x(obb2_pos_x),
+.prev_pos_y(obb2_pos_y),
+.prev_vel_x(obb2_vel_x),
+.prev_vel_y(obb2_vel_y),
+.prev_angle(obb2_angle),
+.prev_omega(obb2_omega)
+    );
+
+    // DID SOMEONE SAY JUICE????
+    // ITS JUICIN' TIME
+    
+    // Juicer for register 1
+logic signed [15 : 0] obb1_u_x;
+logic signed [15 : 0] obb1_u_y;
+logic signed [15 : 0] obb1_v_x;
+logic signed [15 : 0] obb1_v_y;
+logic signed [21 : 0] obb1_Point0_x;
+logic signed [21 : 0] obb1_Point0_y;
+logic signed [21 : 0] obb1_Point1_x;
+logic signed [21 : 0] obb1_Point1_y;
+logic signed [21 : 0] obb1_Point2_x;
+logic signed [21 : 0] obb1_Point2_y;
+logic signed [21 : 0] obb1_Point3_x;
+logic signed [21 : 0] obb1_Point3_y;
+logic signed [6 : 0] obb1_halfWidth;
+logic signed [6 : 0] obb1_halfHeight;
+
+    juicer juicer1(
+        .width(obb1_width),
+.height(obb1_height),
+.pos_x(obb1_pos_x),
+.pos_y(obb1_pos_y),
+.vel_x(obb1_vel_x),
+.vel_y(obb1_vel_y),
+.angle(obb1_angle),
+.omega(obb1_omega),
+        .u_x(obb1_u_x),
+.u_y(obb1_u_y),
+.v_x(obb1_v_x),
+.v_y(obb1_v_y),
+.Point0_x(obb1_Point0_x),
+.Point0_y(obb1_Point0_y),
+.Point1_x(obb1_Point1_x),
+.Point1_y(obb1_Point1_y),
+.Point2_x(obb1_Point2_x),
+.Point2_y(obb1_Point2_y),
+.Point3_x(obb1_Point3_x),
+.Point3_y(obb1_Point3_y),
+.halfWidth(obb1_halfWidth),
+.halfHeight(obb1_halfHeight)
+    );
+
+    // Juicer for register 2
+logic signed [15 : 0] obb2_u_x;
+logic signed [15 : 0] obb2_u_y;
+logic signed [15 : 0] obb2_v_x;
+logic signed [15 : 0] obb2_v_y;
+logic signed [21 : 0] obb2_Point0_x;
+logic signed [21 : 0] obb2_Point0_y;
+logic signed [21 : 0] obb2_Point1_x;
+logic signed [21 : 0] obb2_Point1_y;
+logic signed [21 : 0] obb2_Point2_x;
+logic signed [21 : 0] obb2_Point2_y;
+logic signed [21 : 0] obb2_Point3_x;
+logic signed [21 : 0] obb2_Point3_y;
+logic signed [6 : 0] obb2_halfWidth;
+logic signed [6 : 0] obb2_halfHeight;
+
+    juicer juicer2(
+        .width(obb2_width),
+.height(obb2_height),
+.pos_x(obb2_pos_x),
+.pos_y(obb2_pos_y),
+.vel_x(obb2_vel_x),
+.vel_y(obb2_vel_y),
+.angle(obb2_angle),
+.omega(obb2_omega),
+        .u_x(obb2_u_x),
+.u_y(obb2_u_y),
+.v_x(obb2_v_x),
+.v_y(obb2_v_y),
+.Point0_x(obb2_Point0_x),
+.Point0_y(obb2_Point0_y),
+.Point1_x(obb2_Point1_x),
+.Point1_y(obb2_Point1_y),
+.Point2_x(obb2_Point2_x),
+.Point2_y(obb2_Point2_y),
+.Point3_x(obb2_Point3_x),
+.Point3_y(obb2_Point3_y),
+.halfWidth(obb2_halfWidth),
+.halfHeight(obb2_halfHeight)
+    );
+
     //Color Mapper Module   
     color_mapper color_instance(
-        .BallX(ballxsig),
-        .BallY(ballysig),
+        .obb1_width(obb1_width),
+.obb1_height(obb1_height),
+.obb1_pos_x(obb1_pos_x),
+.obb1_pos_y(obb1_pos_y),
+.obb1_vel_x(obb1_vel_x),
+.obb1_vel_y(obb1_vel_y),
+.obb1_angle(obb1_angle),
+.obb1_omega(obb1_omega),
+.obb1_u_x(obb1_u_x),
+.obb1_u_y(obb1_u_y),
+.obb1_v_x(obb1_v_x),
+.obb1_v_y(obb1_v_y),
+.obb1_Point0_x(obb1_Point0_x),
+.obb1_Point0_y(obb1_Point0_y),
+.obb1_Point1_x(obb1_Point1_x),
+.obb1_Point1_y(obb1_Point1_y),
+.obb1_Point2_x(obb1_Point2_x),
+.obb1_Point2_y(obb1_Point2_y),
+.obb1_Point3_x(obb1_Point3_x),
+.obb1_Point3_y(obb1_Point3_y),
+.obb1_halfWidth(obb1_halfWidth),
+.obb1_halfHeight(obb1_halfHeight),
+        .obb2_width(obb2_width),
+.obb2_height(obb2_height),
+.obb2_pos_x(obb2_pos_x),
+.obb2_pos_y(obb2_pos_y),
+.obb2_vel_x(obb2_vel_x),
+.obb2_vel_y(obb2_vel_y),
+.obb2_angle(obb2_angle),
+.obb2_omega(obb2_omega),
+.obb2_u_x(obb2_u_x),
+.obb2_u_y(obb2_u_y),
+.obb2_v_x(obb2_v_x),
+.obb2_v_y(obb2_v_y),
+.obb2_Point0_x(obb2_Point0_x),
+.obb2_Point0_y(obb2_Point0_y),
+.obb2_Point1_x(obb2_Point1_x),
+.obb2_Point1_y(obb2_Point1_y),
+.obb2_Point2_x(obb2_Point2_x),
+.obb2_Point2_y(obb2_Point2_y),
+.obb2_Point3_x(obb2_Point3_x),
+.obb2_Point3_y(obb2_Point3_y),
+.obb2_halfWidth(obb2_halfWidth),
+.obb2_halfHeight(obb2_halfHeight),
         .DrawX(drawX),
         .DrawY(drawY),
-        .Ball_size(ballsizesig),
         .Red(red),
         .Green(green),
         .Blue(blue)

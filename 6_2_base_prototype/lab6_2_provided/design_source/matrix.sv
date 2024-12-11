@@ -8,7 +8,6 @@
  *
 */
 
-
 module matrix_multiplier
 #(
     parameter DATA_WIDTH = 16,
@@ -21,7 +20,7 @@ module matrix_multiplier
     output logic [DATA_WIDTH - 1:0] out [2][2]
 );
 
-    always_comb begin
+always_comb begin
        // Compute products
        logic [(DATA_WIDTH * 2) - 1:0] p0000;
        logic [(DATA_WIDTH * 2) - 1:0] p0110;
@@ -46,7 +45,7 @@ module matrix_multiplier
        out[0][1] = p0001[DECIMAL_BITS +: DATA_WIDTH] + p0111[DECIMAL_BITS +: DATA_WIDTH];
        out[1][0] = p1000[DECIMAL_BITS +: DATA_WIDTH] + p1110[DECIMAL_BITS +: DATA_WIDTH];
        out[1][1] = p1001[DECIMAL_BITS +: DATA_WIDTH] + p1111[DECIMAL_BITS +: DATA_WIDTH];
-    end
+end
 endmodule
 
 module vec_mat_multiplier
@@ -61,7 +60,7 @@ module vec_mat_multiplier
     output logic [DATA_WIDTH - 1:0] out [2]
 );
 
-    always_comb begin
+always_comb begin
        // Compute products
        logic [(DATA_WIDTH * 2) - 1:0] p00_0;
        logic [(DATA_WIDTH * 2) - 1:0] p01_1;
@@ -76,5 +75,5 @@ module vec_mat_multiplier
        // Compute output using products (products are bit sliced because fixed point multiplication is icky)
        out[0] = p00_0[DECIMAL_BITS +: DATA_WIDTH] + p01_1[DECIMAL_BITS +: DATA_WIDTH];
        out[1] = p10_0[DECIMAL_BITS +: DATA_WIDTH] + p11_1[DECIMAL_BITS +: DATA_WIDTH];
-    end
+end
 endmodule
