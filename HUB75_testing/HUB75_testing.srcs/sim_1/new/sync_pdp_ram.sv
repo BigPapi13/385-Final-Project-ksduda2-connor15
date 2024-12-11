@@ -38,7 +38,8 @@ module sync_pdp_ram #(parameter BITS_PER_PIXEL=0)
         .wea(write_en_top),
         .ena(1'b1),             // CHEKC IF THIS NEEDS CHANGING
         .dina(write_data),
-        .douta(tmp_data_top)
+        .douta(tmp_data_top),
+        .rsta(1'b0)
     );
     
     display_buffer_bram buffer_bottom(
@@ -47,7 +48,8 @@ module sync_pdp_ram #(parameter BITS_PER_PIXEL=0)
         .wea(write_en_bottom),
         .ena(1'b1),             // CHEKC IF THIS NEEDS CHANGING
         .dina(write_data),
-        .douta(tmp_data_bottom)
+        .douta(tmp_data_bottom),
+        .rsta(1'b0)
     );
 
     
@@ -68,9 +70,8 @@ module sync_pdp_ram #(parameter BITS_PER_PIXEL=0)
        end
     end*/
     
-       
-    // WRITE
-    always @ (posedge write_clk) begin
+/*
+    always @ (posedge (write_clk | read_clk)) begin
         if (write_en) begin
             if (write_addr[11] == 1'b0) begin
                 addr_top <= {buffer_toggle, write_addr[10:0]};
@@ -79,18 +80,28 @@ module sync_pdp_ram #(parameter BITS_PER_PIXEL=0)
                 addr_bottom <= {buffer_toggle, write_addr[10:0]};
             end
         end
-    end
-    
-
-    // READ
-    
-    always @ (posedge read_clk) begin
-       if (read_en) begin
+        else if (read_en) begin
             addr_top <= {~buffer_toggle, read_addr};
             addr_bottom <= {~buffer_toggle, read_addr};
        end
-       
+    end*/
+    
+    always @ (posedge ((write_clk & write_en) | (read_clk & read_en))) begin
+        if (write_en) begin
+            if (write_addr[11] == 1'b0) begin
+                addr_top <= {buffer_toggle, write_addr[10:0]};
+            end
+            else begin
+                addr_bottom <= {buffer_toggle, write_addr[10:0]};
+            end
+        end
+        if (read_en) begin
+            addr_top <= {~buffer_toggle, read_addr};
+            addr_bottom <= {~buffer_toggle, read_addr};
+       end
     end
+    
+    
 
     // will only output values when read_en is on.
     assign read_data_top = read_en ? tmp_data_top : {BITS_PER_PIXEL{1'b1}};
