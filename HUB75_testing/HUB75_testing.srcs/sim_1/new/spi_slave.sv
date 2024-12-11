@@ -26,6 +26,8 @@ module spi_slave #(parameter BITS_PER_PIXEL=0)
                     tmp_data[2*8-1:(2*8)-BITS_PER_RGB],
                     tmp_data[1*8-1:(1*8)-BITS_PER_RGB]
     };
+    
+    
     assign pixel_clk = bit_counter[4];
 
 endmodule

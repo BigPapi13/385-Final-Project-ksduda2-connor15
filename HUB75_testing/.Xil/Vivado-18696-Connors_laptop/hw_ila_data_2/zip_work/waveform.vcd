@@ -1,0 +1,36 @@
+$date
+        2024-Dec-11 06:56:52
+$end
+$version
+        Vivado v2022.2 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " startup_state $end
+$var reg 1 # clk_IBUF $end
+$var reg 1 $ hub75_clk_OBUF $end
+$var reg 1 % start_signal_IBUF $end
+$var reg 1 & _TRIGGER $end
+$var reg 1 ' _WINDOW $end
+$var reg 1 ( _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0"
+1#
+0$
+0%
+0&
+1'
+0(
+$end
+#4096
+1%
+1&
+#4097
+1"
+#4098
+0"
