@@ -1,3 +1,5 @@
+$ from svmath import *
+
 module hex_driver (
     input   logic           clk,
     input   logic           reset,
@@ -12,7 +14,7 @@ module hex_driver (
         input   logic   [3:0]   nibble,
         output  logic   [7:0]   hex
     );
-        always_comb begin
+        $ begin_comb()
         case(nibble)
             4'b0000 : hex = 8'b00111111; // '0'
             4'b0001 : hex = 8'b00000110; // '1'
@@ -56,7 +58,7 @@ module hex_driver (
         end
     end
 
-    always_comb begin
+    $ begin_comb()
         if (reset) begin
             hex_grid = '1;
             hex_seg = '1;
@@ -80,6 +82,6 @@ module hex_driver (
             end
             endcase
         end
-    end
+    $ end_comb()
 
 endmodule

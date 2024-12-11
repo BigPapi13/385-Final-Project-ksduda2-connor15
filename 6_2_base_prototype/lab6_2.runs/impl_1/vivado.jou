@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Dec 10 10:48:16 2024
+# Process ID: 18004
+# Current directory: C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/impl_1
+# Command line: vivado.exe -log mb_usb_hdmi_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source mb_usb_hdmi_top.tcl -notrace
+# Log file: C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/impl_1/mb_usb_hdmi_top.vdi
+# Journal file: C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/impl_1\vivado.jou
+# Running On: Kobe_Laptop, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 10, Host memory: 16831 MB
+#-----------------------------------------------------------
+source mb_usb_hdmi_top.tcl -notrace

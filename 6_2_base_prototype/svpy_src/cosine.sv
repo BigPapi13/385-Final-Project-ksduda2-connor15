@@ -6,9 +6,14 @@ module cos
     output [15:0] out      //16 bits of precision, first 2 are integer part (signed)
 );
 
-parameter [0:9][15:0] ROM = {
+parameter ADDR_WIDTH = 10;
+parameter DATA_WIDTH =  16;
+logic [9:0] addr_reg;
+
+parameter [0:2**ADDR_WIDTH-1][DATA_WIDTH-1:0] ROM = {
 $$$
-max = ceil(2 * pi * 2**7)
+# max = ceil(2 * pi * 2**7)
+max = 2**10
 for i in range(max):
     line = svmath.to_bits(cos(i / 2**7), 2, 14)
     if i != max - 1:

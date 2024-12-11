@@ -14,7 +14,7 @@
 //    UIUC ECE Department                                                --
 //-------------------------------------------------------------------------
 
-
+$ from svmath import *
 module  square 
 ( 
     input  logic        Reset, 
@@ -43,7 +43,7 @@ module  square
     logic [9:0] Ball_X_next;
     logic [9:0] Ball_Y_next;
 
-    always_comb begin
+    $ begin_comb()
         Ball_Y_Motion_next = Ball_Y_Motion + 10'b1; // set default motion to be same as prev clock cycle 
         Ball_X_Motion_next = Ball_X_Motion;
 
@@ -96,7 +96,7 @@ module  square
             Ball_X_Motion_next = Ball_X_Step;
         end  
 
-    end
+    $ end_comb()
 
     assign S = 16;  // default ball size
     assign Ball_X_next = (X + Ball_X_Motion_next);
