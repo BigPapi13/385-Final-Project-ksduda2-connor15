@@ -15,7 +15,7 @@ module controller #(parameter BITS_PER_PIXEL=0)
         input logic write_pixel_clk, 
         input logic [11:0] write_addr,
         input logic [BITS_PER_PIXEL-1:0] write_data,
-        input logic spi_ss,
+        input logic buffer_toggle,
         input logic write_en
     );
     
@@ -25,7 +25,12 @@ module controller #(parameter BITS_PER_PIXEL=0)
     assign reset = ~n_reset;
     logic [1:0] clk_counter;
     always @ (posedge clk) begin
-        clk_counter <= clk_counter + 2'b01;
+        if(reset == 1'b1) begin
+            clk_counter <= 2'b0;
+        end
+        else begin
+            clk_counter <= clk_counter + 2'b01;
+        end
     end
     // 12.5MHz on my board
     logic slow_clk;
@@ -41,7 +46,7 @@ module controller #(parameter BITS_PER_PIXEL=0)
     logic read_en;
     
     sync_pdp_ram #(BITS_PER_PIXEL) sync_pdp_ram (
-        spi_ss,
+        buffer_toggle,
         clk,
         write_pixel_clk, write_addr, write_data, write_en,
         slow_clk, read_addr, read_data_top, read_data_bottom, read_en
@@ -64,11 +69,9 @@ module controller #(parameter BITS_PER_PIXEL=0)
             oe_strobe_column_addr <= 10'b0000000000;
             row_addr <= 5'h0;
             column_addr <= 10'b0000000000;
-            clk_counter <= 2'b00;
             run_hub75_clk <= 1'b0;
             hub75_red <= 2'b00;
             hub75_green <= 2'b00;
-            hub75_clk <= 1'b0;
             hub75_blue <= 2'b00;
             hub75_latch <= 1'b0;
             hub75_oe <= 1'b1;

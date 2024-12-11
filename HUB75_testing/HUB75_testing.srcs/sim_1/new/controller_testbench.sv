@@ -21,13 +21,13 @@ module tb1 #(BITS_PER_PIXEL=16);
     localparam period = 1;
 
     localparam BITS_PER_RGB = BITS_PER_PIXEL / 4;
-    
-    logic temp;
-    
+        
     logic [BITS_PER_PIXEL-1:0] write_data;
     logic write_pixel_clk;
     logic [11:0] write_addr; // top bit is the double-buffer flipper and is provided by spi_ss
     logic write_en;
+    
+    logic reset_spi;
     
             
     controller #(BITS_PER_PIXEL) dut (
@@ -57,7 +57,7 @@ module tb1 #(BITS_PER_PIXEL=16);
         spi_clk= 1'b0;
         spi_mosi = 1'b0;
         spi_ss = 1'b0;
-        temp = 0;
+        reset_spi = 1'b0;
 
         #period;
         n_reset = 1'b0;
@@ -75,7 +75,7 @@ module tb1 #(BITS_PER_PIXEL=16);
 
         
     spi_slave #(BITS_PER_PIXEL) spi_slave (
-        reset, spi_clk, spi_mosi, write_data, write_pixel_clk
+        reset_spi, spi_clk, spi_mosi, write_data, write_pixel_clk
     );
 
     always @ (posedge spi_ss, negedge write_pixel_clk) begin
@@ -125,6 +125,7 @@ module tb1 #(BITS_PER_PIXEL=16);
 
         
         n_reset = 1'b1;
+        reset_spi = 1'b1;
     end
     
     always begin : CLOCK_GEN 
@@ -209,7 +210,6 @@ module tb1 #(BITS_PER_PIXEL=16);
     // Watch for the top addr bit going low, this indicates the end of the frame
     always @ (negedge hub75_addr[4]) begin  //this will trigger immediately by default for some reason so
         if(n_reset)
-            if(temp) begin   //use temp to disable this from beging triggered the first time it happens
                 for (integer y_count = 0; y_count < 64; y_count++) begin
                     for (integer x_count = 0; x_count < 64; x_count++) begin
                         // Output the RGB of each pixel in unscaled form, which will turn back into a BMP by scaling
@@ -219,8 +219,6 @@ module tb1 #(BITS_PER_PIXEL=16);
                     end
                 end
                 $finish();
-        end 
-        temp = 1;
     end
     
     
