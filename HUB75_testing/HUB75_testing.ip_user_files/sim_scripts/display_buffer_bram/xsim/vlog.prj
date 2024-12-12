@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../HUB75_testing.gen/sources_1/ip/display_buffer_bram/sim/display_buffer_bram.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
