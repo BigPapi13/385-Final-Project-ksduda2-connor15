@@ -22,9 +22,12 @@ $ DrawY = Fixed(8, 2, "DrawY")
 $ obb1 = JOBB("obb1")
 $ obb2 = JOBB("obb2")
 
+$ drawPoint = Vec2(8, 14, "drawPoint")
+
 module  color_mapper (
     $$obb1.declare("input")$$,
-    $$obb2.declare("input")$$, 
+    $$obb2.declare("input")$$,
+    $$drawPoint.declare("input")$$,
     input  logic [9:0] DrawX, DrawY,
     output logic [3:0]  Red, Green, Blue
 );
@@ -133,8 +136,8 @@ module  color_mapper (
 
         // Draw end points
 
-        $ Point0_dx = (obb1.Point0.x - DrawXs)
-        $ Point0_dy = (obb1.Point0.y - DrawYs)
+        $ Point0_dx = (drawPoint.x - DrawXs)
+        $ Point0_dy = (drawPoint.y - DrawYs)
         if ($$Point0_dx$$ >= $$resize(-1, Point0_dx)$$ && $$Point0_dx$$ <= $$resize(1, Point0_dx)$$ && $$Point0_dy$$ >= $$resize(-1, Point0_dy)$$ && $$Point0_dy$$ <= $$resize(1, Point0_dy)$$) begin
             Red = 4'hf;
             Green = 4'hc;

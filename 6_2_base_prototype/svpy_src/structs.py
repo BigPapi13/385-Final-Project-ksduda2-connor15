@@ -42,7 +42,18 @@ JOBB = Struct("JOBB", [
 
 #> Contact
 #   - Describes a contact in a collision
-#   - Components are the normal vector and the contact point location
+#   - Components are the normal vector, contact point location, and penetration depth
 Contact = Struct("Contact", [
-    
+    Vec2(2, 14, "normal"),
+    Vec2(8, 14, "location"),
+    Fixed(8, 24, "penetration"),
+])
+
+#> Impulse
+#   - Data required to resolve a contact
+#   - Contains the change in velocity, the change in position, and the change in angular velocity
+Impulse = Struct("Impulse", [
+    Vec2(6, 26, "impulse"),
+    Vec2(8, 24, "nudge"),
+    Fixed(4, 7, "rotational_impulse")
 ])
