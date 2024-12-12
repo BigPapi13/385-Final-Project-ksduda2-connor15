@@ -16,6 +16,7 @@
 
 
 
+
 module  color_mapper (
     input logic signed [7 : 0] obb1_width,
 input logic signed [7 : 0] obb1_height,
@@ -44,7 +45,8 @@ input logic signed [21 : 0] obb2_Point1_x, input logic signed [21 : 0] obb2_Poin
 input logic signed [21 : 0] obb2_Point2_x, input logic signed [21 : 0] obb2_Point2_y,
 input logic signed [21 : 0] obb2_Point3_x, input logic signed [21 : 0] obb2_Point3_y,
 input logic signed [6 : 0] obb2_halfWidth,
-input logic signed [6 : 0] obb2_halfHeight, 
+input logic signed [6 : 0] obb2_halfHeight,
+    input logic signed [21 : 0] drawPoint_x, input logic signed [21 : 0] drawPoint_y,
     input  logic [9:0] DrawX, DrawY,
     output logic [3:0]  Red, Green, Blue
 );
@@ -61,12 +63,12 @@ assign DrawYs = DrawY << 22;
     // Determine if point is in first square
 logic signed [31 : 0] DrawXRel1;
 logic signed [31 : 0] DrawYRel1;
-logic signed [31 : 0] opnet_199;
-assign opnet_199 = DrawXs - obb1_pos_x;
-assign DrawXRel1 = opnet_199;
-logic signed [31 : 0] opnet_200;
-assign opnet_200 = DrawYs - obb1_pos_y;
-assign DrawYRel1 = opnet_200;
+logic signed [31 : 0] opnet_289;
+assign opnet_289 = DrawXs - obb1_pos_x;
+assign DrawXRel1 = opnet_289;
+logic signed [31 : 0] opnet_290;
+assign opnet_290 = DrawYs - obb1_pos_y;
+assign DrawYRel1 = opnet_290;
 
 logic signed [31 : 0] u_projection1;
 logic signed [31 : 0] v_projection1;
@@ -77,14 +79,14 @@ always_comb begin
         //  - Get Pixel position relative to square position
         //  - Project onto u and v axes
         //  - Compare to half width and half height
-opnet_201 = DrawXRel1 * obb1_u_x;
-opnet_202 = DrawYRel1 * obb1_u_y;
-opnet_203 = opnet_201 + opnet_202;
-u_projection1 = opnet_203 >>> 14;
-opnet_204 = DrawXRel1 * obb1_v_x;
-opnet_205 = DrawYRel1 * obb1_v_y;
-opnet_206 = opnet_204 + opnet_205;
-v_projection1 = opnet_206 >>> 14;
+opnet_291 = DrawXRel1 * obb1_u_x;
+opnet_292 = DrawYRel1 * obb1_u_y;
+opnet_293 = opnet_291 + opnet_292;
+u_projection1 = opnet_293 >>> 14;
+opnet_294 = DrawXRel1 * obb1_v_x;
+opnet_295 = DrawYRel1 * obb1_v_y;
+opnet_296 = opnet_294 + opnet_295;
+v_projection1 = opnet_296 >>> 14;
 
         obb1_on = 0;
         if (u_projection1 > -(obb1_halfWidth << 24) && u_projection1 < (obb1_halfWidth << 24) && v_projection1 > -(obb1_halfHeight << 24) && v_projection1 < (obb1_halfHeight << 24) 
@@ -93,22 +95,22 @@ v_projection1 = opnet_206 >>> 14;
         end
 
 end
-logic signed [47 : 0] opnet_201;
-logic signed [47 : 0] opnet_202;
-logic signed [47 : 0] opnet_203;
-logic signed [47 : 0] opnet_204;
-logic signed [47 : 0] opnet_205;
-logic signed [47 : 0] opnet_206;
+logic signed [47 : 0] opnet_291;
+logic signed [47 : 0] opnet_292;
+logic signed [47 : 0] opnet_293;
+logic signed [47 : 0] opnet_294;
+logic signed [47 : 0] opnet_295;
+logic signed [47 : 0] opnet_296;
 
     // Determine if point is in second square
 logic signed [31 : 0] DrawXRel2;
 logic signed [31 : 0] DrawYRel2;
-logic signed [31 : 0] opnet_207;
-assign opnet_207 = DrawXs - obb2_pos_x;
-assign DrawXRel2 = opnet_207;
-logic signed [31 : 0] opnet_208;
-assign opnet_208 = DrawYs - obb2_pos_y;
-assign DrawYRel2 = opnet_208;
+logic signed [31 : 0] opnet_297;
+assign opnet_297 = DrawXs - obb2_pos_x;
+assign DrawXRel2 = opnet_297;
+logic signed [31 : 0] opnet_298;
+assign opnet_298 = DrawYs - obb2_pos_y;
+assign DrawYRel2 = opnet_298;
 
 logic signed [31 : 0] u_projection2;
 logic signed [31 : 0] v_projection2;
@@ -119,14 +121,14 @@ always_comb begin
         //  - Get Pixel position relative to square position
         //  - Project onto u and v axes
         //  - Compare to half width and half height
-opnet_209 = DrawXRel2 * obb2_u_x;
-opnet_210 = DrawYRel2 * obb2_u_y;
-opnet_211 = opnet_209 + opnet_210;
-u_projection2 = opnet_211 >>> 14;
-opnet_212 = DrawXRel2 * obb2_v_x;
-opnet_213 = DrawYRel2 * obb2_v_y;
-opnet_214 = opnet_212 + opnet_213;
-v_projection2 = opnet_214 >>> 14;
+opnet_299 = DrawXRel2 * obb2_u_x;
+opnet_300 = DrawYRel2 * obb2_u_y;
+opnet_301 = opnet_299 + opnet_300;
+u_projection2 = opnet_301 >>> 14;
+opnet_302 = DrawXRel2 * obb2_v_x;
+opnet_303 = DrawYRel2 * obb2_v_y;
+opnet_304 = opnet_302 + opnet_303;
+v_projection2 = opnet_304 >>> 14;
 
         obb2_on = 0;
         if (u_projection2 > -(obb2_halfWidth << 24) && u_projection2 < (obb2_halfWidth << 24) && v_projection2 > -(obb2_halfHeight << 24) && v_projection2 < (obb2_halfHeight << 24) 
@@ -135,12 +137,12 @@ v_projection2 = opnet_214 >>> 14;
         end
 
 end
-logic signed [47 : 0] opnet_209;
-logic signed [47 : 0] opnet_210;
-logic signed [47 : 0] opnet_211;
-logic signed [47 : 0] opnet_212;
-logic signed [47 : 0] opnet_213;
-logic signed [47 : 0] opnet_214;
+logic signed [47 : 0] opnet_299;
+logic signed [47 : 0] opnet_300;
+logic signed [47 : 0] opnet_301;
+logic signed [47 : 0] opnet_302;
+logic signed [47 : 0] opnet_303;
+logic signed [47 : 0] opnet_304;
 
     logic is_collision;
 
@@ -211,15 +213,15 @@ always_comb begin
 
         // Draw end points
 
-opnet_215 = obb1_Point0_x - (DrawXs >>> 10);
-opnet_216 = obb1_Point0_y - (DrawYs >>> 10);
-        if (opnet_215 >= 22'sb1111111100000000000000 && opnet_215 <= 22'sb0000000100000000000000 && opnet_216 >= 22'sb1111111100000000000000 && opnet_216 <= 22'sb0000000100000000000000) begin
+opnet_305 = drawPoint_x - (DrawXs >>> 10);
+opnet_306 = drawPoint_y - (DrawYs >>> 10);
+        if (opnet_305 >= 22'sb1111111100000000000000 && opnet_305 <= 22'sb0000000100000000000000 && opnet_306 >= 22'sb1111111100000000000000 && opnet_306 <= 22'sb0000000100000000000000) begin
             Red = 4'hf;
             Green = 4'hc;
             Blue = 4'h0;
         end
 end
-logic signed [21 : 0] opnet_215;
-logic signed [21 : 0] opnet_216;
+logic signed [21 : 0] opnet_305;
+logic signed [21 : 0] opnet_306;
     
 endmodule
