@@ -17,15 +17,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="692.333 ns"></ZoomStartTime>
-      <ZoomEndTime time="934.834 ns"></ZoomEndTime>
-      <Cursor1Time time="768.833 ns"></Cursor1Time>
+      <ZoomStartTime time="933.247 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,124.990 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="273"></NameColumnWidth>
+      <NameColumnWidth column_width="248"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="42" />
+   <WVObjectSize size="45" />
    <wvobject fp_name="/main_test/Clk" type="logic">
       <obj_property name="ElementShortName">Clk</obj_property>
       <obj_property name="ObjectShortName">Clk</obj_property>
@@ -36,35 +36,35 @@
       <obj_property name="BkColor">#FFFFFF</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/obb1_pos_x" type="array">
-      <obj_property name="ElementShortName">obb1_pos_x[31:0]</obj_property>
-      <obj_property name="ObjectShortName">obb1_pos_x[31:0]</obj_property>
+      <obj_property name="ElementShortName">obb1_pos_x[23:0]</obj_property>
+      <obj_property name="ObjectShortName">obb1_pos_x[23:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_fractionWidth">16</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/obb1_pos_y" type="array">
-      <obj_property name="ElementShortName">obb1_pos_y[31:0]</obj_property>
-      <obj_property name="ObjectShortName">obb1_pos_y[31:0]</obj_property>
+      <obj_property name="ElementShortName">obb1_pos_y[23:0]</obj_property>
+      <obj_property name="ObjectShortName">obb1_pos_y[23:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_fractionWidth">16</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/obb2_pos_x" type="array">
-      <obj_property name="ElementShortName">obb2_pos_x[31:0]</obj_property>
-      <obj_property name="ObjectShortName">obb2_pos_x[31:0]</obj_property>
+      <obj_property name="ElementShortName">obb2_pos_x[23:0]</obj_property>
+      <obj_property name="ObjectShortName">obb2_pos_x[23:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_fractionWidth">16</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/obb2_pos_y" type="array">
-      <obj_property name="ElementShortName">obb2_pos_y[31:0]</obj_property>
-      <obj_property name="ObjectShortName">obb2_pos_y[31:0]</obj_property>
+      <obj_property name="ElementShortName">obb2_pos_y[23:0]</obj_property>
+      <obj_property name="ObjectShortName">obb2_pos_y[23:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_fractionWidth">16</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/test/obb1_angle" type="array">
@@ -331,8 +331,8 @@
       <obj_property name="label">OBB1 Point Projections</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/max_uA" type="array">
-         <obj_property name="ElementShortName">max_uA[31:0]</obj_property>
-         <obj_property name="ObjectShortName">max_uA[31:0]</obj_property>
+         <obj_property name="ElementShortName">max_uA[23:0]</obj_property>
+         <obj_property name="ObjectShortName">max_uA[23:0]</obj_property>
          <obj_property name="CustomSignalColor">#FFD700</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
@@ -341,8 +341,8 @@
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/max_vA" type="array">
-         <obj_property name="ElementShortName">max_vA[31:0]</obj_property>
-         <obj_property name="ObjectShortName">max_vA[31:0]</obj_property>
+         <obj_property name="ElementShortName">max_vA[23:0]</obj_property>
+         <obj_property name="ObjectShortName">max_vA[23:0]</obj_property>
          <obj_property name="CustomSignalColor">#FFD700</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
@@ -351,8 +351,8 @@
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_uA" type="array">
-         <obj_property name="ElementShortName">min_uA[31:0]</obj_property>
-         <obj_property name="ObjectShortName">min_uA[31:0]</obj_property>
+         <obj_property name="ElementShortName">min_uA[23:0]</obj_property>
+         <obj_property name="ObjectShortName">min_uA[23:0]</obj_property>
          <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
@@ -361,8 +361,8 @@
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_vA" type="array">
-         <obj_property name="ElementShortName">min_vA[31:0]</obj_property>
-         <obj_property name="ObjectShortName">min_vA[31:0]</obj_property>
+         <obj_property name="ElementShortName">min_vA[23:0]</obj_property>
+         <obj_property name="ObjectShortName">min_vA[23:0]</obj_property>
          <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
@@ -371,64 +371,64 @@
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point1_0_u" type="array">
-         <obj_property name="ElementShortName">Point1_0_u[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point1_0_u[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point1_0_u[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point1_0_u[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point1_0_v" type="array">
-         <obj_property name="ElementShortName">Point1_0_v[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point1_0_v[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point1_0_v[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point1_0_v[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point1_1_u" type="array">
-         <obj_property name="ElementShortName">Point1_1_u[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point1_1_u[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point1_1_u[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point1_1_u[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point1_1_v" type="array">
-         <obj_property name="ElementShortName">Point1_1_v[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point1_1_v[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point1_1_v[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point1_1_v[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point1_2_u" type="array">
-         <obj_property name="ElementShortName">Point1_2_u[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point1_2_u[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point1_2_u[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point1_2_u[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point1_2_v" type="array">
-         <obj_property name="ElementShortName">Point1_2_v[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point1_2_v[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point1_2_v[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point1_2_v[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point1_3_u" type="array">
-         <obj_property name="ElementShortName">Point1_3_u[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point1_3_u[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point1_3_u[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point1_3_u[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point1_3_v" type="array">
-         <obj_property name="ElementShortName">Point1_3_v[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point1_3_v[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point1_3_v[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point1_3_v[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
@@ -443,8 +443,8 @@
       <obj_property name="radix_fractionWidth">24</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/max_uB" type="array">
-         <obj_property name="ElementShortName">max_uB[31:0]</obj_property>
-         <obj_property name="ObjectShortName">max_uB[31:0]</obj_property>
+         <obj_property name="ElementShortName">max_uB[23:0]</obj_property>
+         <obj_property name="ObjectShortName">max_uB[23:0]</obj_property>
          <obj_property name="CustomSignalColor">#FFD700</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
@@ -453,8 +453,8 @@
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/max_vB" type="array">
-         <obj_property name="ElementShortName">max_vB[31:0]</obj_property>
-         <obj_property name="ObjectShortName">max_vB[31:0]</obj_property>
+         <obj_property name="ElementShortName">max_vB[23:0]</obj_property>
+         <obj_property name="ObjectShortName">max_vB[23:0]</obj_property>
          <obj_property name="CustomSignalColor">#FFD700</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
@@ -463,8 +463,8 @@
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_uB" type="array">
-         <obj_property name="ElementShortName">min_uB[31:0]</obj_property>
-         <obj_property name="ObjectShortName">min_uB[31:0]</obj_property>
+         <obj_property name="ElementShortName">min_uB[23:0]</obj_property>
+         <obj_property name="ObjectShortName">min_uB[23:0]</obj_property>
          <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
@@ -473,8 +473,8 @@
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_vB" type="array">
-         <obj_property name="ElementShortName">min_vB[31:0]</obj_property>
-         <obj_property name="ObjectShortName">min_vB[31:0]</obj_property>
+         <obj_property name="ElementShortName">min_vB[23:0]</obj_property>
+         <obj_property name="ObjectShortName">min_vB[23:0]</obj_property>
          <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
@@ -483,64 +483,64 @@
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point2_0_u" type="array">
-         <obj_property name="ElementShortName">Point2_0_u[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point2_0_u[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point2_0_u[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point2_0_u[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point2_0_v" type="array">
-         <obj_property name="ElementShortName">Point2_0_v[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point2_0_v[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point2_0_v[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point2_0_v[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point2_1_u" type="array">
-         <obj_property name="ElementShortName">Point2_1_u[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point2_1_u[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point2_1_u[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point2_1_u[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point2_1_v" type="array">
-         <obj_property name="ElementShortName">Point2_1_v[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point2_1_v[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point2_1_v[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point2_1_v[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point2_2_u" type="array">
-         <obj_property name="ElementShortName">Point2_2_u[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point2_2_u[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point2_2_u[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point2_2_u[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point2_2_v" type="array">
-         <obj_property name="ElementShortName">Point2_2_v[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point2_2_v[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point2_2_v[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point2_2_v[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point2_3_u" type="array">
-         <obj_property name="ElementShortName">Point2_3_u[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point2_3_u[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point2_3_u[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point2_3_u[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/Point2_3_v" type="array">
-         <obj_property name="ElementShortName">Point2_3_v[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Point2_3_v[31:0]</obj_property>
+         <obj_property name="ElementShortName">Point2_3_v[23:0]</obj_property>
+         <obj_property name="ObjectShortName">Point2_3_v[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
@@ -548,16 +548,16 @@
       </wvobject>
    </wvobject>
    <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_uB_01" type="array">
-      <obj_property name="ElementShortName">min_uB_01[31:0]</obj_property>
-      <obj_property name="ObjectShortName">min_uB_01[31:0]</obj_property>
+      <obj_property name="ElementShortName">min_uB_01[23:0]</obj_property>
+      <obj_property name="ObjectShortName">min_uB_01[23:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">24</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_uB_23" type="array">
-      <obj_property name="ElementShortName">min_uB_23[31:0]</obj_property>
-      <obj_property name="ObjectShortName">min_uB_23[31:0]</obj_property>
+      <obj_property name="ElementShortName">min_uB_23[23:0]</obj_property>
+      <obj_property name="ObjectShortName">min_uB_23[23:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">24</obj_property>
@@ -567,41 +567,13 @@
       <obj_property name="ElementShortName">is_collision</obj_property>
       <obj_property name="ObjectShortName">is_collision</obj_property>
    </wvobject>
+   <wvobject fp_name="/main_test/test/ignore_impulse" type="logic">
+      <obj_property name="ElementShortName">ignore_impulse</obj_property>
+      <obj_property name="ObjectShortName">ignore_impulse</obj_property>
+   </wvobject>
    <wvobject fp_name="group95" type="group">
       <obj_property name="label">Axis Separations</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_min_uA" type="logic">
-         <obj_property name="ElementShortName">separate_min_uA</obj_property>
-         <obj_property name="ObjectShortName">separate_min_uA</obj_property>
-      </wvobject>
-      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_max_uA" type="logic">
-         <obj_property name="ElementShortName">separate_max_uA</obj_property>
-         <obj_property name="ObjectShortName">separate_max_uA</obj_property>
-      </wvobject>
-      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_min_vA" type="logic">
-         <obj_property name="ElementShortName">separate_min_vA</obj_property>
-         <obj_property name="ObjectShortName">separate_min_vA</obj_property>
-      </wvobject>
-      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_max_vA" type="logic">
-         <obj_property name="ElementShortName">separate_max_vA</obj_property>
-         <obj_property name="ObjectShortName">separate_max_vA</obj_property>
-      </wvobject>
-      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_min_uB" type="logic">
-         <obj_property name="ElementShortName">separate_min_uB</obj_property>
-         <obj_property name="ObjectShortName">separate_min_uB</obj_property>
-      </wvobject>
-      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_max_uB" type="logic">
-         <obj_property name="ElementShortName">separate_max_uB</obj_property>
-         <obj_property name="ObjectShortName">separate_max_uB</obj_property>
-      </wvobject>
-      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_min_vB" type="logic">
-         <obj_property name="ElementShortName">separate_min_vB</obj_property>
-         <obj_property name="ObjectShortName">separate_min_vB</obj_property>
-      </wvobject>
-      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_max_vB" type="logic">
-         <obj_property name="ElementShortName">separate_max_vB</obj_property>
-         <obj_property name="ObjectShortName">separate_max_vB</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject type="divider" fp_name="divider74">
       <obj_property name="label">Contact Data</obj_property>
@@ -611,64 +583,64 @@
       <obj_property name="label">Basis Penetrations</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/pen_min_uA" type="array">
-         <obj_property name="ElementShortName">pen_min_uA[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pen_min_uA[31:0]</obj_property>
+         <obj_property name="ElementShortName">pen_min_uA[23:0]</obj_property>
+         <obj_property name="ObjectShortName">pen_min_uA[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/pen_max_uA" type="array">
-         <obj_property name="ElementShortName">pen_max_uA[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pen_max_uA[31:0]</obj_property>
+         <obj_property name="ElementShortName">pen_max_uA[23:0]</obj_property>
+         <obj_property name="ObjectShortName">pen_max_uA[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/pen_min_vA" type="array">
-         <obj_property name="ElementShortName">pen_min_vA[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pen_min_vA[31:0]</obj_property>
+         <obj_property name="ElementShortName">pen_min_vA[23:0]</obj_property>
+         <obj_property name="ObjectShortName">pen_min_vA[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/pen_max_vA" type="array">
-         <obj_property name="ElementShortName">pen_max_vA[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pen_max_vA[31:0]</obj_property>
+         <obj_property name="ElementShortName">pen_max_vA[23:0]</obj_property>
+         <obj_property name="ObjectShortName">pen_max_vA[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/pen_min_uB" type="array">
-         <obj_property name="ElementShortName">pen_min_uB[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pen_min_uB[31:0]</obj_property>
+         <obj_property name="ElementShortName">pen_min_uB[23:0]</obj_property>
+         <obj_property name="ObjectShortName">pen_min_uB[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/pen_max_uB" type="array">
-         <obj_property name="ElementShortName">pen_max_uB[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pen_max_uB[31:0]</obj_property>
+         <obj_property name="ElementShortName">pen_max_uB[23:0]</obj_property>
+         <obj_property name="ObjectShortName">pen_max_uB[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/pen_min_vB" type="array">
-         <obj_property name="ElementShortName">pen_min_vB[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pen_min_vB[31:0]</obj_property>
+         <obj_property name="ElementShortName">pen_min_vB[23:0]</obj_property>
+         <obj_property name="ObjectShortName">pen_min_vB[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/pen_max_vB" type="array">
-         <obj_property name="ElementShortName">pen_max_vB[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pen_max_vB[31:0]</obj_property>
+         <obj_property name="ElementShortName">pen_max_vB[23:0]</obj_property>
+         <obj_property name="ObjectShortName">pen_max_vB[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
@@ -683,32 +655,32 @@
       <obj_property name="radix_fractionWidth">24</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_pen_uA" type="array">
-         <obj_property name="ElementShortName">min_pen_uA[31:0]</obj_property>
-         <obj_property name="ObjectShortName">min_pen_uA[31:0]</obj_property>
+         <obj_property name="ElementShortName">min_pen_uA[23:0]</obj_property>
+         <obj_property name="ObjectShortName">min_pen_uA[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_pen_vA" type="array">
-         <obj_property name="ElementShortName">min_pen_vA[31:0]</obj_property>
-         <obj_property name="ObjectShortName">min_pen_vA[31:0]</obj_property>
+         <obj_property name="ElementShortName">min_pen_vA[23:0]</obj_property>
+         <obj_property name="ObjectShortName">min_pen_vA[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_pen_uB" type="array">
-         <obj_property name="ElementShortName">min_pen_uB[31:0]</obj_property>
-         <obj_property name="ObjectShortName">min_pen_uB[31:0]</obj_property>
+         <obj_property name="ElementShortName">min_pen_uB[23:0]</obj_property>
+         <obj_property name="ObjectShortName">min_pen_uB[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_pen_vB" type="array">
-         <obj_property name="ElementShortName">min_pen_vB[31:0]</obj_property>
-         <obj_property name="ObjectShortName">min_pen_vB[31:0]</obj_property>
+         <obj_property name="ElementShortName">min_pen_vB[23:0]</obj_property>
+         <obj_property name="ObjectShortName">min_pen_vB[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
@@ -723,16 +695,16 @@
       <obj_property name="radix_fractionWidth">24</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_pen_u" type="array">
-         <obj_property name="ElementShortName">min_pen_u[31:0]</obj_property>
-         <obj_property name="ObjectShortName">min_pen_u[31:0]</obj_property>
+         <obj_property name="ElementShortName">min_pen_u[23:0]</obj_property>
+         <obj_property name="ObjectShortName">min_pen_u[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_pen_v" type="array">
-         <obj_property name="ElementShortName">min_pen_v[31:0]</obj_property>
-         <obj_property name="ObjectShortName">min_pen_v[31:0]</obj_property>
+         <obj_property name="ElementShortName">min_pen_v[23:0]</obj_property>
+         <obj_property name="ObjectShortName">min_pen_v[23:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
          <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
          <obj_property name="radix_fractionWidth">24</obj_property>
@@ -740,8 +712,8 @@
       </wvobject>
    </wvobject>
    <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_pen" type="array">
-      <obj_property name="ElementShortName">min_pen[31:0]</obj_property>
-      <obj_property name="ObjectShortName">min_pen[31:0]</obj_property>
+      <obj_property name="ElementShortName">min_pen[23:0]</obj_property>
+      <obj_property name="ObjectShortName">min_pen[23:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">24</obj_property>
@@ -763,38 +735,6 @@
       <obj_property name="radix_fractionWidth">14</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
-   <wvobject fp_name="/main_test/test/impulse_data_impulse_x" type="array">
-      <obj_property name="ElementShortName">impulse_data_impulse_x[31:0]</obj_property>
-      <obj_property name="ObjectShortName">impulse_data_impulse_x[31:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">24</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
-   </wvobject>
-   <wvobject fp_name="/main_test/test/impulse_data_impulse_y" type="array">
-      <obj_property name="ElementShortName">impulse_data_impulse_y[31:0]</obj_property>
-      <obj_property name="ObjectShortName">impulse_data_impulse_y[31:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">24</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
-   </wvobject>
-   <wvobject fp_name="/main_test/test/neg_impulse_data_impulse_x" type="array">
-      <obj_property name="ElementShortName">neg_impulse_data_impulse_x[31:0]</obj_property>
-      <obj_property name="ObjectShortName">neg_impulse_data_impulse_x[31:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">24</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
-   </wvobject>
-   <wvobject fp_name="/main_test/test/neg_impulse_data_impulse_y" type="array">
-      <obj_property name="ElementShortName">neg_impulse_data_impulse_y[31:0]</obj_property>
-      <obj_property name="ObjectShortName">neg_impulse_data_impulse_y[31:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
-      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">24</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
-   </wvobject>
    <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/location_x" type="array">
       <obj_property name="ElementShortName">location_x[21:0]</obj_property>
       <obj_property name="ObjectShortName">location_x[21:0]</obj_property>
@@ -806,10 +746,7 @@
    <wvobject fp_name="group235" type="group">
       <obj_property name="label">OBB1 Parameters</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/main_test/test/obb1/mass" type="array">
-         <obj_property name="ElementShortName">mass[7:0]</obj_property>
-         <obj_property name="ObjectShortName">mass[7:0]</obj_property>
-      </wvobject>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/main_test/test/obb1/inertia" type="array">
          <obj_property name="ElementShortName">inertia[15:0]</obj_property>
          <obj_property name="ObjectShortName">inertia[15:0]</obj_property>
@@ -834,10 +771,7 @@
    <wvobject fp_name="group240" type="group">
       <obj_property name="label">OBB2 Parameters</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/main_test/test/obb2/mass" type="array">
-         <obj_property name="ElementShortName">mass[7:0]</obj_property>
-         <obj_property name="ObjectShortName">mass[7:0]</obj_property>
-      </wvobject>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/main_test/test/obb2/inertia" type="array">
          <obj_property name="ElementShortName">inertia[15:0]</obj_property>
          <obj_property name="ObjectShortName">inertia[15:0]</obj_property>
@@ -853,6 +787,10 @@
       <wvobject fp_name="/main_test/test/obb2/inv_inertia" type="array">
          <obj_property name="ElementShortName">inv_inertia[23:0]</obj_property>
          <obj_property name="ObjectShortName">inv_inertia[23:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">23</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="/main_test/test/bbr_inst/totalIMass" type="array">
@@ -872,43 +810,91 @@
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/test/bbr_inst/vs" type="array">
-      <obj_property name="ElementShortName">vs[31:0]</obj_property>
-      <obj_property name="ObjectShortName">vs[31:0]</obj_property>
+      <obj_property name="ElementShortName">vs[23:0]</obj_property>
+      <obj_property name="ObjectShortName">vs[23:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">26</obj_property>
+      <obj_property name="radix_fractionWidth">18</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/test/obb2_vel_x" type="array">
-      <obj_property name="ElementShortName">obb2_vel_x[31:0]</obj_property>
-      <obj_property name="ObjectShortName">obb2_vel_x[31:0]</obj_property>
+      <obj_property name="ElementShortName">obb2_vel_x[23:0]</obj_property>
+      <obj_property name="ObjectShortName">obb2_vel_x[23:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">26</obj_property>
+      <obj_property name="radix_fractionWidth">18</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/test/obb2_vel_y" type="array">
-      <obj_property name="ElementShortName">obb2_vel_y[31:0]</obj_property>
-      <obj_property name="ObjectShortName">obb2_vel_y[31:0]</obj_property>
+      <obj_property name="ElementShortName">obb2_vel_y[23:0]</obj_property>
+      <obj_property name="ObjectShortName">obb2_vel_y[23:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">26</obj_property>
+      <obj_property name="radix_fractionWidth">18</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/test/obb1_vel_x" type="array">
-      <obj_property name="ElementShortName">obb1_vel_x[31:0]</obj_property>
-      <obj_property name="ObjectShortName">obb1_vel_x[31:0]</obj_property>
+      <obj_property name="ElementShortName">obb1_vel_x[23:0]</obj_property>
+      <obj_property name="ObjectShortName">obb1_vel_x[23:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">26</obj_property>
+      <obj_property name="radix_fractionWidth">18</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
    <wvobject fp_name="/main_test/test/obb1_vel_y" type="array">
-      <obj_property name="ElementShortName">obb1_vel_y[31:0]</obj_property>
-      <obj_property name="ObjectShortName">obb1_vel_y[31:0]</obj_property>
+      <obj_property name="ElementShortName">obb1_vel_y[23:0]</obj_property>
+      <obj_property name="ObjectShortName">obb1_vel_y[23:0]</obj_property>
       <obj_property name="Radix">REALRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">26</obj_property>
+      <obj_property name="radix_fractionWidth">18</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/test/bbr_inst/impulse1_nudge_x" type="array">
+      <obj_property name="ElementShortName">impulse1_nudge_x[23:0]</obj_property>
+      <obj_property name="ObjectShortName">impulse1_nudge_x[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/test/bbr_inst/impulse1_nudge_y" type="array">
+      <obj_property name="ElementShortName">impulse1_nudge_y[23:0]</obj_property>
+      <obj_property name="ObjectShortName">impulse1_nudge_y[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/test/impulse1_impulse_x" type="array">
+      <obj_property name="ElementShortName">impulse1_impulse_x[23:0]</obj_property>
+      <obj_property name="ObjectShortName">impulse1_impulse_x[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">18</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/test/impulse1_impulse_y" type="array">
+      <obj_property name="ElementShortName">impulse1_impulse_y[23:0]</obj_property>
+      <obj_property name="ObjectShortName">impulse1_impulse_y[23:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">18</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/test/impulse1_rotational_impulse" type="array">
+      <obj_property name="ElementShortName">impulse1_rotational_impulse[10:0]</obj_property>
+      <obj_property name="ObjectShortName">impulse1_rotational_impulse[10:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/test/impulse2_rotational_impulse" type="array">
+      <obj_property name="ElementShortName">impulse2_rotational_impulse[10:0]</obj_property>
+      <obj_property name="ObjectShortName">impulse2_rotational_impulse[10:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
 </wave_config>

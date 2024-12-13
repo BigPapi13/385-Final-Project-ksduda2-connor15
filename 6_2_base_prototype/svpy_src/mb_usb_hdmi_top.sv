@@ -56,7 +56,7 @@ module mb_usb_hdmi_top(
     logic [31:0] keycode0_gpio, keycode1_gpio;
     logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
     logic locked;
-    logic [9:0] drawX, drawY, ballxsig, ballysig, ballsizesig;
+    logic [9:0] drawX, drawY;
 
     logic hsync, vsync, vde;
     logic [3:0] red, green, blue;
@@ -153,7 +153,7 @@ module mb_usb_hdmi_top(
 
     $ obb1.declare()
     $ obb1_ld.declare()
-    obb_reg #(.X_INIT(10), .Y_INIT(32), .X_VEL_INIT(0.3), .Y_VEL_INIT(-0.1), .ANGLE_INIT(0.7), .OMEGA_INIT(0)) obb1(
+    obb_reg #(.X_INIT(10), .Y_INIT(32), .X_VEL_INIT(0.3), .Y_VEL_INIT(-0.1), .ANGLE_INIT(0.7), .MASS_INIT(4), .OMEGA_INIT(0)) obb1(
         $$ld.module_assign(obb1_ld)$$,
         $$OBB.module_assign(obb1)$$,
         .load(1'b1),
@@ -167,7 +167,7 @@ module mb_usb_hdmi_top(
 
     $ obb2.declare()
     $ obb2_ld.declare()
-    obb_reg #(.X_INIT(45), .Y_INIT(32), .X_VEL_INIT(-0.2), .Y_VEL_INIT(0.5), .WIDTH_INIT(15), .HEIGHT_INIT(5), .OMEGA_INIT(0)) obb2(
+    obb_reg #(.X_INIT(45), .Y_INIT(32), .X_VEL_INIT(-0.2), .Y_VEL_INIT(0.5), .WIDTH_INIT(15), .HEIGHT_INIT(5), .MASS_INIT(4), .OMEGA_INIT(0)) obb2(
         $$ld.module_assign(obb2_ld)$$,
         $$OBB.module_assign(obb2)$$,
         .load(1'b1),
@@ -176,50 +176,40 @@ module mb_usb_hdmi_top(
     );
 
     // Use collision data to generate an impulse
-    $ impulse_data = Impulse("impulse_data")
-    $ impulse_data.declare()
     $ contact_data = Contact("contact_data")
     $ contact_data.declare(),
-    $ rotational_impulse1 = Fixed(4, 7, "rotational_impulse1")
-    $ rotational_impulse2 = Fixed(4, 7, "rotational_impulse2")
-    $ rotational_impulse1.declare()
-    $ rotational_impulse2.declare()
+    $ impulse1 = Impulse("impulse1")
+    $ impulse2 = Impulse("impulse2")
+    $ impulse1.declare()
+    $ impulse2.declare()
+    logic ignore_impulse;
     box_box_resolver bbr_inst(
         $$Contact.module_assign(contact_data)$$,
         $$obb1.module_assign(obb1)$$,
         $$obb2.module_assign(obb2)$$,
-        $$Impulse.module_assign(impulse_data)$$,
-        $$rotational_impulse1.module_assign(rotational_impulse1)$$,
-        $$rotational_impulse2.module_assign(rotational_impulse2)$$
+        $$impulse1.module_assign(impulse1)$$,
+        $$impulse2.module_assign(impulse2)$$,
+        .ignore_impulse(ignore_impulse)
     );
 
     // Logic for determining next state
     $ prev = OBB("prev")
     $ next = OBB("next")
-    $ rotational_impulse = Fixed(4, 7, "rotational_impulse")
-    $ rotational_impulse.declare()
     logic is_collision;
     obb_updater obb1_updater(
-        .impulse_en(is_collision),
+        .impulse_en(is_collision & ~ignore_impulse),
         .update_en(1'b1),
-        $$Impulse.module_assign(impulse_data)$$,
+        $$Impulse.module_assign(impulse1)$$,
         $$next.module_assign(obb1_ld)$$,
-        $$prev.module_assign(obb1)$$,
-        $$rotational_impulse.module_assign(rotational_impulse1)$$
+        $$prev.module_assign(obb1)$$
     );
 
-    $ neg_impulse_data = Impulse("neg_impulse_data")
-    $ neg_impulse_data.declare()
-    $ neg_impulse_data.impulse.assign(-impulse_data.impulse)
-    $ neg_impulse_data.nudge.assign(-impulse_data.nudge)
-
     obb_updater obb2_updater(
-        .impulse_en(is_collision),
+        .impulse_en(is_collision & ~ignore_impulse),
         .update_en(1'b1),
-        $$Impulse.module_assign(neg_impulse_data)$$,
+        $$Impulse.module_assign(impulse2)$$,
         $$next.module_assign(obb2_ld)$$,
-        $$prev.module_assign(obb2)$$,
-        $$rotational_impulse.module_assign(rotational_impulse2)$$
+        $$prev.module_assign(obb2)$$
     );
 
     // DID SOMEONE SAY JUICE????

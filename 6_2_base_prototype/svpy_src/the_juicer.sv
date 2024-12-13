@@ -33,15 +33,12 @@ assign $$Juice.halfWidth$$ = $$OBB.width$$ >> 1;
 assign $$Juice.halfHeight$$ = $$OBB.height$$ >> 1;
 
 $$$
-i = 0
-for w in (-Juice.halfWidth, Juice.halfWidth):
-    for h in (-Juice.halfHeight, Juice.halfHeight):
-        rotated_point = svmath.ExpressionVec2(w * Juice.u.x + h * Juice.v.x, w * Juice.u.y + h * Juice.v.y)
-        
-        p = getattr(Juice, f"Point{i}")
-        p.assign(rotated_point + OBB.pos)
-
-        i += 1
+relPoint0 = svmath.ExpressionVec2(-Juice.halfWidth * Juice.u.x + -Juice.halfHeight * Juice.v.x, -Juice.halfWidth * Juice.u.y + -Juice.halfHeight * Juice.v.y)
+relPoint1 = svmath.ExpressionVec2(-Juice.halfWidth * Juice.u.x + Juice.halfHeight * Juice.v.x, -Juice.halfWidth * Juice.u.y + Juice.halfHeight * Juice.v.y)
+Juice.Point0.assign(OBB.pos + relPoint0)
+Juice.Point1.assign(OBB.pos + relPoint1)
+Juice.Point2.assign(OBB.pos - relPoint0)
+Juice.Point3.assign(OBB.pos - relPoint1)
 $$$
 
 endmodule
