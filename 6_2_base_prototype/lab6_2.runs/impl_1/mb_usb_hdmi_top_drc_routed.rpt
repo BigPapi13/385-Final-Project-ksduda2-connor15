@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Tue Dec 10 10:49:43 2024
+| Date         : Wed Dec 11 21:19:07 2024
 | Host         : Kobe_Laptop running 64-bit major release  (build 9200)
 | Command      : report_drc -file mb_usb_hdmi_top_drc_routed.rpt -pb mb_usb_hdmi_top_drc_routed.pb -rpx mb_usb_hdmi_top_drc_routed.rpx
 | Design       : mb_usb_hdmi_top
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 127
+             Violations found: 136
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| DPIP-1   | Warning  | Input pipelining                                    | 126        |
+| DPIP-1   | Warning  | Input pipelining                                    | 135        |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -49,632 +49,677 @@ Related violations: <none>
 
 DPIP-1#1 Warning
 Input pipelining  
-DSP color_instance/Red7 input color_instance/Red7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x1__0 input bbr_inst/impulse_x1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#2 Warning
 Input pipelining  
-DSP color_instance/Red7__0 input color_instance/Red7__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x1__0 input bbr_inst/impulse_x1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#3 Warning
 Input pipelining  
-DSP color_instance/Red7__0 input color_instance/Red7__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x1__0__0 input bbr_inst/impulse_x1__0__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#4 Warning
 Input pipelining  
-DSP color_instance/Red7__1 input color_instance/Red7__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x1__0__0 input bbr_inst/impulse_x1__0__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#5 Warning
 Input pipelining  
-DSP color_instance/Red7__1 input color_instance/Red7__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x1__1 input bbr_inst/impulse_x1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#6 Warning
 Input pipelining  
-DSP color_instance/Red7__2 input color_instance/Red7__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x1__1 input bbr_inst/impulse_x1__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#7 Warning
 Input pipelining  
-DSP color_instance/Red7__2 input color_instance/Red7__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x2 input bbr_inst/impulse_x2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#8 Warning
 Input pipelining  
-DSP color_instance/Red7__3 input color_instance/Red7__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x2__0 input bbr_inst/impulse_x2__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#9 Warning
 Input pipelining  
-DSP color_instance/Red7__3 input color_instance/Red7__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x2__1 input bbr_inst/impulse_x2__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#10 Warning
 Input pipelining  
-DSP color_instance/Red7__4 input color_instance/Red7__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x5 input bbr_inst/impulse_x5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#11 Warning
 Input pipelining  
-DSP color_instance/Red7__4 input color_instance/Red7__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x5 input bbr_inst/impulse_x5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#12 Warning
 Input pipelining  
-DSP color_instance/Red7__5 input color_instance/Red7__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x5__0 input bbr_inst/impulse_x5__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#13 Warning
 Input pipelining  
-DSP color_instance/Red7__5 input color_instance/Red7__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x5__0 input bbr_inst/impulse_x5__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#14 Warning
 Input pipelining  
-DSP color_instance/Red7__6 input color_instance/Red7__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x5__1 input bbr_inst/impulse_x5__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#15 Warning
 Input pipelining  
-DSP color_instance/Red7__6 input color_instance/Red7__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x5__1 input bbr_inst/impulse_x5__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#16 Warning
 Input pipelining  
-DSP color_instance/Red8 input color_instance/Red8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x5__2 input bbr_inst/impulse_x5__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#17 Warning
 Input pipelining  
-DSP color_instance/Red8__0 input color_instance/Red8__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_x5__2 input bbr_inst/impulse_x5__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#18 Warning
 Input pipelining  
-DSP color_instance/Red8__0 input color_instance/Red8__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_y1__0 input bbr_inst/impulse_y1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#19 Warning
 Input pipelining  
-DSP color_instance/Red8__1 input color_instance/Red8__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_y1__0 input bbr_inst/impulse_y1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#20 Warning
 Input pipelining  
-DSP color_instance/Red8__1 input color_instance/Red8__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_y1__0__0 input bbr_inst/impulse_y1__0__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#21 Warning
 Input pipelining  
-DSP color_instance/Red8__2 input color_instance/Red8__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_y1__0__0 input bbr_inst/impulse_y1__0__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#22 Warning
 Input pipelining  
-DSP color_instance/Red8__2 input color_instance/Red8__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_y1__1 input bbr_inst/impulse_y1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#23 Warning
 Input pipelining  
-DSP color_instance/Red8__3 input color_instance/Red8__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP bbr_inst/impulse_y1__1 input bbr_inst/impulse_y1__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#24 Warning
 Input pipelining  
-DSP color_instance/Red8__3 input color_instance/Red8__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_13 input cd_inst/opnet_13/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#25 Warning
 Input pipelining  
-DSP color_instance/Red8__4 input color_instance/Red8__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_15 input cd_inst/opnet_15/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#26 Warning
 Input pipelining  
-DSP color_instance/Red8__4 input color_instance/Red8__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_15 input cd_inst/opnet_15/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#27 Warning
 Input pipelining  
-DSP color_instance/Red8__5 input color_instance/Red8__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_16 input cd_inst/opnet_16/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#28 Warning
 Input pipelining  
-DSP color_instance/Red8__5 input color_instance/Red8__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_18 input cd_inst/opnet_18/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#29 Warning
 Input pipelining  
-DSP color_instance/Red8__6 input color_instance/Red8__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_18 input cd_inst/opnet_18/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#30 Warning
 Input pipelining  
-DSP color_instance/Red8__6 input color_instance/Red8__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_21 input cd_inst/opnet_21/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#31 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_11 input color_instance/cm_cd_inst/opnet_11/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_23 input cd_inst/opnet_23/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#32 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_11 input color_instance/cm_cd_inst/opnet_11/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_23 input cd_inst/opnet_23/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#33 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_13 input color_instance/cm_cd_inst/opnet_13/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_24 input cd_inst/opnet_24/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#34 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_13 input color_instance/cm_cd_inst/opnet_13/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_26 input cd_inst/opnet_26/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#35 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_13 input color_instance/cm_cd_inst/opnet_13/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_26 input cd_inst/opnet_26/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#36 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_14 input color_instance/cm_cd_inst/opnet_14/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_29 input cd_inst/opnet_29/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#37 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_14 input color_instance/cm_cd_inst/opnet_14/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_31 input cd_inst/opnet_31/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#38 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_16 input color_instance/cm_cd_inst/opnet_16/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_31 input cd_inst/opnet_31/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#39 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_16 input color_instance/cm_cd_inst/opnet_16/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_32 input cd_inst/opnet_32/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#40 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_16 input color_instance/cm_cd_inst/opnet_16/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_34 input cd_inst/opnet_34/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#41 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_19 input color_instance/cm_cd_inst/opnet_19/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_34 input cd_inst/opnet_34/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#42 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_19 input color_instance/cm_cd_inst/opnet_19/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_37 input cd_inst/opnet_37/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#43 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_21 input color_instance/cm_cd_inst/opnet_21/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_39 input cd_inst/opnet_39/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#44 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_21 input color_instance/cm_cd_inst/opnet_21/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_39 input cd_inst/opnet_39/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#45 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_21 input color_instance/cm_cd_inst/opnet_21/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_40 input cd_inst/opnet_40/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#46 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_22 input color_instance/cm_cd_inst/opnet_22/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_42 input cd_inst/opnet_42/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#47 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_22 input color_instance/cm_cd_inst/opnet_22/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_42 input cd_inst/opnet_42/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#48 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_24 input color_instance/cm_cd_inst/opnet_24/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_45 input cd_inst/opnet_45/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#49 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_24 input color_instance/cm_cd_inst/opnet_24/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_47 input cd_inst/opnet_47/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#50 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_24 input color_instance/cm_cd_inst/opnet_24/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_47 input cd_inst/opnet_47/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#51 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_27 input color_instance/cm_cd_inst/opnet_27/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_48 input cd_inst/opnet_48/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#52 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_27 input color_instance/cm_cd_inst/opnet_27/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_50 input cd_inst/opnet_50/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#53 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_29 input color_instance/cm_cd_inst/opnet_29/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_50 input cd_inst/opnet_50/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#54 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_29 input color_instance/cm_cd_inst/opnet_29/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_53 input cd_inst/opnet_53/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#55 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_29 input color_instance/cm_cd_inst/opnet_29/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_55 input cd_inst/opnet_55/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#56 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_3 input color_instance/cm_cd_inst/opnet_3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_55 input cd_inst/opnet_55/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#57 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_3 input color_instance/cm_cd_inst/opnet_3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_56 input cd_inst/opnet_56/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#58 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_30 input color_instance/cm_cd_inst/opnet_30/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_58 input cd_inst/opnet_58/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#59 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_30 input color_instance/cm_cd_inst/opnet_30/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_58 input cd_inst/opnet_58/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#60 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_32 input color_instance/cm_cd_inst/opnet_32/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_61 input cd_inst/opnet_61/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#61 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_32 input color_instance/cm_cd_inst/opnet_32/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_63 input cd_inst/opnet_63/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#62 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_32 input color_instance/cm_cd_inst/opnet_32/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_63 input cd_inst/opnet_63/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#63 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_35 input color_instance/cm_cd_inst/opnet_35/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_64 input cd_inst/opnet_64/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#64 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_35 input color_instance/cm_cd_inst/opnet_35/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_66 input cd_inst/opnet_66/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#65 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_37 input color_instance/cm_cd_inst/opnet_37/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_66 input cd_inst/opnet_66/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#66 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_37 input color_instance/cm_cd_inst/opnet_37/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_69 input cd_inst/opnet_69/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#67 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_37 input color_instance/cm_cd_inst/opnet_37/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_71 input cd_inst/opnet_71/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#68 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_38 input color_instance/cm_cd_inst/opnet_38/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_71 input cd_inst/opnet_71/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#69 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_38 input color_instance/cm_cd_inst/opnet_38/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_72 input cd_inst/opnet_72/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#70 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_40 input color_instance/cm_cd_inst/opnet_40/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_74 input cd_inst/opnet_74/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#71 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_40 input color_instance/cm_cd_inst/opnet_40/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP cd_inst/opnet_74 input cd_inst/opnet_74/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#72 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_40 input color_instance/cm_cd_inst/opnet_40/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red7 input color_instance/Red7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#73 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_43 input color_instance/cm_cd_inst/opnet_43/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red7__0 input color_instance/Red7__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#74 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_43 input color_instance/cm_cd_inst/opnet_43/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red7__1 input color_instance/Red7__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#75 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_45 input color_instance/cm_cd_inst/opnet_45/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red7__2 input color_instance/Red7__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#76 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_45 input color_instance/cm_cd_inst/opnet_45/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red7__3 input color_instance/Red7__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#77 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_45 input color_instance/cm_cd_inst/opnet_45/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red7__4 input color_instance/Red7__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#78 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_46 input color_instance/cm_cd_inst/opnet_46/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red7__5 input color_instance/Red7__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#79 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_46 input color_instance/cm_cd_inst/opnet_46/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red7__6 input color_instance/Red7__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#80 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_48 input color_instance/cm_cd_inst/opnet_48/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red8 input color_instance/Red8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#81 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_48 input color_instance/cm_cd_inst/opnet_48/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red8__0 input color_instance/Red8__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#82 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_48 input color_instance/cm_cd_inst/opnet_48/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red8__1 input color_instance/Red8__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#83 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_5 input color_instance/cm_cd_inst/opnet_5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red8__2 input color_instance/Red8__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#84 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_5 input color_instance/cm_cd_inst/opnet_5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red8__3 input color_instance/Red8__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#85 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_5 input color_instance/cm_cd_inst/opnet_5/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red8__4 input color_instance/Red8__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#86 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_51 input color_instance/cm_cd_inst/opnet_51/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red8__5 input color_instance/Red8__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#87 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_51 input color_instance/cm_cd_inst/opnet_51/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/Red8__6 input color_instance/Red8__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#88 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_53 input color_instance/cm_cd_inst/opnet_53/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_13 input color_instance/cm_cd_inst/opnet_13/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#89 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_53 input color_instance/cm_cd_inst/opnet_53/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_15 input color_instance/cm_cd_inst/opnet_15/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#90 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_53 input color_instance/cm_cd_inst/opnet_53/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_15 input color_instance/cm_cd_inst/opnet_15/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#91 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_54 input color_instance/cm_cd_inst/opnet_54/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_16 input color_instance/cm_cd_inst/opnet_16/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#92 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_54 input color_instance/cm_cd_inst/opnet_54/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_18 input color_instance/cm_cd_inst/opnet_18/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#93 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_56 input color_instance/cm_cd_inst/opnet_56/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_18 input color_instance/cm_cd_inst/opnet_18/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#94 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_56 input color_instance/cm_cd_inst/opnet_56/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_21 input color_instance/cm_cd_inst/opnet_21/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#95 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_56 input color_instance/cm_cd_inst/opnet_56/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_23 input color_instance/cm_cd_inst/opnet_23/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#96 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_59 input color_instance/cm_cd_inst/opnet_59/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_23 input color_instance/cm_cd_inst/opnet_23/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#97 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_59 input color_instance/cm_cd_inst/opnet_59/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_24 input color_instance/cm_cd_inst/opnet_24/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#98 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_6 input color_instance/cm_cd_inst/opnet_6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_26 input color_instance/cm_cd_inst/opnet_26/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#99 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_6 input color_instance/cm_cd_inst/opnet_6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_26 input color_instance/cm_cd_inst/opnet_26/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#100 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_61 input color_instance/cm_cd_inst/opnet_61/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_29 input color_instance/cm_cd_inst/opnet_29/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#101 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_61 input color_instance/cm_cd_inst/opnet_61/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_31 input color_instance/cm_cd_inst/opnet_31/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#102 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_61 input color_instance/cm_cd_inst/opnet_61/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_31 input color_instance/cm_cd_inst/opnet_31/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#103 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_62 input color_instance/cm_cd_inst/opnet_62/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_32 input color_instance/cm_cd_inst/opnet_32/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#104 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_62 input color_instance/cm_cd_inst/opnet_62/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_34 input color_instance/cm_cd_inst/opnet_34/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#105 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_64 input color_instance/cm_cd_inst/opnet_64/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_34 input color_instance/cm_cd_inst/opnet_34/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#106 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_64 input color_instance/cm_cd_inst/opnet_64/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_37 input color_instance/cm_cd_inst/opnet_37/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#107 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_64 input color_instance/cm_cd_inst/opnet_64/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_39 input color_instance/cm_cd_inst/opnet_39/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#108 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_8 input color_instance/cm_cd_inst/opnet_8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_39 input color_instance/cm_cd_inst/opnet_39/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#109 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_8 input color_instance/cm_cd_inst/opnet_8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_40 input color_instance/cm_cd_inst/opnet_40/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#110 Warning
 Input pipelining  
-DSP color_instance/cm_cd_inst/opnet_8 input color_instance/cm_cd_inst/opnet_8/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_42 input color_instance/cm_cd_inst/opnet_42/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#111 Warning
 Input pipelining  
-DSP juicer1/opnet_227 input juicer1/opnet_227/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_42 input color_instance/cm_cd_inst/opnet_42/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#112 Warning
 Input pipelining  
-DSP juicer1/opnet_228 input juicer1/opnet_228/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_45 input color_instance/cm_cd_inst/opnet_45/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#113 Warning
 Input pipelining  
-DSP juicer1/opnet_230 input juicer1/opnet_230/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_47 input color_instance/cm_cd_inst/opnet_47/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#114 Warning
 Input pipelining  
-DSP juicer1/opnet_231 input juicer1/opnet_231/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_47 input color_instance/cm_cd_inst/opnet_47/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#115 Warning
 Input pipelining  
-DSP juicer1/opnet_236 input juicer1/opnet_236/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_48 input color_instance/cm_cd_inst/opnet_48/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#116 Warning
 Input pipelining  
-DSP juicer1/opnet_239 input juicer1/opnet_239/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_50 input color_instance/cm_cd_inst/opnet_50/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#117 Warning
 Input pipelining  
-DSP juicer1/opnet_244 input juicer1/opnet_244/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_50 input color_instance/cm_cd_inst/opnet_50/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#118 Warning
 Input pipelining  
-DSP juicer1/opnet_247 input juicer1/opnet_247/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_53 input color_instance/cm_cd_inst/opnet_53/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#119 Warning
 Input pipelining  
-DSP juicer2/opnet_227 input juicer2/opnet_227/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_55 input color_instance/cm_cd_inst/opnet_55/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#120 Warning
 Input pipelining  
-DSP juicer2/opnet_228 input juicer2/opnet_228/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_55 input color_instance/cm_cd_inst/opnet_55/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#121 Warning
 Input pipelining  
-DSP juicer2/opnet_230 input juicer2/opnet_230/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_56 input color_instance/cm_cd_inst/opnet_56/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#122 Warning
 Input pipelining  
-DSP juicer2/opnet_231 input juicer2/opnet_231/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_58 input color_instance/cm_cd_inst/opnet_58/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#123 Warning
 Input pipelining  
-DSP juicer2/opnet_236 input juicer2/opnet_236/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_58 input color_instance/cm_cd_inst/opnet_58/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#124 Warning
 Input pipelining  
-DSP juicer2/opnet_239 input juicer2/opnet_239/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_61 input color_instance/cm_cd_inst/opnet_61/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#125 Warning
 Input pipelining  
-DSP juicer2/opnet_244 input juicer2/opnet_244/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_63 input color_instance/cm_cd_inst/opnet_63/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#126 Warning
 Input pipelining  
-DSP juicer2/opnet_247 input juicer2/opnet_247/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP color_instance/cm_cd_inst/opnet_63 input color_instance/cm_cd_inst/opnet_63/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#127 Warning
+Input pipelining  
+DSP color_instance/cm_cd_inst/opnet_64 input color_instance/cm_cd_inst/opnet_64/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#128 Warning
+Input pipelining  
+DSP color_instance/cm_cd_inst/opnet_66 input color_instance/cm_cd_inst/opnet_66/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#129 Warning
+Input pipelining  
+DSP color_instance/cm_cd_inst/opnet_66 input color_instance/cm_cd_inst/opnet_66/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#130 Warning
+Input pipelining  
+DSP color_instance/cm_cd_inst/opnet_69 input color_instance/cm_cd_inst/opnet_69/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#131 Warning
+Input pipelining  
+DSP color_instance/cm_cd_inst/opnet_71 input color_instance/cm_cd_inst/opnet_71/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#132 Warning
+Input pipelining  
+DSP color_instance/cm_cd_inst/opnet_71 input color_instance/cm_cd_inst/opnet_71/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#133 Warning
+Input pipelining  
+DSP color_instance/cm_cd_inst/opnet_72 input color_instance/cm_cd_inst/opnet_72/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#134 Warning
+Input pipelining  
+DSP color_instance/cm_cd_inst/opnet_74 input color_instance/cm_cd_inst/opnet_74/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#135 Warning
+Input pipelining  
+DSP color_instance/cm_cd_inst/opnet_74 input color_instance/cm_cd_inst/opnet_74/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 

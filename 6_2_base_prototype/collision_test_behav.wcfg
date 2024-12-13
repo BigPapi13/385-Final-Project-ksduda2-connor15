@@ -17,15 +17,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="69.050 ns"></ZoomStartTime>
-      <ZoomEndTime time="185.151 ns"></ZoomEndTime>
-      <Cursor1Time time="115.050 ns"></Cursor1Time>
+      <ZoomStartTime time="14,842.210 ns"></ZoomStartTime>
+      <ZoomEndTime time="14,935.811 ns"></ZoomEndTime>
+      <Cursor1Time time="13,832.210 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="277"></NameColumnWidth>
-      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+      <ValueColumnWidth column_width="83"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="28" />
+   <WVObjectSize size="29" />
    <wvobject fp_name="/main_test/Clk" type="logic">
       <obj_property name="ElementShortName">Clk</obj_property>
       <obj_property name="ObjectShortName">Clk</obj_property>
@@ -543,37 +543,41 @@
       <obj_property name="ElementShortName">is_collision</obj_property>
       <obj_property name="ObjectShortName">is_collision</obj_property>
    </wvobject>
-   <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_min_uA" type="logic">
-      <obj_property name="ElementShortName">separate_min_uA</obj_property>
-      <obj_property name="ObjectShortName">separate_min_uA</obj_property>
-   </wvobject>
-   <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_max_uA" type="logic">
-      <obj_property name="ElementShortName">separate_max_uA</obj_property>
-      <obj_property name="ObjectShortName">separate_max_uA</obj_property>
-   </wvobject>
-   <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_min_vA" type="logic">
-      <obj_property name="ElementShortName">separate_min_vA</obj_property>
-      <obj_property name="ObjectShortName">separate_min_vA</obj_property>
-   </wvobject>
-   <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_max_vA" type="logic">
-      <obj_property name="ElementShortName">separate_max_vA</obj_property>
-      <obj_property name="ObjectShortName">separate_max_vA</obj_property>
-   </wvobject>
-   <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_min_uB" type="logic">
-      <obj_property name="ElementShortName">separate_min_uB</obj_property>
-      <obj_property name="ObjectShortName">separate_min_uB</obj_property>
-   </wvobject>
-   <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_max_uB" type="logic">
-      <obj_property name="ElementShortName">separate_max_uB</obj_property>
-      <obj_property name="ObjectShortName">separate_max_uB</obj_property>
-   </wvobject>
-   <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_min_vB" type="logic">
-      <obj_property name="ElementShortName">separate_min_vB</obj_property>
-      <obj_property name="ObjectShortName">separate_min_vB</obj_property>
-   </wvobject>
-   <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_max_vB" type="logic">
-      <obj_property name="ElementShortName">separate_max_vB</obj_property>
-      <obj_property name="ObjectShortName">separate_max_vB</obj_property>
+   <wvobject fp_name="group95" type="group">
+      <obj_property name="label">Axis Separations</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_min_uA" type="logic">
+         <obj_property name="ElementShortName">separate_min_uA</obj_property>
+         <obj_property name="ObjectShortName">separate_min_uA</obj_property>
+      </wvobject>
+      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_max_uA" type="logic">
+         <obj_property name="ElementShortName">separate_max_uA</obj_property>
+         <obj_property name="ObjectShortName">separate_max_uA</obj_property>
+      </wvobject>
+      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_min_vA" type="logic">
+         <obj_property name="ElementShortName">separate_min_vA</obj_property>
+         <obj_property name="ObjectShortName">separate_min_vA</obj_property>
+      </wvobject>
+      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_max_vA" type="logic">
+         <obj_property name="ElementShortName">separate_max_vA</obj_property>
+         <obj_property name="ObjectShortName">separate_max_vA</obj_property>
+      </wvobject>
+      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_min_uB" type="logic">
+         <obj_property name="ElementShortName">separate_min_uB</obj_property>
+         <obj_property name="ObjectShortName">separate_min_uB</obj_property>
+      </wvobject>
+      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_max_uB" type="logic">
+         <obj_property name="ElementShortName">separate_max_uB</obj_property>
+         <obj_property name="ObjectShortName">separate_max_uB</obj_property>
+      </wvobject>
+      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_min_vB" type="logic">
+         <obj_property name="ElementShortName">separate_min_vB</obj_property>
+         <obj_property name="ObjectShortName">separate_min_vB</obj_property>
+      </wvobject>
+      <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/separate_max_vB" type="logic">
+         <obj_property name="ElementShortName">separate_max_vB</obj_property>
+         <obj_property name="ObjectShortName">separate_max_vB</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject type="divider" fp_name="divider74">
       <obj_property name="label">Contact Data</obj_property>
@@ -655,7 +659,6 @@
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">24</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_pen_uA" type="array">
          <obj_property name="ElementShortName">min_pen_uA[31:0]</obj_property>
          <obj_property name="ObjectShortName">min_pen_uA[31:0]</obj_property>
@@ -696,7 +699,6 @@
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">24</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/min_pen_u" type="array">
          <obj_property name="ElementShortName">min_pen_u[31:0]</obj_property>
          <obj_property name="ObjectShortName">min_pen_u[31:0]</obj_property>
@@ -721,5 +723,45 @@
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">24</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/normal_x" type="array">
+      <obj_property name="ElementShortName">normal_x[15:0]</obj_property>
+      <obj_property name="ObjectShortName">normal_x[15:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">14</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/normal_y" type="array">
+      <obj_property name="ElementShortName">normal_y[15:0]</obj_property>
+      <obj_property name="ObjectShortName">normal_y[15:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">14</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/test/impulse_data_impulse_x" type="array">
+      <obj_property name="ElementShortName">impulse_data_impulse_x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">impulse_data_impulse_x[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/test/impulse_data_impulse_y" type="array">
+      <obj_property name="ElementShortName">impulse_data_impulse_y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">impulse_data_impulse_y[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/test/neg_impulse_data_impulse_x" type="array">
+      <obj_property name="ElementShortName">neg_impulse_data_impulse_x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">neg_impulse_data_impulse_x[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/test/neg_impulse_data_impulse_y" type="array">
+      <obj_property name="ElementShortName">neg_impulse_data_impulse_y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">neg_impulse_data_impulse_y[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/location_x" type="array">
+      <obj_property name="ElementShortName">location_x[21:0]</obj_property>
+      <obj_property name="ObjectShortName">location_x[21:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_test/test/color_instance/cm_cd_inst/location_y" type="array">
+      <obj_property name="ElementShortName">location_y[21:0]</obj_property>
+      <obj_property name="ObjectShortName">location_y[21:0]</obj_property>
    </wvobject>
 </wave_config>

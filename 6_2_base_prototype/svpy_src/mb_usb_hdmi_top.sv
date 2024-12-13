@@ -10,15 +10,16 @@
 //    University of Illinois ECE Department                              --
 //-------------------------------------------------------------------------
 
-$ # Set to true for synthesis, false for simulation
-$ SYNTHESIS_MODE = False
+$ # Set to true for simulation, false for synthesis
+$ SIMULATION_MODE = False
 
 
 $ from svpy import *
-$ from structs import OBB, Juice, JOBB
+$ from svmath import *
+$ from structs import OBB, Juice, JOBB, Contact, Impulse
 
 $$$
-if SYNTHESIS_MODE == False:
+if SIMULATION_MODE == False:
     reg_clk = "vsync"
 else:
     reg_clk = "Clk"
@@ -145,16 +146,6 @@ module mb_usb_hdmi_top(
         .TMDS_DATA_P(hdmi_tmds_data_p),         
         .TMDS_DATA_N(hdmi_tmds_data_n)          
     );
-
-    //Ball Module
-    square square_instance(
-        .Reset(reset_ah),
-        .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
-        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
-        .X(ballxsig),
-        .Y(ballysig),
-        .S(ballsizesig)
-    );
     
     // First OBB register
     $ obb1 = OBB("obb1")
@@ -163,7 +154,7 @@ module mb_usb_hdmi_top(
 
     $ obb1.declare()
     $ obb1_ld.declare()
-    obb_reg #(.X_INIT(10), .Y_INIT(32), .X_VEL_INIT(0.3), .Y_VEL_INIT(-0.1), .OMEGA_INIT(-0.04)) obb1(
+    obb_reg #(.X_INIT(10), .Y_INIT(32), .X_VEL_INIT(0.3), .Y_VEL_INIT(-0.1), .ANGLE_INIT(0.7), .OMEGA_INIT(0)) obb1(
         $$ld.module_assign(obb1_ld)$$,
         $$OBB.module_assign(obb1)$$,
         .load(1'b1),
@@ -177,7 +168,7 @@ module mb_usb_hdmi_top(
 
     $ obb2.declare()
     $ obb2_ld.declare()
-    obb_reg #(.X_INIT(20), .Y_INIT(32), .X_VEL_INIT(-0.2), .Y_VEL_INIT(0.5), .WIDTH_INIT(15), .HEIGHT_INIT(5), .OMEGA_INIT(0.1)) obb2(
+    obb_reg #(.X_INIT(45), .Y_INIT(32), .X_VEL_INIT(-0.2), .Y_VEL_INIT(0.5), .WIDTH_INIT(15), .HEIGHT_INIT(5), .OMEGA_INIT(0)) obb2(
         $$ld.module_assign(obb2_ld)$$,
         $$OBB.module_assign(obb2)$$,
         .load(1'b1),
@@ -185,15 +176,44 @@ module mb_usb_hdmi_top(
         .clk($$reg_clk$$)
     );
 
+    // Use collision data to generate an impulse
+    $ impulse_data = Impulse("impulse_data")
+    $ impulse_data.declare()
+    $ contact_data = Contact("contact_data")
+    $ contact_data.declare()
+    box_box_resolver bbr_inst(
+        $$Contact.module_assign(contact_data)$$,
+        $$obb1.pos.module_assign(obb1.pos)$$,
+        $$obb1.vel.module_assign(obb1.vel)$$,
+        $$obb1.omega.module_assign(obb1.omega)$$,
+        $$obb2.pos.module_assign(obb2.pos)$$,
+        $$obb2.vel.module_assign(obb2.vel)$$,
+        $$obb2.omega.module_assign(obb2.omega)$$,
+        $$Impulse.module_assign(impulse_data)
+    );
+
     // Logic for determining next state
     $ prev = OBB("prev")
     $ next = OBB("next")
+    logic is_collision;
     obb_updater obb1_updater(
+        .impulse_en(is_collision),
+        .update_en(1'b1),
+        $$Impulse.module_assign(impulse_data)$$,
         $$next.module_assign(obb1_ld)$$,
         $$prev.module_assign(obb1)$$
     );
 
+    $ neg_impulse_data = Impulse("neg_impulse_data")
+    $ neg_impulse_data.declare()
+    $ neg_impulse_data.impulse.assign(-impulse_data.impulse)
+    $ neg_impulse_data.nudge.assign(-impulse_data.nudge)
+    $ neg_impulse_data.rotational_impulse.assign(-impulse_data.rotational_impulse)
+
     obb_updater obb2_updater(
+        .impulse_en(is_collision),
+        .update_en(1'b1),
+        $$Impulse.module_assign(neg_impulse_data)$$,
         $$next.module_assign(obb2_ld)$$,
         $$prev.module_assign(obb2)$$
     );
@@ -225,10 +245,20 @@ module mb_usb_hdmi_top(
         $$Juice.module_assign(juice2)$$
     );
 
-    //Color Mapper Module   
+    // Collision data between boxes
+    collision_detector cd_inst(
+        $$jobb1.module_assign(jobb1)$$,
+        $$jobb2.module_assign(jobb2)$$,
+        .is_collision(is_collision),
+        $$Contact.module_assign(contact_data)$$
+    );
+
+    //Color Mapper Module
+    $ drawPoint = Vec2(8, 14, "drawPoint")   
     color_mapper color_instance(
         $$jobb1.module_assign(jobb1)$$,
         $$jobb2.module_assign(jobb2)$$,
+        $$drawPoint.module_assign(contact_data.location)$$,
         .DrawX(drawX),
         .DrawY(drawY),
         .Red(red),

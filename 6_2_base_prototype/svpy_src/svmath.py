@@ -83,6 +83,9 @@ class Fixed:
         else:
             raise ValueError("context_type is in invalid state")
 
+    def module_assign(self, other):
+        svwrite(f".{self}({other})")
+
     def comb_assign(self, other: Fixed | int | float):
         if type(other) is Fixed:
             difference = self.precision - other.precision
@@ -228,6 +231,9 @@ class Vec2:
         self.x.assign(other[0])
         self.y.assign(other[1])
 
+    def module_assign(self, other):
+        svwrite(f".{self.x}({other[0]}),\n.{self.y}({other[1]})")
+
     def __getitem__(self, key) -> Fixed:
         if key == 0:
             return self.x
@@ -252,6 +258,9 @@ class Vec2:
     def Dot(self, other: Vec2 | list | tuple) -> Fixed:
         return (self.x * other[0]) + (self.y * other[1])
     
+    def __mul__(self, other: Fixed | int | float) -> ExpressionVec2:
+        return ExpressionVec2(self.x * other, self.y * other)
+
     ## To-do: Scalar multiplication
 
     def SetName(self, name):
