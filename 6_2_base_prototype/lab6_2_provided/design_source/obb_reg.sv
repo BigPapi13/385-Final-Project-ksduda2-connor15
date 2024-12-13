@@ -14,20 +14,20 @@ module obb_reg
     parameter OMEGA_INIT = 0
 )
 (
-    input logic [7 : 0] ld_width,
-input logic [7 : 0] ld_height,
-input logic [15 : 0] ld_inertia,
-input logic [15 : 0] ld_inv_mass,
-input logic [23 : 0] ld_inv_inertia,
+    input logic signed [7 : 0] ld_width,
+input logic signed [7 : 0] ld_height,
+input logic signed [15 : 0] ld_inertia,
+input logic signed [16 : 0] ld_inv_mass,
+input logic signed [24 : 0] ld_inv_inertia,
 input logic signed [23 : 0] ld_pos_x, input logic signed [23 : 0] ld_pos_y,
 input logic signed [23 : 0] ld_vel_x, input logic signed [23 : 0] ld_vel_y,
 input logic signed [10 : 0] ld_angle,
 input logic signed [10 : 0] ld_omega,
-    output logic [7 : 0] width,
-output logic [7 : 0] height,
-output logic [15 : 0] inertia,
-output logic [15 : 0] inv_mass,
-output logic [23 : 0] inv_inertia,
+    output logic signed [7 : 0] width,
+output logic signed [7 : 0] height,
+output logic signed [15 : 0] inertia,
+output logic signed [16 : 0] inv_mass,
+output logic signed [24 : 0] inv_inertia,
 output logic signed [23 : 0] pos_x, output logic signed [23 : 0] pos_y,
 output logic signed [23 : 0] vel_x, output logic signed [23 : 0] vel_y,
 output logic signed [10 : 0] angle,
@@ -51,11 +51,11 @@ localparam OMEGA_INIT_SCALED = OMEGA_INIT * 2**7;
 localparam INV_MASS_INIT_SCALED = INV_MASS_INIT * 2**14;
 localparam INV_INERTIA_INIT_SCALED = INV_INERTIA_INIT * 2**23;
 
-logic [7 : 0] next_width;
-logic [7 : 0] next_height;
-logic [15 : 0] next_inertia;
-logic [15 : 0] next_inv_mass;
-logic [23 : 0] next_inv_inertia;
+logic signed [7 : 0] next_width;
+logic signed [7 : 0] next_height;
+logic signed [15 : 0] next_inertia;
+logic signed [16 : 0] next_inv_mass;
+logic signed [24 : 0] next_inv_inertia;
 logic signed [23 : 0] next_pos_x;
 logic signed [23 : 0] next_pos_y;
 logic signed [23 : 0] next_vel_x;

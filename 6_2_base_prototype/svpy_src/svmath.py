@@ -185,7 +185,7 @@ class Fixed:
             Fixed.opnet_count += 1
             if self.signed and other.signed:
                 result.integer_bits -= 1
-                result.bits
+                result.bits -= 1
 
             write_operation(result, f"{result.name} = {self.name} * {other.name};")
 
@@ -195,22 +195,33 @@ class Fixed:
 
             write_operation(result, f"{result.name} = {self.name} * {to_bits(other, self.integer_bits, self.precision)};")
 
-        if result.bits > 24:
-            return Fixed(result.integer_bits, result.precision - (result.bits - 24), f"{result.name}[{result.bits - 1}:{result.bits - 24}]")
+        # if result.bits > 24:
+        #     return Fixed(result.integer_bits, result.precision - (result.bits - 24), f"{result.name}[{result.bits - 1}:{result.bits - 24}]")
 
         return result
-    
+
+    def unrestrained_mul(self, other: Fixed) -> Fixed:
+        result = Fixed(self.integer_bits + other.integer_bits - 1, self.precision + other.precision, f"opnet_{Fixed.opnet_count}")
+        Fixed.opnet_count += 1
+        if self.signed and other.signed:
+            result.integer_bits -= 1
+            result.bits -= 1
+
+        write_operation(result, f"{result.name} = {self.name} * {other.name};")
+        return result
+
     def __neg__(self):
         result = Fixed(self.integer_bits, self.precision,  f"opnet_{Fixed.opnet_count}")
         Fixed.opnet_count += 1
 
         global context_type
-        write_operation(result, f"{result.name} = ~({self.name}) + 1'b1;\n")
+        write_operation(result, f"{result.name} = ~({self.name}) + 1'b1;")
 
         return result
 
     def __str__(self):
         return self.name
+
 
 class Vec2:
     vec_counter = 0

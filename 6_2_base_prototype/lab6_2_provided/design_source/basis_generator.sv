@@ -15,7 +15,6 @@ logic signed [15 : 0] sin_0;
 sin sin_inst_0(.theta(angle), .out(sin_0));
 u_y = sin_0;
 opnet_0 = ~(u_y) + 1'b1;
-
 v_x = opnet_0;
 v_y = u_x;
 
