@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module frame_manager#(BITS_PER_PIXEL=16) 
+module frame_manager
     (
         input logic clk,
         input logic start_signal,
-        input logic [BITS_PER_PIXEL-1:0] write_data,
+        input logic [11:0] write_data,
         
         output logic display_frame_done,
         output logic [5:0] write_x,
@@ -38,7 +38,6 @@ module frame_manager#(BITS_PER_PIXEL=16)
         output logic hub75_oe
     );
     
-        localparam period = 1;
 
     
     logic n_reset;
@@ -48,8 +47,7 @@ module frame_manager#(BITS_PER_PIXEL=16)
     
     logic user_led;
     logic test_led;
-    
-    localparam BITS_PER_RGB = BITS_PER_PIXEL / 4;
+
        
     logic write_pixel_clk;
     logic [11:0] write_addr; // top bit is the double-buffer flipper and is provided by spi_ss
@@ -77,8 +75,12 @@ module frame_manager#(BITS_PER_PIXEL=16)
         .write_done(mem_write_done)
     );
     
-            
-    controller #(BITS_PER_PIXEL) dut (
+         
+    logic [15:0] write_data_16b;
+    assign write_data_16b = {write_data,4'b0000};
+    // required because controller takes in a 16 bit write_data value, but we really only need the first 12 for R G B with 4 bits each.
+    
+    controller #(16) dut (
         n_reset,
         clk,
         hub75_red,
@@ -91,7 +93,7 @@ module frame_manager#(BITS_PER_PIXEL=16)
         user_led,
         write_pixel_clk, 
         write_addr,
-        write_data,
+        write_data_16b,
         buffer_toggle,
         write_en,
         display_frame_done
@@ -104,9 +106,6 @@ module frame_manager#(BITS_PER_PIXEL=16)
         DISPLAY
     } startup_state, startup_state_nxt;
     
-    
-    logic [5:0] test_counter1;
-    logic [5:0] test_counter2;
         
         
     always_ff @ (posedge clk)

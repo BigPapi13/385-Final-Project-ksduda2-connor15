@@ -20,23 +20,33 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module frame_manager_tb(
-    input logic clk,
-    
-    output logic [1:0] hub75_red,
-    output logic [1:0] hub75_green,
-    output logic [1:0] hub75_blue,
-    output logic [4:0] hub75_addr,
-    output logic hub75_latch,
-    output logic hub75_clk,
-    output logic hub75_oe
-);
+module frame_manager_tb_sim();
 
+    //frame manager inputs:
+    logic clk;
+    logic start_signal;
     logic [11:0] write_data;
+    
+    //frame manager outputs:
     logic display_frame_done;
     logic [5:0] write_x;
     logic [5:0] write_y;
-    logic start_signal;
+    logic [1:0] hub75_red;
+    logic [1:0] hub75_green;
+    logic [1:0] hub75_blue;
+    logic [4:0] hub75_addr;
+    logic hub75_latch;
+    logic hub75_clk;
+    logic hub75_oe;
+    
+            
+    always begin : CLOCK_GEN 
+            clk= 1'b1;
+            #1;
+
+            clk= 1'b0;
+            #1;
+    end
 
     frame_manager fm(
         .clk(clk),
