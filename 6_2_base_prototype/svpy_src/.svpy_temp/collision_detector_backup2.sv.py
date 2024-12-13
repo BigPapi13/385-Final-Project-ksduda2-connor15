@@ -79,8 +79,8 @@ points1_v = []
 i = 0
 for point in points1:
     relative = point - obb2.pos
-    point_u = Fixed(8, 24, f"Point1_{i}_u")
-    point_v = Fixed(8, 24, f"Point1_{i}_v")
+    point_u = Fixed(8, 16, f"Point1_{i}_u")
+    point_v = Fixed(8, 16, f"Point1_{i}_v")
 
     point_u.declare()
     point_v.declare()
@@ -426,10 +426,10 @@ svwrite("\n")
 dump_queue()
 svwrite("// Find penetration values for each axis\n")
 dump_queue()
-min_uA = Fixed(8, 24, "min_uA")
-max_uA = Fixed(8, 24, "max_uA")
-min_vA = Fixed(8, 24, "min_vA")
-max_vA = Fixed(8, 24, "max_vA")
+min_uA = Fixed(8, 16, "min_uA")
+max_uA = Fixed(8, 16, "max_uA")
+min_vA = Fixed(8, 16, "min_vA")
+max_vA = Fixed(8, 16, "max_vA")
 pen_min_uA = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_min_uA")
 pen_max_uA = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_max_uA")
 pen_min_vA = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_min_vA")
@@ -483,8 +483,8 @@ points2_v = []
 i = 0
 for point in points2:
     relative = point - obb1.pos    
-    point_u = Fixed(8, 24, f"Point2_{i}_u")
-    point_v = Fixed(8, 24, f"Point2_{i}_v")
+    point_u = Fixed(8, 16, f"Point2_{i}_u")
+    point_v = Fixed(8, 16, f"Point2_{i}_v")
 
     point_u.declare()
     point_v.declare()
@@ -831,10 +831,10 @@ svwrite("\n")
 dump_queue()
 svwrite("// Find penetration values for each axis\n")
 dump_queue()
-min_uB = Fixed(8, 24, "min_uB")
-max_uB = Fixed(8, 24, "max_uB")
-min_vB = Fixed(8, 24, "min_vB")
-max_vB = Fixed(8, 24, "max_vB")
+min_uB = Fixed(8, 16, "min_uB")
+max_uB = Fixed(8, 16, "max_uB")
+min_vB = Fixed(8, 16, "min_vB")
+max_vB = Fixed(8, 16, "max_vB")
 pen_min_uB = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_min_uB")
 pen_max_uB = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_max_uB")
 pen_min_vB = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_min_vB")

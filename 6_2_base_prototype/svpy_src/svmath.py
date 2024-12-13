@@ -181,16 +181,22 @@ class Fixed:
     
     def __mul__(self, other: Fixed) -> Fixed:
         if type(other) is Fixed:
-            result = Fixed(self.integer_bits + other.integer_bits, self.precision + other.precision, f"opnet_{Fixed.opnet_count}")
+            result = Fixed(self.integer_bits + other.integer_bits - 1, self.precision + other.precision, f"opnet_{Fixed.opnet_count}")
             Fixed.opnet_count += 1
+            if self.signed and other.signed:
+                result.integer_bits -= 1
+                result.bits
 
             write_operation(result, f"{result.name} = {self.name} * {other.name};")
 
         else:
-            result = Fixed(2 * self.integer_bits, 2 * self.precision, f"opnet_{Fixed.opnet_count}")
+            result = Fixed(2 * self.integer_bits - 1, 2 * self.precision, f"opnet_{Fixed.opnet_count}")
             Fixed.opnet_count += 1
 
             write_operation(result, f"{result.name} = {self.name} * {to_bits(other, self.integer_bits, self.precision)};")
+
+        if result.bits > 24:
+            return Fixed(result.integer_bits, result.precision - (result.bits - 24), f"{result.name}[{result.bits - 1}:{result.bits - 24}]")
 
         return result
     

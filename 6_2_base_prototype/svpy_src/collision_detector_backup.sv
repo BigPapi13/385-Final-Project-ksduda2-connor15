@@ -4,14 +4,14 @@ $$$
 widthA = Fixed(8, 0, "widthA")
 heightA = Fixed(8, 0, "heightA")
 posA = Vec2(7, 25, "posA")
-velA = Vec2(6, 26, "velA")
+velA = Vec2(5, 19, "velA")
 uA = Vec2(2, 14, "uA")
 vA = Vec2(2, 14, "vA")
 
 widthB = Fixed(8, 0, "widthB")
 heightB = Fixed(8, 0, "heightB")
 posB = Vec2(7, 25, "posB")
-velB = Vec2(6, 26, "velB")
+velB = Vec2(5, 19, "velB")
 uB = Vec2(2, 14, "uB")
 vB = Vec2(2, 14, "vB")
 $$$

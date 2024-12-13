@@ -61,7 +61,6 @@ $ begin_ff("clk")
         height <= HEIGHT_INIT;
         angle <= ANGLE_INIT_SCALED;
         omega <= OMEGA_INIT_SCALED;
-        mass <= MASS_INIT;
         inv_mass <= INV_MASS_INIT_SCALED;
         inertia <= INERTIA_INIT;
         inv_inertia <= INV_INERTIA_INIT_SCALED;

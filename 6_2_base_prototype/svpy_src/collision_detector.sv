@@ -37,8 +37,8 @@ points1_v = []
 i = 0
 for point in points1:
     relative = point - obb2.pos
-    point_u = Fixed(8, 24, f"Point1_{i}_u")
-    point_v = Fixed(8, 24, f"Point1_{i}_v")
+    point_u = Fixed(8, 16, f"Point1_{i}_u")
+    point_v = Fixed(8, 16, f"Point1_{i}_v")
 
     point_u.declare()
     point_v.declare()
@@ -53,13 +53,13 @@ $$$
 
 
 // Find max u and v values for rect A
-logic signed [31 : 0] max_uA;
-logic signed [31 : 0] max_uA_01;    // Max of points 0 and 1
-logic signed [31 : 0] max_uA_23;    // Max of points 2 and 3
+logic signed [23:0] max_uA;
+logic signed [23:0] max_uA_01;    // Max of points 0 and 1
+logic signed [23:0] max_uA_23;    // Max of points 2 and 3
 
-logic signed [31 : 0] max_vA;
-logic signed [31 : 0] max_vA_01;    // Max of points 0 and 1
-logic signed [31 : 0] max_vA_23;    // Max of points 2 and 3
+logic signed [23:0] max_vA;
+logic signed [23:0] max_vA_01;    // Max of points 0 and 1
+logic signed [23:0] max_vA_23;    // Max of points 2 and 3
 
 // Also record xy coordinate point corresponding to min values
 $$$
@@ -129,13 +129,13 @@ end
 $ end_comb()
 
 // Find min u and v values for rect A
-logic signed [31 : 0] min_uA;
-logic signed [31 : 0] min_uA_01;    // Min of points 0 and 1
-logic signed [31 : 0] min_uA_23;    // Min of points 2 and 3
+logic signed [23:0] min_uA;
+logic signed [23:0] min_uA_01;    // Min of points 0 and 1
+logic signed [23:0] min_uA_23;    // Min of points 2 and 3
 
-logic signed [31 : 0] min_vA;
-logic signed [31 : 0] min_vA_01;    // Min of points 0 and 1
-logic signed [31 : 0] min_vA_23;    // Min of points 2 and 3
+logic signed [23:0] min_vA;
+logic signed [23:0] min_vA_01;    // Min of points 0 and 1
+logic signed [23:0] min_vA_23;    // Min of points 2 and 3
 
 // Also record xy coordinate point corresponding to min values
 $$$
@@ -204,13 +204,6 @@ end
 
 $ end_comb()
 
-
-// Check for separating axis
-logic separate_min_uA;
-logic separate_max_uA;
-logic separate_min_vA;
-logic separate_max_vA;
-
 // Need to cast width and height of B into same Fixed structure as u and v
 $$$
 widthB_fixed = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "widthB_fixed")
@@ -224,20 +217,20 @@ $$$
 
 // Find penetration values for each axis
 $$$
-min_uA = Fixed(8, 24, "min_uA")
-max_uA = Fixed(8, 24, "max_uA")
-min_vA = Fixed(8, 24, "min_vA")
-max_vA = Fixed(8, 24, "max_vA")
+min_uA = Fixed(8, 16, "min_uA")
+max_uA = Fixed(8, 16, "max_uA")
+min_vA = Fixed(8, 16, "min_vA")
+max_vA = Fixed(8, 16, "max_vA")
 pen_min_uA = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_min_uA")
 pen_max_uA = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_max_uA")
 pen_min_vA = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_min_vA")
 pen_max_vA = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_max_vA")
 $$$
 
-logic signed [31:0] pen_min_uA;
-logic signed [31:0] pen_max_uA;
-logic signed [31:0] pen_min_vA;
-logic signed [31:0] pen_max_vA;
+logic signed [23:0] pen_min_uA;
+logic signed [23:0] pen_max_uA;
+logic signed [23:0] pen_min_vA;
+logic signed [23:0] pen_max_vA;
 
 always_comb begin
     pen_min_uA = widthB_fixed - min_uA;
@@ -245,12 +238,6 @@ always_comb begin
     pen_min_vA = heightB_fixed - min_vA;
     pen_max_vA = max_vA + heightB_fixed;
 end
-
-// If the penetration is negative, then there's separation
-assign separate_min_uA = pen_min_uA[31];
-assign separate_max_uA = pen_max_uA[31];
-assign separate_min_vA = pen_min_vA[31];
-assign separate_max_vA = pen_max_vA[31];
 
 //// TEST 2: B onto A
 
@@ -261,8 +248,8 @@ points2_v = []
 i = 0
 for point in points2:
     relative = point - obb1.pos    
-    point_u = Fixed(8, 24, f"Point2_{i}_u")
-    point_v = Fixed(8, 24, f"Point2_{i}_v")
+    point_u = Fixed(8, 16, f"Point2_{i}_u")
+    point_v = Fixed(8, 16, f"Point2_{i}_v")
 
     point_u.declare()
     point_v.declare()
@@ -278,13 +265,13 @@ $$$
 
 
 // Find max u and v values for rect B
-logic signed [31 : 0] max_uB;
-logic signed [31 : 0] max_uB_01;    // Max of points 0 and 1
-logic signed [31 : 0] max_uB_23;    // Max of points 2 and 3
+logic signed [23:0] max_uB;
+logic signed [23:0] max_uB_01;    // Max of points 0 and 1
+logic signed [23:0] max_uB_23;    // Max of points 2 and 3
 
-logic signed [31 : 0] max_vB;
-logic signed [31 : 0] max_vB_01;    // Max of points 0 and 1
-logic signed [31 : 0] max_vB_23;    // Max of points 2 and 3
+logic signed [23:0] max_vB;
+logic signed [23:0] max_vB_01;    // Max of points 0 and 1
+logic signed [23:0] max_vB_23;    // Max of points 2 and 3
 
 // Also record xy coordinate point corresponding to min values
 $$$
@@ -354,13 +341,13 @@ end
 $ end_comb()
 
 // Find min u and v values for rect B
-logic signed [31 : 0] min_uB;
-logic signed [31 : 0] min_uB_01;    // Min of points 0 and 1
-logic signed [31 : 0] min_uB_23;    // Min of points 2 and 3
+logic signed [23:0] min_uB;
+logic signed [23:0] min_uB_01;    // Min of points 0 and 1
+logic signed [23:0] min_uB_23;    // Min of points 2 and 3
 
-logic signed [31 : 0] min_vB;
-logic signed [31 : 0] min_vB_01;    // Min of points 0 and 1
-logic signed [31 : 0] min_vB_23;    // Min of points 2 and 3
+logic signed [23:0] min_vB;
+logic signed [23:0] min_vB_01;    // Min of points 0 and 1
+logic signed [23:0] min_vB_23;    // Min of points 2 and 3
 
 // Also record xy coordinate point corresponding to min values
 $$$
@@ -429,13 +416,6 @@ end
 
 $ end_comb()
 
-
-// Check for separating axis
-logic separate_min_uB;
-logic separate_max_uB;
-logic separate_min_vB;
-logic separate_max_vB;
-
 // Need to cast width and height of A into same Fixed structure as u and v
 $$$
 widthA_fixed = Fixed(points2_u[0].integer_bits, points2_u[0].precision, "widthA_fixed")
@@ -449,20 +429,20 @@ $$$
 
 // Find penetration values for each axis
 $$$
-min_uB = Fixed(8, 24, "min_uB")
-max_uB = Fixed(8, 24, "max_uB")
-min_vB = Fixed(8, 24, "min_vB")
-max_vB = Fixed(8, 24, "max_vB")
+min_uB = Fixed(8, 16, "min_uB")
+max_uB = Fixed(8, 16, "max_uB")
+min_vB = Fixed(8, 16, "min_vB")
+max_vB = Fixed(8, 16, "max_vB")
 pen_min_uB = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_min_uB")
 pen_max_uB = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_max_uB")
 pen_min_vB = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_min_vB")
 pen_max_vB = Fixed(points1_u[0].integer_bits, points1_u[0].precision, "pen_max_vB")
 $$$
 
-logic signed [31:0] pen_min_uB;
-logic signed [31:0] pen_max_uB;
-logic signed [31:0] pen_min_vB;
-logic signed [31:0] pen_max_vB;
+logic signed [23:0] pen_min_uB;
+logic signed [23:0] pen_max_uB;
+logic signed [23:0] pen_min_vB;
+logic signed [23:0] pen_max_vB;
 
 always_comb begin
     pen_min_uB = widthA_fixed - min_uB;
@@ -471,26 +451,20 @@ always_comb begin
     pen_max_vB = max_vB + heightA_fixed;
 end
 
-// If the penetration is negative, then there's separation
-assign separate_min_uB = pen_min_uB[31];
-assign separate_max_uB = pen_max_uB[31];
-assign separate_min_vB = pen_min_vB[31];
-assign separate_max_vB = pen_max_vB[31];
-
 ////// TYING IT ALL TOGETHER
 
 // Find minimum penetration
 
 // Penetration value intermediaries
-logic signed [31:0] min_pen_uA;
-logic signed [31:0] min_pen_vA;
-logic signed [31:0] min_pen_uB;
-logic signed [31:0] min_pen_vB;
+logic signed [23:0] min_pen_uA;
+logic signed [23:0] min_pen_vA;
+logic signed [23:0] min_pen_uB;
+logic signed [23:0] min_pen_vB;
 
-logic signed [31:0] min_pen_u;
-logic signed [31:0] min_pen_v;
+logic signed [23:0] min_pen_u;
+logic signed [23:0] min_pen_v;
 
-logic signed [31:0] min_pen;
+logic signed [23:0] min_pen;
 
 // Normal value intermediaries and contact point intermediaries
 $$$
@@ -598,14 +572,10 @@ if (min_pen_v < min_pen_u) begin
     $ Contact.location.assign(location_v)
 end
 
-$ end_comb()
+penetration = min_pen;
 
-/*
-$ begin_comb()
-is_collision = ~(separate_min_uA | separate_max_uA | separate_min_vA | separate_max_vA | separate_min_uB | separate_max_uB | separate_min_vB | separate_max_vB);
 $ end_comb()
-*/
 
 // If any penetration is negative, there is no collision
-assign is_collision = ~min_pen[31];
+assign is_collision = ~min_pen[23];
 endmodule

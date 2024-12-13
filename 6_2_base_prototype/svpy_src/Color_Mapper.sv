@@ -52,8 +52,8 @@ module  color_mapper (
     $ DrawXRel1.assign(DrawXs - obb1.pos.x)
     $ DrawYRel1.assign(DrawYs - obb1.pos.y)
 
-    $ u_projection1 = Fixed(8, 24, "u_projection1")
-    $ v_projection1 = Fixed(8, 24, "v_projection1")
+    $ u_projection1 = Fixed(8, 16, "u_projection1")
+    $ v_projection1 = Fixed(8, 16, "v_projection1")
     $ u_projection1.declare()
     $ v_projection1.declare()
     $ halfWidth1 = resize(obb1.halfWidth, u_projection1)
@@ -85,8 +85,8 @@ module  color_mapper (
     $ DrawXRel2.assign(DrawXs - obb2.pos.x)
     $ DrawYRel2.assign(DrawYs - obb2.pos.y)
 
-    $ u_projection2 = Fixed(8, 24, "u_projection2")
-    $ v_projection2 = Fixed(8, 24, "v_projection2")
+    $ u_projection2 = Fixed(8, 16, "u_projection2")
+    $ v_projection2 = Fixed(8, 16, "v_projection2")
     $ u_projection2.declare()
     $ v_projection2.declare()
     $ halfWidth2 = resize(obb2.halfWidth, u_projection2)
