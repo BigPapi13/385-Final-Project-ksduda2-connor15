@@ -34,7 +34,6 @@ module adxl345_top(
 	output logic sclk,
 	output logic ss,
 	output logic mosi,
-	output logic [15:0] data_word_recv,
 	output logic [15:0] x,
 	output logic test_clock
 	);
@@ -49,6 +48,8 @@ module adxl345_top(
 	logic [15:0] accelerometer_data;
 	logic reset_div;
 	logic divider_ready;
+	logic [15:0] data_word_recv;
+
 	
     clock_divider #( .DIV_N(20) )	slow_test_clock ( .clk_in(clk), .clk_out(test_clock), .do_reset(reset_div), .is_ready(divider_ready) );
 
