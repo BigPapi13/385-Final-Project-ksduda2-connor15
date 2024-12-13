@@ -13,7 +13,6 @@
 
 
 
-
 module mb_usb_hdmi_top(
     input logic Clk,
     input logic reset_rtl_0,
@@ -138,16 +137,24 @@ module mb_usb_hdmi_top(
     
     // First OBB register
 
-logic signed [7 : 0] obb1_width;
-logic signed [7 : 0] obb1_height;
+logic [7 : 0] obb1_width;
+logic [7 : 0] obb1_height;
+logic [7 : 0] obb1_mass;
+logic [15 : 0] obb1_inertia;
+logic [15 : 0] obb1_inv_mass;
+logic [23 : 0] obb1_inv_inertia;
 logic signed [31 : 0] obb1_pos_x;
 logic signed [31 : 0] obb1_pos_y;
 logic signed [31 : 0] obb1_vel_x;
 logic signed [31 : 0] obb1_vel_y;
 logic signed [10 : 0] obb1_angle;
 logic signed [10 : 0] obb1_omega;
-logic signed [7 : 0] obb1_ld_width;
-logic signed [7 : 0] obb1_ld_height;
+logic [7 : 0] obb1_ld_width;
+logic [7 : 0] obb1_ld_height;
+logic [7 : 0] obb1_ld_mass;
+logic [15 : 0] obb1_ld_inertia;
+logic [15 : 0] obb1_ld_inv_mass;
+logic [23 : 0] obb1_ld_inv_inertia;
 logic signed [31 : 0] obb1_ld_pos_x;
 logic signed [31 : 0] obb1_ld_pos_y;
 logic signed [31 : 0] obb1_ld_vel_x;
@@ -157,6 +164,10 @@ logic signed [10 : 0] obb1_ld_omega;
     obb_reg #(.X_INIT(10), .Y_INIT(32), .X_VEL_INIT(0.3), .Y_VEL_INIT(-0.1), .ANGLE_INIT(0.7), .OMEGA_INIT(0)) obb1(
         .ld_width(obb1_ld_width),
 .ld_height(obb1_ld_height),
+.ld_mass(obb1_ld_mass),
+.ld_inertia(obb1_ld_inertia),
+.ld_inv_mass(obb1_ld_inv_mass),
+.ld_inv_inertia(obb1_ld_inv_inertia),
 .ld_pos_x(obb1_ld_pos_x),
 .ld_pos_y(obb1_ld_pos_y),
 .ld_vel_x(obb1_ld_vel_x),
@@ -165,6 +176,10 @@ logic signed [10 : 0] obb1_ld_omega;
 .ld_omega(obb1_ld_omega),
         .width(obb1_width),
 .height(obb1_height),
+.mass(obb1_mass),
+.inertia(obb1_inertia),
+.inv_mass(obb1_inv_mass),
+.inv_inertia(obb1_inv_inertia),
 .pos_x(obb1_pos_x),
 .pos_y(obb1_pos_y),
 .vel_x(obb1_vel_x),
@@ -178,16 +193,24 @@ logic signed [10 : 0] obb1_ld_omega;
 
     // Second OBB register
 
-logic signed [7 : 0] obb2_width;
-logic signed [7 : 0] obb2_height;
+logic [7 : 0] obb2_width;
+logic [7 : 0] obb2_height;
+logic [7 : 0] obb2_mass;
+logic [15 : 0] obb2_inertia;
+logic [15 : 0] obb2_inv_mass;
+logic [23 : 0] obb2_inv_inertia;
 logic signed [31 : 0] obb2_pos_x;
 logic signed [31 : 0] obb2_pos_y;
 logic signed [31 : 0] obb2_vel_x;
 logic signed [31 : 0] obb2_vel_y;
 logic signed [10 : 0] obb2_angle;
 logic signed [10 : 0] obb2_omega;
-logic signed [7 : 0] obb2_ld_width;
-logic signed [7 : 0] obb2_ld_height;
+logic [7 : 0] obb2_ld_width;
+logic [7 : 0] obb2_ld_height;
+logic [7 : 0] obb2_ld_mass;
+logic [15 : 0] obb2_ld_inertia;
+logic [15 : 0] obb2_ld_inv_mass;
+logic [23 : 0] obb2_ld_inv_inertia;
 logic signed [31 : 0] obb2_ld_pos_x;
 logic signed [31 : 0] obb2_ld_pos_y;
 logic signed [31 : 0] obb2_ld_vel_x;
@@ -197,6 +220,10 @@ logic signed [10 : 0] obb2_ld_omega;
     obb_reg #(.X_INIT(45), .Y_INIT(32), .X_VEL_INIT(-0.2), .Y_VEL_INIT(0.5), .WIDTH_INIT(15), .HEIGHT_INIT(5), .OMEGA_INIT(0)) obb2(
         .ld_width(obb2_ld_width),
 .ld_height(obb2_ld_height),
+.ld_mass(obb2_ld_mass),
+.ld_inertia(obb2_ld_inertia),
+.ld_inv_mass(obb2_ld_inv_mass),
+.ld_inv_inertia(obb2_ld_inv_inertia),
 .ld_pos_x(obb2_ld_pos_x),
 .ld_pos_y(obb2_ld_pos_y),
 .ld_vel_x(obb2_ld_vel_x),
@@ -205,6 +232,10 @@ logic signed [10 : 0] obb2_ld_omega;
 .ld_omega(obb2_ld_omega),
         .width(obb2_width),
 .height(obb2_height),
+.mass(obb2_mass),
+.inertia(obb2_inertia),
+.inv_mass(obb2_inv_mass),
+.inv_inertia(obb2_inv_inertia),
 .pos_x(obb2_pos_x),
 .pos_y(obb2_pos_y),
 .vel_x(obb2_vel_x),
@@ -221,35 +252,53 @@ logic signed [31 : 0] impulse_data_impulse_x;
 logic signed [31 : 0] impulse_data_impulse_y;
 logic signed [31 : 0] impulse_data_nudge_x;
 logic signed [31 : 0] impulse_data_nudge_y;
-logic signed [10 : 0] impulse_data_rotational_impulse;
 logic signed [15 : 0] contact_data_normal_x;
 logic signed [15 : 0] contact_data_normal_y;
 logic signed [21 : 0] contact_data_location_x;
 logic signed [21 : 0] contact_data_location_y;
 logic signed [31 : 0] contact_data_penetration;
+logic signed [10 : 0] rotational_impulse1;
+logic signed [10 : 0] rotational_impulse2;
     box_box_resolver bbr_inst(
         .normal_x(contact_data_normal_x),
 .normal_y(contact_data_normal_y),
 .location_x(contact_data_location_x),
 .location_y(contact_data_location_y),
 .penetration(contact_data_penetration),
-        .obb1_pos_x(obb1_pos_x),
+        .obb1_width(obb1_width),
+.obb1_height(obb1_height),
+.obb1_mass(obb1_mass),
+.obb1_inertia(obb1_inertia),
+.obb1_inv_mass(obb1_inv_mass),
+.obb1_inv_inertia(obb1_inv_inertia),
+.obb1_pos_x(obb1_pos_x),
 .obb1_pos_y(obb1_pos_y),
-        .obb1_vel_x(obb1_vel_x),
+.obb1_vel_x(obb1_vel_x),
 .obb1_vel_y(obb1_vel_y),
-        .obb1_omega(obb1_omega),
-        .obb2_pos_x(obb2_pos_x),
+.obb1_angle(obb1_angle),
+.obb1_omega(obb1_omega),
+        .obb2_width(obb2_width),
+.obb2_height(obb2_height),
+.obb2_mass(obb2_mass),
+.obb2_inertia(obb2_inertia),
+.obb2_inv_mass(obb2_inv_mass),
+.obb2_inv_inertia(obb2_inv_inertia),
+.obb2_pos_x(obb2_pos_x),
 .obb2_pos_y(obb2_pos_y),
-        .obb2_vel_x(obb2_vel_x),
+.obb2_vel_x(obb2_vel_x),
 .obb2_vel_y(obb2_vel_y),
-        .obb2_omega(obb2_omega),
+.obb2_angle(obb2_angle),
+.obb2_omega(obb2_omega),
         .impulse_x(impulse_data_impulse_x),
 .impulse_y(impulse_data_impulse_y),
 .nudge_x(impulse_data_nudge_x),
 .nudge_y(impulse_data_nudge_y),
-.rotational_impulse(impulse_data_rotational_impulse)    );
+        .rotational_impulse1(rotational_impulse1),
+        .rotational_impulse2(rotational_impulse2)
+    );
 
     // Logic for determining next state
+logic signed [10 : 0] rotational_impulse;
     logic is_collision;
     obb_updater obb1_updater(
         .impulse_en(is_collision),
@@ -258,9 +307,12 @@ logic signed [31 : 0] contact_data_penetration;
 .impulse_y(impulse_data_impulse_y),
 .nudge_x(impulse_data_nudge_x),
 .nudge_y(impulse_data_nudge_y),
-.rotational_impulse(impulse_data_rotational_impulse),
         .next_width(obb1_ld_width),
 .next_height(obb1_ld_height),
+.next_mass(obb1_ld_mass),
+.next_inertia(obb1_ld_inertia),
+.next_inv_mass(obb1_ld_inv_mass),
+.next_inv_inertia(obb1_ld_inv_inertia),
 .next_pos_x(obb1_ld_pos_x),
 .next_pos_y(obb1_ld_pos_y),
 .next_vel_x(obb1_ld_vel_x),
@@ -269,39 +321,39 @@ logic signed [31 : 0] contact_data_penetration;
 .next_omega(obb1_ld_omega),
         .prev_width(obb1_width),
 .prev_height(obb1_height),
+.prev_mass(obb1_mass),
+.prev_inertia(obb1_inertia),
+.prev_inv_mass(obb1_inv_mass),
+.prev_inv_inertia(obb1_inv_inertia),
 .prev_pos_x(obb1_pos_x),
 .prev_pos_y(obb1_pos_y),
 .prev_vel_x(obb1_vel_x),
 .prev_vel_y(obb1_vel_y),
 .prev_angle(obb1_angle),
-.prev_omega(obb1_omega)
+.prev_omega(obb1_omega),
+        .rotational_impulse(rotational_impulse1)
     );
 
 logic signed [31 : 0] neg_impulse_data_impulse_x;
 logic signed [31 : 0] neg_impulse_data_impulse_y;
 logic signed [31 : 0] neg_impulse_data_nudge_x;
 logic signed [31 : 0] neg_impulse_data_nudge_y;
-logic signed [10 : 0] neg_impulse_data_rotational_impulse;
-logic signed [31 : 0] opnet_307;
-assign opnet_307 = ~(impulse_data_impulse_x) + 1'b1;
+logic signed [31 : 0] opnet_340;
+assign opnet_340 = ~(impulse_data_impulse_x) + 1'b1;
 
-logic signed [31 : 0] opnet_308;
-assign opnet_308 = ~(impulse_data_impulse_y) + 1'b1;
+logic signed [31 : 0] opnet_341;
+assign opnet_341 = ~(impulse_data_impulse_y) + 1'b1;
 
-assign neg_impulse_data_impulse_x = opnet_307;
-assign neg_impulse_data_impulse_y = opnet_308;
-logic signed [31 : 0] opnet_309;
-assign opnet_309 = ~(impulse_data_nudge_x) + 1'b1;
+assign neg_impulse_data_impulse_x = opnet_340;
+assign neg_impulse_data_impulse_y = opnet_341;
+logic signed [31 : 0] opnet_342;
+assign opnet_342 = ~(impulse_data_nudge_x) + 1'b1;
 
-logic signed [31 : 0] opnet_310;
-assign opnet_310 = ~(impulse_data_nudge_y) + 1'b1;
+logic signed [31 : 0] opnet_343;
+assign opnet_343 = ~(impulse_data_nudge_y) + 1'b1;
 
-assign neg_impulse_data_nudge_x = opnet_309;
-assign neg_impulse_data_nudge_y = opnet_310;
-logic signed [10 : 0] opnet_311;
-assign opnet_311 = ~(impulse_data_rotational_impulse) + 1'b1;
-
-assign neg_impulse_data_rotational_impulse = opnet_311;
+assign neg_impulse_data_nudge_x = opnet_342;
+assign neg_impulse_data_nudge_y = opnet_343;
 
     obb_updater obb2_updater(
         .impulse_en(is_collision),
@@ -310,9 +362,12 @@ assign neg_impulse_data_rotational_impulse = opnet_311;
 .impulse_y(neg_impulse_data_impulse_y),
 .nudge_x(neg_impulse_data_nudge_x),
 .nudge_y(neg_impulse_data_nudge_y),
-.rotational_impulse(neg_impulse_data_rotational_impulse),
         .next_width(obb2_ld_width),
 .next_height(obb2_ld_height),
+.next_mass(obb2_ld_mass),
+.next_inertia(obb2_ld_inertia),
+.next_inv_mass(obb2_ld_inv_mass),
+.next_inv_inertia(obb2_ld_inv_inertia),
 .next_pos_x(obb2_ld_pos_x),
 .next_pos_y(obb2_ld_pos_y),
 .next_vel_x(obb2_ld_vel_x),
@@ -321,12 +376,17 @@ assign neg_impulse_data_rotational_impulse = opnet_311;
 .next_omega(obb2_ld_omega),
         .prev_width(obb2_width),
 .prev_height(obb2_height),
+.prev_mass(obb2_mass),
+.prev_inertia(obb2_inertia),
+.prev_inv_mass(obb2_inv_mass),
+.prev_inv_inertia(obb2_inv_inertia),
 .prev_pos_x(obb2_pos_x),
 .prev_pos_y(obb2_pos_y),
 .prev_vel_x(obb2_vel_x),
 .prev_vel_y(obb2_vel_y),
 .prev_angle(obb2_angle),
-.prev_omega(obb2_omega)
+.prev_omega(obb2_omega),
+        .rotational_impulse(rotational_impulse2)
     );
 
     // DID SOMEONE SAY JUICE????
@@ -351,6 +411,10 @@ logic signed [6 : 0] obb1_halfHeight;
     juicer juicer1(
         .width(obb1_width),
 .height(obb1_height),
+.mass(obb1_mass),
+.inertia(obb1_inertia),
+.inv_mass(obb1_inv_mass),
+.inv_inertia(obb1_inv_inertia),
 .pos_x(obb1_pos_x),
 .pos_y(obb1_pos_y),
 .vel_x(obb1_vel_x),
@@ -392,6 +456,10 @@ logic signed [6 : 0] obb2_halfHeight;
     juicer juicer2(
         .width(obb2_width),
 .height(obb2_height),
+.mass(obb2_mass),
+.inertia(obb2_inertia),
+.inv_mass(obb2_inv_mass),
+.inv_inertia(obb2_inv_inertia),
 .pos_x(obb2_pos_x),
 .pos_y(obb2_pos_y),
 .vel_x(obb2_vel_x),
@@ -418,6 +486,10 @@ logic signed [6 : 0] obb2_halfHeight;
     collision_detector cd_inst(
         .obb1_width(obb1_width),
 .obb1_height(obb1_height),
+.obb1_mass(obb1_mass),
+.obb1_inertia(obb1_inertia),
+.obb1_inv_mass(obb1_inv_mass),
+.obb1_inv_inertia(obb1_inv_inertia),
 .obb1_pos_x(obb1_pos_x),
 .obb1_pos_y(obb1_pos_y),
 .obb1_vel_x(obb1_vel_x),
@@ -440,6 +512,10 @@ logic signed [6 : 0] obb2_halfHeight;
 .obb1_halfHeight(obb1_halfHeight),
         .obb2_width(obb2_width),
 .obb2_height(obb2_height),
+.obb2_mass(obb2_mass),
+.obb2_inertia(obb2_inertia),
+.obb2_inv_mass(obb2_inv_mass),
+.obb2_inv_inertia(obb2_inv_inertia),
 .obb2_pos_x(obb2_pos_x),
 .obb2_pos_y(obb2_pos_y),
 .obb2_vel_x(obb2_vel_x),
@@ -472,6 +548,10 @@ logic signed [6 : 0] obb2_halfHeight;
     color_mapper color_instance(
         .obb1_width(obb1_width),
 .obb1_height(obb1_height),
+.obb1_mass(obb1_mass),
+.obb1_inertia(obb1_inertia),
+.obb1_inv_mass(obb1_inv_mass),
+.obb1_inv_inertia(obb1_inv_inertia),
 .obb1_pos_x(obb1_pos_x),
 .obb1_pos_y(obb1_pos_y),
 .obb1_vel_x(obb1_vel_x),
@@ -494,6 +574,10 @@ logic signed [6 : 0] obb2_halfHeight;
 .obb1_halfHeight(obb1_halfHeight),
         .obb2_width(obb2_width),
 .obb2_height(obb2_height),
+.obb2_mass(obb2_mass),
+.obb2_inertia(obb2_inertia),
+.obb2_inv_mass(obb2_inv_mass),
+.obb2_inv_inertia(obb2_inv_inertia),
 .obb2_pos_x(obb2_pos_x),
 .obb2_pos_y(obb2_pos_y),
 .obb2_vel_x(obb2_vel_x),
