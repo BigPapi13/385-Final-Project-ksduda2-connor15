@@ -152,3 +152,5 @@ Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Tcl Message: open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1130.977 ; gain = 202.195 
 // Project name: HUB75_testing; location: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing; part: xc7s50csga324-1
 dismissDialog("Open Project"); // bq
+// Elapsed time: 112 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // f
