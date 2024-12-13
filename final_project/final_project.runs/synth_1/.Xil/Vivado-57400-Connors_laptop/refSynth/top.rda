@@ -1,0 +1,347 @@
+Data_For_RDAFlowver5.0
+	top levelùâ
+final_project_topà
+LinkDesign_Blackboxes8
+!fm/dut/sync_pdp_ram/buffer_bottomdisplay_buffer_bram5
+fm/dut/sync_pdp_ram/buffer_topdisplay_buffer_bramò0
+synthFileNamesJ
+10DC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhdG
+11AC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_TDP_MACRO.vhdK
+12EC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/COUNTER_LOAD_MACRO.vhdI
+13CC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/COUNTER_TC_MACRO.vhdI
+14CC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/EQ_COMPARE_MACRO.vhdF
+20@C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/ADDSUB_MACRO.vM
+15GC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhdH
+21BC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SDP_MACRO.vH
+16BC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhdK
+22EC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.vC
+17=C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/MACC_MACRO.vhdC
+18=C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/MULT_MACRO.vhdH
+23BC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_TDP_MACRO.vG
+19AC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/ADDMACC_MACRO.vL
+24FC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/COUNTER_LOAD_MACRO.vJ
+25DC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/COUNTER_TC_MACRO.vD
+30>C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/MULT_MACRO.v
+NumFileNames61J
+26DC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/EQ_COMPARE_MACRO.vJ
+31DC:/Xilinx/Vivado/2022.2/data/vhdl/src/unisims/retarget/MULT18X18.vhd=
+18C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_VCOMP.vhdN
+27HC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/FIFO_DUALCLOCK_MACRO.vK
+32EC:/Xilinx/Vivado/2022.2/data/vhdl/src/unisims/retarget/MULT18X18S.vhd<
+27C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_VPKG.vhdI
+28CC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/FIFO_SYNC_MACRO.vF
+33@C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:
+35C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.vD
+29>C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/MACC_MACRO.vä
+34ÉC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/Color_Mapper.sv=
+48C:/Xilinx/Vivado/2022.2/scripts/rt/data/internal_cells.vé
+35áC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/box_box_resolver.svÖ
+40C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/inverter.sv3
+5.C:/Xilinx/Vivado/2022.2/scripts/rt/data/BUFT.vê
+36âC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/collision_detector.svå
+41ÖC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/memory_manager.svF
+6AC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/unimacro_VCOMP.vhdà
+37ÅC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/controller.svÑ
+42~C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/obb_reg.svE
+7@C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/ADDMACC_MACRO.vhdÉ
+38}C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/cosine.svâ
+43ÇC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/obb_updater.svD
+8?C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhdã
+39ÑC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/frame_manager.svå
+44ÖC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/simulation_top.sv7
+501C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhdF
+9AC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_SDP_MACRO.vhdÅ
+45{C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/sine.svä
+51ÉC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.runs/synth_1/1993/src/std_1164.vhdä
+46ÉC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/sync_pdp_ram.svä
+52ÉC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.runs/synth_1/1993/src/standard.vhdà
+47ÅC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/the_juicer.svç
+53ÜC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.runs/synth_1/1993/src/numeric_std.vhdè
+48àC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/final_project_top.svà
+54ÅC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.runs/synth_1/1993/src/textio.vhdπ
+49≤C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.runs/synth_1/.Xil/Vivado-57384-Connors_laptop/realtime/display_buffer_bram_stub.vä
+60ÉC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.runs/synth_1/1993/src/syn_unsi.vhdä
+55ÉC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.runs/synth_1/1993/src/timing_p.vhdä
+56ÉC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.runs/synth_1/1993/src/timing_b.vhdä
+57ÉC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.runs/synth_1/1993/src/prmtvs_p.vhdä
+58ÉC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.runs/synth_1/1993/src/prmtvs_b.vhdä
+59ÉC:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.runs/synth_1/1993/src/syn_arit.vhd∫
+
+synthStatsH
+caseNotFullNoDefault
+L88
+Mnullname
+F37
+O
+read_stateL
+caseNotFullNoDefault
+L130
+Mnullname
+F39
+Ostartup_stateF
+dspWideMultUnderpipelined
+L142
+Mnullname
+F35
+Ox6F
+dspWideMultUnderpipelined
+L144
+Mnullname
+F35
+Ox5W
+dspWideMultUnderpipelined
+L155
+Mnullname
+F35
+Oimpulse1_impulse_x4F
+dspWideMultUnderpipelined
+L148
+Mnullname
+F35
+Ox4F
+dspWideMultUnderpipelined
+L150
+Mnullname
+F35
+Ox3W
+dspWideMultUnderpipelined
+L156
+Mnullname
+F35
+Oimpulse1_impulse_x3`
+dspWideMultUnderpipelined
+L168
+Mnullname
+F35!
+Oimpulse1_rotational_impulse1`
+dspWideMultUnderpipelined
+L170
+Mnullname
+F35!
+Oimpulse2_rotational_impulse3ïL
+ElaboratedNamesForRQS˚K
+DSP_RAM(
+2437129 {sim/cd_inst/min_pen_uB2_i} $
+376841 {sim/cd_inst/opnet_60_i} )
+2781193 {sim/cd_inst/normal_uB_y0_i} 0
+638979& {sim/bbr_inst/impulse1_impulse_x3_i} $
+540681 {sim/cd_inst/opnet_76_i} *
+540682  {sim/color_instance/Red8_i__2} %
+1507337 {sim/cd_inst/opnet_94_i} ?
+2826305 {sim/juicer1/opnet_374_i} {sim/juicer2/opnet_374_i} &
+1634313 {sim/cd_inst/opnet_106_i} !
+544781 {fm/dut/bit_count0_i} *
+544778  {sim/color_instance/Red7_i__3} $
+286723 {sim/bbr_inst/opnet_6_i} %
+716803 {sim/bbr_inst/opnet_13_i} $
+286729 {sim/cd_inst/opnet_51_i} ?
+3235905 {sim/juicer1/opnet_379_i} {sim/juicer2/opnet_379_i} 
+548867 {sim/bbr_inst/x7_i} $
+323593 {sim/cd_inst/opnet_55_i} 4
+450563* {sim/bbr_inst/impulse1_impulse_x13_i__0} &
+1597449 {sim/cd_inst/opnet_103_i} %
+1372169 {sim/cd_inst/opnet_81_i} %
+1417225 {sim/cd_inst/opnet_85_i} J
+4255751? {sim/juicer1/cos_inst_1/ROM_i} {sim/juicer2/cos_inst_1/ROM_i} $
+450569 {sim/cd_inst/opnet_67_i} J
+4255752? {sim/juicer1/sin_inst_1/ROM_i} {sim/juicer2/sin_inst_1/ROM_i} 4
+454659* {sim/bbr_inst/impulse1_impulse_x11_i__0} $
+196611 {sim/bbr_inst/opnet_1_i} "
+581635 {sim/bbr_inst/x6_i__0} +
+1323017  {sim/cd_inst/min_pen_uA2_i__0} 4
+458755* {sim/bbr_inst/impulse1_impulse_x11_i__2} $
+458761 {sim/cd_inst/opnet_68_i} S
+458757I {sim/obb1_updater/next_angle0_i__0} {sim/obb2_updater/next_angle0_i__0} ?
+2334785 {sim/juicer1/opnet_368_i} {sim/juicer2/opnet_368_i} (
+1327113 {sim/cd_inst/min_pen_uA2_i} `
+360460V {fm/mem_start/buffer_toggle_i} {fm/mem_start/write_done_i} {fm/mem_start/write_en_i} ¥
+360461© {fm/dut/bit_count_i__0} {fm/dut/column_addr_i__0} {fm/dut/hub75_blue_i} {fm/dut/hub75_green_i} {fm/dut/hub75_latch_i} {fm/dut/hub75_latch_i__0} {fm/dut/hub75_oe_i} {fm/dut/hub75_red_i} {fm/dut/oe_strobe_column_addr_i__0} {fm/dut/read_state_i} {fm/dut/run_hub75_clk_i} {fm/dut/run_hub75_clk_i__0} $
+360457 {sim/cd_inst/opnet_58_i} $
+405513 {sim/cd_inst/opnet_63_i} &
+1671177 {sim/cd_inst/opnet_110_i} ?
+3645505 {sim/juicer1/opnet_384_i} {sim/juicer2/opnet_384_i} "
+589827 {sim/bbr_inst/x5_i__2} '
+364554 {sim/color_instance/Red8_i} 3
+491523) {sim/bbr_inst/impulse1_impulse_x9_i__0} *
+368650  {sim/color_instance/Red8_i__0} $
+368649 {sim/cd_inst/opnet_59_i} 3
+495619) {sim/bbr_inst/impulse1_impulse_x9_i__2} 0
+532483& {sim/bbr_inst/impulse1_impulse_x6_i} 9
+700419/ {sim/bbr_inst/impulse2_rotational_impulse1_i} &
+1679369 {sim/cd_inst/opnet_111_i} $
+315401 {sim/cd_inst/opnet_54_i} ,
+315402" {sim/color_instance/opnet_327_i} %
+1454089 {sim/cd_inst/opnet_89_i} O
+532491E {fm/n_reset_i} {fm/reset_mem_manager_i} {fm/startup_state_nxt_i__2} &
+1581065 {sim/cd_inst/opnet_101_i} )
+2777097 {sim/cd_inst/normal_uB_x0_i} 0
+499715& {sim/bbr_inst/impulse1_impulse_x8_i} $
+532489 {sim/cd_inst/opnet_75_i} $
+499721 {sim/cd_inst/opnet_72_i} *
+536586  {sim/color_instance/Red8_i__1} $
+278531 {sim/bbr_inst/opnet_5_i} 0
+663555& {sim/bbr_inst/impulse2_impulse_x0_i} $
+278537 {sim/cd_inst/opnet_50_i} 0
+667651& {sim/bbr_inst/impulse2_impulse_y0_i} M
+315397C {sim/obb1_updater/next_vel_y0_i} {sim/obb2_updater/next_vel_y0_i} ?
+3153985 {sim/juicer1/opnet_378_i} {sim/juicer2/opnet_378_i} 
+610307 {sim/bbr_inst/x2_i} &
+1589257 {sim/cd_inst/opnet_102_i} G
+180229= {sim/obb1_updater/n_vel_y2_i} {sim/obb2_updater/n_vel_y2_i} 
+667661 {fm/dut/counter0_i} $
+442377 {sim/cd_inst/opnet_66_i} "
+614403 {sim/bbr_inst/x3_i__1} G
+184325= {sim/obb1_updater/n_vel_x0_i} {sim/obb2_updater/n_vel_x0_i} %
+1536009 {sim/cd_inst/opnet_97_i} ?
+4464705 {sim/juicer1/opnet_391_i} {sim/juicer2/opnet_391_i} M
+446469C {sim/obb1_updater/next_angle0_i} {sim/obb2_updater/next_angle0_i} "
+573443 {sim/bbr_inst/x5_i__1} G
+188421= {sim/obb1_updater/n_vel_y0_i} {sim/obb2_updater/n_vel_y0_i} (
+221196 {fm/mem_start/write_addr0_i} ?
+2252865 {sim/juicer1/opnet_367_i} {sim/juicer2/opnet_367_i} %
+1499145 {sim/cd_inst/opnet_93_i}  
+577549 {fm/dut/row_addr0_i} .
+741379$ {sim/bbr_inst/impulse2_nudge_x0_i} 0
+483331& {sim/bbr_inst/impulse1_impulse_x9_i} ?
+3563585 {sim/juicer1/opnet_383_i} {sim/juicer2/opnet_383_i} 
+618499 {sim/bbr_inst/x1_i} .
+745475$ {sim/bbr_inst/impulse2_nudge_y0_i} ,
+303114" {sim/color_instance/opnet_326_i} #
+135181 {fm/dut/clk_counter0_i} 3
+487427) {sim/bbr_inst/impulse1_impulse_x9_i__1} $
+487433 {sim/cd_inst/opnet_71_i} ,
+487434" {sim/color_instance/opnet_335_i} $
+262147 {sim/bbr_inst/opnet_4_i} $
+262153 {sim/cd_inst/opnet_49_i} 0
+524291& {sim/bbr_inst/impulse1_impulse_x7_i} $
+307209 {sim/cd_inst/opnet_53_i} $
+524297 {sim/cd_inst/opnet_74_i} 0
+651267& {sim/bbr_inst/impulse1_impulse_y1_i} ?
+2662465 {sim/juicer1/opnet_372_i} {sim/juicer2/opnet_372_i} 3
+528387) {sim/bbr_inst/impulse1_impulse_x7_i__0} 1
+430083' {sim/bbr_inst/impulse1_impulse_x13_i} #
+430093 {fm/dut/column_addr0_i} $
+397321 {sim/cd_inst/opnet_62_i} e
+397317[ {sim/obb1_updater/next_angle_uncorrected0_i} {sim/obb2_updater/next_angle_uncorrected0_i} ?
+3973185 {sim/juicer1/opnet_387_i} {sim/juicer2/opnet_387_i} 
+602115 {sim/bbr_inst/x3_i} /
+397324% {fm/mem_start/write_pixel_count0_i} #
+397325 {fm/dut/hub75_green1_i} 1
+434179' {sim/bbr_inst/impulse1_impulse_x11_i} $
+561161 {sim/cd_inst/opnet_78_i} "
+606211 {sim/bbr_inst/x4_i__1} $
+434189 {fm/dut/read_state_i__0} G
+176133= {sim/obb1_updater/n_vel_x2_i} {sim/obb2_updater/n_vel_x2_i} *
+561162  {sim/color_instance/Red6_i__5} ?
+1761345 {sim/juicer1/opnet_365_i} {sim/juicer2/opnet_365_i} 4
+438275* {sim/bbr_inst/impulse1_impulse_x11_i__1} ?
+4382785 {sim/juicer1/opnet_390_i} {sim/juicer2/opnet_390_i} "
+565251 {sim/bbr_inst/x6_i__1} !
+565261 {fm/dut/frame_done_i} *
+692234  {sim/color_instance/Red5_i__7} ?
+2170945 {sim/juicer1/opnet_366_i} {sim/juicer2/opnet_366_i} %
+1404937 {sim/cd_inst/opnet_84_i} "
+569347 {sim/bbr_inst/x6_i__2} $
+569353 {sim/cd_inst/opnet_79_i} $
+344073 {sim/cd_inst/opnet_57_i} 9
+696323/ {sim/bbr_inst/impulse2_rotational_impulse3_i} *
+696330  {sim/color_instance/Red4_i__5} %
+1363977 {sim/cd_inst/opnet_80_i} $
+471049 {sim/cd_inst/opnet_69_i} 1
+4276228& {sim/bbr_inst/inverter_inst_1/ROM_i} ?
+3481665 {sim/juicer1/opnet_382_i} {sim/juicer2/opnet_382_i} ,
+475146" {sim/color_instance/opnet_334_i} $
+479241 {sim/cd_inst/opnet_70_i} &
+1662985 {sim/cd_inst/opnet_109_i} 0
+647171& {sim/bbr_inst/impulse1_impulse_x1_i} *
+385034  {sim/color_instance/Red7_i__2} M
+385029C {sim/obb1_updater/next_pos_y0_i} {sim/obb2_updater/next_pos_y0_i} *
+389130  {sim/color_instance/Red6_i__1} ?
+3891265 {sim/juicer1/opnet_386_i} {sim/juicer2/opnet_386_i} $
+389129 {sim/cd_inst/opnet_61_i} %
+1445897 {sim/cd_inst/opnet_88_i} &
+1617929 {sim/cd_inst/opnet_105_i} 
+557059 {sim/bbr_inst/x6_i} *
+557066  {sim/color_instance/Red7_i__6} )
+2715657 {sim/cd_inst/normal_vA_x0_i} (
+2842633 {sim/cd_inst/normal_v_y0_i} )
+2719753 {sim/cd_inst/normal_vA_y0_i} 9
+688131/ {sim/bbr_inst/impulse1_rotational_impulse1_i} %
+1527817 {sim/cd_inst/opnet_96_i} G
+212997= {sim/obb1_updater/n_pos_y0_i} {sim/obb2_updater/n_pos_y0_i} %
+1486857 {sim/cd_inst/opnet_92_i} %
+1433609 {sim/cd_inst/opnet_87_i} &
+1650697 {sim/cd_inst/opnet_108_i} %
+1396745 {sim/cd_inst/opnet_83_i} %
+1560585 {sim/cd_inst/opnet_99_i} $
+253955 {sim/bbr_inst/opnet_3_i} $
+253961 {sim/cd_inst/opnet_48_i} +
+2441225  {sim/cd_inst/min_pen_vB2_i__0} M
+380933C {sim/obb1_updater/next_pos_x0_i} {sim/obb2_updater/next_pos_x0_i} !
+380941 {fm/dut/hub75_red1_i} *
+380938  {sim/color_instance/Red7_i__1} &
+1609737 {sim/cd_inst/opnet_104_i} (
+2445321 {sim/cd_inst/min_pen_vB2_i} M
+200709C {sim/obb1_updater/next_omega0_i} {sim/obb2_updater/next_omega0_i} $
+204803 {sim/bbr_inst/opnet_2_i} &
+1568777 {sim/cd_inst/opnet_100_i} ?
+4218945 {sim/juicer1/opnet_389_i} {sim/juicer2/opnet_389_i} %
+1470473 {sim/cd_inst/opnet_90_i} G
+208901= {sim/obb1_updater/n_pos_x0_i} {sim/obb2_updater/n_pos_x0_i} %
+1515529 {sim/cd_inst/opnet_95_i} M
+290821C {sim/obb1_updater/next_vel_x0_i} {sim/obb2_updater/next_vel_x0_i} ?
+2908225 {sim/juicer1/opnet_375_i} {sim/juicer2/opnet_375_i} &
+1642505 {sim/cd_inst/opnet_107_i} (
+2838537 {sim/cd_inst/normal_v_x0_i} $
+425993 {sim/cd_inst/opnet_65_i} "
+552963 {sim/bbr_inst/x7_i__0} *
+552970  {sim/color_instance/Red7_i__5} 
+552973 {fm/dut/row_addr_i} $
+552969 {sim/cd_inst/opnet_77_i} $
+294921 {sim/cd_inst/opnet_52_i} %
+1478665 {sim/cd_inst/opnet_91_i} 3
+503811) {sim/bbr_inst/impulse1_impulse_x8_i__0} %
+1425417 {sim/cd_inst/opnet_86_i} %
+720899 {sim/bbr_inst/opnet_23_i} $
+335881 {sim/cd_inst/opnet_56_i} $
+507913 {sim/cd_inst/opnet_73_i} %
+1388553 {sim/cd_inst/opnet_82_i} +
+1331209  {sim/cd_inst/min_pen_vA2_i__0} ?
+2416705 {sim/juicer1/opnet_369_i} {sim/juicer2/opnet_369_i} )
+2654217 {sim/cd_inst/normal_uA_x0_i} (
+1335305 {sim/cd_inst/min_pen_vA2_i} %
+1552393 {sim/cd_inst/opnet_98_i} ?
+4137025 {sim/juicer1/opnet_388_i} {sim/juicer2/opnet_388_i} )
+2658313 {sim/cd_inst/normal_uA_y0_i} +
+2433033  {sim/cd_inst/min_pen_uB2_i__0} "
+413709 {fm/dut/hub75_blue1_i} ?
+3727425 {sim/juicer1/opnet_385_i} {sim/juicer2/opnet_385_i} 0
+634883& {sim/bbr_inst/impulse1_impulse_x4_i} $
+417801 {sim/cd_inst/opnet_64_i} '
+372746 {sim/color_instance/Red7_i} ?
+2498625 {sim/juicer1/opnet_370_i} {sim/juicer2/opnet_370_i} 
+blackBoxInfo8
+!fm/dut/sync_pdp_ram/buffer_bottomdisplay_buffer_bram5
+fm/dut/sync_pdp_ram/buffer_topdisplay_buffer_bramã
+synth_design
+isIncremental0
+Runtime2
+Threads used2`
+argsX-verilog_define default::[not_specified] -top  final_project_top -part  xc7s50csga324-1 
+resynthPerc0.00
+Cputime1
+blackBoxPercinf
+	directive ú
+synth_design_metrics$
+mismatchedAddSubOperatorWidths-1
+lowMaxFanout-1
+NumUnregisteredPorts0
+caseNotFullNoDefault2
+	smallSrls-1
+srlsWithResetLogic-1
+shallowRAMWithAttribute-1
+hierMFO0
+bigRAMs-1
+NetsWithMixedFanouts-1
+DSPsWithKeep0
+RQS_Results

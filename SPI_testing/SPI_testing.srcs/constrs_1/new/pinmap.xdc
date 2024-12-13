@@ -179,6 +179,13 @@ set_property IOSTANDARD LVCMOS25 [get_ports {x[1]}]
 set_property IOSTANDARD LVCMOS25 [get_ports {x[0]}]
 connect_debug_port u_ila_0/probe0 [get_nets [list {data_word_recv_OBUF[0]} {data_word_recv_OBUF[1]} {data_word_recv_OBUF[2]} {data_word_recv_OBUF[3]} {data_word_recv_OBUF[4]} {data_word_recv_OBUF[5]} {data_word_recv_OBUF[6]} {data_word_recv_OBUF[7]} {data_word_recv_OBUF[8]} {data_word_recv_OBUF[9]} {data_word_recv_OBUF[10]} {data_word_recv_OBUF[11]} {data_word_recv_OBUF[12]} {data_word_recv_OBUF[13]} {data_word_recv_OBUF[14]} {data_word_recv_OBUF[15]}]]
 
+
+set_property PACKAGE_PIN C13 [get_ports led]
+set_property IOSTANDARD LVCMOS25 [get_ports led]
+
+set_property PACKAGE_PIN C14 [get_ports led2]
+set_property IOSTANDARD LVCMOS25 [get_ports led2]
+
 create_debug_core u_ila_0 ila
 set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
 set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_0]
@@ -217,6 +224,8 @@ create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
 set_property port_width 1 [get_debug_ports u_ila_0/probe6]
 connect_debug_port u_ila_0/probe6 [get_nets [list test_clock_OBUF]]
+set_property IOSTANDARD LVCMOS25 [get_ports led3]
+set_property PACKAGE_PIN D14 [get_ports led3]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

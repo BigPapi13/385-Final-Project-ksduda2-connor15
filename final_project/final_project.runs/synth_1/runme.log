@@ -1,0 +1,26 @@
+
+*** Running vivado
+    with args -log final_project_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source final_project_top.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source final_project_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 372.484 ; gain = 62.750
+Command: read_checkpoint -auto_incremental -incremental C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/utils_1/imports/synth_1/ADXL345_com.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/utils_1/imports/synth_1/ADXL345_com.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top final_project_top -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 57404

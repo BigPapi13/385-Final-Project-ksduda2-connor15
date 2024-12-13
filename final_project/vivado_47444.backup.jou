@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Dec 13 08:55:57 2024
+# Process ID: 47444
+# Current directory: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent51936 C:\Users\conno\Documents\Stuff\UIUC\2024-2025\FALL\ECE385\final\repo\final_project\final_project.xpr
+# Log file: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/vivado.log
+# Journal file: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project\vivado.jou
+# Running On: Connors_laptop, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 12, Host memory: 34042 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.xpr
+update_compile_order -fileset sources_1

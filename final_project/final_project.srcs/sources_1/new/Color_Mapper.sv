@@ -53,7 +53,8 @@ input logic signed [21 : 0] obb2_Point3_x, input logic signed [21 : 0] obb2_Poin
 input logic signed [6 : 0] obb2_halfWidth,
 input logic signed [6 : 0] obb2_halfHeight,
     input logic signed [21 : 0] drawPoint_x, input logic signed [21 : 0] drawPoint_y,
-    input  logic [9:0] DrawX, DrawY,
+    input logic separating,
+    input  logic [5:0] DrawX, DrawY,
     output logic [3:0]  Red, Green, Blue
 );
     
@@ -63,8 +64,8 @@ input logic signed [6 : 0] obb2_halfHeight,
     // Rescaled versions of DrawX and DrawY
 logic signed [23 : 0] DrawXs;
 logic signed [23 : 0] DrawYs;
-assign DrawXs = DrawX << 14;
-assign DrawYs = DrawY << 14;
+assign DrawXs = DrawX << 16;
+assign DrawYs = DrawY << 16;
 
     // Determine if point is in first square
 logic signed [23 : 0] DrawXRel1;
@@ -150,77 +151,17 @@ logic signed [37 : 0] opnet_339;
 logic signed [37 : 0] opnet_340;
 logic signed [37 : 0] opnet_341;
 
-    logic is_collision;
-
-    collision_detector cm_cd_inst(
-        .obb1_width(obb1_width),
-.obb1_height(obb1_height),
-.obb1_inertia(obb1_inertia),
-.obb1_inv_mass(obb1_inv_mass),
-.obb1_inv_inertia(obb1_inv_inertia),
-.obb1_pos_x(obb1_pos_x),
-.obb1_pos_y(obb1_pos_y),
-.obb1_vel_x(obb1_vel_x),
-.obb1_vel_y(obb1_vel_y),
-.obb1_angle(obb1_angle),
-.obb1_omega(obb1_omega),
-.obb1_u_x(obb1_u_x),
-.obb1_u_y(obb1_u_y),
-.obb1_v_x(obb1_v_x),
-.obb1_v_y(obb1_v_y),
-.obb1_Point0_x(obb1_Point0_x),
-.obb1_Point0_y(obb1_Point0_y),
-.obb1_Point1_x(obb1_Point1_x),
-.obb1_Point1_y(obb1_Point1_y),
-.obb1_Point2_x(obb1_Point2_x),
-.obb1_Point2_y(obb1_Point2_y),
-.obb1_Point3_x(obb1_Point3_x),
-.obb1_Point3_y(obb1_Point3_y),
-.obb1_halfWidth(obb1_halfWidth),
-.obb1_halfHeight(obb1_halfHeight),
-        .obb2_width(obb2_width),
-.obb2_height(obb2_height),
-.obb2_inertia(obb2_inertia),
-.obb2_inv_mass(obb2_inv_mass),
-.obb2_inv_inertia(obb2_inv_inertia),
-.obb2_pos_x(obb2_pos_x),
-.obb2_pos_y(obb2_pos_y),
-.obb2_vel_x(obb2_vel_x),
-.obb2_vel_y(obb2_vel_y),
-.obb2_angle(obb2_angle),
-.obb2_omega(obb2_omega),
-.obb2_u_x(obb2_u_x),
-.obb2_u_y(obb2_u_y),
-.obb2_v_x(obb2_v_x),
-.obb2_v_y(obb2_v_y),
-.obb2_Point0_x(obb2_Point0_x),
-.obb2_Point0_y(obb2_Point0_y),
-.obb2_Point1_x(obb2_Point1_x),
-.obb2_Point1_y(obb2_Point1_y),
-.obb2_Point2_x(obb2_Point2_x),
-.obb2_Point2_y(obb2_Point2_y),
-.obb2_Point3_x(obb2_Point3_x),
-.obb2_Point3_y(obb2_Point3_y),
-.obb2_halfWidth(obb2_halfWidth),
-.obb2_halfHeight(obb2_halfHeight),
-        .is_collision(is_collision)
-    );
-
 always_comb begin
         if ((obb1_on == 1'b1) || (obb2_on == 1'b1)) begin
             Red = 4'hf;
-            Green = 4'hf;
-            Blue = 4'hf;
+            Green = 4'h0;
+            Blue = 4'h0;
 
-            if (is_collision) begin
-                Green = 4'h0;
-                Blue = 4'h0;
-            end
         end       
         else begin 
-            Red = 4'h4; 
-            Green = 4'h3;
-            Blue = 4'h7;
+            Red = 4'h0; 
+            Green = 4'hf;
+            Blue = 4'h0;
         end
 
         // Draw end points
@@ -231,6 +172,11 @@ opnet_343 = drawPoint_y - (DrawYs >>> 2);
             Red = 4'hf;
             Green = 4'hc;
             Blue = 4'h0;
+            if(separating) begin
+                Red = 4'h00;
+                Green = 4'hff;
+                Blue = 4'h00;
+            end
         end
 end
 logic signed [21 : 0] opnet_342;

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="final_project_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="final_project_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="5.550001 us"></ZoomEndTime>
+      <Cursor1Time time="0.000000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="328"></NameColumnWidth>
+      <ValueColumnWidth column_width="96"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/final_project_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/hub75_red" type="array">
+      <obj_property name="ElementShortName">hub75_red[1:0]</obj_property>
+      <obj_property name="ObjectShortName">hub75_red[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/hub75_green" type="array">
+      <obj_property name="ElementShortName">hub75_green[1:0]</obj_property>
+      <obj_property name="ObjectShortName">hub75_green[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/hub75_blue" type="array">
+      <obj_property name="ElementShortName">hub75_blue[1:0]</obj_property>
+      <obj_property name="ObjectShortName">hub75_blue[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/hub75_addr" type="array">
+      <obj_property name="ElementShortName">hub75_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">hub75_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/hub75_latch" type="logic">
+      <obj_property name="ElementShortName">hub75_latch</obj_property>
+      <obj_property name="ObjectShortName">hub75_latch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/hub75_clk" type="logic">
+      <obj_property name="ElementShortName">hub75_clk</obj_property>
+      <obj_property name="ObjectShortName">hub75_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/hub75_oe" type="logic">
+      <obj_property name="ElementShortName">hub75_oe</obj_property>
+      <obj_property name="ObjectShortName">hub75_oe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/display_frame_done" type="logic">
+      <obj_property name="ElementShortName">display_frame_done</obj_property>
+      <obj_property name="ObjectShortName">display_frame_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/master_reset" type="logic">
+      <obj_property name="ElementShortName">master_reset</obj_property>
+      <obj_property name="ObjectShortName">master_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/this_line_x" type="array">
+      <obj_property name="ElementShortName">this_line_x[5:0]</obj_property>
+      <obj_property name="ObjectShortName">this_line_x[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/this_line_red" type="array">
+      <obj_property name="ElementShortName">this_line_red[0:63][1:0]</obj_property>
+      <obj_property name="ObjectShortName">this_line_red[0:63][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/this_line_green" type="array">
+      <obj_property name="ElementShortName">this_line_green[0:63][1:0]</obj_property>
+      <obj_property name="ObjectShortName">this_line_green[0:63][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/this_line_blue" type="array">
+      <obj_property name="ElementShortName">this_line_blue[0:63][1:0]</obj_property>
+      <obj_property name="ObjectShortName">this_line_blue[0:63][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/latched_line_red" type="array">
+      <obj_property name="ElementShortName">latched_line_red[0:63][1:0]</obj_property>
+      <obj_property name="ObjectShortName">latched_line_red[0:63][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/latched_line_green" type="array">
+      <obj_property name="ElementShortName">latched_line_green[0:63][1:0]</obj_property>
+      <obj_property name="ObjectShortName">latched_line_green[0:63][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/latched_line_blue" type="array">
+      <obj_property name="ElementShortName">latched_line_blue[0:63][1:0]</obj_property>
+      <obj_property name="ObjectShortName">latched_line_blue[0:63][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/counter" type="array">
+      <obj_property name="ElementShortName">counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/final_project/sim/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/final_project/sim/reset_rtl_0" type="logic">
+      <obj_property name="ElementShortName">reset_rtl_0</obj_property>
+      <obj_property name="ObjectShortName">reset_rtl_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/final_project/sim/frame_done" type="logic">
+      <obj_property name="ElementShortName">frame_done</obj_property>
+      <obj_property name="ObjectShortName">frame_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/final_project/sim/obb1_ld_pos_x" type="array">
+      <obj_property name="ElementShortName">obb1_ld_pos_x[23:0]</obj_property>
+      <obj_property name="ObjectShortName">obb1_ld_pos_x[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/final_project/sim/obb1_ld_pos_y" type="array">
+      <obj_property name="ElementShortName">obb1_ld_pos_y[23:0]</obj_property>
+      <obj_property name="ObjectShortName">obb1_ld_pos_y[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/final_project_tb/final_project/sim/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+</wave_config>

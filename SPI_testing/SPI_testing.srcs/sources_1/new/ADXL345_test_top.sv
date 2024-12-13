@@ -35,7 +35,10 @@ module adxl345_top(
 	output logic ss,
 	output logic mosi,
 	output logic [15:0] x,
-	output logic test_clock
+	output logic test_clock,
+	output logic led,
+	output logic led2,
+	output logic led3
 	);
 	
     logic reset;
@@ -86,6 +89,23 @@ module adxl345_top(
     else begin
         reset = 1'b1;
         reset_div = 1'b1;
+    end
+    
+    led = 1'b0;
+    if(x > 16'd3000) begin
+        led = 1'b1;
+    end
+    led2 = 1'b0;
+    if(y > 16'd3000) begin
+        led2 = 1'b1;
+        if(y[0]+y[1]+y[2]+y[3]+y[4]+y[5]+y[6]+y[7]+y[8]+y[9]+y[10]+y[11]+y[12]+y[13]+y[14]+y[15] == 16'd6)
+            led2 = 1'b0;
+    end
+    led3 = 1'b0;
+    if(z > 16'd3000) begin
+        led3 = 1'b1;
+        if(z[0]+z[1]+z[2]+z[3]+z[4]+z[5]+z[6]+z[7]+z[8]+z[9]+z[10]+z[11]+z[12]+z[13]+z[14]+z[15] == 16'd6)
+            led3 = 1'b0;
     end
    end
    
