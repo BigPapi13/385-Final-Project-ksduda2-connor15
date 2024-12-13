@@ -102,107 +102,129 @@ logic signed [23 : 0] impulse_magnitude;
 always_comb begin
 
 // Get vector omega x r1 and omega x r2
-//$ vw1.assign(ExpressionVec2(-r1[1].unrestrained_mul(obb1.omega), r1[0].unrestrained_mul(obb1.omega)))
-//$ vw2.assign(ExpressionVec2(-r2[1].unrestrained_mul(obb2.omega), r2[0].unrestrained_mul(obb2.omega)))
+opnet_7 = r1_y * obb1_omega;
+opnet_8 = ~(opnet_7) + 1'b1;
+opnet_9 = r1_x * obb1_omega;
+vw1_x = opnet_8 >>> 2;
+vw1_y = opnet_9 >>> 2;
+opnet_10 = r2_y * obb2_omega;
+opnet_11 = ~(opnet_10) + 1'b1;
+opnet_12 = r2_x * obb2_omega;
+vw2_x = opnet_11 >>> 2;
+vw2_y = opnet_12 >>> 2;
 
 
 // Get relative velocity
-opnet_7 = obb1_vel_x - obb2_vel_x;
-opnet_8 = obb1_vel_y - obb2_vel_y;
-v_rel_x = opnet_7;
-v_rel_y = opnet_8;
+opnet_13 = obb1_vel_x - obb2_vel_x;
+opnet_14 = obb1_vel_y - obb2_vel_y;
+opnet_15 = vw1_x - vw2_x;
+opnet_16 = vw1_y - vw2_y;
+opnet_17 = opnet_13 + opnet_15;
+opnet_18 = opnet_14 + opnet_16;
+v_rel_x = opnet_17;
+v_rel_y = opnet_18;
 
 // Get separating velocity
-opnet_9 = v_rel_x * normal_x;
-opnet_10 = v_rel_y * normal_y;
-opnet_11 = opnet_9 + opnet_10;
-vs = opnet_11 >>> 14;
+opnet_19 = v_rel_x * normal_x;
+opnet_20 = v_rel_y * normal_y;
+opnet_21 = opnet_19 + opnet_20;
+vs = opnet_21 >>> 14;
 
 // Get total inverse mass/inertia
-opnet_12 = r1_x * normal_y;
-opnet_13 = r1_y * normal_x;
-opnet_14 = opnet_12 - opnet_13;
-r1Cross = opnet_14 >>> 14;
-opnet_15 = r2_x * normal_y;
-opnet_16 = r2_y * normal_x;
-opnet_17 = opnet_15 - opnet_16;
-r2Cross = opnet_17 >>> 14;
-opnet_18 = r1Cross * signed_obb1_inv_I;
-r1CrossInertia = opnet_18 >>> 13;
-opnet_19 = r2Cross * signed_obb2_inv_I;
-r2CrossInertia = opnet_19 >>> 13;
+opnet_22 = r1_x * normal_y;
+opnet_23 = r1_y * normal_x;
+opnet_24 = opnet_22 - opnet_23;
+r1Cross = opnet_24 >>> 14;
+opnet_25 = r2_x * normal_y;
+opnet_26 = r2_y * normal_x;
+opnet_27 = opnet_25 - opnet_26;
+r2Cross = opnet_27 >>> 14;
+opnet_28 = r1Cross * signed_obb1_inv_I;
+r1CrossInertia = opnet_28 >>> 13;
+opnet_29 = r2Cross * signed_obb2_inv_I;
+r2CrossInertia = opnet_29 >>> 13;
 
-opnet_20 = obb1_inv_mass + obb2_inv_mass;
-opnet_21 = r1Cross * r1CrossInertia;
-opnet_22 = opnet_20 + (opnet_21 >>> 24);
-opnet_23 = r2Cross * r2CrossInertia;
-opnet_24 = opnet_22 + (opnet_23 >>> 24);
-totalIMass = opnet_24 >>> 6;
+opnet_30 = obb1_inv_mass + obb2_inv_mass;
+opnet_31 = r1Cross * r1CrossInertia;
+opnet_32 = opnet_30 + (opnet_31 >>> 24);
+opnet_33 = r2Cross * r2CrossInertia;
+opnet_34 = opnet_32 + (opnet_33 >>> 24);
+totalIMass = opnet_34 >>> 6;
 
 // Calculate impulse vector
-opnet_25 = vs * 24'sb111101000000000000000000;
-opnet_26 = opnet_25 * inverter_0;
-impulse_magnitude = opnet_26 >>> 26;
-opnet_27 = normal_x * impulse_magnitude;
-opnet_28 = normal_y * impulse_magnitude;
-impulse1_impulse_x = opnet_27 >>> 14;
-impulse1_impulse_y = opnet_28 >>> 14;
-opnet_29 = ~(impulse1_impulse_x) + 1'b1;
-opnet_30 = ~(impulse1_impulse_y) + 1'b1;
-impulse2_impulse_x = opnet_29;
-impulse2_impulse_y = opnet_30;
+opnet_35 = vs * 24'sb111101000000000000000000;
+opnet_36 = opnet_35 * inverter_0;
+impulse_magnitude = opnet_36 >>> 26;
+opnet_37 = normal_x * impulse_magnitude;
+opnet_38 = normal_y * impulse_magnitude;
+impulse1_impulse_x = opnet_37 >>> 14;
+impulse1_impulse_y = opnet_38 >>> 14;
+opnet_39 = ~(impulse1_impulse_x) + 1'b1;
+opnet_40 = ~(impulse1_impulse_y) + 1'b1;
+impulse2_impulse_x = opnet_39;
+impulse2_impulse_y = opnet_40;
 
 // Calculate rotational impulse for both boxes
-opnet_31 = impulse_magnitude * r1CrossInertia;
-impulse1_rotational_impulse = opnet_31 >>> 36;
-opnet_32 = impulse_magnitude * r2CrossInertia;
-opnet_33 = ~(opnet_32) + 1'b1;
-impulse2_rotational_impulse = opnet_33 >>> 36;
+opnet_41 = impulse_magnitude * r1CrossInertia;
+impulse1_rotational_impulse = opnet_41 >>> 36;
+opnet_42 = impulse_magnitude * r2CrossInertia;
+opnet_43 = ~(opnet_42) + 1'b1;
+impulse2_rotational_impulse = opnet_43 >>> 36;
 
 //// Getting nudge vector
-opnet_34 = normal_x * penetration;
-opnet_35 = normal_y * penetration;
-double_nudge_x = opnet_34 >>> 14;
-double_nudge_y = opnet_35 >>> 14;
+opnet_44 = normal_x * penetration;
+opnet_45 = normal_y * penetration;
+double_nudge_x = opnet_44 >>> 14;
+double_nudge_y = opnet_45 >>> 14;
 impulse1_nudge_x = double_nudge_x >>> 1;
 impulse1_nudge_y = double_nudge_y >>> 1;
-opnet_36 = ~(impulse1_nudge_x) + 1'b1;
-opnet_37 = ~(impulse1_nudge_y) + 1'b1;
-impulse2_nudge_x = opnet_36;
-impulse2_nudge_y = opnet_37;
+opnet_46 = ~(impulse1_nudge_x) + 1'b1;
+opnet_47 = ~(impulse1_nudge_y) + 1'b1;
+impulse2_nudge_x = opnet_46;
+impulse2_nudge_y = opnet_47;
 
 end
-logic signed [23 : 0] opnet_7;
-logic signed [23 : 0] opnet_8;
-logic signed [37 : 0] opnet_9;
-logic signed [37 : 0] opnet_10;
-logic signed [37 : 0] opnet_11;
-logic signed [35 : 0] opnet_12;
-logic signed [35 : 0] opnet_13;
-logic signed [35 : 0] opnet_14;
-logic signed [35 : 0] opnet_15;
-logic signed [35 : 0] opnet_16;
-logic signed [35 : 0] opnet_17;
-logic signed [44 : 0] opnet_18;
-logic signed [44 : 0] opnet_19;
-logic signed [16 : 0] opnet_20;
-logic signed [51 : 0] opnet_21;
-logic signed [27 : 0] opnet_22;
-logic signed [51 : 0] opnet_23;
-logic signed [27 : 0] opnet_24;
-logic signed [46 : 0] opnet_25;
-logic signed [60 : 0] opnet_26;
-logic signed [37 : 0] opnet_27;
-logic signed [37 : 0] opnet_28;
-logic signed [23 : 0] opnet_29;
-logic signed [23 : 0] opnet_30;
-logic signed [53 : 0] opnet_31;
-logic signed [53 : 0] opnet_32;
-logic signed [53 : 0] opnet_33;
-logic signed [37 : 0] opnet_34;
-logic signed [37 : 0] opnet_35;
-logic signed [21 : 0] opnet_36;
-logic signed [21 : 0] opnet_37;
+logic signed [30 : 0] opnet_7;
+logic signed [30 : 0] opnet_8;
+logic signed [30 : 0] opnet_9;
+logic signed [30 : 0] opnet_10;
+logic signed [30 : 0] opnet_11;
+logic signed [30 : 0] opnet_12;
+logic signed [23 : 0] opnet_13;
+logic signed [23 : 0] opnet_14;
+logic signed [23 : 0] opnet_15;
+logic signed [23 : 0] opnet_16;
+logic signed [23 : 0] opnet_17;
+logic signed [23 : 0] opnet_18;
+logic signed [37 : 0] opnet_19;
+logic signed [37 : 0] opnet_20;
+logic signed [37 : 0] opnet_21;
+logic signed [35 : 0] opnet_22;
+logic signed [35 : 0] opnet_23;
+logic signed [35 : 0] opnet_24;
+logic signed [35 : 0] opnet_25;
+logic signed [35 : 0] opnet_26;
+logic signed [35 : 0] opnet_27;
+logic signed [44 : 0] opnet_28;
+logic signed [44 : 0] opnet_29;
+logic signed [16 : 0] opnet_30;
+logic signed [51 : 0] opnet_31;
+logic signed [27 : 0] opnet_32;
+logic signed [51 : 0] opnet_33;
+logic signed [27 : 0] opnet_34;
+logic signed [46 : 0] opnet_35;
+logic signed [60 : 0] opnet_36;
+logic signed [37 : 0] opnet_37;
+logic signed [37 : 0] opnet_38;
+logic signed [23 : 0] opnet_39;
+logic signed [23 : 0] opnet_40;
+logic signed [53 : 0] opnet_41;
+logic signed [53 : 0] opnet_42;
+logic signed [53 : 0] opnet_43;
+logic signed [37 : 0] opnet_44;
+logic signed [37 : 0] opnet_45;
+logic signed [21 : 0] opnet_46;
+logic signed [21 : 0] opnet_47;
 
 // If separating velocity is positive, don't apply the impulse
 assign ignore_impulse = ~vs[23];

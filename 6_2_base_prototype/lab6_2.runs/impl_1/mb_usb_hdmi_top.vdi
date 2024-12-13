@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Dec 13 08:14:48 2024
-# Process ID: 30092
+# Start of session at: Fri Dec 13 08:54:39 2024
+# Process ID: 23460
 # Current directory: C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/impl_1
 # Command line: vivado.exe -log mb_usb_hdmi_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source mb_usb_hdmi_top.tcl -notrace
 # Log file: C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/impl_1/mb_usb_hdmi_top.vdi
@@ -39,8 +39,8 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/Users/kobes/OneDrive/Desktop
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0.dcp' for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0.dcp' for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_lmb_bram_0/mb_block_lmb_bram_0.dcp' for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.255 . Memory (MB): peak = 906.074 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 2293 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.250 . Memory (MB): peak = 907.582 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2311 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2022.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -59,7 +59,7 @@ Finished Parsing XDC File [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE3
 Parsing XDC File [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0.xdc] for cell 'mb_block_i/clk_wiz_1/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1555.957 ; gain = 506.035
+get_clocks: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1556.676 ; gain = 506.984
 Finished Parsing XDC File [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0.xdc] for cell 'mb_block_i/clk_wiz_1/inst'
 Parsing XDC File [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_board.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M/U0'
 Finished Parsing XDC File [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_board.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M/U0'
@@ -153,7 +153,7 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 WARNING: [Constraints 18-5572] Instance mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
 Generating merged BMM file for the design top 'mb_usb_hdmi_top'...
 INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/data/mb_bootloop_le.elf 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1555.957 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1556.676 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 247 instances were transformed.
   LUT6_2 => LUT6_2 (LUT5, LUT6): 145 instances
@@ -163,7 +163,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 34 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1555.957 ; gain = 1121.227
+link_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1556.676 ; gain = 1122.465
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
@@ -174,13 +174,13 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.945 . Memory (MB): peak = 1555.957 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.706 . Memory (MB): peak = 1556.676 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 2544abd13
+Ending Cache Timing Information Task | Checksum: 1d48b77d2
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.812 . Memory (MB): peak = 1555.957 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.892 . Memory (MB): peak = 1556.676 ; gain = 0.000
 
 Starting Logic Optimization Task
 
@@ -189,28 +189,28 @@ INFO: [Opt 31-1287] Pulled Inverter mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL
 INFO: [Opt 31-1287] Pulled Inverter mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1 into driver instance mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst//i_, which resulted in an inversion of 2 pins
 INFO: [Opt 31-1287] Pulled Inverter mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1 into driver instance mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst//i_, which resulted in an inversion of 2 pins
 INFO: [Opt 31-1287] Pulled Inverter mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_1 into driver instance mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/SS_O[0]_i_2, which resulted in an inversion of 3 pins
-INFO: [Opt 31-1287] Pulled Inverter obb1/impulse1_impulse_x6_i_83 into driver instance obb1/impulse1_impulse_x7_i_117, which resulted in an inversion of 3 pins
-INFO: [Opt 31-1287] Pulled Inverter obb2/impulse1_impulse_x6_i_128 into driver instance obb2/impulse1_impulse_x6_i_86, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter obb1/opnet_13_i_94 into driver instance obb1/opnet_13_i_56, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter obb2/opnet_13_i_121 into driver instance obb2/opnet_23_i_173, which resulted in an inversion of 4 pins
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 2 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 19997fb30
+Phase 1 Retarget | Checksum: 198475543
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.747 . Memory (MB): peak = 1868.355 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.733 . Memory (MB): peak = 1864.480 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 224 cells and removed 335 cells
 INFO: [Opt 31-1021] In phase Retarget, 4 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 8 inverter(s) to 14 load pin(s).
-Phase 2 Constant propagation | Checksum: 240313395
+Phase 2 Constant propagation | Checksum: 1b08b049f
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.922 . Memory (MB): peak = 1868.355 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.901 . Memory (MB): peak = 1864.480 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 123 cells and removed 295 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1cd781d9e
+Phase 3 Sweep | Checksum: 23c1920e8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 1868.355 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1864.480 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 275 cells
 INFO: [Opt 31-1021] In phase Sweep, 7 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
@@ -218,22 +218,22 @@ Phase 4 BUFG optimization
 INFO: [Opt 31-194] Inserted BUFG mb_block_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG_inst to drive 40 load(s) on clock net mb_block_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG
 INFO: [Opt 31-194] Inserted BUFG Clk_IBUF_BUFG_inst to drive 36 load(s) on clock net Clk_IBUF_BUFG
 INFO: [Opt 31-193] Inserted 2 BUFG(s) on clock nets
-Phase 4 BUFG optimization | Checksum: 2185f85fa
+Phase 4 BUFG optimization | Checksum: 25186fdf1
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1868.355 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1864.480 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 2 cells of which 2 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 2185f85fa
+Phase 5 Shift Register Optimization | Checksum: 25186fdf1
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1868.355 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1864.480 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 1c5e35056
+Phase 6 Post Processing Netlist | Checksum: 1a002a355
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1868.355 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1864.480 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
@@ -255,10 +255,10 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1868.355 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 1e4f5eb21
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1864.480 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 168e90e20
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1868.355 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1864.480 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -274,33 +274,33 @@ Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 8 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 16
-Ending PowerOpt Patch Enables Task | Checksum: 1e4f5eb21
+Ending PowerOpt Patch Enables Task | Checksum: 168e90e20
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 2012.016 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 1e4f5eb21
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.067 . Memory (MB): peak = 2009.395 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 168e90e20
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2012.016 ; gain = 143.660
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2009.395 ; gain = 144.914
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 1e4f5eb21
+Ending Final Cleanup Task | Checksum: 168e90e20
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2012.016 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 1e4f5eb21
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2009.395 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 168e90e20
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2009.395 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 69 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2012.016 ; gain = 456.059
+opt_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2009.395 ; gain = 452.719
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 2009.395 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/impl_1/mb_usb_hdmi_top_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file mb_usb_hdmi_top_drc_opted.rpt -pb mb_usb_hdmi_top_drc_opted.pb -rpx mb_usb_hdmi_top_drc_opted.rpx
 Command: report_drc -file mb_usb_hdmi_top_drc_opted.rpt -pb mb_usb_hdmi_top_drc_opted.pb -rpx mb_usb_hdmi_top_drc_opted.rpx
@@ -325,69 +325,74 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2012.016 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1674d55e7
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2009.395 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 11844549e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 2012.016 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2009.395 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: bdd33e75
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: b1b3451f
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.697 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.637 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 127a301da
+Phase 1.3 Build Placer Netlist Model | Checksum: 190a47fbe
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 127a301da
+Phase 1.4 Constrain Clocks/Macros | Checksum: 190a47fbe
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2012.016 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 127a301da
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2009.395 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 190a47fbe
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: cf9425b5
+Phase 2.1 Floorplanning | Checksum: 14a0700bc
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1a47a88e1
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 157e1eda3
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 1a47a88e1
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 157e1eda3
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 UpdateTiming Before Physical Synthesis
-Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 151b2c36c
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 1e2633fb2
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 2.4.2 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 261 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 354 LUT instances to create LUTNM shape
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 105 nets or LUTs. Breaked 0 LUT, combined 105 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 146 nets or LUTs. Breaked 0 LUT, combined 146 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -396,68 +401,68 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |            105  |                   105  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |            146  |                   146  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |            105  |                   105  |           0  |           4  |  00:00:00  |
+|  Total                                            |            0  |            146  |                   146  |           0  |           9  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.2 Physical Synthesis In Placer | Checksum: 15ed8610d
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 22d40d4d7
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2012.016 ; gain = 0.000
-Phase 2.4 Global Placement Core | Checksum: 1e2ac09da
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2009.395 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: 28b7dee44
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2012.016 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 1e2ac09da
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2009.395 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 28b7dee44
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1175093e4
+Phase 3.1 Commit Multi Column Macros | Checksum: 22651006f
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1eec73ef3
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1e9c671cc
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1949e6d9c
+Phase 3.3 Area Swap Optimization | Checksum: 1c3693795
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1f7455eb2
+Phase 3.4 Pipeline Register Optimization | Checksum: 26d725295
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 1a61698ca
+Phase 3.5 Small Shape Detail Placement | Checksum: 19e83cee3
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 16c002446
+Phase 3.6 Re-assign LUT pins | Checksum: 151d707fd
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 173c83b80
+Phase 3.7 Pipeline Register Optimization | Checksum: 187912a90
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 2012.016 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 173c83b80
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2009.395 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 187912a90
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -465,7 +470,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1142520cf
+Post Placement Optimization Initialization | Checksum: e112f94d
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -473,33 +478,33 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=1.699 | TNS=0.000 |
-Phase 1 Physical Synthesis Initialization | Checksum: 11226356c
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.476 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 125da668a
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.308 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.303 . Memory (MB): peak = 2009.395 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 124ce7826
+Ending Physical Synthesis Task | Checksum: f1316c07
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.382 . Memory (MB): peak = 2012.016 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1142520cf
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.379 . Memory (MB): peak = 2009.395 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: e112f94d
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=1.699. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 129ff960b
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.880. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 18c052d3d
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2012.016 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 129ff960b
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2009.395 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 18c052d3d
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 129ff960b
+Phase 4.2 Post Placement Cleanup | Checksum: 18c052d3d
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -511,62 +516,62 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |___________|___________________|___________________|
 |      North|                1x1|                2x2|
 |___________|___________________|___________________|
-|      South|                2x2|                2x2|
+|      South|                2x2|                4x4|
 |___________|___________________|___________________|
 |       East|                1x1|                1x1|
 |___________|___________________|___________________|
 |       West|                1x1|                1x1|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 129ff960b
+Phase 4.3.1 Print Estimated Congestion | Checksum: 18c052d3d
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2012.016 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: 129ff960b
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2009.395 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 18c052d3d
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2009.395 ; gain = 0.000
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2012.016 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1c48aaf01
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2009.395 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1005617ac
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2012.016 ; gain = 0.000
-Ending Placer Task | Checksum: 141b0fbe2
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2009.395 ; gain = 0.000
+Ending Placer Task | Checksum: 9dc1371c
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2009.395 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-104 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+109 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2012.016 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2009.395 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.992 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.975 . Memory (MB): peak = 2009.395 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/impl_1/mb_usb_hdmi_top_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file mb_usb_hdmi_top_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 2012.016 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 2009.395 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file mb_usb_hdmi_top_utilization_placed.rpt -pb mb_usb_hdmi_top_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file mb_usb_hdmi_top_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2012.016 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2009.395 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2009.395 ; gain = 0.000
 INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
 INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
-113 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+118 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2012.016 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.981 . Memory (MB): peak = 2009.395 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/impl_1/mb_usb_hdmi_top_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
@@ -581,30 +586,30 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: 7fa7809d ConstDB: 0 ShapeSum: c2097b45 RouteDB: 0
-Post Restoration Checksum: NetGraph: 2aaafd66 NumContArr: 5126f68a Constraints: 0 Timing: 0
-Phase 1 Build RT Design | Checksum: 7bd1f3f0
+Checksum: PlaceDB: 94c0e66d ConstDB: 0 ShapeSum: 90050af RouteDB: 0
+Post Restoration Checksum: NetGraph: 7ce585f9 NumContArr: 3d7c47aa Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: ba61cda3
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 2075.156 ; gain = 63.141
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2074.391 ; gain = 64.996
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 7bd1f3f0
+Phase 2.1 Fix Topology Constraints | Checksum: ba61cda3
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 2080.953 ; gain = 68.938
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2079.383 ; gain = 69.988
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 7bd1f3f0
+Phase 2.2 Pre Route Cleanup | Checksum: ba61cda3
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 2080.953 ; gain = 68.938
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2079.383 ; gain = 69.988
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
-Phase 2.3 Update Timing | Checksum: 2adbe532f
+Phase 2.3 Update Timing | Checksum: 17705972b
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 2112.980 ; gain = 100.965
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.724  | TNS=0.000  | WHS=-0.165 | THS=-75.571|
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2116.508 ; gain = 107.113
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.950  | TNS=0.000  | WHS=-0.144 | THS=-68.468|
 
 
 Router Utilization Summary
@@ -613,94 +618,92 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 13842
+  Number of Failed Nets               = 14084
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 13842
+  Number of Unrouted Nets             = 14084
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 1
 
-Phase 2 Router Initialization | Checksum: 28dd3bf2c
+Phase 2 Router Initialization | Checksum: 14f4445f4
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2175.984 ; gain = 163.969
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2180.602 ; gain = 171.207
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 28dd3bf2c
+Phase 3.1 Global Routing | Checksum: 14f4445f4
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2175.984 ; gain = 163.969
-Phase 3 Initial Routing | Checksum: 231ddad9e
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2180.602 ; gain = 171.207
+Phase 3 Initial Routing | Checksum: 15a9845a2
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 2175.984 ; gain = 163.969
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 2180.602 ; gain = 171.207
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1175
- Number of Nodes with overlaps = 58
- Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 1467
+ Number of Nodes with overlaps = 96
+ Number of Nodes with overlaps = 43
+ Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 10
  Number of Nodes with overlaps = 7
- Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 5
  Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.007  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 4.1 Global Iteration 0 | Checksum: 16ef00136
-
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 2175.984 ; gain = 163.969
-
-Phase 4.2 Global Iteration 1
  Number of Nodes with overlaps = 3
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.007  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.531  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: fd278d21
+Phase 4.1 Global Iteration 0 | Checksum: 1cfe647e1
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 2175.984 ; gain = 163.969
-Phase 4 Rip-up And Reroute | Checksum: fd278d21
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 2180.602 ; gain = 171.207
+Phase 4 Rip-up And Reroute | Checksum: 1cfe647e1
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 2175.984 ; gain = 163.969
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 2180.602 ; gain = 171.207
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: fd278d21
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 2175.984 ; gain = 163.969
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 126e12964
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 2180.602 ; gain = 171.207
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.610  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 126e12964
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 2180.602 ; gain = 171.207
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: fd278d21
+Phase 5.2 Clock Skew Optimization | Checksum: 126e12964
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 2175.984 ; gain = 163.969
-Phase 5 Delay and Skew Optimization | Checksum: fd278d21
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 2180.602 ; gain = 171.207
+Phase 5 Delay and Skew Optimization | Checksum: 126e12964
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 2175.984 ; gain = 163.969
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 2180.602 ; gain = 171.207
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 18800b46b
+Phase 6.1.1 Update Timing | Checksum: 1a3aae168
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 2175.984 ; gain = 163.969
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.101  | TNS=0.000  | WHS=0.050  | THS=0.000  |
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2180.602 ; gain = 171.207
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.610  | TNS=0.000  | WHS=0.040  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 18800b46b
+Phase 6.1 Hold Fix Iter | Checksum: 10909c2d2
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 2175.984 ; gain = 163.969
-Phase 6 Post Hold Fix | Checksum: 18800b46b
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2180.602 ; gain = 171.207
+Phase 6 Post Hold Fix | Checksum: 10909c2d2
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 2175.984 ; gain = 163.969
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2180.602 ; gain = 171.207
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 9.98294 %
-  Global Horizontal Routing Utilization  = 8.60945 %
+  Global Vertical Routing Utilization    = 10.5678 %
+  Global Horizontal Routing Utilization  = 10.1701 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -710,43 +713,43 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: f3dca157
+Phase 7 Route finalize | Checksum: 104a4bb21
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 2175.984 ; gain = 163.969
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2180.602 ; gain = 171.207
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: f3dca157
+Phase 8 Verifying routed nets | Checksum: 104a4bb21
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 2175.984 ; gain = 163.969
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2180.602 ; gain = 171.207
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: c62e2256
+Phase 9 Depositing Routes | Checksum: 1694e39bb
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 2175.984 ; gain = 163.969
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 2180.602 ; gain = 171.207
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=2.101  | TNS=0.000  | WHS=0.050  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.610  | TNS=0.000  | WHS=0.040  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: c62e2256
+Phase 10 Post Router Timing | Checksum: 1694e39bb
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 2175.984 ; gain = 163.969
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 2180.602 ; gain = 171.207
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 2175.984 ; gain = 163.969
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 2180.602 ; gain = 171.207
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-128 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+133 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:30 . Memory (MB): peak = 2175.984 ; gain = 163.969
+route_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2180.602 ; gain = 171.207
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2187.727 ; gain = 11.742
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2190.453 ; gain = 9.852
 INFO: [Common 17-1381] The checkpoint 'C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/impl_1/mb_usb_hdmi_top_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file mb_usb_hdmi_top_drc_routed.rpt -pb mb_usb_hdmi_top_drc_routed.pb -rpx mb_usb_hdmi_top_drc_routed.rpx
 Command: report_drc -file mb_usb_hdmi_top_drc_routed.rpt -pb mb_usb_hdmi_top_drc_routed.pb -rpx mb_usb_hdmi_top_drc_routed.rpx
@@ -768,7 +771,7 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-140 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+145 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file mb_usb_hdmi_top_route_status.rpt -pb mb_usb_hdmi_top_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file mb_usb_hdmi_top_timing_summary_routed.rpt -pb mb_usb_hdmi_top_timing_summary_routed.pb -rpx mb_usb_hdmi_top_timing_summary_routed.rpx -warn_on_violation 
@@ -799,6 +802,10 @@ WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Nei
 Refer to the device configuration user guide for more information.
 WARNING: [DRC DPIP-1] Input pipelining: DSP bbr_inst/impulse1_impulse_x1 input bbr_inst/impulse1_impulse_x1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP bbr_inst/impulse1_impulse_x1 input bbr_inst/impulse1_impulse_x1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP bbr_inst/impulse1_impulse_x11 input bbr_inst/impulse1_impulse_x11/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP bbr_inst/impulse1_impulse_x11__0 input bbr_inst/impulse1_impulse_x11__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP bbr_inst/impulse1_impulse_x13 input bbr_inst/impulse1_impulse_x13/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP bbr_inst/impulse1_impulse_x13__0 input bbr_inst/impulse1_impulse_x13__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP bbr_inst/impulse1_impulse_x3 input bbr_inst/impulse1_impulse_x3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP bbr_inst/impulse1_impulse_x3 input bbr_inst/impulse1_impulse_x3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP bbr_inst/impulse1_impulse_x3__0 input bbr_inst/impulse1_impulse_x3__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
@@ -843,62 +850,58 @@ WARNING: [DRC DPIP-1] Input pipelining: DSP bbr_inst/x6__1 input bbr_inst/x6__1/
 WARNING: [DRC DPIP-1] Input pipelining: DSP bbr_inst/x6__1 input bbr_inst/x6__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP bbr_inst/x7 input bbr_inst/x7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP bbr_inst/x7 input bbr_inst/x7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_100 input cd_inst/opnet_100/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_100 input cd_inst/opnet_100/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_100 input cd_inst/opnet_100/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_101 input cd_inst/opnet_101/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_101 input cd_inst/opnet_101/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_101 input cd_inst/opnet_101/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_40 input cd_inst/opnet_40/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_40 input cd_inst/opnet_40/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_42 input cd_inst/opnet_42/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_42 input cd_inst/opnet_42/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_42 input cd_inst/opnet_42/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_43 input cd_inst/opnet_43/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_43 input cd_inst/opnet_43/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_45 input cd_inst/opnet_45/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_45 input cd_inst/opnet_45/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_45 input cd_inst/opnet_45/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_48 input cd_inst/opnet_48/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_48 input cd_inst/opnet_48/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_103 input cd_inst/opnet_103/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_103 input cd_inst/opnet_103/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_103 input cd_inst/opnet_103/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_106 input cd_inst/opnet_106/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_106 input cd_inst/opnet_106/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_108 input cd_inst/opnet_108/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_108 input cd_inst/opnet_108/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_108 input cd_inst/opnet_108/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_109 input cd_inst/opnet_109/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_109 input cd_inst/opnet_109/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_111 input cd_inst/opnet_111/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_111 input cd_inst/opnet_111/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_111 input cd_inst/opnet_111/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_50 input cd_inst/opnet_50/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_50 input cd_inst/opnet_50/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_50 input cd_inst/opnet_50/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_51 input cd_inst/opnet_51/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_51 input cd_inst/opnet_51/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_52 input cd_inst/opnet_52/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_52 input cd_inst/opnet_52/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_52 input cd_inst/opnet_52/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_53 input cd_inst/opnet_53/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_53 input cd_inst/opnet_53/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_53 input cd_inst/opnet_53/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_56 input cd_inst/opnet_56/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_56 input cd_inst/opnet_56/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_55 input cd_inst/opnet_55/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_55 input cd_inst/opnet_55/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_55 input cd_inst/opnet_55/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_58 input cd_inst/opnet_58/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_58 input cd_inst/opnet_58/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_58 input cd_inst/opnet_58/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_59 input cd_inst/opnet_59/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_59 input cd_inst/opnet_59/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_60 input cd_inst/opnet_60/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_60 input cd_inst/opnet_60/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_60 input cd_inst/opnet_60/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_61 input cd_inst/opnet_61/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_61 input cd_inst/opnet_61/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_61 input cd_inst/opnet_61/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_64 input cd_inst/opnet_64/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_64 input cd_inst/opnet_64/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_63 input cd_inst/opnet_63/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_63 input cd_inst/opnet_63/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_63 input cd_inst/opnet_63/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_66 input cd_inst/opnet_66/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_66 input cd_inst/opnet_66/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_66 input cd_inst/opnet_66/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_67 input cd_inst/opnet_67/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_67 input cd_inst/opnet_67/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_68 input cd_inst/opnet_68/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_68 input cd_inst/opnet_68/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_68 input cd_inst/opnet_68/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_69 input cd_inst/opnet_69/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_69 input cd_inst/opnet_69/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_69 input cd_inst/opnet_69/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_72 input cd_inst/opnet_72/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_72 input cd_inst/opnet_72/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_71 input cd_inst/opnet_71/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_71 input cd_inst/opnet_71/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_71 input cd_inst/opnet_71/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_74 input cd_inst/opnet_74/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_74 input cd_inst/opnet_74/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_74 input cd_inst/opnet_74/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_75 input cd_inst/opnet_75/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_75 input cd_inst/opnet_75/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_77 input cd_inst/opnet_77/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_77 input cd_inst/opnet_77/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_77 input cd_inst/opnet_77/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP cd_inst/opnet_80 input cd_inst/opnet_80/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 INFO: [Common 17-14] Message 'DRC DPIP-1' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 251 Warnings
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 255 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
 Loading data files...
@@ -913,5 +916,5 @@ INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT dev
 INFO: [Common 17-83] Releasing license: Implementation
 15 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 2658.031 ; gain = 464.406
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 13 08:16:48 2024...
+write_bitstream: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 2650.480 ; gain = 453.707
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 13 08:56:38 2024...

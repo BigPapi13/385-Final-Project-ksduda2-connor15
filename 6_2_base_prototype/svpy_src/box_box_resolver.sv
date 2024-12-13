@@ -82,13 +82,13 @@ $ impulse_magnitude.declare()
 $ begin_comb()
 
 // Get vector omega x r1 and omega x r2
-//$ vw1.assign(ExpressionVec2(-r1[1].unrestrained_mul(obb1.omega), r1[0].unrestrained_mul(obb1.omega)))
-//$ vw2.assign(ExpressionVec2(-r2[1].unrestrained_mul(obb2.omega), r2[0].unrestrained_mul(obb2.omega)))
+$ vw1.assign(ExpressionVec2(-r1[1].unrestrained_mul(obb1.omega), r1[0].unrestrained_mul(obb1.omega)))
+$ vw2.assign(ExpressionVec2(-r2[1].unrestrained_mul(obb2.omega), r2[0].unrestrained_mul(obb2.omega)))
 
 $ print(vw1.x.integer_bits, vw1.x.precision)
 
 // Get relative velocity
-$ v_rel.assign((obb1.vel - obb2.vel))
+$ v_rel.assign((obb1.vel - obb2.vel) + (vw1 - vw2))
 
 // Get separating velocity
 $ vs.assign(v_rel.Dot(Contact.normal))
