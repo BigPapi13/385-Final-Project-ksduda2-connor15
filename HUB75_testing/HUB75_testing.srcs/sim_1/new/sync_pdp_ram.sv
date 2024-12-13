@@ -36,20 +36,18 @@ module sync_pdp_ram #(parameter BITS_PER_PIXEL=0)
         .clka(master_clk),
         .addra(addr_top),
         .wea(write_en_top),
-        .ena(1'b1),             // CHEKC IF THIS NEEDS CHANGING
+        .ena(1'b1),
         .dina(write_data),
-        .douta(tmp_data_top),
-        .rsta(1'b0)
+        .douta(tmp_data_top)
     );
     
     display_buffer_bram buffer_bottom(
         .clka(master_clk),
         .addra(addr_bottom),
         .wea(write_en_bottom),
-        .ena(1'b1),             // CHEKC IF THIS NEEDS CHANGING
+        .ena(1'b1),
         .dina(write_data),
-        .douta(tmp_data_bottom),
-        .rsta(1'b0)
+        .douta(tmp_data_bottom)
     );
 
     

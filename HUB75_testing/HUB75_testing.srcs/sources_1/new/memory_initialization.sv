@@ -41,15 +41,15 @@ module memory_initialization #(parameter BITS_PER_PIXEL=16) (
 
 
     //for simulation test:
-    integer write_buffer_count;
-    integer write_pixel_count;
-    integer write_bit_count;
+    //integer write_buffer_count;
+    //integer write_pixel_count;
+    //integer write_bit_count;
     
     logic spi_clk_counter;
     
-    /*
+    
     logic [11:0] write_pixel_count;
-    logic [4:0] write_bit_count;*/
+    logic [4:0] write_bit_count;
 
 
     spi_slave #(BITS_PER_PIXEL) spi_slave (

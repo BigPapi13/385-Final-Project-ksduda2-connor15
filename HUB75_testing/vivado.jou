@@ -2,57 +2,117 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Dec 11 06:50:04 2024
-# Process ID: 18696
+# Start of session at: Thu Dec 12 21:23:32 2024
+# Process ID: 37716
 # Current directory: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11532 C:\Users\conno\Documents\Stuff\UIUC\2024-2025\FALL\ECE385\final\repo\HUB75_testing\HUB75_testing.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent43280 C:\Users\conno\Documents\Stuff\UIUC\2024-2025\FALL\ECE385\final\repo\HUB75_testing\HUB75_testing.xpr
 # Log file: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/vivado.log
 # Journal file: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing\vivado.jou
 # Running On: Connors_laptop, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 12, Host memory: 34042 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.xpr
-update_compile_order -fileset sources_1
-launch_simulation
-source controller_stllfrm_test_sim.tcl
 open_hw_manager
 connect_hw_server -allow_non_jtag
 open_hw_target
-set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.bit} [get_hw_devices xc7s50_0]
-set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.bit} [get_hw_devices xc7s50_0]
+set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
 current_hw_device [get_hw_devices xc7s50_0]
 refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
-set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.bit} [get_hw_devices xc7s50_0]
+set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.bit} [get_hw_devices xc7s50_0]
 program_hw_devices [get_hw_devices xc7s50_0]
 refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
 display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]]
-set_property CONTROL.CAPTURE_MODE BASIC [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
-set_property CAPTURE_COMPARE_VALUE eq5'bX_XXXX [get_hw_probes hub75_addr_OBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
-set_property TRIGGER_COMPARE_VALUE eq2'hX [get_hw_probes hub75_green_OBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
-set_property TRIGGER_COMPARE_VALUE eq5'bX_XXXX [get_hw_probes hub75_addr_OBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes start_signal_IBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {hub75_addr_OBUF} }
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes dut/display_frame_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property CAPTURE_COMPARE_VALUE eq5'hXX [get_hw_probes hub75_addr_OBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes start_signal_IBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
 run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
-set_property CONTROL.CAPTURE_MODE BASIC [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]
-run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]
-wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]
-display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]]
-run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]
-wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]
-display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]]
-set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes clk_IBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]]
-set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes start_signal_IBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]]
-run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]
-wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]
-upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]
-open_run impl_1
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes start_signal_IBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes dut/display_frame_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes dut/display_frame_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq12'bXXXX_XXXX_XXXX [get_hw_probes frame_counter -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq12'b0000_0000_0001 [get_hw_probes frame_counter -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+set_property TRIGGER_COMPARE_VALUE eq5'hXX [get_hw_probes hub75_addr_OBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+set_property TRIGGER_COMPARE_VALUE eq12'hXXX [get_hw_probes frame_counter -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property CAPTURE_COMPARE_VALUE eq1'bR [get_hw_probes dut/display_frame_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes start_signal_IBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+set_property CONTROL.TRIGGER_POSITION 0 [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property CAPTURE_COMPARE_VALUE eq1'bF [get_hw_probes dut/display_frame_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
 open_run synth_1 -name synth_1
-show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*" ]
-delete_debug_core [get_debug_cores {u_ila_0 u_ila_1 }]
+delete_debug_core [get_debug_cores {u_ila_0 }]
 create_debug_core u_ila_0 ila
-set_property C_DATA_DEPTH 8192 [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_0]
 set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
 set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
 set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
@@ -60,326 +120,57 @@ set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
 set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
 set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
 set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
-startgroup 
-set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0 ]
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0 ]
-set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_0 ]
-endgroup
-create_debug_core u_ila_1 ila
-set_property C_DATA_DEPTH 8192 [get_debug_cores u_ila_1]
-set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
-set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
-set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1]
-set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1]
-set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1]
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
-set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1]
-startgroup 
-set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_1 ]
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1 ]
-set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_1 ]
-endgroup
-connect_debug_port u_ila_0/clk [get_nets [list slow_clk ]]
-connect_debug_port u_ila_1/clk [get_nets [list clk_IBUF_BUFG ]]
-set_property port_width 2 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 12 [get_debug_ports u_ila_0/probe0]
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {hub75_blue_OBUF[0]} {hub75_blue_OBUF[1]} ]]
-create_debug_port u_ila_0 probe
-set_property port_width 2 [get_debug_ports u_ila_0/probe1]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
-connect_debug_port u_ila_0/probe1 [get_nets [list {hub75_green_OBUF[0]} {hub75_green_OBUF[1]} ]]
-create_debug_port u_ila_0 probe
-set_property port_width 2 [get_debug_ports u_ila_0/probe2]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
-connect_debug_port u_ila_0/probe2 [get_nets [list {hub75_red_OBUF[0]} {hub75_red_OBUF[1]} ]]
-create_debug_port u_ila_0 probe
-set_property port_width 5 [get_debug_ports u_ila_0/probe3]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
-connect_debug_port u_ila_0/probe3 [get_nets [list {hub75_addr_OBUF[0]} {hub75_addr_OBUF[1]} {hub75_addr_OBUF[2]} {hub75_addr_OBUF[3]} {hub75_addr_OBUF[4]} ]]
-create_debug_port u_ila_0 probe
-set_property port_width 1 [get_debug_ports u_ila_0/probe4]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
-connect_debug_port u_ila_0/probe4 [get_nets [list hub75_latch_OBUF ]]
-set_property port_width 1 [get_debug_ports u_ila_1/probe0]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
-connect_debug_port u_ila_1/probe0 [get_nets [list {startup_state[0]} ]]
-create_debug_port u_ila_1 probe
-set_property port_width 1 [get_debug_ports u_ila_1/probe1]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe1]
-connect_debug_port u_ila_1/probe1 [get_nets [list clk_IBUF ]]
-create_debug_port u_ila_1 probe
-set_property port_width 1 [get_debug_ports u_ila_1/probe2]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe2]
-connect_debug_port u_ila_1/probe2 [get_nets [list dut_n_3 ]]
-create_debug_port u_ila_1 probe
-set_property port_width 1 [get_debug_ports u_ila_1/probe3]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe3]
-connect_debug_port u_ila_1/probe3 [get_nets [list hub75_clk_OBUF ]]
-create_debug_port u_ila_1 probe
-set_property port_width 1 [get_debug_ports u_ila_1/probe4]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe4]
-connect_debug_port u_ila_1/probe4 [get_nets [list start_signal_IBUF ]]
-create_debug_port u_ila_1 probe
-set_property port_width 1 [get_debug_ports u_ila_1/probe5]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe5]
-connect_debug_port u_ila_1/probe5 [get_nets [list slow_clk ]]
-set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.bit} [get_hw_devices xc7s50_0]
-program_hw_devices [get_hw_devices xc7s50_0]
-refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]]
-set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
-set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.bit} [get_hw_devices xc7s50_0]
-program_hw_devices [get_hw_devices xc7s50_0]
-refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
-current_design impl_1
-open_project C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/SPI_testing/SPI_testing.xpr
-update_compile_order -fileset sources_1
-open_run impl_1
-current_project HUB75_testing
-current_design synth_1
-save_constraints
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-refresh_design
-set_property IOSTANDARD LVCMOS25 [get_ports [list test_led]]
-place_ports test_led C13
-set_property IOSTANDARD LVCMOS33 [get_ports [list test_led]]
-save_constraints
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-set_property IOSTANDARD LVCMOS25 [get_ports [list test_led]]
-save_constraints
-reset_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-set_param general.maxThreads 8
-set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.bit} [get_hw_devices xc7s50_0]
-program_hw_devices [get_hw_devices xc7s50_0]
-refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]]
-current_project SPI_testing
-current_project HUB75_testing
-close_sim
-launch_simulation
-source controller_stllfrm_test_sim.tcl
-relaunch_sim
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-reset_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.bit} [get_hw_devices xc7s50_0]
-program_hw_devices [get_hw_devices xc7s50_0]
-refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]]
-set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.bit} [get_hw_devices xc7s50_0]
-program_hw_devices [get_hw_devices xc7s50_0]
-refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
-set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.bit} [get_hw_devices xc7s50_0]
-program_hw_devices [get_hw_devices xc7s50_0]
-refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]]
-close_sim
-launch_simulation
-source controller_stllfrm_test_sim.tcl
-close_sim
-launch_simulation
-source controller_stllfrm_test_sim.tcl
-close_sim
-launch_simulation
-source controller_stllfrm_test_sim.tcl
-close_sim
-launch_simulation
-source controller_stllfrm_test_sim.tcl
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.bit} [get_hw_devices xc7s50_0]
-program_hw_devices [get_hw_devices xc7s50_0]
-set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.bit} [get_hw_devices xc7s50_0]
-program_hw_devices [get_hw_devices xc7s50_0]
-refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]]
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-refresh_design
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-refresh_design
-launch_runs impl_1 -jobs 8
-wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.bit} [get_hw_devices xc7s50_0]
-program_hw_devices [get_hw_devices xc7s50_0]
-refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]]
-close_sim
-launch_simulation
-source controller_stllfrm_test_sim.tcl
-close_sim
-launch_simulation
-source controller_stllfrm_test_sim.tcl
-relaunch_sim
-close_sim
-launch_simulation
-source controller_stllfrm_test_sim.tcl
-close_sim
-launch_simulation
-source controller_stllfrm_test_sim.tcl
-relaunch_sim
-close_sim
-launch_simulation
-source controller_stllfrm_test_sim.tcl
-close_sim
-launch_simulation
-source controller_stllfrm_test_sim.tcl
-close_sim
-launch_simulation
-source controller_stllfrm_test_sim.tcl
-close_sim
-launch_simulation
-source controller_stllfrm_test_sim.tcl
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-relaunch_sim
-close_sim
-launch_simulation
-source controller_stllfrm_test_sim.tcl
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-refresh_design
-delete_debug_core [get_debug_cores {u_ila_0 u_ila_1 }]
-create_debug_core u_ila_0 ila
-set_property C_DATA_DEPTH 8192 [get_debug_cores u_ila_0]
-set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
-set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
-set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
-set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
-set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
-set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
-startgroup 
-set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0 ]
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0 ]
-set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_0 ]
-endgroup
-create_debug_core u_ila_1 ila
-set_property C_DATA_DEPTH 8192 [get_debug_cores u_ila_1]
-set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
-set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
-set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1]
-set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1]
-set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1]
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
-set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1]
-startgroup 
-set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_1 ]
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1 ]
-set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_1 ]
-endgroup
-connect_debug_port u_ila_0/clk [get_nets [list slow_clk ]]
-connect_debug_port u_ila_1/clk [get_nets [list clk_IBUF_BUFG ]]
-set_property port_width 2 [get_debug_ports u_ila_0/probe0]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {hub75_red_OBUF[0]} {hub75_red_OBUF[1]} ]]
+connect_debug_port u_ila_0/probe0 [get_nets [list {frame_counter[0]} {frame_counter[1]} {frame_counter[2]} {frame_counter[3]} {frame_counter[4]} {frame_counter[5]} {frame_counter[6]} {frame_counter[7]} {frame_counter[8]} {frame_counter[9]} {frame_counter[10]} {frame_counter[11]} ]]
 create_debug_port u_ila_0 probe
 set_property port_width 5 [get_debug_ports u_ila_0/probe1]
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
 connect_debug_port u_ila_0/probe1 [get_nets [list {hub75_addr_OBUF[0]} {hub75_addr_OBUF[1]} {hub75_addr_OBUF[2]} {hub75_addr_OBUF[3]} {hub75_addr_OBUF[4]} ]]
 create_debug_port u_ila_0 probe
-set_property port_width 2 [get_debug_ports u_ila_0/probe2]
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
-connect_debug_port u_ila_0/probe2 [get_nets [list {hub75_blue_OBUF[0]} {hub75_blue_OBUF[1]} ]]
+connect_debug_port u_ila_0/probe2 [get_nets [list dut/display_frame_done ]]
 create_debug_port u_ila_0 probe
-set_property port_width 2 [get_debug_ports u_ila_0/probe3]
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
-connect_debug_port u_ila_0/probe3 [get_nets [list {hub75_green_OBUF[0]} {hub75_green_OBUF[1]} ]]
-create_debug_port u_ila_0 probe
-set_property port_width 1 [get_debug_ports u_ila_0/probe4]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
-connect_debug_port u_ila_0/probe4 [get_nets [list hub75_latch_OBUF ]]
-set_property port_width 1 [get_debug_ports u_ila_1/probe0]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
-connect_debug_port u_ila_1/probe0 [get_nets [list {startup_state[0]} ]]
-create_debug_port u_ila_1 probe
-set_property port_width 1 [get_debug_ports u_ila_1/probe1]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe1]
-connect_debug_port u_ila_1/probe1 [get_nets [list clk_IBUF ]]
-create_debug_port u_ila_1 probe
-set_property port_width 1 [get_debug_ports u_ila_1/probe2]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe2]
-connect_debug_port u_ila_1/probe2 [get_nets [list hub75_clk_OBUF ]]
-create_debug_port u_ila_1 probe
-set_property port_width 1 [get_debug_ports u_ila_1/probe3]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe3]
-connect_debug_port u_ila_1/probe3 [get_nets [list slow_clk ]]
-create_debug_port u_ila_1 probe
-set_property port_width 1 [get_debug_ports u_ila_1/probe4]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe4]
-connect_debug_port u_ila_1/probe4 [get_nets [list start_signal_IBUF ]]
+connect_debug_port u_ila_0/probe3 [get_nets [list start_signal_IBUF ]]
 save_constraints
 reset_run impl_1
 launch_runs impl_1 -to_step write_bitstream -jobs 8
 wait_on_run impl_1
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-open_hw_target
-set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.bit} [get_hw_devices xc7s50_0]
-set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-current_hw_device [get_hw_devices xc7s50_0]
-refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
-set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.ltx} [get_hw_devices xc7s50_0]
-set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_stillframe_test.bit} [get_hw_devices xc7s50_0]
+set_property PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.bit} [get_hw_devices xc7s50_0]
 program_hw_devices [get_hw_devices xc7s50_0]
 refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]]
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+launch_simulation
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/controller_moving_test.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
