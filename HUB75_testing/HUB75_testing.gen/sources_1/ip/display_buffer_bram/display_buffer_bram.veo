@@ -55,14 +55,12 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 display_buffer_bram your_instance_name (
-  .clka(clka),            // input wire clka
-  .rsta(rsta),            // input wire rsta
-  .ena(ena),              // input wire ena
-  .wea(wea),              // input wire [0 : 0] wea
-  .addra(addra),          // input wire [11 : 0] addra
-  .dina(dina),            // input wire [15 : 0] dina
-  .douta(douta),          // output wire [15 : 0] douta
-  .rsta_busy(rsta_busy)  // output wire rsta_busy
+  .clka(clka),    // input wire clka
+  .ena(ena),      // input wire ena
+  .wea(wea),      // input wire [0 : 0] wea
+  .addra(addra),  // input wire [11 : 0] addra
+  .dina(dina),    // input wire [15 : 0] dina
+  .douta(douta)  // output wire [15 : 0] douta
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

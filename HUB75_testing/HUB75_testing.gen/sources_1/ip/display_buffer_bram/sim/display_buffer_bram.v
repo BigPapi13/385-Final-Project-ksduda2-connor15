@@ -55,19 +55,15 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module display_buffer_bram (
   clka,
-  rsta,
   ena,
   wea,
   addra,
   dina,
-  douta,
-  rsta_busy
+  douta
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK" *)
 input wire clka;
-(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA RST" *)
-input wire rsta;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA EN" *)
 input wire ena;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA WE" *)
@@ -79,7 +75,6 @@ input wire [15 : 0] dina;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTA, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT" *)
 output wire [15 : 0] douta;
-output wire rsta_busy;
 
   blk_mem_gen_v8_4_5 #(
     .C_FAMILY("spartan7"),
@@ -102,7 +97,7 @@ output wire rsta_busy;
     .C_INIT_FILE("display_buffer_bram.mem"),
     .C_USE_DEFAULT_DATA(0),
     .C_DEFAULT_DATA("0"),
-    .C_HAS_RSTA(1),
+    .C_HAS_RSTA(0),
     .C_RST_PRIORITY_A("CE"),
     .C_RSTRAM_A(0),
     .C_INITA_VAL("0"),
@@ -152,14 +147,14 @@ output wire rsta_busy;
     .C_EN_RDADDRB_CHG(0),
     .C_EN_DEEPSLEEP_PIN(0),
     .C_EN_SHUTDOWN_PIN(0),
-    .C_EN_SAFETY_CKT(1),
+    .C_EN_SAFETY_CKT(0),
     .C_DISABLE_WARN_BHV_RANGE(0),
     .C_COUNT_36K_BRAM("2"),
     .C_COUNT_18K_BRAM("0"),
     .C_EST_POWER_SUMMARY("Estimated Power for IP     :     5.071399 mW")
   ) inst (
     .clka(clka),
-    .rsta(rsta),
+    .rsta(1'D0),
     .ena(ena),
     .regcea(1'D0),
     .wea(wea),
@@ -183,7 +178,7 @@ output wire rsta_busy;
     .sleep(1'D0),
     .deepsleep(1'D0),
     .shutdown(1'D0),
-    .rsta_busy(rsta_busy),
+    .rsta_busy(),
     .rstb_busy(),
     .s_aclk(1'H0),
     .s_aresetn(1'D0),

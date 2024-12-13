@@ -16,7 +16,8 @@ module controller #(parameter BITS_PER_PIXEL=0)
         input logic [11:0] write_addr,
         input logic [BITS_PER_PIXEL-1:0] write_data,
         input logic buffer_toggle,
-        input logic write_en
+        input logic write_en,
+        output logic frame_done
     );
     
 
@@ -81,6 +82,7 @@ module controller #(parameter BITS_PER_PIXEL=0)
             oe_strobe_column_addr <= 10'b0000011111;
             read_state <= READ_STATE_PIXELS;
             read_en <= 1'b0;
+            frame_done <= 1'b0;
         end else begin
             read_en <= 1'b1;
             case (read_state)
@@ -133,6 +135,9 @@ module controller #(parameter BITS_PER_PIXEL=0)
                     if (bit_count == BITS_PER_RGB - 1) begin
                         bit_count <= 0;
                         oe_strobe_column_addr <= 10'b0000011111;
+                        if(row_addr == 5'd31) begin
+                            frame_done <= 1'b1;     // this frame is complete
+                        end
                         row_addr <= row_addr + 5'h1;
                     end
                     read_state <= READ_STATE_NEXT_LINE;
@@ -146,10 +151,6 @@ module controller #(parameter BITS_PER_PIXEL=0)
         end
     end
 
-    logic _unused_ok = &{1'b0,
-        read_data_bottom[3:0],
-        read_data_top[3:0],
-        1'b0};
 
     assign hub75_addr = row_addr;
     assign hub75_clk = run_hub75_clk ? slow_clk : 1'b0;

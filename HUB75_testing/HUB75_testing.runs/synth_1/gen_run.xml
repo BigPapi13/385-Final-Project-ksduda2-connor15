@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1733938657" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/controller_stillframe_test.dcp">
-  <File Type="PA-TCL" Name="controller_stillframe_test.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="controller_stillframe_test_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="controller_stillframe_test_reports.tcl"/>
-  <File Type="RDS-RDS" Name="controller_stillframe_test.vds"/>
-  <File Type="RDS-UTIL" Name="controller_stillframe_test_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="controller_stillframe_test_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="controller_stillframe_test.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="controller_stillframe_test_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="controller_stillframe_test_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1734062654" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/controller_stillframe_test.dcp">
+  <File Type="PA-TCL" Name="controller_moving_test.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="controller_moving_test_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="controller_moving_test_reports.tcl"/>
+  <File Type="RDS-RDS" Name="controller_moving_test.vds"/>
+  <File Type="RDS-UTIL" Name="controller_moving_test_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="controller_moving_test_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="controller_moving_test.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="controller_moving_test_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="controller_moving_test_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/ip/display_buffer_bram/display_buffer_bram.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_divider.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -25,14 +32,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/memory_initialization.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sim_1/new/spi_slave.sv">
+    <File Path="$PSRCDIR/sources_1/new/memory_manager.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -46,7 +46,28 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/controller_moving_test.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/controller_stillframe_test.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/frame_manager.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/memory_initialization.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -55,15 +76,13 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/posedge_det.sv">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/frame_manager.sv">
+    <File Path="$PSRCDIR/sim_1/new/spi_slave.sv">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -71,8 +90,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="controller_stillframe_test"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="controller_moving_test"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
