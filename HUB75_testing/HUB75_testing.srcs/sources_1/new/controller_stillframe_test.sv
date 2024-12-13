@@ -35,6 +35,7 @@ module controller_stillframe_test #(BITS_PER_PIXEL=16)
     );
 
     logic n_reset;
+    logic display_frame_done;
 
 
     logic buffer_toggle;
@@ -84,7 +85,8 @@ module controller_stillframe_test #(BITS_PER_PIXEL=16)
         write_addr,
         write_data,
         buffer_toggle,
-        write_en
+        write_en,
+        display_frame_done
     );
     
     

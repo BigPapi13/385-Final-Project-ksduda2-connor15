@@ -1,0 +1,27 @@
+$date
+        2024-Dec-12 21:14:41
+$end
+$version
+        Vivado v2022.2 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 12 " frame_counter [11:0] $end
+$var reg 1 . dut/display_frame_done $end
+$var reg 1 / _TRIGGER $end
+$var reg 1 0 _WINDOW $end
+$var reg 1 1 _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 "
+0.
+0/
+10
+01
+$end
+#2048
+1/

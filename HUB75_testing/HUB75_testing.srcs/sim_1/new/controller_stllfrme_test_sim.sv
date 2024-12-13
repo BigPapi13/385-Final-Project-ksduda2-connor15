@@ -57,6 +57,7 @@ module controller_stllfrm_test_sim #(BITS_PER_PIXEL=16);
     logic reset_mem_initialization;
     
     logic mem_write_done;
+    logic display_frame_done;
     
     memory_initialization mem_start(
         .clk(clk),
@@ -86,7 +87,8 @@ module controller_stllfrm_test_sim #(BITS_PER_PIXEL=16);
         write_addr,
         write_data,
         buffer_toggle,
-        write_en
+        write_en,
+        display_frame_done
     );
     
     logic start_signal;
@@ -238,19 +240,16 @@ module controller_stllfrm_test_sim #(BITS_PER_PIXEL=16);
     end
     
     
-    // Watch for the top addr bit going low, this indicates the end of the frame
-    always @ (negedge hub75_addr[4]) begin  //this will trigger immediately by default for some reason so
-        if(n_reset && startup_state==RUN) begin
-                for (integer y_count = 0; y_count < 64; y_count++) begin
-                    for (integer x_count = 0; x_count < 64; x_count++) begin
-                        // Output the RGB of each pixel in unscaled form, which will turn back into a BMP by scaling
-                        // such that the maximum intensity of any pixels R, G or B will be 255
-                        $display("%0d,%0d,%0d", screen_red[x_count][y_count], screen_green[x_count][y_count],
-                            screen_blue[x_count][y_count]);
-                    end
+    always @ (posedge display_frame_done) begin  //this will trigger immediately by default for some reason so
+            for (integer y_count = 0; y_count < 64; y_count++) begin
+                for (integer x_count = 0; x_count < 64; x_count++) begin
+                    // Output the RGB of each pixel in unscaled form, which will turn back into a BMP by scaling
+                    // such that the maximum intensity of any pixels R, G or B will be 255
+                    $display("%0d,%0d,%0d", screen_red[x_count][y_count], screen_green[x_count][y_count],
+                        screen_blue[x_count][y_count]);
                 end
-                $finish();
             end
+            $finish();
     end
 
 
