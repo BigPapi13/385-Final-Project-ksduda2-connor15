@@ -1,83 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1734062654">
-  <File Type="ROUTE-PWR" Name="controller_moving_test_power_routed.rpt"/>
   <File Type="PA-TCL" Name="controller_moving_test.tcl"/>
-  <File Type="BITSTR-MMI" Name="controller_moving_test.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="controller_moving_test_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="controller_moving_test_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="controller_moving_test_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="controller_moving_test_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="controller_moving_test_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="controller_moving_test_opt.dcp"/>
-  <File Type="OPT-DRC" Name="controller_moving_test_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="controller_moving_test.hwdef"/>
-  <File Type="PWROPT-DCP" Name="controller_moving_test_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="controller_moving_test_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="controller_moving_test_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="controller_moving_test_placed.dcp"/>
-  <File Type="PLACE-IO" Name="controller_moving_test_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="controller_moving_test_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="controller_moving_test_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="controller_moving_test_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="controller_moving_test_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="controller_moving_test_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="controller_moving_test_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="controller_moving_test.bin"/>
-  <File Type="PLACE-TIMING" Name="controller_moving_test_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="controller_moving_test_postplace_pwropt.dcp"/>
   <File Type="BITSTR-MSK" Name="controller_moving_test.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="controller_moving_test_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="controller_moving_test_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="controller_moving_test_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="controller_moving_test.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="controller_moving_test_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="controller_moving_test_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="controller_moving_test_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="controller_moving_test_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="controller_moving_test_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="controller_moving_test_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="controller_moving_test_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="controller_moving_test_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="controller_moving_test_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="controller_moving_test_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="controller_moving_test_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="controller_moving_test_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="controller_moving_test_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="controller_moving_test_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="controller_moving_test_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="controller_moving_test_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="controller_moving_test_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="controller_moving_test_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="controller_moving_test_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="controller_moving_test_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="controller_moving_test_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="controller_moving_test_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="controller_moving_test_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="controller_moving_test_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="controller_moving_test_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="controller_moving_test_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="controller_moving_test_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="controller_moving_test.vdi"/>
   <File Type="BG-BIT" Name="controller_moving_test.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="controller_moving_test_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="controller_moving_test_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-DRC" Name="controller_moving_test.drc"/>
+  <File Type="BG-BGN" Name="controller_moving_test.bgn"/>
+  <File Type="BG-BIN" Name="controller_moving_test.bin"/>
+  <File Type="BITSTR-RBT" Name="controller_moving_test.rbt"/>
   <File Type="BITSTR-NKY" Name="controller_moving_test.nky"/>
   <File Type="BITSTR-BMM" Name="controller_moving_test_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="controller_moving_test.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="controller_moving_test.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="controller_moving_test.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-HWDEF" Name="controller_moving_test.hwdef"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="controller_moving_test_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DCP" Name="controller_moving_test_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="controller_moving_test_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="controller_moving_test_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMING-PB" Name="controller_moving_test_timing_summary_routed.pb"/>
+  <File Type="OPT-DCP" Name="controller_moving_test_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="controller_moving_test_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="controller_moving_test_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="controller_moving_test_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="controller_moving_test_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="controller_moving_test_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="controller_moving_test_postroute_physopt_bb.dcp"/>
   <File Type="PDI-FILE" Name="controller_moving_test.pdi"/>
   <File Type="RCFI_FILE" Name="controller_moving_test.rcfi"/>
   <File Type="CFI_FILE" Name="controller_moving_test.cfi"/>
   <File Type="RNPI_FILE" Name="controller_moving_test.rnpi"/>
   <File Type="NPI_FILE" Name="controller_moving_test.npi"/>
   <File Type="RBD_FILE" Name="controller_moving_test.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="controller_moving_test.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="controller_moving_test.sysdef"/>
-  <File Type="BG-BGN" Name="controller_moving_test.bgn"/>
-  <File Type="BG-DRC" Name="controller_moving_test.drc"/>
-  <File Type="RDI-RDI" Name="controller_moving_test.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="controller_moving_test_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="controller_moving_test_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -201,5 +161,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>

@@ -61,6 +61,14 @@ module controller_moving_test_sim #(BITS_PER_PIXEL=16);
     logic clk_divided;
     clock_divider #( .DIV_N(5) )	slow_test_clock ( .clk_in(clk), .clk_out(clk_divided), .do_reset(reset_div), .is_ready(divider_ready) );
 
+            
+    always begin : CLOCK_GEN 
+            clk= 1'b1;
+            #period;
+
+            clk= 1'b0;
+            #period;
+    end
     
     memory_manager mem_start(
         .clk(clk),
@@ -276,8 +284,8 @@ module controller_moving_test_sim #(BITS_PER_PIXEL=16);
 
     
     // for simulation:
+    /*
     always @ (posedge display_frame_done) begin
-        if(frame_counter == 12'd6) begin  
             for (integer y_count = 0; y_count < 64; y_count++) begin
                 for (integer x_count = 0; x_count < 64; x_count++) begin
                     // Output the RGB of each pixel in unscaled form, which will turn back into a BMP by scaling
@@ -287,7 +295,7 @@ module controller_moving_test_sim #(BITS_PER_PIXEL=16);
                 end
             end
             $finish();
-        end
-        end
+        
+        end*/
 
 endmodule
