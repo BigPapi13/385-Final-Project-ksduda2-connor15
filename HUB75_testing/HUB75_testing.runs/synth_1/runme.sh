@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log controller_moving_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source controller_moving_test.tcl
+EAStep vivado -log frame_manager_tb.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source frame_manager_tb.tcl

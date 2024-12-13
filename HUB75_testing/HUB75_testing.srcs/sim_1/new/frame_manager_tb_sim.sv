@@ -89,6 +89,7 @@ module frame_manager_tb_sim();
             RESET: begin
                 // automatically run when reset is active
                 next_state = RUN;
+                reset = 1'b0;
             end
             RUN : begin
                 // run forever
@@ -117,7 +118,7 @@ module frame_manager_tb_sim();
     logic [10:0] test_counter1;
     logic [5:0] test_counter2;
     
-    // Display output logic!
+    //////  Display output logic! ////////////
     always_ff @ (posedge clk) begin
         if(reset) begin
             test_counter1 <= 0;
@@ -133,21 +134,23 @@ module frame_manager_tb_sim();
                 test_counter2 <= test_counter2 + 1;
                 // test_counter2 will automatically loop back to the top of the display (due to overflow) when it hits 64
             end
-            
-            // test_counter2 will be a slowly incrementing value, we can use this value to shift the position of drawn pixels!
-            
-            if(write_x == test_counter2) begin
-                // draw a vertical line on the column corresponding to counter2
-                write_data = {12'b111100000000};
-            end
-            else begin
-                // draw a green background for the rest of the pixels
-                write_data = {12'b000011110000};
-            end
         end
-        
-        
     end
+    
+    always_comb begin
+            // test_counter2 will be a slowly incrementing value, we can use this value to shift the position of drawn pixels!
+        
+        if(write_x == test_counter2) begin
+            // draw a vertical line on the column corresponding to counter2
+            write_data = {12'b111100000000};
+        end
+        else begin
+            // draw a green background for the rest of the pixels
+            write_data = {12'b000011110000};
+        end
+    end 
+    
+    //////////
     
     
 
