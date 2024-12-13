@@ -6,12 +6,14 @@ $ prev = OBB("prev")
 $ next = OBB("next")
 $ impulse = Vec2(6, 26)
 $ nudge = Vec2(8, 24)
+$ rotational_impulse = Fixed(4, 7, "rotational_impulse")
 
 // Calculates the next state for a given OBB
 module obb_updater(
     input logic impulse_en,     // Whether impulses should be applied
     input logic update_en,      // Whether position/rotation should be updated
     $$Impulse.declare("input")$$,
+    $$rotational_impulse.declare("input")$$,
     $$prev.declare("input")$$,
     $$next.declare("output")$$
 );
@@ -24,7 +26,8 @@ $ begin_comb()
 $ next_vel.assign(prev.vel)
 $ next.omega.assign(prev.omega)
 if (impulse_en) begin
-    $ next_vel.assign(prev.vel + Impulse.impulse)
+    $ next_vel.assign(prev.vel + (Impulse.impulse * prev.inv_mass))
+    $ next.omega.assign(prev.omega + rotational_impulse)
     ///////// TO-DO: MAKE IT SO OMEGA IS UPDATED WITH IMPULSE AS WELL
     ////////  ALSO TO-DO: Apply shift here
 end
@@ -55,6 +58,7 @@ $ next_angle_uncorrected.assign(prev.angle)
 if (update_en) begin
     $ next.pos.assign(prev.pos + next.vel)
     ////////// TO-DO: UPDATE ROTATION WITH UPDATED VALUE FROM IMPULSE
+    $ next_angle_uncorrected.assign(prev.angle + next.omega)
 end
 $ end_comb()
 
@@ -71,5 +75,9 @@ $ end_comb()
 // Keep other things the same
 $ next.width.assign(prev.width)
 $ next.height.assign(prev.height)
+$ next.mass.assign(prev.mass)
+$ next.inv_mass.assign(prev.inv_mass)
+$ next.inertia.assign(prev.inertia)
+$ next.inv_inertia.assign(prev.inv_inertia)
 
 endmodule

@@ -13,16 +13,15 @@
 $ # Set to true for simulation, false for synthesis
 $ SIMULATION_MODE = False
 
-
 $ from svpy import *
 $ from svmath import *
 $ from structs import OBB, Juice, JOBB, Contact, Impulse
 
 $$$
-if SIMULATION_MODE == False:
-    reg_clk = "vsync"
-else:
+if SIMULATION_MODE:
     reg_clk = "Clk"
+else:
+    reg_clk = "vsync"
 $$$
 
 module mb_usb_hdmi_top(
@@ -180,42 +179,47 @@ module mb_usb_hdmi_top(
     $ impulse_data = Impulse("impulse_data")
     $ impulse_data.declare()
     $ contact_data = Contact("contact_data")
-    $ contact_data.declare()
+    $ contact_data.declare(),
+    $ rotational_impulse1 = Fixed(4, 7, "rotational_impulse1")
+    $ rotational_impulse2 = Fixed(4, 7, "rotational_impulse2")
+    $ rotational_impulse1.declare()
+    $ rotational_impulse2.declare()
     box_box_resolver bbr_inst(
         $$Contact.module_assign(contact_data)$$,
-        $$obb1.pos.module_assign(obb1.pos)$$,
-        $$obb1.vel.module_assign(obb1.vel)$$,
-        $$obb1.omega.module_assign(obb1.omega)$$,
-        $$obb2.pos.module_assign(obb2.pos)$$,
-        $$obb2.vel.module_assign(obb2.vel)$$,
-        $$obb2.omega.module_assign(obb2.omega)$$,
-        $$Impulse.module_assign(impulse_data)
+        $$obb1.module_assign(obb1)$$,
+        $$obb2.module_assign(obb2)$$,
+        $$Impulse.module_assign(impulse_data)$$,
+        $$rotational_impulse1.module_assign(rotational_impulse1)$$,
+        $$rotational_impulse2.module_assign(rotational_impulse2)$$
     );
 
     // Logic for determining next state
     $ prev = OBB("prev")
     $ next = OBB("next")
+    $ rotational_impulse = Fixed(4, 7, "rotational_impulse")
+    $ rotational_impulse.declare()
     logic is_collision;
     obb_updater obb1_updater(
         .impulse_en(is_collision),
         .update_en(1'b1),
         $$Impulse.module_assign(impulse_data)$$,
         $$next.module_assign(obb1_ld)$$,
-        $$prev.module_assign(obb1)$$
+        $$prev.module_assign(obb1)$$,
+        $$rotational_impulse.module_assign(rotational_impulse1)$$
     );
 
     $ neg_impulse_data = Impulse("neg_impulse_data")
     $ neg_impulse_data.declare()
     $ neg_impulse_data.impulse.assign(-impulse_data.impulse)
     $ neg_impulse_data.nudge.assign(-impulse_data.nudge)
-    $ neg_impulse_data.rotational_impulse.assign(-impulse_data.rotational_impulse)
 
     obb_updater obb2_updater(
         .impulse_en(is_collision),
         .update_en(1'b1),
         $$Impulse.module_assign(neg_impulse_data)$$,
         $$next.module_assign(obb2_ld)$$,
-        $$prev.module_assign(obb2)$$
+        $$prev.module_assign(obb2)$$,
+        $$rotational_impulse.module_assign(rotational_impulse2)$$
     );
 
     // DID SOMEONE SAY JUICE????

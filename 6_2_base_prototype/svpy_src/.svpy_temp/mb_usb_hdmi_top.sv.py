@@ -31,17 +31,15 @@ dump_queue()
 SIMULATION_MODE = False
 svwrite("\n")
 dump_queue()
-svwrite("\n")
-dump_queue()
 from svpy import *
 from svmath import *
 from structs import OBB, Juice, JOBB, Contact, Impulse
 svwrite("\n")
 dump_queue()
-if SIMULATION_MODE == False:
-    reg_clk = "vsync"
-else:
+if SIMULATION_MODE:
     reg_clk = "Clk"
+else:
+    reg_clk = "vsync"
 svwrite("\n")
 dump_queue()
 svwrite("module mb_usb_hdmi_top(\n")
@@ -366,7 +364,11 @@ dump_queue()
 impulse_data = Impulse("impulse_data")
 impulse_data.declare()
 contact_data = Contact("contact_data")
-contact_data.declare()
+contact_data.declare(),
+rotational_impulse1 = Fixed(4, 7, "rotational_impulse1")
+rotational_impulse2 = Fixed(4, 7, "rotational_impulse2")
+rotational_impulse1.declare()
+rotational_impulse2.declare()
 svwrite("    box_box_resolver bbr_inst(\n")
 dump_queue()
 svwrite("        ")
@@ -377,45 +379,33 @@ svwrite(",\n")
 dump_queue()
 svwrite("        ")
 svpy.inline_state = True
-svwrite(obb1.pos.module_assign(obb1.pos))
+svwrite(obb1.module_assign(obb1))
 svpy.inline_state = False
 svwrite(",\n")
 dump_queue()
 svwrite("        ")
 svpy.inline_state = True
-svwrite(obb1.vel.module_assign(obb1.vel))
+svwrite(obb2.module_assign(obb2))
 svpy.inline_state = False
 svwrite(",\n")
 dump_queue()
 svwrite("        ")
 svpy.inline_state = True
-svwrite(obb1.omega.module_assign(obb1.omega))
+svwrite(Impulse.module_assign(impulse_data))
 svpy.inline_state = False
 svwrite(",\n")
 dump_queue()
 svwrite("        ")
 svpy.inline_state = True
-svwrite(obb2.pos.module_assign(obb2.pos))
+svwrite(rotational_impulse1.module_assign(rotational_impulse1))
 svpy.inline_state = False
 svwrite(",\n")
 dump_queue()
 svwrite("        ")
 svpy.inline_state = True
-svwrite(obb2.vel.module_assign(obb2.vel))
+svwrite(rotational_impulse2.module_assign(rotational_impulse2))
 svpy.inline_state = False
-svwrite(",\n")
-dump_queue()
-svwrite("        ")
-svpy.inline_state = True
-svwrite(obb2.omega.module_assign(obb2.omega))
-svpy.inline_state = False
-svwrite(",\n")
-dump_queue()
-svwrite("        ")
-svpy.inline_state = True
-svwrite(Impulse.module_assign(impulse_data)
-)
-svpy.inline_state = False
+svwrite("\n")
 dump_queue()
 svwrite("    );\n")
 dump_queue()
@@ -425,6 +415,8 @@ svwrite("    // Logic for determining next state\n")
 dump_queue()
 prev = OBB("prev")
 next = OBB("next")
+rotational_impulse = Fixed(4, 7, "rotational_impulse")
+rotational_impulse.declare()
 svwrite("    logic is_collision;\n")
 dump_queue()
 svwrite("    obb_updater obb1_updater(\n")
@@ -449,6 +441,12 @@ svwrite("        ")
 svpy.inline_state = True
 svwrite(prev.module_assign(obb1))
 svpy.inline_state = False
+svwrite(",\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(rotational_impulse.module_assign(rotational_impulse1))
+svpy.inline_state = False
 svwrite("\n")
 dump_queue()
 svwrite("    );\n")
@@ -459,7 +457,6 @@ neg_impulse_data = Impulse("neg_impulse_data")
 neg_impulse_data.declare()
 neg_impulse_data.impulse.assign(-impulse_data.impulse)
 neg_impulse_data.nudge.assign(-impulse_data.nudge)
-neg_impulse_data.rotational_impulse.assign(-impulse_data.rotational_impulse)
 svwrite("\n")
 dump_queue()
 svwrite("    obb_updater obb2_updater(\n")
@@ -483,6 +480,12 @@ dump_queue()
 svwrite("        ")
 svpy.inline_state = True
 svwrite(prev.module_assign(obb2))
+svpy.inline_state = False
+svwrite(",\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(rotational_impulse.module_assign(rotational_impulse2))
 svpy.inline_state = False
 svwrite("\n")
 dump_queue()

@@ -21,6 +21,7 @@ sv xil_defaultlib  --include "../../../../../../lab6_1/lab6_1.gen/sources_1/bd/m
 "../../../../lab6_2_provided/design_source/collision_detector.sv" \
 "../../../../lab6_2_provided/design_source/cosine.sv" \
 "../../../../lab6_2_provided/design_source/hex_driver.sv" \
+"../../../../lab6_2_provided/design_source/inverter.sv" \
 "../../../../lab6_2_provided/design_source/mb_usb_hdmi_top.sv" \
 "../../../../lab6_2_provided/design_source/obb_reg.sv" \
 "../../../../lab6_2_provided/design_source/obb_updater.sv" \

@@ -8,8 +8,12 @@ from svmath import *
 #   - Used for the physics objects
 
 OBB = Struct("OBB", [
-    Fixed(8, 0, "width"),
-    Fixed(8, 0, "height"),
+    Fixed(8, 0, "width", signed=False),
+    Fixed(8, 0, "height", signed=False),
+    Fixed(8, 0, "mass", signed=False),
+    Fixed(16, 0, "inertia", signed=False),
+    Fixed(2, 14, "inv_mass", signed=False),
+    Fixed(1, 23, "inv_inertia", signed=False),
     Vec2(8, 24, "pos"),
     Vec2(6, 26, "vel"),
     Fixed(4, 7, "angle"),
@@ -54,6 +58,6 @@ Contact = Struct("Contact", [
 #   - Contains the change in velocity, the change in position, and the change in angular velocity
 Impulse = Struct("Impulse", [
     Vec2(6, 26, "impulse"),
-    Vec2(8, 24, "nudge"),
-    Fixed(4, 7, "rotational_impulse")
+    Vec2(8, 24, "nudge")
+    # Vec2(4, 7, "rotational_impulse")
 ])

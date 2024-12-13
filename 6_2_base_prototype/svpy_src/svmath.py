@@ -8,6 +8,7 @@ __all__ = [
     "Vec2",
     "cos",
     "sin",
+    "inverse",
     "Struct",
     "resize",
     "always_comb",
@@ -34,7 +35,7 @@ class Fixed:
     fixed_counter = 0
     opnet_count = 0
 
-    def __init__(self, integer_bits: int, precision_bits: int, name: str = None):
+    def __init__(self, integer_bits: int, precision_bits: int, name: str = None, signed = True):
         if name == None:
             name = f"fixed_{Fixed.fixed_counter}"
             Fixed.fixed_counter += 1
@@ -43,12 +44,13 @@ class Fixed:
         self.integer_bits = integer_bits
         self.precision = precision_bits
         self.name = name
+        self.signed = signed
 
     # Declares the variable in system verilog
     # Can be specified whether it's an output or input
-    def declare(self, mode : None | str = None, signed: bool = True):    # Mode == "output", "input", or None
+    def declare(self, mode : None | str = None):    # Mode == "output", "input", or None
         sign_text = ""
-        if signed:
+        if self.signed:
             sign_text = " signed"
         
         if mode == None:
@@ -60,7 +62,7 @@ class Fixed:
     def assign(self, other: Fixed | int | float):
         global context_type
         if context_type == "NORMAL":
-            if type(other) is Fixed:
+            if type(other) is Fixed or type(other) is ShiftedFixed:
                 difference = self.precision - other.precision
 
                 # Other gets bit shifted by difference
@@ -120,14 +122,14 @@ class Fixed:
         # Create new net representing the result of the addition
         #   - Integer part is maximum of operands
         #   - Precision is minimum of operands
-        if other is Fixed:
+        if isinstance(other, Fixed):
             other_int_bits = other.integer_bits
             other_precision = other.precision
         else:
             other_int_bits = self.integer_bits
             other_precision = self.precision
 
-        result = Fixed(max(self.integer_bits, other_int_bits), max(self.precision, other_precision), f"opnet_{Fixed.opnet_count}")
+        result = Fixed(max(self.integer_bits, other_int_bits), min(self.precision, other_precision), f"opnet_{Fixed.opnet_count}")
         Fixed.opnet_count += 1
 
         # Case 1: Fixed + Fixed
@@ -150,14 +152,14 @@ class Fixed:
         # Create new net representing the result of the subtraction
         #   - Integer part is maximum of operands
         #   - Precision is minimum of operands
-        if other is Fixed:
+        if isinstance(other, Fixed):
             other_int_bits = other.integer_bits
             other_precision = other.precision
         else:
             other_int_bits = self.integer_bits
             other_precision = self.precision
 
-        result = Fixed(max(self.integer_bits, other_int_bits), max(self.precision, other_precision), f"opnet_{Fixed.opnet_count}")
+        result = Fixed(max(self.integer_bits, other_int_bits), min(self.precision, other_precision), f"opnet_{Fixed.opnet_count}")
         Fixed.opnet_count += 1
 
 
@@ -207,25 +209,26 @@ class Fixed:
 class Vec2:
     vec_counter = 0
 
-    def __init__(self, integer_bits: int, precision_bits: int, name: str = None):
+    def __init__(self, integer_bits: int, precision_bits: int, name: str = None, signed = True):
         if name == None:
             name = f"vec_{Vec2.vec_counter}"
             Vec2.vec_counter += 1
 
-        self.x = Fixed(integer_bits, precision_bits, f"{name}_x")
-        self.y = Fixed(integer_bits, precision_bits, f"{name}_y")
+        self.x = Fixed(integer_bits, precision_bits, f"{name}_x", signed)
+        self.y = Fixed(integer_bits, precision_bits, f"{name}_y", signed)
         self.integer_bits = integer_bits
         self.precision = precision_bits
         self.name = name
+        self.signed = signed
 
     def declare(self, mode : None | str = None, signed: bool = True):    # Mode == "output", "input", or None
         if mode == None:
-            self.x.declare(mode, signed)
-            self.y.declare(mode, signed)
+            self.x.declare(mode)
+            self.y.declare(mode)
         else:
-            self.x.declare(mode, signed)
+            self.x.declare(mode)
             svwrite(", ")
-            self.y.declare(mode, signed)
+            self.y.declare(mode)
 
     def assign(self, other: Vec2 | list | tuple):
         self.x.assign(other[0])
@@ -257,6 +260,10 @@ class Vec2:
 
     def Dot(self, other: Vec2 | list | tuple) -> Fixed:
         return (self.x * other[0]) + (self.y * other[1])
+    
+    # Note: This is a 2D cross product, returns a scalar instead of a vector
+    def Cross(self, other: Vec2 | list | tuple) -> Fixed:
+        return (self.x * other[1]) - (self.y * other[0])
     
     def __mul__(self, other: Fixed | int | float) -> ExpressionVec2:
         return ExpressionVec2(self.x * other, self.y * other)
@@ -298,8 +305,31 @@ def cos(theta: Fixed) -> Fixed:
 
     return result
 
-def to_bits(value, integer_bits=16, precision_bits=0):
-    if 2**(integer_bits - 1) <= value:
+# ROM-based system verilog mutliplicative inverse
+inverter_counter = 0
+def inverse(x: Fixed) -> Fixed:
+    shift = max(0, x.bits - 10)
+    remaining_precision = max(0, x.precision - shift)
+    sliced_integers = max(0, shift - x.precision)
+    scale_factor = remaining_precision + sliced_integers
+
+    global inverter_counter
+    result = Fixed(1 + scale_factor, 15 - scale_factor, f"inverter_{inverter_counter}")
+    result.declare()
+    inverter_counter += 1
+
+    # Determine shift on the input to make the most of the bits we got
+
+    shift_text = ""
+    if x.bits > 10:
+        shift_text = f" >> {x.bits - 10}"
+
+    svwritel(f"inverter inverter_inst_{inverter_counter}(.x({x.name}{shift_text}), .x_inverse({result.name}));")
+    # result.assign(result_preshift)
+    return result
+
+def to_bits(value, integer_bits=16, precision_bits=0, signed=True):
+    if 2**(integer_bits) <= value:
         print(f"Warning: {value} cannot be represented with {integer_bits} integer bits and {precision_bits} precision bits")
     
     bits = integer_bits + precision_bits
@@ -313,8 +343,10 @@ def to_bits(value, integer_bits=16, precision_bits=0):
         value = floor(value / 2)
 
     
-
-    return f"{bits}'sb" + output
+    sign_char = ''
+    if signed:
+        sign_char = 's'
+    return f"{bits}'{sign_char}b" + output
 
 
 # Cluster of nets
