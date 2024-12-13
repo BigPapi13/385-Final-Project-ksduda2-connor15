@@ -137,22 +137,22 @@ module mb_usb_hdmi_top(
     
     // First OBB register
 
-logic [7 : 0] obb1_width;
-logic [7 : 0] obb1_height;
-logic [15 : 0] obb1_inertia;
-logic [15 : 0] obb1_inv_mass;
-logic [23 : 0] obb1_inv_inertia;
+logic signed [7 : 0] obb1_width;
+logic signed [7 : 0] obb1_height;
+logic signed [15 : 0] obb1_inertia;
+logic signed [16 : 0] obb1_inv_mass;
+logic signed [24 : 0] obb1_inv_inertia;
 logic signed [23 : 0] obb1_pos_x;
 logic signed [23 : 0] obb1_pos_y;
 logic signed [23 : 0] obb1_vel_x;
 logic signed [23 : 0] obb1_vel_y;
 logic signed [10 : 0] obb1_angle;
 logic signed [10 : 0] obb1_omega;
-logic [7 : 0] obb1_ld_width;
-logic [7 : 0] obb1_ld_height;
-logic [15 : 0] obb1_ld_inertia;
-logic [15 : 0] obb1_ld_inv_mass;
-logic [23 : 0] obb1_ld_inv_inertia;
+logic signed [7 : 0] obb1_ld_width;
+logic signed [7 : 0] obb1_ld_height;
+logic signed [15 : 0] obb1_ld_inertia;
+logic signed [16 : 0] obb1_ld_inv_mass;
+logic signed [24 : 0] obb1_ld_inv_inertia;
 logic signed [23 : 0] obb1_ld_pos_x;
 logic signed [23 : 0] obb1_ld_pos_y;
 logic signed [23 : 0] obb1_ld_vel_x;
@@ -189,22 +189,22 @@ logic signed [10 : 0] obb1_ld_omega;
 
     // Second OBB register
 
-logic [7 : 0] obb2_width;
-logic [7 : 0] obb2_height;
-logic [15 : 0] obb2_inertia;
-logic [15 : 0] obb2_inv_mass;
-logic [23 : 0] obb2_inv_inertia;
+logic signed [7 : 0] obb2_width;
+logic signed [7 : 0] obb2_height;
+logic signed [15 : 0] obb2_inertia;
+logic signed [16 : 0] obb2_inv_mass;
+logic signed [24 : 0] obb2_inv_inertia;
 logic signed [23 : 0] obb2_pos_x;
 logic signed [23 : 0] obb2_pos_y;
 logic signed [23 : 0] obb2_vel_x;
 logic signed [23 : 0] obb2_vel_y;
 logic signed [10 : 0] obb2_angle;
 logic signed [10 : 0] obb2_omega;
-logic [7 : 0] obb2_ld_width;
-logic [7 : 0] obb2_ld_height;
-logic [15 : 0] obb2_ld_inertia;
-logic [15 : 0] obb2_ld_inv_mass;
-logic [23 : 0] obb2_ld_inv_inertia;
+logic signed [7 : 0] obb2_ld_width;
+logic signed [7 : 0] obb2_ld_height;
+logic signed [15 : 0] obb2_ld_inertia;
+logic signed [16 : 0] obb2_ld_inv_mass;
+logic signed [24 : 0] obb2_ld_inv_inertia;
 logic signed [23 : 0] obb2_ld_pos_x;
 logic signed [23 : 0] obb2_ld_pos_y;
 logic signed [23 : 0] obb2_ld_vel_x;
@@ -247,13 +247,13 @@ logic signed [21 : 0] contact_data_location_y;
 logic signed [23 : 0] contact_data_penetration;
 logic signed [23 : 0] impulse1_impulse_x;
 logic signed [23 : 0] impulse1_impulse_y;
-logic signed [23 : 0] impulse1_nudge_x;
-logic signed [23 : 0] impulse1_nudge_y;
+logic signed [21 : 0] impulse1_nudge_x;
+logic signed [21 : 0] impulse1_nudge_y;
 logic signed [10 : 0] impulse1_rotational_impulse;
 logic signed [23 : 0] impulse2_impulse_x;
 logic signed [23 : 0] impulse2_impulse_y;
-logic signed [23 : 0] impulse2_nudge_x;
-logic signed [23 : 0] impulse2_nudge_y;
+logic signed [21 : 0] impulse2_nudge_x;
+logic signed [21 : 0] impulse2_nudge_y;
 logic signed [10 : 0] impulse2_rotational_impulse;
     logic ignore_impulse;
     box_box_resolver bbr_inst(

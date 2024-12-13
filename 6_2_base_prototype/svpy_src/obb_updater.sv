@@ -27,7 +27,7 @@ $ next_vel.assign(prev.vel)
 $ next_pos.assign(prev.pos)
 $ next.omega.assign(prev.omega)
 if (impulse_en) begin
-    $ next_vel.assign(prev.vel + Impulse.impulse)
+    $ next_vel.assign(prev.vel + (Impulse.impulse * prev.inv_mass))
     $ next.omega.assign(prev.omega + Impulse.rotational_impulse)
     $ next_pos.assign(prev.pos + Impulse.nudge)
 

@@ -1,11 +1,11 @@
 
 
 module collision_detector(
-    input logic [7 : 0] obb1_width,
-input logic [7 : 0] obb1_height,
-input logic [15 : 0] obb1_inertia,
-input logic [15 : 0] obb1_inv_mass,
-input logic [23 : 0] obb1_inv_inertia,
+    input logic signed [7 : 0] obb1_width,
+input logic signed [7 : 0] obb1_height,
+input logic signed [15 : 0] obb1_inertia,
+input logic signed [16 : 0] obb1_inv_mass,
+input logic signed [24 : 0] obb1_inv_inertia,
 input logic signed [23 : 0] obb1_pos_x, input logic signed [23 : 0] obb1_pos_y,
 input logic signed [23 : 0] obb1_vel_x, input logic signed [23 : 0] obb1_vel_y,
 input logic signed [10 : 0] obb1_angle,
@@ -18,11 +18,11 @@ input logic signed [21 : 0] obb1_Point2_x, input logic signed [21 : 0] obb1_Poin
 input logic signed [21 : 0] obb1_Point3_x, input logic signed [21 : 0] obb1_Point3_y,
 input logic signed [6 : 0] obb1_halfWidth,
 input logic signed [6 : 0] obb1_halfHeight,
-    input logic [7 : 0] obb2_width,
-input logic [7 : 0] obb2_height,
-input logic [15 : 0] obb2_inertia,
-input logic [15 : 0] obb2_inv_mass,
-input logic [23 : 0] obb2_inv_inertia,
+    input logic signed [7 : 0] obb2_width,
+input logic signed [7 : 0] obb2_height,
+input logic signed [15 : 0] obb2_inertia,
+input logic signed [16 : 0] obb2_inv_mass,
+input logic signed [24 : 0] obb2_inv_inertia,
 input logic signed [23 : 0] obb2_pos_x, input logic signed [23 : 0] obb2_pos_y,
 input logic signed [23 : 0] obb2_vel_x, input logic signed [23 : 0] obb2_vel_y,
 input logic signed [10 : 0] obb2_angle,
@@ -58,86 +58,86 @@ output logic signed [23 : 0] penetration
 //// TEST 1: A onto B
 
 // Project points of A onto axes of B
-logic signed [21 : 0] opnet_46;
-assign opnet_46 = obb1_Point0_x - (obb2_pos_x >>> 2);
-logic signed [21 : 0] opnet_47;
-assign opnet_47 = obb1_Point0_y - (obb2_pos_y >>> 2);
+logic signed [21 : 0] opnet_38;
+assign opnet_38 = obb1_Point0_x - (obb2_pos_x >>> 2);
+logic signed [21 : 0] opnet_39;
+assign opnet_39 = obb1_Point0_y - (obb2_pos_y >>> 2);
 logic signed [23 : 0] Point1_0_u;
 logic signed [23 : 0] Point1_0_v;
-logic signed [36 : 0] opnet_48;
-assign opnet_48 = opnet_46 * obb2_u_x;
-logic signed [36 : 0] opnet_49;
-assign opnet_49 = opnet_47 * obb2_u_y;
-logic signed [22 : 0] opnet_50;
-assign opnet_50 = opnet_48[36:13] + opnet_49[36:13];
-assign Point1_0_u = opnet_50 << 1;
-logic signed [36 : 0] opnet_51;
-assign opnet_51 = opnet_46 * obb2_v_x;
-logic signed [36 : 0] opnet_52;
-assign opnet_52 = opnet_47 * obb2_v_y;
-logic signed [22 : 0] opnet_53;
-assign opnet_53 = opnet_51[36:13] + opnet_52[36:13];
-assign Point1_0_v = opnet_53 << 1;
-logic signed [21 : 0] opnet_54;
-assign opnet_54 = obb1_Point1_x - (obb2_pos_x >>> 2);
-logic signed [21 : 0] opnet_55;
-assign opnet_55 = obb1_Point1_y - (obb2_pos_y >>> 2);
+logic signed [35 : 0] opnet_40;
+assign opnet_40 = opnet_38 * obb2_u_x;
+logic signed [35 : 0] opnet_41;
+assign opnet_41 = opnet_39 * obb2_u_y;
+logic signed [35 : 0] opnet_42;
+assign opnet_42 = opnet_40 + opnet_41;
+assign Point1_0_u = opnet_42 >>> 12;
+logic signed [35 : 0] opnet_43;
+assign opnet_43 = opnet_38 * obb2_v_x;
+logic signed [35 : 0] opnet_44;
+assign opnet_44 = opnet_39 * obb2_v_y;
+logic signed [35 : 0] opnet_45;
+assign opnet_45 = opnet_43 + opnet_44;
+assign Point1_0_v = opnet_45 >>> 12;
+logic signed [21 : 0] opnet_46;
+assign opnet_46 = obb1_Point1_x - (obb2_pos_x >>> 2);
+logic signed [21 : 0] opnet_47;
+assign opnet_47 = obb1_Point1_y - (obb2_pos_y >>> 2);
 logic signed [23 : 0] Point1_1_u;
 logic signed [23 : 0] Point1_1_v;
-logic signed [36 : 0] opnet_56;
-assign opnet_56 = opnet_54 * obb2_u_x;
-logic signed [36 : 0] opnet_57;
-assign opnet_57 = opnet_55 * obb2_u_y;
-logic signed [22 : 0] opnet_58;
-assign opnet_58 = opnet_56[36:13] + opnet_57[36:13];
-assign Point1_1_u = opnet_58 << 1;
-logic signed [36 : 0] opnet_59;
-assign opnet_59 = opnet_54 * obb2_v_x;
-logic signed [36 : 0] opnet_60;
-assign opnet_60 = opnet_55 * obb2_v_y;
-logic signed [22 : 0] opnet_61;
-assign opnet_61 = opnet_59[36:13] + opnet_60[36:13];
-assign Point1_1_v = opnet_61 << 1;
-logic signed [21 : 0] opnet_62;
-assign opnet_62 = obb1_Point2_x - (obb2_pos_x >>> 2);
-logic signed [21 : 0] opnet_63;
-assign opnet_63 = obb1_Point2_y - (obb2_pos_y >>> 2);
+logic signed [35 : 0] opnet_48;
+assign opnet_48 = opnet_46 * obb2_u_x;
+logic signed [35 : 0] opnet_49;
+assign opnet_49 = opnet_47 * obb2_u_y;
+logic signed [35 : 0] opnet_50;
+assign opnet_50 = opnet_48 + opnet_49;
+assign Point1_1_u = opnet_50 >>> 12;
+logic signed [35 : 0] opnet_51;
+assign opnet_51 = opnet_46 * obb2_v_x;
+logic signed [35 : 0] opnet_52;
+assign opnet_52 = opnet_47 * obb2_v_y;
+logic signed [35 : 0] opnet_53;
+assign opnet_53 = opnet_51 + opnet_52;
+assign Point1_1_v = opnet_53 >>> 12;
+logic signed [21 : 0] opnet_54;
+assign opnet_54 = obb1_Point2_x - (obb2_pos_x >>> 2);
+logic signed [21 : 0] opnet_55;
+assign opnet_55 = obb1_Point2_y - (obb2_pos_y >>> 2);
 logic signed [23 : 0] Point1_2_u;
 logic signed [23 : 0] Point1_2_v;
-logic signed [36 : 0] opnet_64;
-assign opnet_64 = opnet_62 * obb2_u_x;
-logic signed [36 : 0] opnet_65;
-assign opnet_65 = opnet_63 * obb2_u_y;
-logic signed [22 : 0] opnet_66;
-assign opnet_66 = opnet_64[36:13] + opnet_65[36:13];
-assign Point1_2_u = opnet_66 << 1;
-logic signed [36 : 0] opnet_67;
-assign opnet_67 = opnet_62 * obb2_v_x;
-logic signed [36 : 0] opnet_68;
-assign opnet_68 = opnet_63 * obb2_v_y;
-logic signed [22 : 0] opnet_69;
-assign opnet_69 = opnet_67[36:13] + opnet_68[36:13];
-assign Point1_2_v = opnet_69 << 1;
-logic signed [21 : 0] opnet_70;
-assign opnet_70 = obb1_Point3_x - (obb2_pos_x >>> 2);
-logic signed [21 : 0] opnet_71;
-assign opnet_71 = obb1_Point3_y - (obb2_pos_y >>> 2);
+logic signed [35 : 0] opnet_56;
+assign opnet_56 = opnet_54 * obb2_u_x;
+logic signed [35 : 0] opnet_57;
+assign opnet_57 = opnet_55 * obb2_u_y;
+logic signed [35 : 0] opnet_58;
+assign opnet_58 = opnet_56 + opnet_57;
+assign Point1_2_u = opnet_58 >>> 12;
+logic signed [35 : 0] opnet_59;
+assign opnet_59 = opnet_54 * obb2_v_x;
+logic signed [35 : 0] opnet_60;
+assign opnet_60 = opnet_55 * obb2_v_y;
+logic signed [35 : 0] opnet_61;
+assign opnet_61 = opnet_59 + opnet_60;
+assign Point1_2_v = opnet_61 >>> 12;
+logic signed [21 : 0] opnet_62;
+assign opnet_62 = obb1_Point3_x - (obb2_pos_x >>> 2);
+logic signed [21 : 0] opnet_63;
+assign opnet_63 = obb1_Point3_y - (obb2_pos_y >>> 2);
 logic signed [23 : 0] Point1_3_u;
 logic signed [23 : 0] Point1_3_v;
-logic signed [36 : 0] opnet_72;
-assign opnet_72 = opnet_70 * obb2_u_x;
-logic signed [36 : 0] opnet_73;
-assign opnet_73 = opnet_71 * obb2_u_y;
-logic signed [22 : 0] opnet_74;
-assign opnet_74 = opnet_72[36:13] + opnet_73[36:13];
-assign Point1_3_u = opnet_74 << 1;
-logic signed [36 : 0] opnet_75;
-assign opnet_75 = opnet_70 * obb2_v_x;
-logic signed [36 : 0] opnet_76;
-assign opnet_76 = opnet_71 * obb2_v_y;
-logic signed [22 : 0] opnet_77;
-assign opnet_77 = opnet_75[36:13] + opnet_76[36:13];
-assign Point1_3_v = opnet_77 << 1;
+logic signed [35 : 0] opnet_64;
+assign opnet_64 = opnet_62 * obb2_u_x;
+logic signed [35 : 0] opnet_65;
+assign opnet_65 = opnet_63 * obb2_u_y;
+logic signed [35 : 0] opnet_66;
+assign opnet_66 = opnet_64 + opnet_65;
+assign Point1_3_u = opnet_66 >>> 12;
+logic signed [35 : 0] opnet_67;
+assign opnet_67 = opnet_62 * obb2_v_x;
+logic signed [35 : 0] opnet_68;
+assign opnet_68 = opnet_63 * obb2_v_y;
+logic signed [35 : 0] opnet_69;
+assign opnet_69 = opnet_67 + opnet_68;
+assign Point1_3_v = opnet_69 >>> 12;
 
 
 // Find max u and v values for rect A
@@ -329,86 +329,86 @@ end
 //// TEST 2: B onto A
 
 // Project points of B onto axes of A
-logic signed [21 : 0] opnet_78;
-assign opnet_78 = obb2_Point0_x - (obb1_pos_x >>> 2);
-logic signed [21 : 0] opnet_79;
-assign opnet_79 = obb2_Point0_y - (obb1_pos_y >>> 2);
+logic signed [21 : 0] opnet_70;
+assign opnet_70 = obb2_Point0_x - (obb1_pos_x >>> 2);
+logic signed [21 : 0] opnet_71;
+assign opnet_71 = obb2_Point0_y - (obb1_pos_y >>> 2);
 logic signed [23 : 0] Point2_0_u;
 logic signed [23 : 0] Point2_0_v;
-logic signed [36 : 0] opnet_80;
-assign opnet_80 = opnet_78 * obb1_u_x;
-logic signed [36 : 0] opnet_81;
-assign opnet_81 = opnet_79 * obb1_u_y;
-logic signed [22 : 0] opnet_82;
-assign opnet_82 = opnet_80[36:13] + opnet_81[36:13];
-assign Point2_0_u = opnet_82 << 1;
-logic signed [36 : 0] opnet_83;
-assign opnet_83 = opnet_78 * obb1_v_x;
-logic signed [36 : 0] opnet_84;
-assign opnet_84 = opnet_79 * obb1_v_y;
-logic signed [22 : 0] opnet_85;
-assign opnet_85 = opnet_83[36:13] + opnet_84[36:13];
-assign Point2_0_v = opnet_85 << 1;
-logic signed [21 : 0] opnet_86;
-assign opnet_86 = obb2_Point1_x - (obb1_pos_x >>> 2);
-logic signed [21 : 0] opnet_87;
-assign opnet_87 = obb2_Point1_y - (obb1_pos_y >>> 2);
+logic signed [35 : 0] opnet_72;
+assign opnet_72 = opnet_70 * obb1_u_x;
+logic signed [35 : 0] opnet_73;
+assign opnet_73 = opnet_71 * obb1_u_y;
+logic signed [35 : 0] opnet_74;
+assign opnet_74 = opnet_72 + opnet_73;
+assign Point2_0_u = opnet_74 >>> 12;
+logic signed [35 : 0] opnet_75;
+assign opnet_75 = opnet_70 * obb1_v_x;
+logic signed [35 : 0] opnet_76;
+assign opnet_76 = opnet_71 * obb1_v_y;
+logic signed [35 : 0] opnet_77;
+assign opnet_77 = opnet_75 + opnet_76;
+assign Point2_0_v = opnet_77 >>> 12;
+logic signed [21 : 0] opnet_78;
+assign opnet_78 = obb2_Point1_x - (obb1_pos_x >>> 2);
+logic signed [21 : 0] opnet_79;
+assign opnet_79 = obb2_Point1_y - (obb1_pos_y >>> 2);
 logic signed [23 : 0] Point2_1_u;
 logic signed [23 : 0] Point2_1_v;
-logic signed [36 : 0] opnet_88;
-assign opnet_88 = opnet_86 * obb1_u_x;
-logic signed [36 : 0] opnet_89;
-assign opnet_89 = opnet_87 * obb1_u_y;
-logic signed [22 : 0] opnet_90;
-assign opnet_90 = opnet_88[36:13] + opnet_89[36:13];
-assign Point2_1_u = opnet_90 << 1;
-logic signed [36 : 0] opnet_91;
-assign opnet_91 = opnet_86 * obb1_v_x;
-logic signed [36 : 0] opnet_92;
-assign opnet_92 = opnet_87 * obb1_v_y;
-logic signed [22 : 0] opnet_93;
-assign opnet_93 = opnet_91[36:13] + opnet_92[36:13];
-assign Point2_1_v = opnet_93 << 1;
-logic signed [21 : 0] opnet_94;
-assign opnet_94 = obb2_Point2_x - (obb1_pos_x >>> 2);
-logic signed [21 : 0] opnet_95;
-assign opnet_95 = obb2_Point2_y - (obb1_pos_y >>> 2);
+logic signed [35 : 0] opnet_80;
+assign opnet_80 = opnet_78 * obb1_u_x;
+logic signed [35 : 0] opnet_81;
+assign opnet_81 = opnet_79 * obb1_u_y;
+logic signed [35 : 0] opnet_82;
+assign opnet_82 = opnet_80 + opnet_81;
+assign Point2_1_u = opnet_82 >>> 12;
+logic signed [35 : 0] opnet_83;
+assign opnet_83 = opnet_78 * obb1_v_x;
+logic signed [35 : 0] opnet_84;
+assign opnet_84 = opnet_79 * obb1_v_y;
+logic signed [35 : 0] opnet_85;
+assign opnet_85 = opnet_83 + opnet_84;
+assign Point2_1_v = opnet_85 >>> 12;
+logic signed [21 : 0] opnet_86;
+assign opnet_86 = obb2_Point2_x - (obb1_pos_x >>> 2);
+logic signed [21 : 0] opnet_87;
+assign opnet_87 = obb2_Point2_y - (obb1_pos_y >>> 2);
 logic signed [23 : 0] Point2_2_u;
 logic signed [23 : 0] Point2_2_v;
-logic signed [36 : 0] opnet_96;
-assign opnet_96 = opnet_94 * obb1_u_x;
-logic signed [36 : 0] opnet_97;
-assign opnet_97 = opnet_95 * obb1_u_y;
-logic signed [22 : 0] opnet_98;
-assign opnet_98 = opnet_96[36:13] + opnet_97[36:13];
-assign Point2_2_u = opnet_98 << 1;
-logic signed [36 : 0] opnet_99;
-assign opnet_99 = opnet_94 * obb1_v_x;
-logic signed [36 : 0] opnet_100;
-assign opnet_100 = opnet_95 * obb1_v_y;
-logic signed [22 : 0] opnet_101;
-assign opnet_101 = opnet_99[36:13] + opnet_100[36:13];
-assign Point2_2_v = opnet_101 << 1;
-logic signed [21 : 0] opnet_102;
-assign opnet_102 = obb2_Point3_x - (obb1_pos_x >>> 2);
-logic signed [21 : 0] opnet_103;
-assign opnet_103 = obb2_Point3_y - (obb1_pos_y >>> 2);
+logic signed [35 : 0] opnet_88;
+assign opnet_88 = opnet_86 * obb1_u_x;
+logic signed [35 : 0] opnet_89;
+assign opnet_89 = opnet_87 * obb1_u_y;
+logic signed [35 : 0] opnet_90;
+assign opnet_90 = opnet_88 + opnet_89;
+assign Point2_2_u = opnet_90 >>> 12;
+logic signed [35 : 0] opnet_91;
+assign opnet_91 = opnet_86 * obb1_v_x;
+logic signed [35 : 0] opnet_92;
+assign opnet_92 = opnet_87 * obb1_v_y;
+logic signed [35 : 0] opnet_93;
+assign opnet_93 = opnet_91 + opnet_92;
+assign Point2_2_v = opnet_93 >>> 12;
+logic signed [21 : 0] opnet_94;
+assign opnet_94 = obb2_Point3_x - (obb1_pos_x >>> 2);
+logic signed [21 : 0] opnet_95;
+assign opnet_95 = obb2_Point3_y - (obb1_pos_y >>> 2);
 logic signed [23 : 0] Point2_3_u;
 logic signed [23 : 0] Point2_3_v;
-logic signed [36 : 0] opnet_104;
-assign opnet_104 = opnet_102 * obb1_u_x;
-logic signed [36 : 0] opnet_105;
-assign opnet_105 = opnet_103 * obb1_u_y;
-logic signed [22 : 0] opnet_106;
-assign opnet_106 = opnet_104[36:13] + opnet_105[36:13];
-assign Point2_3_u = opnet_106 << 1;
-logic signed [36 : 0] opnet_107;
-assign opnet_107 = opnet_102 * obb1_v_x;
-logic signed [36 : 0] opnet_108;
-assign opnet_108 = opnet_103 * obb1_v_y;
-logic signed [22 : 0] opnet_109;
-assign opnet_109 = opnet_107[36:13] + opnet_108[36:13];
-assign Point2_3_v = opnet_109 << 1;
+logic signed [35 : 0] opnet_96;
+assign opnet_96 = opnet_94 * obb1_u_x;
+logic signed [35 : 0] opnet_97;
+assign opnet_97 = opnet_95 * obb1_u_y;
+logic signed [35 : 0] opnet_98;
+assign opnet_98 = opnet_96 + opnet_97;
+assign Point2_3_u = opnet_98 >>> 12;
+logic signed [35 : 0] opnet_99;
+assign opnet_99 = opnet_94 * obb1_v_x;
+logic signed [35 : 0] opnet_100;
+assign opnet_100 = opnet_95 * obb1_v_y;
+logic signed [35 : 0] opnet_101;
+assign opnet_101 = opnet_99 + opnet_100;
+assign Point2_3_v = opnet_101 >>> 12;
 
 
 // Find max u and v values for rect B
@@ -645,12 +645,10 @@ always_comb begin
 
 // First pass
 min_pen_uA = pen_min_uA;
-opnet_110 = ~(obb2_u_x) + 1'b1;
-
-opnet_111 = ~(obb2_u_y) + 1'b1;
-
-normal_uA_x = opnet_110;
-normal_uA_y = opnet_111;
+opnet_102 = ~(obb2_u_x) + 1'b1;
+opnet_103 = ~(obb2_u_y) + 1'b1;
+normal_uA_x = opnet_102;
+normal_uA_y = opnet_103;
 location_uA_x = point_min_uA_x;
 location_uA_y = point_min_uA_y;
 if (pen_max_uA < pen_min_uA) begin
@@ -662,12 +660,10 @@ location_uA_y = point_max_uA_y;
 end
 
 min_pen_vA = pen_min_vA;
-opnet_112 = ~(obb2_v_x) + 1'b1;
-
-opnet_113 = ~(obb2_v_y) + 1'b1;
-
-normal_vA_x = opnet_112;
-normal_vA_y = opnet_113;
+opnet_104 = ~(obb2_v_x) + 1'b1;
+opnet_105 = ~(obb2_v_y) + 1'b1;
+normal_vA_x = opnet_104;
+normal_vA_y = opnet_105;
 location_vA_x = point_min_vA_x;
 location_vA_y = point_min_vA_y;
 if (pen_max_vA < pen_min_vA) begin
@@ -679,12 +675,10 @@ location_vA_y = point_max_vA_y;
 end
 
 min_pen_uB = pen_min_uB;
-opnet_114 = ~(obb1_u_x) + 1'b1;
-
-opnet_115 = ~(obb1_u_y) + 1'b1;
-
-normal_uB_x = opnet_114;
-normal_uB_y = opnet_115;
+opnet_106 = ~(obb1_u_x) + 1'b1;
+opnet_107 = ~(obb1_u_y) + 1'b1;
+normal_uB_x = opnet_106;
+normal_uB_y = opnet_107;
 location_uB_x = point_min_uB_x;
 location_uB_y = point_min_uB_y;
 if (pen_max_uB < pen_min_uB) begin
@@ -696,12 +690,10 @@ location_uB_y = point_max_uB_y;
 end
 
 min_pen_vB = pen_min_vB;
-opnet_116 = ~(obb1_v_x) + 1'b1;
-
-opnet_117 = ~(obb1_v_y) + 1'b1;
-
-normal_vB_x = opnet_116;
-normal_vB_y = opnet_117;
+opnet_108 = ~(obb1_v_x) + 1'b1;
+opnet_109 = ~(obb1_v_y) + 1'b1;
+normal_vB_x = opnet_108;
+normal_vB_y = opnet_109;
 location_vB_x = point_min_vB_x;
 location_vB_y = point_min_vB_y;
 if (pen_max_vB < pen_min_vB) begin
@@ -756,14 +748,14 @@ end
 penetration = min_pen;
 
 end
-logic signed [15 : 0] opnet_110;
-logic signed [15 : 0] opnet_111;
-logic signed [15 : 0] opnet_112;
-logic signed [15 : 0] opnet_113;
-logic signed [15 : 0] opnet_114;
-logic signed [15 : 0] opnet_115;
-logic signed [15 : 0] opnet_116;
-logic signed [15 : 0] opnet_117;
+logic signed [15 : 0] opnet_102;
+logic signed [15 : 0] opnet_103;
+logic signed [15 : 0] opnet_104;
+logic signed [15 : 0] opnet_105;
+logic signed [15 : 0] opnet_106;
+logic signed [15 : 0] opnet_107;
+logic signed [15 : 0] opnet_108;
+logic signed [15 : 0] opnet_109;
 
 // If any penetration is negative, there is no collision
 assign is_collision = ~min_pen[23];
