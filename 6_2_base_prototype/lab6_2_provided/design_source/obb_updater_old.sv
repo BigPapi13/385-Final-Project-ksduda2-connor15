@@ -22,12 +22,12 @@ output logic signed [10 : 0] next_angle,
 output logic signed [10 : 0] next_omega
 );
 
-logic signed [23 : 0] opnet_348;
-assign opnet_348 = prev_pos_x + (next_vel_x >>> 3);
-logic signed [23 : 0] opnet_349;
-assign opnet_349 = prev_pos_y + (next_vel_y >>> 3);
-assign next_pos_x = opnet_348;
-assign next_pos_y = opnet_349;
+logic signed [23 : 0] opnet_358;
+assign opnet_358 = prev_pos_x + (next_vel_x >>> 3);
+logic signed [23 : 0] opnet_359;
+assign opnet_359 = prev_pos_y + (next_vel_y >>> 3);
+assign next_pos_x = opnet_358;
+assign next_pos_y = opnet_359;
 assign next_omega = prev_omega;
 assign next_width = prev_width;
 assign next_height = prev_height;
@@ -35,34 +35,34 @@ assign next_height = prev_height;
 always_comb begin
 next_vel_x = prev_vel_x;
 if(prev_pos_x < 0 || prev_pos_x > 24'sb010000000000000000000000) begin
-opnet_350 = ~(prev_vel_x) + 1'b1;
-next_vel_x = opnet_350;
+opnet_360 = ~(prev_vel_x) + 1'b1;
+next_vel_x = opnet_360;
 end
 
 next_vel_y = prev_vel_y;
 if(prev_pos_y < 0 || prev_pos_y > 24'sb010000000000000000000000) begin
-opnet_351 = ~(prev_vel_y) + 1'b1;
-next_vel_y = opnet_351;
+opnet_361 = ~(prev_vel_y) + 1'b1;
+next_vel_y = opnet_361;
 end
 end
-logic signed [23 : 0] opnet_350;
-logic signed [23 : 0] opnet_351;
+logic signed [23 : 0] opnet_360;
+logic signed [23 : 0] opnet_361;
 
 // Ensure next state angle is within bounds of [0, 2pi] 
-logic signed [10 : 0] opnet_352;
-assign opnet_352 = prev_angle + prev_omega;
+logic signed [10 : 0] opnet_362;
+assign opnet_362 = prev_angle + prev_omega;
 
 always_comb begin
-next_angle = opnet_352;
-    if (opnet_352 > 11'sb01100100100) begin
-opnet_353 = opnet_352 - 11'sb01100100100;
-next_angle = opnet_353;
-    end else if (opnet_352 < 11'sb0) begin
-opnet_354 = opnet_352 + 11'sb01100100100;
-next_angle = opnet_354;
+next_angle = opnet_362;
+    if (opnet_362 > 11'sb01100100100) begin
+opnet_363 = opnet_362 - 11'sb01100100100;
+next_angle = opnet_363;
+    end else if (opnet_362 < 11'sb0) begin
+opnet_364 = opnet_362 + 11'sb01100100100;
+next_angle = opnet_364;
     end
 end
-logic signed [10 : 0] opnet_353;
-logic signed [10 : 0] opnet_354;
+logic signed [10 : 0] opnet_363;
+logic signed [10 : 0] opnet_364;
 
 endmodule
