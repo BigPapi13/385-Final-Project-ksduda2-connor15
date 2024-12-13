@@ -35,6 +35,7 @@ connect_debug_port u_ila_0/probe2 [get_nets [list display_frame_done]]
 set_property IOSTANDARD LVCMOS25 [get_ports start_signal]
 set_property PACKAGE_PIN J2 [get_ports start_signal]
 
+
 create_debug_core u_ila_0 ila
 set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
 set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_0]
@@ -53,6 +54,14 @@ create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
 set_property port_width 1 [get_debug_ports u_ila_0/probe1]
 connect_debug_port u_ila_0/probe1 [get_nets [list hub75_clk_OBUF]]
+set_property PACKAGE_PIN J16 [get_ports miso]
+set_property IOSTANDARD LVCMOS25 [get_ports miso]
+set_property PACKAGE_PIN E15 [get_ports mosi]
+set_property PACKAGE_PIN E14 [get_ports sclk]
+set_property PACKAGE_PIN J14 [get_ports ss]
+set_property IOSTANDARD LVCMOS25 [get_ports mosi]
+set_property IOSTANDARD LVCMOS25 [get_ports sclk]
+set_property IOSTANDARD LVCMOS25 [get_ports ss]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

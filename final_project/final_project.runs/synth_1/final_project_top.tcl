@@ -91,6 +91,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
+  C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/ADXL345.sv
   C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/Color_Mapper.sv
   C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/box_box_resolver.sv
   C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/clock_divider.sv
@@ -100,10 +101,13 @@ read_verilog -library xil_defaultlib -sv {
   C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/frame_manager.sv
   C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/inverter.sv
   C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/memory_manager.sv
+  C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/neg_edge_det.sv
   C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/obb_reg.sv
   C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/obb_updater.sv
+  C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/pos_edge_det.sv
   C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/simulation_top.sv
   C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/sine.sv
+  C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/spi_module.sv
   C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/sync_pdp_ram.sv
   C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/the_juicer.sv
   C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/final_project/final_project.srcs/sources_1/new/final_project_top.sv

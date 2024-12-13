@@ -2,6 +2,7 @@
 
 // Calculates the next state for a given OBB
 module obb_updater(
+    input logic [15:0] x,
     input logic impulse_en,     // Whether impulses should be applied
     input logic update_en,      // Whether position/rotation should be updated
     input logic signed [23 : 0] impulse_x, input logic signed [23 : 0] impulse_y,
@@ -66,7 +67,7 @@ logic signed [23 : 0] opnet_350;
 // DELETE THIS LATER
 //   - Over simplified wall bouncing
 always_comb begin
-next_vel_x = n_vel_x;
+next_vel_x = n_vel_x + x;
 if(prev_pos_x < 0 || prev_pos_x > 24'sb010000000000000000000000) begin
 opnet_351 = ~(n_vel_x) + 1'b1;
 next_vel_x = opnet_351;
@@ -107,10 +108,10 @@ always_comb begin
 next_angle = next_angle_uncorrected;
     if (next_angle_uncorrected > 11'sb01100100100) begin
 opnet_356 = next_angle_uncorrected - 11'sb01100100100;
-next_angle = opnet_356;
+next_angle = (opnet_356 * 24'sb000001100110011001100110) >>> 19;
     end else if (next_angle_uncorrected < 11'sb0) begin
 opnet_357 = next_angle_uncorrected + 11'sb01100100100;
-next_angle = opnet_357;
+next_angle = (opnet_357 * 24'sb000001100110011001100110) >>> 19;
     end
 end
 logic signed [10 : 0] opnet_356;

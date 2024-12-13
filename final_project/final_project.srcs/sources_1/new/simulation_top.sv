@@ -19,6 +19,7 @@ module simulation_top (
     input logic [5:0] drawX,
     input logic [5:0] drawY,
     input logic frame_done,
+    input logic [15:0] x,
     output logic [11:0] write_data
 );
     
@@ -60,7 +61,7 @@ logic signed [23 : 0] obb1_ld_vel_x;
 logic signed [23 : 0] obb1_ld_vel_y;
 logic signed [10 : 0] obb1_ld_angle;
 logic signed [10 : 0] obb1_ld_omega;
-    obb_reg #(.X_INIT(10), .Y_INIT(32), .X_VEL_INIT(0.3), .Y_VEL_INIT(-0.1), .ANGLE_INIT(0.7), .MASS_INIT(4), .OMEGA_INIT(0)) obb1(
+    obb_reg #(.X_INIT(10), .Y_INIT(32), .X_VEL_INIT(0), .Y_VEL_INIT(0), .ANGLE_INIT(0.7), .MASS_INIT(4), .OMEGA_INIT(0)) obb1(
         .ld_width(obb1_ld_width),
 .ld_height(obb1_ld_height),
 .ld_inertia(obb1_ld_inertia),
@@ -112,7 +113,7 @@ logic signed [23 : 0] obb2_ld_vel_x;
 logic signed [23 : 0] obb2_ld_vel_y;
 logic signed [10 : 0] obb2_ld_angle;
 logic signed [10 : 0] obb2_ld_omega;
-    obb_reg #(.X_INIT(45), .Y_INIT(32), .X_VEL_INIT(-0.2), .Y_VEL_INIT(0.5), .WIDTH_INIT(15), .HEIGHT_INIT(5), .MASS_INIT(4), .OMEGA_INIT(0)) obb2(
+    obb_reg #(.X_INIT(45), .Y_INIT(32), .X_VEL_INIT(0), .Y_VEL_INIT(0), .WIDTH_INIT(15), .HEIGHT_INIT(5), .MASS_INIT(4), .OMEGA_INIT(0)) obb2(
         .ld_width(obb2_ld_width),
 .ld_height(obb2_ld_height),
 .ld_inertia(obb2_ld_inertia),
@@ -201,6 +202,7 @@ logic signed [10 : 0] impulse2_rotational_impulse;
     // Logic for determining next state
     logic is_collision;
     obb_updater obb1_updater(
+        .x(x),
         .impulse_en(is_collision & ~ignore_impulse),
         .update_en(1'b1),
         .impulse_x(impulse1_impulse_x),
@@ -233,6 +235,7 @@ logic signed [10 : 0] impulse2_rotational_impulse;
     );
 
     obb_updater obb2_updater(
+        .x(x),
         .impulse_en(is_collision & ~ignore_impulse),
         .update_en(1'b1),
         .impulse_x(impulse2_impulse_x),
