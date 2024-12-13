@@ -21,7 +21,7 @@
                             "slave_index": 0,
                             "bscan_switch_index": 0
                         },
-                        "uuid": "23E7D65A79BC59F7BC47406C1714DFAE",
+                        "uuid": "23e7d65a79bc59f7bc47406c1714dfae",
                         "pins": [
                             {
                                 "name": "probe0",
@@ -34,56 +34,56 @@
                                 "portIndex": 0,
                                 "nets": [
                                     {
-                                        "name": "data_word_recv_OBUF",
+                                        "name": "x_OBUF",
                                         "isBus": true,
                                         "subnets": [
                                             {
-                                                "name": "data_word_recv_OBUF[15]"
+                                                "name": "x_OBUF[15]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[14]"
+                                                "name": "x_OBUF[14]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[13]"
+                                                "name": "x_OBUF[13]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[12]"
+                                                "name": "x_OBUF[12]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[11]"
+                                                "name": "x_OBUF[11]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[10]"
+                                                "name": "x_OBUF[10]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[9]"
+                                                "name": "x_OBUF[9]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[8]"
+                                                "name": "x_OBUF[8]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[7]"
+                                                "name": "x_OBUF[7]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[6]"
+                                                "name": "x_OBUF[6]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[5]"
+                                                "name": "x_OBUF[5]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[4]"
+                                                "name": "x_OBUF[4]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[3]"
+                                                "name": "x_OBUF[3]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[2]"
+                                                "name": "x_OBUF[2]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[1]"
+                                                "name": "x_OBUF[1]"
                                             },
                                             {
-                                                "name": "data_word_recv_OBUF[0]"
+                                                "name": "x_OBUF[0]"
                                             }
                                         ]
                                     }
@@ -94,40 +94,14 @@
                                 "id": 1,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": true,
+                                "isVector": false,
                                 "leftIndex": 0,
-                                "rightIndex": 7,
+                                "rightIndex": 0,
                                 "portIndex": 1,
                                 "nets": [
                                     {
-                                        "name": "x0_OBUF",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "x0_OBUF[7]"
-                                            },
-                                            {
-                                                "name": "x0_OBUF[6]"
-                                            },
-                                            {
-                                                "name": "x0_OBUF[5]"
-                                            },
-                                            {
-                                                "name": "x0_OBUF[4]"
-                                            },
-                                            {
-                                                "name": "x0_OBUF[3]"
-                                            },
-                                            {
-                                                "name": "x0_OBUF[2]"
-                                            },
-                                            {
-                                                "name": "x0_OBUF[1]"
-                                            },
-                                            {
-                                                "name": "x0_OBUF[0]"
-                                            }
-                                        ]
+                                        "name": "clk_IBUF",
+                                        "isBus": false
                                     }
                                 ]
                             },
@@ -142,7 +116,7 @@
                                 "portIndex": 2,
                                 "nets": [
                                     {
-                                        "name": "clk_IBUF",
+                                        "name": "miso_IBUF",
                                         "isBus": false
                                     }
                                 ]
@@ -158,7 +132,7 @@
                                 "portIndex": 3,
                                 "nets": [
                                     {
-                                        "name": "miso_IBUF",
+                                        "name": "mosi_OBUF",
                                         "isBus": false
                                     }
                                 ]
@@ -174,7 +148,7 @@
                                 "portIndex": 4,
                                 "nets": [
                                     {
-                                        "name": "mosi_OBUF",
+                                        "name": "sclk_OBUF",
                                         "isBus": false
                                     }
                                 ]
@@ -190,7 +164,7 @@
                                 "portIndex": 5,
                                 "nets": [
                                     {
-                                        "name": "sclk_OBUF",
+                                        "name": "ss_OBUF",
                                         "isBus": false
                                     }
                                 ]
@@ -204,22 +178,6 @@
                                 "leftIndex": 0,
                                 "rightIndex": 0,
                                 "portIndex": 6,
-                                "nets": [
-                                    {
-                                        "name": "ss_OBUF",
-                                        "isBus": false
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe7",
-                                "id": 7,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": false,
-                                "leftIndex": 0,
-                                "rightIndex": 0,
-                                "portIndex": 7,
                                 "nets": [
                                     {
                                         "name": "test_clock_OBUF",
