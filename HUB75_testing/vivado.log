@@ -2,10 +2,10 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Dec 13 00:55:09 2024
-# Process ID: 8900
+# Start of session at: Fri Dec 13 01:48:55 2024
+# Process ID: 46604
 # Current directory: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent50648 C:\Users\conno\Documents\Stuff\UIUC\2024-2025\FALL\ECE385\final\repo\HUB75_testing\HUB75_testing.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2556 C:\Users\conno\Documents\Stuff\UIUC\2024-2025\FALL\ECE385\final\repo\HUB75_testing\HUB75_testing.xpr
 # Log file: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/vivado.log
 # Journal file: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing\vivado.jou
 # Running On: Connors_laptop, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 12, Host memory: 34042 MB
@@ -81,4 +81,699 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
-open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1130.977 ; gain = 202.195
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1116.184 ; gain = 165.285
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'frame_manager_tb_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'frame_manager_tb_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim/test-bars-32.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim/test-bars-16.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim/test-bars-16-64x64.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj frame_manager_tb_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.gen/sources_1/ip/display_buffer_bram/sim/display_buffer_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_buffer_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/clock_divider.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/memory_manager.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_manager
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/sync_pdp_ram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_pdp_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/controller_moving_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_moving_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/controller_stillframe_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_stillframe_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/frame_manager.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/memory_initialization.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_initialization
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/spi_slave.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_slave
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/frame_manager_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/bram_tests.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bram_tests
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_moving_test_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_moving_test_sim
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_stllfrme_test_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_stllfrm_test_sim
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/spi_slave_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/sync_pdp_ram_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/tb1_modified.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1_modified
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/frame_manager_tb_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager_tb_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot frame_manager_tb_sim_behav xil_defaultlib.frame_manager_tb_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot frame_manager_tb_sim_behav xil_defaultlib.frame_manager_tb_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock_divider(DIV_N=5)
+Compiling module xil_defaultlib.memory_manager
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="spa...
+Compiling module xil_defaultlib.display_buffer_bram
+Compiling module xil_defaultlib.sync_pdp_ram(BITS_PER_PIXEL=16)
+Compiling module xil_defaultlib.controller(BITS_PER_PIXEL=16)
+Compiling module xil_defaultlib.frame_manager
+Compiling module xil_defaultlib.frame_manager_tb_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot frame_manager_tb_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "frame_manager_tb_sim_behav -key {Behavioral:sim_1:Functional:frame_manager_tb_sim} -tclbatch {frame_manager_tb_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source frame_manager_tb_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run all
+Block Memory Generator module frame_manager_tb_sim.fm.dut.sync_pdp_ram.buffer_top.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module frame_manager_tb_sim.fm.dut.sync_pdp_ram.buffer_bottom.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 1168.168 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 1168.168 ; gain = 14.070
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:22 . Memory (MB): peak = 1168.168 ; gain = 14.070
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+relaunch_sim
+INFO: xsimkernel Simulation Memory Usage: 18676 KB (Peak: 18676 KB), Simulation CPU Usage: 11296 ms
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'frame_manager_tb_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'frame_manager_tb_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim/test-bars-32.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim/test-bars-16.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim/test-bars-16-64x64.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj frame_manager_tb_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/clock_divider.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/memory_manager.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_manager
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/sync_pdp_ram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_pdp_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/controller_moving_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_moving_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/controller_stillframe_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_stillframe_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/frame_manager.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/memory_initialization.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_initialization
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/spi_slave.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_slave
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/frame_manager_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/bram_tests.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bram_tests
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_moving_test_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_moving_test_sim
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_stllfrme_test_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_stllfrm_test_sim
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/spi_slave_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/sync_pdp_ram_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/tb1_modified.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1_modified
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/frame_manager_tb_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager_tb_sim
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'frame_manager_tb_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot frame_manager_tb_sim_behav xil_defaultlib.frame_manager_tb_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot frame_manager_tb_sim_behav xil_defaultlib.frame_manager_tb_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock_divider(DIV_N=5)
+Compiling module xil_defaultlib.memory_manager
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="spa...
+Compiling module xil_defaultlib.display_buffer_bram
+Compiling module xil_defaultlib.sync_pdp_ram(BITS_PER_PIXEL=16)
+Compiling module xil_defaultlib.controller(BITS_PER_PIXEL=16)
+Compiling module xil_defaultlib.frame_manager
+Compiling module xil_defaultlib.frame_manager_tb_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot frame_manager_tb_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+Block Memory Generator module frame_manager_tb_sim.fm.dut.sync_pdp_ram.buffer_top.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module frame_manager_tb_sim.fm.dut.sync_pdp_ram.buffer_bottom.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+relaunch_xsim_kernel: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1173.242 ; gain = 3.398
+INFO: [Common 17-344] 'relaunch_xsim_kernel' was cancelled
+INFO: [Common 17-344] 'relaunch_sim' was cancelled
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'frame_manager_tb_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj frame_manager_tb_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/clock_divider.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/memory_manager.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_manager
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/sync_pdp_ram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_pdp_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/controller_moving_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_moving_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/controller_stillframe_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_stillframe_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/frame_manager.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/memory_initialization.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_initialization
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/spi_slave.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_slave
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/frame_manager_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/bram_tests.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bram_tests
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_moving_test_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_moving_test_sim
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_stllfrme_test_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_stllfrm_test_sim
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/spi_slave_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/sync_pdp_ram_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/tb1_modified.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1_modified
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/frame_manager_tb_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager_tb_sim
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'frame_manager_tb_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot frame_manager_tb_sim_behav xil_defaultlib.frame_manager_tb_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot frame_manager_tb_sim_behav xil_defaultlib.frame_manager_tb_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock_divider(DIV_N=5)
+Compiling module xil_defaultlib.memory_manager
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="spa...
+Compiling module xil_defaultlib.display_buffer_bram
+Compiling module xil_defaultlib.sync_pdp_ram(BITS_PER_PIXEL=16)
+Compiling module xil_defaultlib.controller(BITS_PER_PIXEL=16)
+Compiling module xil_defaultlib.frame_manager
+Compiling module xil_defaultlib.frame_manager_tb_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot frame_manager_tb_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+Block Memory Generator module frame_manager_tb_sim.fm.dut.sync_pdp_ram.buffer_top.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module frame_manager_tb_sim.fm.dut.sync_pdp_ram.buffer_bottom.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1185.750 ; gain = 12.508
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+relaunch_xsim_kernel: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1185.750 ; gain = 12.508
+INFO: [Common 17-344] 'relaunch_xsim_kernel' was cancelled
+INFO: [Common 17-344] 'relaunch_sim' was cancelled
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/utils_1/imports/synth_1/controller_stillframe_test.dcp with file C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/synth_1/controller_moving_test.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/ip/display_buffer_bram/display_buffer_bram.xci' is already up-to-date
+[Fri Dec 13 01:52:24 2024] Launched synth_1...
+Run output will be captured here: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/synth_1/runme.log
+[Fri Dec 13 01:52:24 2024] Launched impl_1...
+Run output will be captured here: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2022.2
+  **** Build date : Oct 14 2022 at 05:18:10
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2022.2.0
+  ****** Build date   : Oct 04 2022-18:25:37
+    **** Build number : 2022.2.1664925937
+      ** Copyright 2017-2024 Xilinx, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000014A
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/frame_manager_tb.bit} [get_hw_devices xc7s50_0]
+current_hw_device [get_hw_devices xc7s50_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
+INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/frame_manager_tb.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'frame_manager_tb_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj frame_manager_tb_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/clock_divider.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/memory_manager.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_manager
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/sync_pdp_ram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_pdp_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/controller_moving_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_moving_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/controller_stillframe_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_stillframe_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/frame_manager.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/memory_initialization.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_initialization
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/spi_slave.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_slave
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/frame_manager_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/bram_tests.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bram_tests
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_moving_test_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_moving_test_sim
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_stllfrme_test_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_stllfrm_test_sim
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/spi_slave_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/sync_pdp_ram_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/tb1_modified.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1_modified
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/frame_manager_tb_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager_tb_sim
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'frame_manager_tb_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot frame_manager_tb_sim_behav xil_defaultlib.frame_manager_tb_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot frame_manager_tb_sim_behav xil_defaultlib.frame_manager_tb_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock_divider(DIV_N=5)
+Compiling module xil_defaultlib.memory_manager
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="spa...
+Compiling module xil_defaultlib.display_buffer_bram
+Compiling module xil_defaultlib.sync_pdp_ram(BITS_PER_PIXEL=16)
+Compiling module xil_defaultlib.controller(BITS_PER_PIXEL=16)
+Compiling module xil_defaultlib.frame_manager
+Compiling module xil_defaultlib.frame_manager_tb_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot frame_manager_tb_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+ERROR: [Labtools 27-1832] create_wave_config not a supported tcl command in labtools hardware mode. Default wave configurations are automatically created when triggering an ILA core.
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 3418.242 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'frame_manager_tb_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'frame_manager_tb_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim/test-bars-32.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim/test-bars-16.txt'
+INFO: [SIM-utils-43] Exported 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim/test-bars-16-64x64.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj frame_manager_tb_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/clock_divider.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/memory_manager.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_manager
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/sync_pdp_ram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_pdp_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/controller_moving_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_moving_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/controller_stillframe_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_stillframe_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/frame_manager.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/memory_initialization.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_initialization
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/spi_slave.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_slave
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/frame_manager_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/bram_tests.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bram_tests
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_moving_test_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_moving_test_sim
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_stllfrme_test_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_stllfrm_test_sim
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/spi_slave_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/sync_pdp_ram_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/tb1_modified.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1_modified
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/frame_manager_tb_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager_tb_sim
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot frame_manager_tb_sim_behav xil_defaultlib.frame_manager_tb_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot frame_manager_tb_sim_behav xil_defaultlib.frame_manager_tb_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock_divider(DIV_N=5)
+Compiling module xil_defaultlib.memory_manager
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="spa...
+Compiling module xil_defaultlib.display_buffer_bram
+Compiling module xil_defaultlib.sync_pdp_ram(BITS_PER_PIXEL=16)
+Compiling module xil_defaultlib.controller(BITS_PER_PIXEL=16)
+Compiling module xil_defaultlib.frame_manager
+Compiling module xil_defaultlib.frame_manager_tb_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot frame_manager_tb_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "frame_manager_tb_sim_behav -key {Behavioral:sim_1:Functional:frame_manager_tb_sim} -tclbatch {frame_manager_tb_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source frame_manager_tb_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run all
+Block Memory Generator module frame_manager_tb_sim.fm.dut.sync_pdp_ram.buffer_top.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module frame_manager_tb_sim.fm.dut.sync_pdp_ram.buffer_bottom.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+run: Time (s): cpu = 00:00:17 ; elapsed = 00:06:42 . Memory (MB): peak = 3427.406 ; gain = 7.750
+xsim: Time (s): cpu = 00:00:17 ; elapsed = 00:06:44 . Memory (MB): peak = 3427.406 ; gain = 9.164
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'frame_manager_tb_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for all
+launch_simulation: Time (s): cpu = 00:00:18 ; elapsed = 00:06:50 . Memory (MB): peak = 3427.406 ; gain = 9.164
+relaunch_sim
+INFO: xsimkernel Simulation Memory Usage: 17848 KB (Peak: 17848 KB), Simulation CPU Usage: 351671 ms
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'frame_manager_tb_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj frame_manager_tb_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/clock_divider.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/memory_manager.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_manager
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/sync_pdp_ram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_pdp_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/controller_moving_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_moving_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/controller_stillframe_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_stillframe_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/frame_manager.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/new/memory_initialization.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_initialization
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/spi_slave.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_slave
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/frame_manager_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/bram_tests.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bram_tests
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_moving_test_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_moving_test_sim
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_stllfrme_test_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_stllfrm_test_sim
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/controller_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/spi_slave_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/sync_pdp_ram_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/tb1_modified.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb1_modified
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sim_1/new/frame_manager_tb_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_manager_tb_sim
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'frame_manager_tb_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot frame_manager_tb_sim_behav xil_defaultlib.frame_manager_tb_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot frame_manager_tb_sim_behav xil_defaultlib.frame_manager_tb_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock_divider(DIV_N=5)
+Compiling module xil_defaultlib.memory_manager
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="spa...
+Compiling module xil_defaultlib.display_buffer_bram
+Compiling module xil_defaultlib.sync_pdp_ram(BITS_PER_PIXEL=16)
+Compiling module xil_defaultlib.controller(BITS_PER_PIXEL=16)
+Compiling module xil_defaultlib.frame_manager
+Compiling module xil_defaultlib.frame_manager_tb_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot frame_manager_tb_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+Block Memory Generator module frame_manager_tb_sim.fm.dut.sync_pdp_ram.buffer_top.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module frame_manager_tb_sim.fm.dut.sync_pdp_ram.buffer_bottom.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 3427.406 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+relaunch_xsim_kernel: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 3427.406 ; gain = 0.000
+INFO: [Common 17-344] 'relaunch_xsim_kernel' was cancelled
+INFO: [Common 17-344] 'relaunch_sim' was cancelled
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/utils_1/imports/synth_1/controller_stillframe_test.dcp with file C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/synth_1/frame_manager_tb.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.srcs/sources_1/ip/display_buffer_bram/display_buffer_bram.xci' is already up-to-date
+[Fri Dec 13 02:04:02 2024] Launched synth_1...
+Run output will be captured here: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/synth_1/runme.log
+[Fri Dec 13 02:04:02 2024] Launched impl_1...
+Run output will be captured here: C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/conno/Documents/Stuff/UIUC/2024-2025/FALL/ECE385/final/repo/HUB75_testing/HUB75_testing.runs/impl_1/frame_manager_tb.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 13 02:07:06 2024...
