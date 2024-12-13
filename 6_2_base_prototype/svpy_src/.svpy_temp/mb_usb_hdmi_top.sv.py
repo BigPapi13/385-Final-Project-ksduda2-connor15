@@ -27,17 +27,18 @@ svwrite("//---------------------------------------------------------------------
 dump_queue()
 svwrite("\n")
 dump_queue()
-# Set to true for synthesis, false for simulation
-SYNTHESIS_MODE = False
+# Set to true for simulation, false for synthesis
+SIMULATION_MODE = False
 svwrite("\n")
 dump_queue()
 svwrite("\n")
 dump_queue()
 from svpy import *
-from structs import OBB, Juice, JOBB
+from svmath import *
+from structs import OBB, Juice, JOBB, Contact, Impulse
 svwrite("\n")
 dump_queue()
-if SYNTHESIS_MODE == False:
+if SIMULATION_MODE == False:
     reg_clk = "vsync"
 else:
     reg_clk = "Clk"
@@ -285,26 +286,6 @@ svwrite("        .TMDS_DATA_N(hdmi_tmds_data_n)          \n")
 dump_queue()
 svwrite("    );\n")
 dump_queue()
-svwrite("\n")
-dump_queue()
-svwrite("    //Ball Module\n")
-dump_queue()
-svwrite("    square square_instance(\n")
-dump_queue()
-svwrite("        .Reset(reset_ah),\n")
-dump_queue()
-svwrite("        .frame_clk(vsync),                    //Figure out what this should be so that the ball will move\n")
-dump_queue()
-svwrite("        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default\n")
-dump_queue()
-svwrite("        .X(ballxsig),\n")
-dump_queue()
-svwrite("        .Y(ballysig),\n")
-dump_queue()
-svwrite("        .S(ballsizesig)\n")
-dump_queue()
-svwrite("    );\n")
-dump_queue()
 svwrite("    \n")
 dump_queue()
 svwrite("    // First OBB register\n")
@@ -316,7 +297,7 @@ svwrite("\n")
 dump_queue()
 obb1.declare()
 obb1_ld.declare()
-svwrite("    obb_reg #(.X_INIT(10), .Y_INIT(32), .X_VEL_INIT(0.3), .Y_VEL_INIT(-0.1), .OMEGA_INIT(-0.04)) obb1(\n")
+svwrite("    obb_reg #(.X_INIT(10), .Y_INIT(32), .X_VEL_INIT(0.3), .Y_VEL_INIT(-0.1), .ANGLE_INIT(0.7), .OMEGA_INIT(0)) obb1(\n")
 dump_queue()
 svwrite("        ")
 svpy.inline_state = True
@@ -352,7 +333,7 @@ svwrite("\n")
 dump_queue()
 obb2.declare()
 obb2_ld.declare()
-svwrite("    obb_reg #(.X_INIT(20), .Y_INIT(32), .X_VEL_INIT(-0.2), .Y_VEL_INIT(0.5), .WIDTH_INIT(15), .HEIGHT_INIT(5), .OMEGA_INIT(0.1)) obb2(\n")
+svwrite("    obb_reg #(.X_INIT(45), .Y_INIT(32), .X_VEL_INIT(-0.2), .Y_VEL_INIT(0.5), .WIDTH_INIT(15), .HEIGHT_INIT(5), .OMEGA_INIT(0)) obb2(\n")
 dump_queue()
 svwrite("        ")
 svpy.inline_state = True
@@ -380,11 +361,83 @@ svwrite("    );\n")
 dump_queue()
 svwrite("\n")
 dump_queue()
+svwrite("    // Use collision data to generate an impulse\n")
+dump_queue()
+impulse_data = Impulse("impulse_data")
+impulse_data.declare()
+contact_data = Contact("contact_data")
+contact_data.declare()
+svwrite("    box_box_resolver bbr_inst(\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(Contact.module_assign(contact_data))
+svpy.inline_state = False
+svwrite(",\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(obb1.pos.module_assign(obb1.pos))
+svpy.inline_state = False
+svwrite(",\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(obb1.vel.module_assign(obb1.vel))
+svpy.inline_state = False
+svwrite(",\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(obb1.omega.module_assign(obb1.omega))
+svpy.inline_state = False
+svwrite(",\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(obb2.pos.module_assign(obb2.pos))
+svpy.inline_state = False
+svwrite(",\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(obb2.vel.module_assign(obb2.vel))
+svpy.inline_state = False
+svwrite(",\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(obb2.omega.module_assign(obb2.omega))
+svpy.inline_state = False
+svwrite(",\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(Impulse.module_assign(impulse_data)
+)
+svpy.inline_state = False
+dump_queue()
+svwrite("    );\n")
+dump_queue()
+svwrite("\n")
+dump_queue()
 svwrite("    // Logic for determining next state\n")
 dump_queue()
 prev = OBB("prev")
 next = OBB("next")
+svwrite("    logic is_collision;\n")
+dump_queue()
 svwrite("    obb_updater obb1_updater(\n")
+dump_queue()
+svwrite("        .impulse_en(is_collision),\n")
+dump_queue()
+svwrite("        .update_en(1'b1),\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(Impulse.module_assign(impulse_data))
+svpy.inline_state = False
+svwrite(",\n")
 dump_queue()
 svwrite("        ")
 svpy.inline_state = True
@@ -402,7 +455,24 @@ svwrite("    );\n")
 dump_queue()
 svwrite("\n")
 dump_queue()
+neg_impulse_data = Impulse("neg_impulse_data")
+neg_impulse_data.declare()
+neg_impulse_data.impulse.assign(-impulse_data.impulse)
+neg_impulse_data.nudge.assign(-impulse_data.nudge)
+neg_impulse_data.rotational_impulse.assign(-impulse_data.rotational_impulse)
+svwrite("\n")
+dump_queue()
 svwrite("    obb_updater obb2_updater(\n")
+dump_queue()
+svwrite("        .impulse_en(is_collision),\n")
+dump_queue()
+svwrite("        .update_en(1'b1),\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(Impulse.module_assign(neg_impulse_data))
+svpy.inline_state = False
+svwrite(",\n")
 dump_queue()
 svwrite("        ")
 svpy.inline_state = True
@@ -480,8 +550,37 @@ svwrite("    );\n")
 dump_queue()
 svwrite("\n")
 dump_queue()
-svwrite("    //Color Mapper Module   \n")
+svwrite("    // Collision data between boxes\n")
 dump_queue()
+svwrite("    collision_detector cd_inst(\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(jobb1.module_assign(jobb1))
+svpy.inline_state = False
+svwrite(",\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(jobb2.module_assign(jobb2))
+svpy.inline_state = False
+svwrite(",\n")
+dump_queue()
+svwrite("        .is_collision(is_collision),\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(Contact.module_assign(contact_data))
+svpy.inline_state = False
+svwrite("\n")
+dump_queue()
+svwrite("    );\n")
+dump_queue()
+svwrite("\n")
+dump_queue()
+svwrite("    //Color Mapper Module\n")
+dump_queue()
+drawPoint = Vec2(8, 14, "drawPoint")   
 svwrite("    color_mapper color_instance(\n")
 dump_queue()
 svwrite("        ")
@@ -493,6 +592,12 @@ dump_queue()
 svwrite("        ")
 svpy.inline_state = True
 svwrite(jobb2.module_assign(jobb2))
+svpy.inline_state = False
+svwrite(",\n")
+dump_queue()
+svwrite("        ")
+svpy.inline_state = True
+svwrite(drawPoint.module_assign(contact_data.location))
 svpy.inline_state = False
 svwrite(",\n")
 dump_queue()

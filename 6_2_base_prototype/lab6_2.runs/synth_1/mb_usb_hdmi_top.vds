@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Tue Dec 10 10:47:05 2024
-# Process ID: 40556
+# Start of session at: Wed Dec 11 21:14:38 2024
+# Process ID: 13736
 # Current directory: C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1
 # Command line: vivado.exe -log mb_usb_hdmi_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mb_usb_hdmi_top.tcl
 # Log file: C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/mb_usb_hdmi_top.vds
@@ -28,54 +28,99 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 46648
+INFO: [Synth 8-7075] Helper process launched with PID 17336
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-WARNING: [Synth 8-6901] identifier 'opnet_201' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:80]
-WARNING: [Synth 8-6901] identifier 'opnet_202' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:81]
-WARNING: [Synth 8-6901] identifier 'opnet_203' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:82]
-WARNING: [Synth 8-6901] identifier 'opnet_201' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:82]
-WARNING: [Synth 8-6901] identifier 'opnet_202' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:82]
-WARNING: [Synth 8-6901] identifier 'opnet_203' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:83]
-WARNING: [Synth 8-6901] identifier 'opnet_204' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:84]
-WARNING: [Synth 8-6901] identifier 'opnet_205' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:85]
-WARNING: [Synth 8-6901] identifier 'opnet_206' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:86]
-WARNING: [Synth 8-6901] identifier 'opnet_204' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:86]
-WARNING: [Synth 8-6901] identifier 'opnet_205' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:86]
-WARNING: [Synth 8-6901] identifier 'opnet_206' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:87]
-WARNING: [Synth 8-6901] identifier 'opnet_209' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:122]
-WARNING: [Synth 8-6901] identifier 'opnet_210' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:123]
-WARNING: [Synth 8-6901] identifier 'opnet_211' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:124]
-WARNING: [Synth 8-6901] identifier 'opnet_209' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:124]
-WARNING: [Synth 8-6901] identifier 'opnet_210' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:124]
-WARNING: [Synth 8-6901] identifier 'opnet_211' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:125]
-WARNING: [Synth 8-6901] identifier 'opnet_212' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:126]
-WARNING: [Synth 8-6901] identifier 'opnet_213' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:127]
-WARNING: [Synth 8-6901] identifier 'opnet_214' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:128]
-WARNING: [Synth 8-6901] identifier 'opnet_212' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:128]
-WARNING: [Synth 8-6901] identifier 'opnet_213' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:128]
-WARNING: [Synth 8-6901] identifier 'opnet_214' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:129]
-WARNING: [Synth 8-6901] identifier 'opnet_215' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:214]
-WARNING: [Synth 8-6901] identifier 'opnet_216' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:215]
-WARNING: [Synth 8-6901] identifier 'opnet_215' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:216]
-WARNING: [Synth 8-6901] identifier 'opnet_215' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:216]
-WARNING: [Synth 8-6901] identifier 'opnet_216' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:216]
-WARNING: [Synth 8-6901] identifier 'opnet_216' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:216]
+WARNING: [Synth 8-6901] identifier 'opnet_291' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:82]
+WARNING: [Synth 8-6901] identifier 'opnet_292' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:83]
+WARNING: [Synth 8-6901] identifier 'opnet_293' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:84]
+WARNING: [Synth 8-6901] identifier 'opnet_291' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:84]
+WARNING: [Synth 8-6901] identifier 'opnet_292' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:84]
+WARNING: [Synth 8-6901] identifier 'opnet_293' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:85]
+WARNING: [Synth 8-6901] identifier 'opnet_294' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:86]
+WARNING: [Synth 8-6901] identifier 'opnet_295' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:87]
+WARNING: [Synth 8-6901] identifier 'opnet_296' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:88]
+WARNING: [Synth 8-6901] identifier 'opnet_294' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:88]
+WARNING: [Synth 8-6901] identifier 'opnet_295' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:88]
+WARNING: [Synth 8-6901] identifier 'opnet_296' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:89]
+WARNING: [Synth 8-6901] identifier 'opnet_299' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:124]
+WARNING: [Synth 8-6901] identifier 'opnet_300' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:125]
+WARNING: [Synth 8-6901] identifier 'opnet_301' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:126]
+WARNING: [Synth 8-6901] identifier 'opnet_299' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:126]
+WARNING: [Synth 8-6901] identifier 'opnet_300' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:126]
+WARNING: [Synth 8-6901] identifier 'opnet_301' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:127]
+WARNING: [Synth 8-6901] identifier 'opnet_302' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:128]
+WARNING: [Synth 8-6901] identifier 'opnet_303' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:129]
+WARNING: [Synth 8-6901] identifier 'opnet_304' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:130]
+WARNING: [Synth 8-6901] identifier 'opnet_302' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:130]
+WARNING: [Synth 8-6901] identifier 'opnet_303' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:130]
+WARNING: [Synth 8-6901] identifier 'opnet_304' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:131]
+WARNING: [Synth 8-6901] identifier 'opnet_305' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:216]
+WARNING: [Synth 8-6901] identifier 'opnet_306' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:217]
+WARNING: [Synth 8-6901] identifier 'opnet_305' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:218]
+WARNING: [Synth 8-6901] identifier 'opnet_305' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:218]
+WARNING: [Synth 8-6901] identifier 'opnet_306' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:218]
+WARNING: [Synth 8-6901] identifier 'opnet_306' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:218]
+WARNING: [Synth 8-6901] identifier 'opnet_1' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:35]
+WARNING: [Synth 8-6901] identifier 'opnet_2' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:36]
+WARNING: [Synth 8-6901] identifier 'opnet_3' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:39]
+WARNING: [Synth 8-6901] identifier 'opnet_1' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:39]
+WARNING: [Synth 8-6901] identifier 'opnet_4' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:40]
+WARNING: [Synth 8-6901] identifier 'opnet_2' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:40]
+WARNING: [Synth 8-6901] identifier 'opnet_5' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:41]
+WARNING: [Synth 8-6901] identifier 'opnet_3' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:41]
+WARNING: [Synth 8-6901] identifier 'opnet_4' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:41]
+WARNING: [Synth 8-6901] identifier 'opnet_5' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:42]
+WARNING: [Synth 8-6901] identifier 'opnet_6' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:45]
+WARNING: [Synth 8-6901] identifier 'opnet_7' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:46]
+WARNING: [Synth 8-6901] identifier 'opnet_6' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:46]
+WARNING: [Synth 8-6901] identifier 'opnet_8' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:47]
+WARNING: [Synth 8-6901] identifier 'opnet_6' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:47]
+WARNING: [Synth 8-6901] identifier 'opnet_7' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:48]
+WARNING: [Synth 8-6901] identifier 'opnet_8' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:49]
+WARNING: [Synth 8-6901] identifier 'opnet_9' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:53]
+WARNING: [Synth 8-6901] identifier 'opnet_10' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:54]
+WARNING: [Synth 8-6901] identifier 'opnet_9' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:55]
+WARNING: [Synth 8-6901] identifier 'opnet_10' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:56]
+WARNING: [Synth 8-6901] identifier 'opnet_75' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:668]
+WARNING: [Synth 8-6901] identifier 'opnet_76' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:670]
+WARNING: [Synth 8-6901] identifier 'opnet_75' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:672]
+WARNING: [Synth 8-6901] identifier 'opnet_76' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:673]
+WARNING: [Synth 8-6901] identifier 'opnet_77' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:685]
+WARNING: [Synth 8-6901] identifier 'opnet_78' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:687]
+WARNING: [Synth 8-6901] identifier 'opnet_77' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:689]
+WARNING: [Synth 8-6901] identifier 'opnet_78' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:690]
+WARNING: [Synth 8-6901] identifier 'opnet_79' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:702]
+WARNING: [Synth 8-6901] identifier 'opnet_80' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:704]
+WARNING: [Synth 8-6901] identifier 'opnet_79' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:706]
+WARNING: [Synth 8-6901] identifier 'opnet_80' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:707]
+WARNING: [Synth 8-6901] identifier 'opnet_81' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:719]
+WARNING: [Synth 8-6901] identifier 'opnet_82' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:721]
+WARNING: [Synth 8-6901] identifier 'opnet_81' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:723]
+WARNING: [Synth 8-6901] identifier 'opnet_82' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:724]
 WARNING: [Synth 8-11065] parameter 'X_INIT_SCALED' becomes localparam in 'obb_reg' with formal parameter declaration list [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:34]
 WARNING: [Synth 8-11065] parameter 'Y_INIT_SCALED' becomes localparam in 'obb_reg' with formal parameter declaration list [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:35]
 WARNING: [Synth 8-11065] parameter 'X_VEL_INIT_SCALED' becomes localparam in 'obb_reg' with formal parameter declaration list [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:36]
 WARNING: [Synth 8-11065] parameter 'Y_VEL_INIT_SCALED' becomes localparam in 'obb_reg' with formal parameter declaration list [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:37]
 WARNING: [Synth 8-11065] parameter 'ANGLE_INIT_SCALED' becomes localparam in 'obb_reg' with formal parameter declaration list [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:38]
 WARNING: [Synth 8-11065] parameter 'OMEGA_INIT_SCALED' becomes localparam in 'obb_reg' with formal parameter declaration list [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:39]
-WARNING: [Synth 8-6901] identifier 'opnet_219' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:32]
-WARNING: [Synth 8-6901] identifier 'opnet_219' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:34]
-WARNING: [Synth 8-6901] identifier 'opnet_220' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:39]
-WARNING: [Synth 8-6901] identifier 'opnet_220' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:41]
-WARNING: [Synth 8-6901] identifier 'opnet_222' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:54]
-WARNING: [Synth 8-6901] identifier 'opnet_222' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:55]
-WARNING: [Synth 8-6901] identifier 'opnet_223' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:57]
-WARNING: [Synth 8-6901] identifier 'opnet_223' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:58]
+WARNING: [Synth 8-6901] identifier 'opnet_312' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:33]
+WARNING: [Synth 8-6901] identifier 'opnet_313' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:34]
+WARNING: [Synth 8-6901] identifier 'opnet_312' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:35]
+WARNING: [Synth 8-6901] identifier 'opnet_313' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:36]
+WARNING: [Synth 8-6901] identifier 'opnet_314' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:49]
+WARNING: [Synth 8-6901] identifier 'opnet_314' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:51]
+WARNING: [Synth 8-6901] identifier 'opnet_315' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:56]
+WARNING: [Synth 8-6901] identifier 'opnet_315' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:58]
+WARNING: [Synth 8-6901] identifier 'opnet_316' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:73]
+WARNING: [Synth 8-6901] identifier 'opnet_317' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:74]
+WARNING: [Synth 8-6901] identifier 'opnet_316' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:75]
+WARNING: [Synth 8-6901] identifier 'opnet_317' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:76]
+WARNING: [Synth 8-6901] identifier 'opnet_318' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:87]
+WARNING: [Synth 8-6901] identifier 'opnet_318' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:88]
+WARNING: [Synth 8-6901] identifier 'opnet_319' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:90]
+WARNING: [Synth 8-6901] identifier 'opnet_319' is used before its declaration [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:91]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1218.352 ; gain = 409.297
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1218.383 ; gain = 409.199
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'mb_usb_hdmi_top' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv:17]
 INFO: [Synth 8-6157] synthesizing module 'hex_driver' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:2]
@@ -89,22 +134,22 @@ INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/kobes/OneDriv
 INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:12]
 INFO: [Synth 8-6155] done synthesizing module 'hex_driver' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/hex_driver.sv:2]
 INFO: [Synth 8-6157] synthesizing module 'mb_block' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:936]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_uartlite_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_uartlite_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_clk_wiz_1_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_clk_wiz_1_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_2' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_2' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_3' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_gpio_0_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_3' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_gpio_0_3_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_1' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_1' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_mdm_1_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_mdm_1_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_intc_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_intc_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_uartlite_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_uartlite_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_clk_wiz_1_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_clk_wiz_1_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_2' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_2' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_3' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_axi_gpio_0_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_3' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_axi_gpio_0_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_1' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_1' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_mdm_1_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_mdm_1_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_intc_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_intc_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_periph_0' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1602]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1TK4492' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1TK4492' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
@@ -122,46 +167,46 @@ INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1QRRYF7' [c:/Users/ko
 INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1QRRYF7' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:804]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_5YIJ0K' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2926]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_5YIJ0K' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2926]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_xbar_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_xbar_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_xbar_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_xbar_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_xbar_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_xbar_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'mb_block_xbar_0' is unconnected for instance 'xbar' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'mb_block_xbar_0' is unconnected for instance 'xbar' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'mb_block_xbar_0' has 40 connections declared, but only 38 given [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_periph_0' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1602]
 INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2692]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_v10_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_dlmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_v10_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_v10_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_v10_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_dlmb_v10_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2838]
 WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'mb_block_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2838]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_v10_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_ilmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_v10_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_v10_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_v10_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_ilmb_v10_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2884]
 WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'mb_block_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2884]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_lmb_bram_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_lmb_bram_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_lmb_bram_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_lmb_bram_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_lmb_bram_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_lmb_bram_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'rsta_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
 WARNING: [Synth 8-7071] port 'rstb_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
 WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'mb_block_lmb_bram_0' has 16 connections declared, but only 14 given [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
 INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:2692]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
 WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'mb_block_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_quad_spi_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_quad_spi_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_quad_spi_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_quad_spi_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'io0_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
 WARNING: [Synth 8-7071] port 'io1_o' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
 WARNING: [Synth 8-7071] port 'io1_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
 WARNING: [Synth 8-7071] port 'sck_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
 WARNING: [Synth 8-7071] port 'ss_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
 WARNING: [Synth 8-7023] instance 'spi_usb' of module 'mb_block_axi_quad_spi_0_0' has 33 connections declared, but only 28 given [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_timer_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_timer_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_timer_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/mb_block_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_timer_0_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_timer_0_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/mb_block_axi_timer_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'generateout0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
 WARNING: [Synth 8-7071] port 'generateout1' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
 WARNING: [Synth 8-7071] port 'pwm0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
@@ -171,32 +216,33 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/ko
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.srcs/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block_xlconcat_0_0' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/ip/mb_block_xlconcat_0_0/synth/mb_block_xlconcat_0_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block' (0#1) [c:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/lab6_1/lab6_1.gen/sources_1/bd/mb_block/synth/mb_block.v:936]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/VGA_controller.sv:26]
 INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/VGA_controller.sv:26]
 WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv:100]
 WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv:100]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/hdmi_tx_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-40556-Kobe_Laptop/realtime/hdmi_tx_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'square' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/square.sv:17]
-INFO: [Synth 8-6155] done synthesizing module 'square' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/square.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/.Xil/Vivado-13736-Kobe_Laptop/realtime/hdmi_tx_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'obb_reg' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:4]
 	Parameter X_INIT bound to: 10 - type: integer 
 	Parameter Y_INIT bound to: 32 - type: integer 
 	Parameter X_VEL_INIT bound to: 0.300000 - type: double 
 	Parameter Y_VEL_INIT bound to: -0.100000 - type: double 
-	Parameter OMEGA_INIT bound to: -0.040000 - type: double 
+	Parameter ANGLE_INIT bound to: 0.700000 - type: double 
+	Parameter OMEGA_INIT bound to: 0 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'obb_reg' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'obb_reg__parameterized0' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:4]
-	Parameter X_INIT bound to: 20 - type: integer 
+	Parameter X_INIT bound to: 45 - type: integer 
 	Parameter Y_INIT bound to: 32 - type: integer 
 	Parameter X_VEL_INIT bound to: -0.200000 - type: double 
 	Parameter Y_VEL_INIT bound to: 0.500000 - type: double 
 	Parameter WIDTH_INIT bound to: 15 - type: integer 
 	Parameter HEIGHT_INIT bound to: 5 - type: integer 
-	Parameter OMEGA_INIT bound to: 0.100000 - type: double 
+	Parameter OMEGA_INIT bound to: 0 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'obb_reg__parameterized0' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_reg.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'box_box_resolver' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'box_box_resolver' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:9]
 INFO: [Synth 8-6157] synthesizing module 'obb_updater' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:4]
 INFO: [Synth 8-6155] done synthesizing module 'obb_updater' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/obb_updater.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'juicer' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/the_juicer.sv:7]
@@ -205,11 +251,51 @@ INFO: [Synth 8-6155] done synthesizing module 'cos' (0#1) [C:/Users/kobes/OneDri
 INFO: [Synth 8-6157] synthesizing module 'sin' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/sine.sv:2]
 INFO: [Synth 8-6155] done synthesizing module 'sin' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/sine.sv:2]
 INFO: [Synth 8-6155] done synthesizing module 'juicer' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/the_juicer.sv:7]
-INFO: [Synth 8-6157] synthesizing module 'color_mapper' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:19]
 INFO: [Synth 8-6157] synthesizing module 'collision_detector' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'collision_detector' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'color_mapper' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'color_mapper' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:20]
+WARNING: [Synth 8-7071] port 'normal_x' of module 'collision_detector' is unconnected for instance 'cm_cd_inst' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:149]
+WARNING: [Synth 8-7071] port 'normal_y' of module 'collision_detector' is unconnected for instance 'cm_cd_inst' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:149]
+WARNING: [Synth 8-7071] port 'location_x' of module 'collision_detector' is unconnected for instance 'cm_cd_inst' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:149]
+WARNING: [Synth 8-7071] port 'location_y' of module 'collision_detector' is unconnected for instance 'cm_cd_inst' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:149]
+WARNING: [Synth 8-7071] port 'penetration' of module 'collision_detector' is unconnected for instance 'cm_cd_inst' [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:149]
+WARNING: [Synth 8-7023] instance 'cm_cd_inst' of module 'collision_detector' has 50 connections declared, but only 45 given [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:149]
+INFO: [Synth 8-6155] done synthesizing module 'color_mapper' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/Color_Mapper.sv:20]
 INFO: [Synth 8-6155] done synthesizing module 'mb_usb_hdmi_top' (0#1) [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/mb_usb_hdmi_top.sv:17]
+WARNING: [Synth 8-3848] Net rotational_impulse in module/entity box_box_resolver does not have driver. [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/box_box_resolver.sv:23]
+WARNING: [Synth 8-3848] Net penetration in module/entity collision_detector does not have driver. [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2_provided/design_source/collision_detector.sv:35]
+WARNING: [Synth 8-7129] Port penetration[31] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[30] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[29] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[28] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[27] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[26] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[25] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[24] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[23] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[22] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[21] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[20] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[19] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[18] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[17] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[16] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[15] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[14] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[13] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[12] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[11] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[10] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[9] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[8] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[7] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[6] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[5] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[4] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[3] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[2] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[1] in module collision_detector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port penetration[0] in module collision_detector is either unconnected or has no load
 WARNING: [Synth 8-7129] Port obb1_width[7] in module collision_detector is either unconnected or has no load
 WARNING: [Synth 8-7129] Port obb1_width[6] in module collision_detector is either unconnected or has no load
 WARNING: [Synth 8-7129] Port obb1_width[5] in module collision_detector is either unconnected or has no load
@@ -278,52 +364,20 @@ WARNING: [Synth 8-7129] Port obb1_vel_y[15] in module collision_detector is eith
 WARNING: [Synth 8-7129] Port obb1_vel_y[14] in module collision_detector is either unconnected or has no load
 WARNING: [Synth 8-7129] Port obb1_vel_y[13] in module collision_detector is either unconnected or has no load
 WARNING: [Synth 8-7129] Port obb1_vel_y[12] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_vel_y[11] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_vel_y[10] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_vel_y[9] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_vel_y[8] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_vel_y[7] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_vel_y[6] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_vel_y[5] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_vel_y[4] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_vel_y[3] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_vel_y[2] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_vel_y[1] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_vel_y[0] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_angle[10] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_angle[9] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_angle[8] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_angle[7] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_angle[6] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_angle[5] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_angle[4] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_angle[3] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_angle[2] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_angle[1] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_angle[0] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_omega[10] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_omega[9] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_omega[8] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_omega[7] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_omega[6] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_omega[5] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_omega[4] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_omega[3] in module collision_detector is either unconnected or has no load
-WARNING: [Synth 8-7129] Port obb1_omega[2] in module collision_detector is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1336.895 ; gain = 527.840
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1338.738 ; gain = 529.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1336.895 ; gain = 527.840
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1338.738 ; gain = 529.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1336.895 ; gain = 527.840
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1338.738 ; gain = 529.555
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 1336.895 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.190 . Memory (MB): peak = 1338.738 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -379,25 +433,25 @@ Parsing XDC File [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado
 Finished Parsing XDC File [C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1442.496 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1449.750 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1442.496 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1449.750 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/spi_usb' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1443.277 ; gain = 634.223
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1450.539 ; gain = 641.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1443.277 ; gain = 634.223
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1450.539 ; gain = 641.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -443,36 +497,39 @@ Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/xlconcat_0. (constrain
 Applied set_property KEEP_HIERARCHY = SOFT for vga_to_hdmi. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for clk_wiz. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1443.277 ; gain = 634.223
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1450.539 ; gain = 641.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1443.277 ; gain = 634.223
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1450.539 ; gain = 641.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   48 Bit       Adders := 4     
-	   2 Input   32 Bit       Adders := 12    
-	   3 Input   32 Bit       Adders := 8     
-	   3 Input   22 Bit       Adders := 34    
-	   2 Input   11 Bit       Adders := 8     
-	   2 Input   10 Bit       Adders := 10    
+	   2 Input   59 Bit       Adders := 1     
+	   2 Input   48 Bit       Adders := 5     
+	   3 Input   32 Bit       Adders := 14    
+	   2 Input   32 Bit       Adders := 20    
+	   3 Input   22 Bit       Adders := 50    
+	   2 Input   16 Bit       Adders := 16    
+	   2 Input   11 Bit       Adders := 6     
+	   2 Input   10 Bit       Adders := 2     
 	   2 Input    7 Bit       Adders := 4     
 +---Registers : 
 	               32 Bit    Registers := 8     
 	               11 Bit    Registers := 4     
-	               10 Bit    Registers := 6     
+	               10 Bit    Registers := 2     
 	                8 Bit    Registers := 4     
 	                1 Bit    Registers := 2     
 +---Multipliers : 
-	              16x32  Multipliers := 8     
+	              16x59  Multipliers := 2     
+	              16x32  Multipliers := 12    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 45    
+	   2 Input   32 Bit        Muxes := 94    
+	   2 Input   22 Bit        Muxes := 164   
+	   2 Input   16 Bit        Muxes := 32    
 	   2 Input   11 Bit        Muxes := 4     
-	   2 Input   10 Bit        Muxes := 8     
-	   5 Input   10 Bit        Muxes := 2     
 	   4 Input    8 Bit        Muxes := 2     
 	   2 Input    8 Bit        Muxes := 2     
 	   5 Input    4 Bit        Muxes := 2     
@@ -494,118 +551,252 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP opnet_228, operation Mode is: A*B.
-DSP Report: operator opnet_228 is absorbed into DSP opnet_228.
-DSP Report: Generating DSP opnet_227, operation Mode is: A*B.
-DSP Report: operator opnet_227 is absorbed into DSP opnet_227.
-DSP Report: Generating DSP opnet_231, operation Mode is: A*B.
-DSP Report: operator opnet_231 is absorbed into DSP opnet_231.
-DSP Report: Generating DSP opnet_230, operation Mode is: A*B.
-DSP Report: operator opnet_230 is absorbed into DSP opnet_230.
-DSP Report: Generating DSP opnet_236, operation Mode is: A*B.
-DSP Report: operator opnet_236 is absorbed into DSP opnet_236.
-DSP Report: Generating DSP opnet_239, operation Mode is: A*B.
-DSP Report: operator opnet_239 is absorbed into DSP opnet_239.
-DSP Report: Generating DSP opnet_244, operation Mode is: A*B.
-DSP Report: operator opnet_244 is absorbed into DSP opnet_244.
-DSP Report: Generating DSP opnet_247, operation Mode is: A*B.
-DSP Report: operator opnet_247 is absorbed into DSP opnet_247.
-DSP Report: Generating DSP opnet_228, operation Mode is: A*B.
-DSP Report: operator opnet_228 is absorbed into DSP opnet_228.
-DSP Report: Generating DSP opnet_227, operation Mode is: A*B.
-DSP Report: operator opnet_227 is absorbed into DSP opnet_227.
-DSP Report: Generating DSP opnet_231, operation Mode is: A*B.
-DSP Report: operator opnet_231 is absorbed into DSP opnet_231.
-DSP Report: Generating DSP opnet_230, operation Mode is: A*B.
-DSP Report: operator opnet_230 is absorbed into DSP opnet_230.
-DSP Report: Generating DSP opnet_236, operation Mode is: A*B.
-DSP Report: operator opnet_236 is absorbed into DSP opnet_236.
-DSP Report: Generating DSP opnet_239, operation Mode is: A*B.
-DSP Report: operator opnet_239 is absorbed into DSP opnet_239.
-DSP Report: Generating DSP opnet_244, operation Mode is: A*B.
-DSP Report: operator opnet_244 is absorbed into DSP opnet_244.
-DSP Report: Generating DSP opnet_247, operation Mode is: A*B.
-DSP Report: operator opnet_247 is absorbed into DSP opnet_247.
-DSP Report: Generating DSP opnet_3, operation Mode is: A*B.
-DSP Report: operator opnet_3 is absorbed into DSP opnet_3.
-DSP Report: Generating DSP opnet_5, operation Mode is: C+A*B.
-DSP Report: operator opnet_5 is absorbed into DSP opnet_5.
-DSP Report: operator opnet_4 is absorbed into DSP opnet_5.
-DSP Report: Generating DSP opnet_11, operation Mode is: A*B.
-DSP Report: operator opnet_11 is absorbed into DSP opnet_11.
-DSP Report: Generating DSP opnet_13, operation Mode is: C+A*B.
+DSP Report: Generating DSP impulse_x5, operation Mode is: A*B.
+DSP Report: operator impulse_x5 is absorbed into DSP impulse_x5.
+DSP Report: operator impulse_x5 is absorbed into DSP impulse_x5.
+DSP Report: Generating DSP impulse_x5, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator impulse_x5 is absorbed into DSP impulse_x5.
+DSP Report: operator impulse_x5 is absorbed into DSP impulse_x5.
+DSP Report: Generating DSP impulse_x5, operation Mode is: A*B.
+DSP Report: operator impulse_x5 is absorbed into DSP impulse_x5.
+DSP Report: operator impulse_x5 is absorbed into DSP impulse_x5.
+DSP Report: Generating DSP impulse_x5, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator impulse_x5 is absorbed into DSP impulse_x5.
+DSP Report: operator impulse_x5 is absorbed into DSP impulse_x5.
+DSP Report: Generating DSP impulse_x2, operation Mode is: A*(B:0x0).
+DSP Report: operator impulse_x2 is absorbed into DSP impulse_x2.
+DSP Report: operator impulse_x2 is absorbed into DSP impulse_x2.
+DSP Report: Generating DSP impulse_x2, operation Mode is: (PCIN>>17)+A*(B:0x3fe80).
+DSP Report: operator impulse_x2 is absorbed into DSP impulse_x2.
+DSP Report: operator impulse_x2 is absorbed into DSP impulse_x2.
+DSP Report: Generating DSP impulse_x2, operation Mode is: A*(B:0x0).
+DSP Report: operator impulse_x2 is absorbed into DSP impulse_x2.
+DSP Report: operator impulse_x2 is absorbed into DSP impulse_x2.
+DSP Report: Generating DSP impulse_x2, operation Mode is: (PCIN>>17)+A*(B:0x3fe80).
+DSP Report: operator impulse_x2 is absorbed into DSP impulse_x2.
+DSP Report: operator impulse_x2 is absorbed into DSP impulse_x2.
+DSP Report: Generating DSP impulse_x1, operation Mode is: A*B.
+DSP Report: operator impulse_x1 is absorbed into DSP impulse_x1.
+DSP Report: operator impulse_x1 is absorbed into DSP impulse_x1.
+DSP Report: Generating DSP impulse_x1, operation Mode is: A*B.
+DSP Report: operator impulse_x1 is absorbed into DSP impulse_x1.
+DSP Report: operator impulse_x1 is absorbed into DSP impulse_x1.
+DSP Report: Generating DSP impulse_x1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator impulse_x1 is absorbed into DSP impulse_x1.
+DSP Report: operator impulse_x1 is absorbed into DSP impulse_x1.
+DSP Report: Generating DSP impulse_y1, operation Mode is: A*B.
+DSP Report: operator impulse_y1 is absorbed into DSP impulse_y1.
+DSP Report: operator impulse_y1 is absorbed into DSP impulse_y1.
+DSP Report: Generating DSP impulse_y1, operation Mode is: A*B.
+DSP Report: operator impulse_y1 is absorbed into DSP impulse_y1.
+DSP Report: operator impulse_y1 is absorbed into DSP impulse_y1.
+DSP Report: Generating DSP impulse_y1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator impulse_y1 is absorbed into DSP impulse_y1.
+DSP Report: operator impulse_y1 is absorbed into DSP impulse_y1.
+DSP Report: Generating DSP nudge_x1, operation Mode is: A*B.
+DSP Report: operator nudge_x1 is absorbed into DSP nudge_x1.
+DSP Report: operator nudge_x1 is absorbed into DSP nudge_x1.
+DSP Report: Generating DSP nudge_x1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator nudge_x1 is absorbed into DSP nudge_x1.
+DSP Report: operator nudge_x1 is absorbed into DSP nudge_x1.
+DSP Report: Generating DSP nudge_y1, operation Mode is: A*B.
+DSP Report: operator nudge_y1 is absorbed into DSP nudge_y1.
+DSP Report: operator nudge_y1 is absorbed into DSP nudge_y1.
+DSP Report: Generating DSP nudge_y1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator nudge_y1 is absorbed into DSP nudge_y1.
+DSP Report: operator nudge_y1 is absorbed into DSP nudge_y1.
+DSP Report: Generating DSP opnet_331, operation Mode is: A*B.
+DSP Report: operator opnet_331 is absorbed into DSP opnet_331.
+DSP Report: Generating DSP opnet_330, operation Mode is: A*B.
+DSP Report: operator opnet_330 is absorbed into DSP opnet_330.
+DSP Report: Generating DSP opnet_334, operation Mode is: A*B.
+DSP Report: operator opnet_334 is absorbed into DSP opnet_334.
+DSP Report: Generating DSP opnet_333, operation Mode is: A*B.
+DSP Report: operator opnet_333 is absorbed into DSP opnet_333.
+DSP Report: Generating DSP opnet_339, operation Mode is: A*B.
+DSP Report: operator opnet_339 is absorbed into DSP opnet_339.
+DSP Report: Generating DSP opnet_342, operation Mode is: A*B.
+DSP Report: operator opnet_342 is absorbed into DSP opnet_342.
+DSP Report: Generating DSP opnet_347, operation Mode is: A*B.
+DSP Report: operator opnet_347 is absorbed into DSP opnet_347.
+DSP Report: Generating DSP opnet_350, operation Mode is: A*B.
+DSP Report: operator opnet_350 is absorbed into DSP opnet_350.
+DSP Report: Generating DSP opnet_331, operation Mode is: A*B.
+DSP Report: operator opnet_331 is absorbed into DSP opnet_331.
+DSP Report: Generating DSP opnet_330, operation Mode is: A*B.
+DSP Report: operator opnet_330 is absorbed into DSP opnet_330.
+DSP Report: Generating DSP opnet_334, operation Mode is: A*B.
+DSP Report: operator opnet_334 is absorbed into DSP opnet_334.
+DSP Report: Generating DSP opnet_333, operation Mode is: A*B.
+DSP Report: operator opnet_333 is absorbed into DSP opnet_333.
+DSP Report: Generating DSP opnet_339, operation Mode is: A*B.
+DSP Report: operator opnet_339 is absorbed into DSP opnet_339.
+DSP Report: Generating DSP opnet_342, operation Mode is: A*B.
+DSP Report: operator opnet_342 is absorbed into DSP opnet_342.
+DSP Report: Generating DSP opnet_347, operation Mode is: A*B.
+DSP Report: operator opnet_347 is absorbed into DSP opnet_347.
+DSP Report: Generating DSP opnet_350, operation Mode is: A*B.
+DSP Report: operator opnet_350 is absorbed into DSP opnet_350.
+DSP Report: Generating DSP opnet_13, operation Mode is: A*B.
 DSP Report: operator opnet_13 is absorbed into DSP opnet_13.
-DSP Report: operator opnet_12 is absorbed into DSP opnet_13.
-DSP Report: Generating DSP opnet_19, operation Mode is: A*B.
-DSP Report: operator opnet_19 is absorbed into DSP opnet_19.
-DSP Report: Generating DSP opnet_21, operation Mode is: C+A*B.
+DSP Report: Generating DSP opnet_15, operation Mode is: C+A*B.
+DSP Report: operator opnet_15 is absorbed into DSP opnet_15.
+DSP Report: operator opnet_14 is absorbed into DSP opnet_15.
+DSP Report: Generating DSP opnet_21, operation Mode is: A*B.
 DSP Report: operator opnet_21 is absorbed into DSP opnet_21.
-DSP Report: operator opnet_20 is absorbed into DSP opnet_21.
-DSP Report: Generating DSP opnet_27, operation Mode is: A*B.
-DSP Report: operator opnet_27 is absorbed into DSP opnet_27.
-DSP Report: Generating DSP opnet_29, operation Mode is: C+A*B.
+DSP Report: Generating DSP opnet_23, operation Mode is: C+A*B.
+DSP Report: operator opnet_23 is absorbed into DSP opnet_23.
+DSP Report: operator opnet_22 is absorbed into DSP opnet_23.
+DSP Report: Generating DSP opnet_29, operation Mode is: A*B.
 DSP Report: operator opnet_29 is absorbed into DSP opnet_29.
-DSP Report: operator opnet_28 is absorbed into DSP opnet_29.
-DSP Report: Generating DSP opnet_35, operation Mode is: A*B.
-DSP Report: operator opnet_35 is absorbed into DSP opnet_35.
-DSP Report: Generating DSP opnet_37, operation Mode is: C+A*B.
+DSP Report: Generating DSP opnet_31, operation Mode is: C+A*B.
+DSP Report: operator opnet_31 is absorbed into DSP opnet_31.
+DSP Report: operator opnet_30 is absorbed into DSP opnet_31.
+DSP Report: Generating DSP opnet_37, operation Mode is: A*B.
 DSP Report: operator opnet_37 is absorbed into DSP opnet_37.
-DSP Report: operator opnet_36 is absorbed into DSP opnet_37.
-DSP Report: Generating DSP opnet_43, operation Mode is: A*B.
-DSP Report: operator opnet_43 is absorbed into DSP opnet_43.
-DSP Report: Generating DSP opnet_45, operation Mode is: C+A*B.
+DSP Report: Generating DSP opnet_39, operation Mode is: C+A*B.
+DSP Report: operator opnet_39 is absorbed into DSP opnet_39.
+DSP Report: operator opnet_38 is absorbed into DSP opnet_39.
+DSP Report: Generating DSP opnet_45, operation Mode is: A*B.
 DSP Report: operator opnet_45 is absorbed into DSP opnet_45.
-DSP Report: operator opnet_44 is absorbed into DSP opnet_45.
-DSP Report: Generating DSP opnet_51, operation Mode is: A*B.
-DSP Report: operator opnet_51 is absorbed into DSP opnet_51.
-DSP Report: Generating DSP opnet_53, operation Mode is: C+A*B.
+DSP Report: Generating DSP opnet_47, operation Mode is: C+A*B.
+DSP Report: operator opnet_47 is absorbed into DSP opnet_47.
+DSP Report: operator opnet_46 is absorbed into DSP opnet_47.
+DSP Report: Generating DSP opnet_53, operation Mode is: A*B.
 DSP Report: operator opnet_53 is absorbed into DSP opnet_53.
-DSP Report: operator opnet_52 is absorbed into DSP opnet_53.
-DSP Report: Generating DSP opnet_59, operation Mode is: A*B.
-DSP Report: operator opnet_59 is absorbed into DSP opnet_59.
-DSP Report: Generating DSP opnet_61, operation Mode is: C+A*B.
+DSP Report: Generating DSP opnet_55, operation Mode is: C+A*B.
+DSP Report: operator opnet_55 is absorbed into DSP opnet_55.
+DSP Report: operator opnet_54 is absorbed into DSP opnet_55.
+DSP Report: Generating DSP opnet_61, operation Mode is: A*B.
 DSP Report: operator opnet_61 is absorbed into DSP opnet_61.
-DSP Report: operator opnet_60 is absorbed into DSP opnet_61.
-DSP Report: Generating DSP opnet_6, operation Mode is: A*B.
-DSP Report: operator opnet_6 is absorbed into DSP opnet_6.
-DSP Report: Generating DSP opnet_8, operation Mode is: C+A*B.
-DSP Report: operator opnet_8 is absorbed into DSP opnet_8.
-DSP Report: operator opnet_7 is absorbed into DSP opnet_8.
-DSP Report: Generating DSP opnet_14, operation Mode is: A*B.
-DSP Report: operator opnet_14 is absorbed into DSP opnet_14.
-DSP Report: Generating DSP opnet_16, operation Mode is: C+A*B.
+DSP Report: Generating DSP opnet_63, operation Mode is: C+A*B.
+DSP Report: operator opnet_63 is absorbed into DSP opnet_63.
+DSP Report: operator opnet_62 is absorbed into DSP opnet_63.
+DSP Report: Generating DSP opnet_69, operation Mode is: A*B.
+DSP Report: operator opnet_69 is absorbed into DSP opnet_69.
+DSP Report: Generating DSP opnet_71, operation Mode is: C+A*B.
+DSP Report: operator opnet_71 is absorbed into DSP opnet_71.
+DSP Report: operator opnet_70 is absorbed into DSP opnet_71.
+DSP Report: Generating DSP opnet_16, operation Mode is: A*B.
 DSP Report: operator opnet_16 is absorbed into DSP opnet_16.
-DSP Report: operator opnet_15 is absorbed into DSP opnet_16.
-DSP Report: Generating DSP opnet_22, operation Mode is: A*B.
-DSP Report: operator opnet_22 is absorbed into DSP opnet_22.
-DSP Report: Generating DSP opnet_24, operation Mode is: C+A*B.
+DSP Report: Generating DSP opnet_18, operation Mode is: C+A*B.
+DSP Report: operator opnet_18 is absorbed into DSP opnet_18.
+DSP Report: operator opnet_17 is absorbed into DSP opnet_18.
+DSP Report: Generating DSP opnet_24, operation Mode is: A*B.
 DSP Report: operator opnet_24 is absorbed into DSP opnet_24.
-DSP Report: operator opnet_23 is absorbed into DSP opnet_24.
-DSP Report: Generating DSP opnet_30, operation Mode is: A*B.
-DSP Report: operator opnet_30 is absorbed into DSP opnet_30.
-DSP Report: Generating DSP opnet_32, operation Mode is: C+A*B.
+DSP Report: Generating DSP opnet_26, operation Mode is: C+A*B.
+DSP Report: operator opnet_26 is absorbed into DSP opnet_26.
+DSP Report: operator opnet_25 is absorbed into DSP opnet_26.
+DSP Report: Generating DSP opnet_32, operation Mode is: A*B.
 DSP Report: operator opnet_32 is absorbed into DSP opnet_32.
-DSP Report: operator opnet_31 is absorbed into DSP opnet_32.
-DSP Report: Generating DSP opnet_38, operation Mode is: A*B.
-DSP Report: operator opnet_38 is absorbed into DSP opnet_38.
-DSP Report: Generating DSP opnet_40, operation Mode is: C+A*B.
+DSP Report: Generating DSP opnet_34, operation Mode is: C+A*B.
+DSP Report: operator opnet_34 is absorbed into DSP opnet_34.
+DSP Report: operator opnet_33 is absorbed into DSP opnet_34.
+DSP Report: Generating DSP opnet_40, operation Mode is: A*B.
 DSP Report: operator opnet_40 is absorbed into DSP opnet_40.
-DSP Report: operator opnet_39 is absorbed into DSP opnet_40.
-DSP Report: Generating DSP opnet_46, operation Mode is: A*B.
-DSP Report: operator opnet_46 is absorbed into DSP opnet_46.
-DSP Report: Generating DSP opnet_48, operation Mode is: C+A*B.
+DSP Report: Generating DSP opnet_42, operation Mode is: C+A*B.
+DSP Report: operator opnet_42 is absorbed into DSP opnet_42.
+DSP Report: operator opnet_41 is absorbed into DSP opnet_42.
+DSP Report: Generating DSP opnet_48, operation Mode is: A*B.
 DSP Report: operator opnet_48 is absorbed into DSP opnet_48.
-DSP Report: operator opnet_47 is absorbed into DSP opnet_48.
-DSP Report: Generating DSP opnet_54, operation Mode is: A*B.
-DSP Report: operator opnet_54 is absorbed into DSP opnet_54.
-DSP Report: Generating DSP opnet_56, operation Mode is: C+A*B.
+DSP Report: Generating DSP opnet_50, operation Mode is: C+A*B.
+DSP Report: operator opnet_50 is absorbed into DSP opnet_50.
+DSP Report: operator opnet_49 is absorbed into DSP opnet_50.
+DSP Report: Generating DSP opnet_56, operation Mode is: A*B.
 DSP Report: operator opnet_56 is absorbed into DSP opnet_56.
-DSP Report: operator opnet_55 is absorbed into DSP opnet_56.
-DSP Report: Generating DSP opnet_62, operation Mode is: A*B.
-DSP Report: operator opnet_62 is absorbed into DSP opnet_62.
-DSP Report: Generating DSP opnet_64, operation Mode is: C+A*B.
+DSP Report: Generating DSP opnet_58, operation Mode is: C+A*B.
+DSP Report: operator opnet_58 is absorbed into DSP opnet_58.
+DSP Report: operator opnet_57 is absorbed into DSP opnet_58.
+DSP Report: Generating DSP opnet_64, operation Mode is: A*B.
 DSP Report: operator opnet_64 is absorbed into DSP opnet_64.
-DSP Report: operator opnet_63 is absorbed into DSP opnet_64.
+DSP Report: Generating DSP opnet_66, operation Mode is: C+A*B.
+DSP Report: operator opnet_66 is absorbed into DSP opnet_66.
+DSP Report: operator opnet_65 is absorbed into DSP opnet_66.
+DSP Report: Generating DSP opnet_72, operation Mode is: A*B.
+DSP Report: operator opnet_72 is absorbed into DSP opnet_72.
+DSP Report: Generating DSP opnet_74, operation Mode is: C+A*B.
+DSP Report: operator opnet_74 is absorbed into DSP opnet_74.
+DSP Report: operator opnet_73 is absorbed into DSP opnet_74.
+DSP Report: Generating DSP opnet_13, operation Mode is: A*B.
+DSP Report: operator opnet_13 is absorbed into DSP opnet_13.
+DSP Report: Generating DSP opnet_15, operation Mode is: C+A*B.
+DSP Report: operator opnet_15 is absorbed into DSP opnet_15.
+DSP Report: operator opnet_14 is absorbed into DSP opnet_15.
+DSP Report: Generating DSP opnet_21, operation Mode is: A*B.
+DSP Report: operator opnet_21 is absorbed into DSP opnet_21.
+DSP Report: Generating DSP opnet_23, operation Mode is: C+A*B.
+DSP Report: operator opnet_23 is absorbed into DSP opnet_23.
+DSP Report: operator opnet_22 is absorbed into DSP opnet_23.
+DSP Report: Generating DSP opnet_29, operation Mode is: A*B.
+DSP Report: operator opnet_29 is absorbed into DSP opnet_29.
+DSP Report: Generating DSP opnet_31, operation Mode is: C+A*B.
+DSP Report: operator opnet_31 is absorbed into DSP opnet_31.
+DSP Report: operator opnet_30 is absorbed into DSP opnet_31.
+DSP Report: Generating DSP opnet_37, operation Mode is: A*B.
+DSP Report: operator opnet_37 is absorbed into DSP opnet_37.
+DSP Report: Generating DSP opnet_39, operation Mode is: C+A*B.
+DSP Report: operator opnet_39 is absorbed into DSP opnet_39.
+DSP Report: operator opnet_38 is absorbed into DSP opnet_39.
+DSP Report: Generating DSP opnet_45, operation Mode is: A*B.
+DSP Report: operator opnet_45 is absorbed into DSP opnet_45.
+DSP Report: Generating DSP opnet_47, operation Mode is: C+A*B.
+DSP Report: operator opnet_47 is absorbed into DSP opnet_47.
+DSP Report: operator opnet_46 is absorbed into DSP opnet_47.
+DSP Report: Generating DSP opnet_53, operation Mode is: A*B.
+DSP Report: operator opnet_53 is absorbed into DSP opnet_53.
+DSP Report: Generating DSP opnet_55, operation Mode is: C+A*B.
+DSP Report: operator opnet_55 is absorbed into DSP opnet_55.
+DSP Report: operator opnet_54 is absorbed into DSP opnet_55.
+DSP Report: Generating DSP opnet_61, operation Mode is: A*B.
+DSP Report: operator opnet_61 is absorbed into DSP opnet_61.
+DSP Report: Generating DSP opnet_63, operation Mode is: C+A*B.
+DSP Report: operator opnet_63 is absorbed into DSP opnet_63.
+DSP Report: operator opnet_62 is absorbed into DSP opnet_63.
+DSP Report: Generating DSP opnet_69, operation Mode is: A*B.
+DSP Report: operator opnet_69 is absorbed into DSP opnet_69.
+DSP Report: Generating DSP opnet_71, operation Mode is: C+A*B.
+DSP Report: operator opnet_71 is absorbed into DSP opnet_71.
+DSP Report: operator opnet_70 is absorbed into DSP opnet_71.
+DSP Report: Generating DSP opnet_16, operation Mode is: A*B.
+DSP Report: operator opnet_16 is absorbed into DSP opnet_16.
+DSP Report: Generating DSP opnet_18, operation Mode is: C+A*B.
+DSP Report: operator opnet_18 is absorbed into DSP opnet_18.
+DSP Report: operator opnet_17 is absorbed into DSP opnet_18.
+DSP Report: Generating DSP opnet_24, operation Mode is: A*B.
+DSP Report: operator opnet_24 is absorbed into DSP opnet_24.
+DSP Report: Generating DSP opnet_26, operation Mode is: C+A*B.
+DSP Report: operator opnet_26 is absorbed into DSP opnet_26.
+DSP Report: operator opnet_25 is absorbed into DSP opnet_26.
+DSP Report: Generating DSP opnet_32, operation Mode is: A*B.
+DSP Report: operator opnet_32 is absorbed into DSP opnet_32.
+DSP Report: Generating DSP opnet_34, operation Mode is: C+A*B.
+DSP Report: operator opnet_34 is absorbed into DSP opnet_34.
+DSP Report: operator opnet_33 is absorbed into DSP opnet_34.
+DSP Report: Generating DSP opnet_40, operation Mode is: A*B.
+DSP Report: operator opnet_40 is absorbed into DSP opnet_40.
+DSP Report: Generating DSP opnet_42, operation Mode is: C+A*B.
+DSP Report: operator opnet_42 is absorbed into DSP opnet_42.
+DSP Report: operator opnet_41 is absorbed into DSP opnet_42.
+DSP Report: Generating DSP opnet_48, operation Mode is: A*B.
+DSP Report: operator opnet_48 is absorbed into DSP opnet_48.
+DSP Report: Generating DSP opnet_50, operation Mode is: C+A*B.
+DSP Report: operator opnet_50 is absorbed into DSP opnet_50.
+DSP Report: operator opnet_49 is absorbed into DSP opnet_50.
+DSP Report: Generating DSP opnet_56, operation Mode is: A*B.
+DSP Report: operator opnet_56 is absorbed into DSP opnet_56.
+DSP Report: Generating DSP opnet_58, operation Mode is: C+A*B.
+DSP Report: operator opnet_58 is absorbed into DSP opnet_58.
+DSP Report: operator opnet_57 is absorbed into DSP opnet_58.
+DSP Report: Generating DSP opnet_64, operation Mode is: A*B.
+DSP Report: operator opnet_64 is absorbed into DSP opnet_64.
+DSP Report: Generating DSP opnet_66, operation Mode is: C+A*B.
+DSP Report: operator opnet_66 is absorbed into DSP opnet_66.
+DSP Report: operator opnet_65 is absorbed into DSP opnet_66.
+DSP Report: Generating DSP opnet_72, operation Mode is: A*B.
+DSP Report: operator opnet_72 is absorbed into DSP opnet_72.
+DSP Report: Generating DSP opnet_74, operation Mode is: C+A*B.
+DSP Report: operator opnet_74 is absorbed into DSP opnet_74.
+DSP Report: operator opnet_73 is absorbed into DSP opnet_74.
 DSP Report: Generating DSP Red8, operation Mode is: A*B.
 DSP Report: operator Red8 is absorbed into DSP Red8.
 DSP Report: operator Red8 is absorbed into DSP Red8.
@@ -655,7 +846,7 @@ DSP Report: Generating DSP Red7, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator Red7 is absorbed into DSP Red7.
 DSP Report: operator Red7 is absorbed into DSP Red7.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 1443.277 ; gain = 634.223
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:01:46 . Memory (MB): peak = 1450.539 ; gain = 641.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -675,74 +866,124 @@ ROM: Preliminary Mapping Report
 
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+-------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name        | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B            | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B            | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B          | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+-------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++-------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping              | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|box_box_resolver   | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | (PCIN>>17)+A*B           | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | (PCIN>>17)+A*B           | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*(B:0x0)                | 15     | 2      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | (PCIN>>17)+A*(B:0x3fe80) | 15     | 10     | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*(B:0x0)                | 18     | 2      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | (PCIN>>17)+A*(B:0x3fe80) | 18     | 10     | -      | -      | 42     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*B                      | 25     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | (PCIN>>17)+A*B           | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*B                      | 25     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | (PCIN>>17)+A*B           | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | (PCIN>>17)+A*B           | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | (PCIN>>17)+A*B           | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B                      | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B                      | 22     | 16     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B                    | 22     | 16     | 36     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B           | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B           | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B           | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B           | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B           | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B           | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B           | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | (PCIN>>17)+A*B           | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -753,19 +994,19 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'Clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:37 . Memory (MB): peak = 1443.277 ; gain = 634.223
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:02:03 . Memory (MB): peak = 1450.539 ; gain = 641.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:38 . Memory (MB): peak = 1443.277 ; gain = 634.223
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:02:05 . Memory (MB): peak = 1450.539 ; gain = 641.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 1454.547 ; gain = 645.492
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:02:16 . Memory (MB): peak = 1519.484 ; gain = 710.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -783,37 +1024,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:44 . Memory (MB): peak = 1469.102 ; gain = 660.047
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:02:25 . Memory (MB): peak = 1532.066 ; gain = 722.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:44 . Memory (MB): peak = 1469.102 ; gain = 660.047
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:02:25 . Memory (MB): peak = 1532.066 ; gain = 722.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1469.102 ; gain = 660.047
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:02:26 . Memory (MB): peak = 1532.066 ; gain = 722.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1469.102 ; gain = 660.047
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:02:26 . Memory (MB): peak = 1532.066 ; gain = 722.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1469.102 ; gain = 660.047
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:02:26 . Memory (MB): peak = 1532.066 ; gain = 722.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1469.102 ; gain = 660.047
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:02:26 . Memory (MB): peak = 1532.066 ; gain = 722.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -823,70 +1064,116 @@ DSP Final Report (the ' indicates corresponding REG is set)
 +-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name        | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|box_box_resolver   | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*B          | 30     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | PCIN>>17+A*B | 30     | 18     | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*B          | 17     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | PCIN>>17+A*B | 0      | 18     | -      | -      | 42     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*B          | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | PCIN>>17+A*B | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*B          | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|box_box_resolver   | PCIN>>17+A*B | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 15     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 0      | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 15     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 0      | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 15     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 0      | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 15     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 0      | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 15     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 15     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 15     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 15     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 17     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 15     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 15     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 17     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 14     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 17     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 14     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 17     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 14     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 15     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 0      | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 15     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 0      | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 15     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 0      | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 15     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 0      | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 14     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 15     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 15     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 15     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 15     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|collision_detector | C+A*B        | 30     | 14     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |juicer             | A*B          | 30     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B          | 30     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B          | 30     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B          | 30     | 18     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 14     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 14     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 14     | 18     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |juicer             | A*B          | 30     | 3      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B          | 30     | 3      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B          | 30     | 3      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B          | 30     | 3      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B          | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B          | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|color_mapper       | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|collision_detector | A*B          | 30     | 18     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|collision_detector | C+A*B        | 30     | 18     | 48     | -      | 36     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 14     | 3      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 14     | 3      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 14     | 3      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |juicer             | A*B          | 30     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B          | 30     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B          | 30     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B          | 30     | 18     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 15     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 15     | 18     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 0      | 18     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |juicer             | A*B          | 30     | 2      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B          | 30     | 2      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B          | 30     | 3      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|juicer             | A*B          | 30     | 3      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 15     | 2      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 15     | 3      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|juicer             | A*B          | 0      | 3      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 +-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
@@ -937,45 +1224,45 @@ Report Cell Usage:
 |18    |mb_block_rst_clk_wiz_1_100M    |     1|
 |19    |mb_block_xbar                  |     1|
 |20    |BUFG                           |     1|
-|21    |CARRY4                         |   576|
-|22    |DSP48E1                        |    64|
-|24    |LUT1                           |   251|
-|25    |LUT2                           |   911|
-|26    |LUT3                           |   625|
-|27    |LUT4                           |  1128|
-|28    |LUT5                           |   179|
-|29    |LUT6                           |  1944|
-|30    |MUXF7                          |   363|
-|31    |MUXF8                          |   167|
+|21    |CARRY4                         |  1040|
+|22    |DSP48E1                        |   110|
+|24    |LUT1                           |   311|
+|25    |LUT2                           |  1506|
+|26    |LUT3                           |  1307|
+|27    |LUT4                           |  1796|
+|28    |LUT5                           |   683|
+|29    |LUT6                           |  2292|
+|30    |MUXF7                          |   266|
+|31    |MUXF8                          |    44|
 |32    |FDCE                           |    22|
-|33    |FDRE                           |   212|
-|34    |FDSE                           |    55|
+|33    |FDRE                           |   228|
+|34    |FDSE                           |    62|
 |35    |IBUF                           |     4|
 |36    |OBUF                           |    29|
 +------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1469.102 ; gain = 660.047
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:02:26 . Memory (MB): peak = 1532.066 ; gain = 722.883
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 360 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:43 . Memory (MB): peak = 1469.102 ; gain = 553.664
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1469.102 ; gain = 660.047
+Synthesis finished with 0 errors, 0 critical warnings and 672 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:02:20 . Memory (MB): peak = 1532.066 ; gain = 611.082
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:02:26 . Memory (MB): peak = 1532.066 ; gain = 722.883
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1481.242 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1170 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 1544.262 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1460 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1485.059 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1548.039 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: aa325d0a
+Synth Design complete, checksum: c6e8c37d
 INFO: [Common 17-83] Releasing license: Synthesis
-124 Infos, 175 Warnings, 1 Critical Warnings and 0 Errors encountered.
+124 Infos, 228 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:50 . Memory (MB): peak = 1485.059 ; gain = 1050.984
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:02:36 . Memory (MB): peak = 1548.039 ; gain = 1114.883
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/kobes/OneDrive/Desktop/School/Fall_2024/ECE385/Vivado/Final Project/6_2_base_prototype/lab6_2.runs/synth_1/mb_usb_hdmi_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mb_usb_hdmi_top_utilization_synth.rpt -pb mb_usb_hdmi_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 10 10:48:04 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 11 21:17:22 2024...

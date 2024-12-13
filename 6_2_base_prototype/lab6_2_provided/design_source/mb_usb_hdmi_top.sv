@@ -135,16 +135,6 @@ module mb_usb_hdmi_top(
         .TMDS_DATA_P(hdmi_tmds_data_p),         
         .TMDS_DATA_N(hdmi_tmds_data_n)          
     );
-
-    //Ball Module
-    square square_instance(
-        .Reset(reset_ah),
-        .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
-        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
-        .X(ballxsig),
-        .Y(ballysig),
-        .S(ballsizesig)
-    );
     
     // First OBB register
 
@@ -164,7 +154,7 @@ logic signed [31 : 0] obb1_ld_vel_x;
 logic signed [31 : 0] obb1_ld_vel_y;
 logic signed [10 : 0] obb1_ld_angle;
 logic signed [10 : 0] obb1_ld_omega;
-    obb_reg #(.X_INIT(10), .Y_INIT(32), .X_VEL_INIT(0.3), .Y_VEL_INIT(-0.1), .OMEGA_INIT(-0.04)) obb1(
+    obb_reg #(.X_INIT(10), .Y_INIT(32), .X_VEL_INIT(0.3), .Y_VEL_INIT(-0.1), .ANGLE_INIT(0.7), .OMEGA_INIT(0)) obb1(
         .ld_width(obb1_ld_width),
 .ld_height(obb1_ld_height),
 .ld_pos_x(obb1_ld_pos_x),
@@ -204,7 +194,7 @@ logic signed [31 : 0] obb2_ld_vel_x;
 logic signed [31 : 0] obb2_ld_vel_y;
 logic signed [10 : 0] obb2_ld_angle;
 logic signed [10 : 0] obb2_ld_omega;
-    obb_reg #(.X_INIT(20), .Y_INIT(32), .X_VEL_INIT(-0.2), .Y_VEL_INIT(0.5), .WIDTH_INIT(15), .HEIGHT_INIT(5), .OMEGA_INIT(0.1)) obb2(
+    obb_reg #(.X_INIT(45), .Y_INIT(32), .X_VEL_INIT(-0.2), .Y_VEL_INIT(0.5), .WIDTH_INIT(15), .HEIGHT_INIT(5), .OMEGA_INIT(0)) obb2(
         .ld_width(obb2_ld_width),
 .ld_height(obb2_ld_height),
 .ld_pos_x(obb2_ld_pos_x),
@@ -226,8 +216,49 @@ logic signed [10 : 0] obb2_ld_omega;
         .clk(vsync)
     );
 
+    // Use collision data to generate an impulse
+logic signed [31 : 0] impulse_data_impulse_x;
+logic signed [31 : 0] impulse_data_impulse_y;
+logic signed [31 : 0] impulse_data_nudge_x;
+logic signed [31 : 0] impulse_data_nudge_y;
+logic signed [10 : 0] impulse_data_rotational_impulse;
+logic signed [15 : 0] contact_data_normal_x;
+logic signed [15 : 0] contact_data_normal_y;
+logic signed [21 : 0] contact_data_location_x;
+logic signed [21 : 0] contact_data_location_y;
+logic signed [31 : 0] contact_data_penetration;
+    box_box_resolver bbr_inst(
+        .normal_x(contact_data_normal_x),
+.normal_y(contact_data_normal_y),
+.location_x(contact_data_location_x),
+.location_y(contact_data_location_y),
+.penetration(contact_data_penetration),
+        .obb1_pos_x(obb1_pos_x),
+.obb1_pos_y(obb1_pos_y),
+        .obb1_vel_x(obb1_vel_x),
+.obb1_vel_y(obb1_vel_y),
+        .obb1_omega(obb1_omega),
+        .obb2_pos_x(obb2_pos_x),
+.obb2_pos_y(obb2_pos_y),
+        .obb2_vel_x(obb2_vel_x),
+.obb2_vel_y(obb2_vel_y),
+        .obb2_omega(obb2_omega),
+        .impulse_x(impulse_data_impulse_x),
+.impulse_y(impulse_data_impulse_y),
+.nudge_x(impulse_data_nudge_x),
+.nudge_y(impulse_data_nudge_y),
+.rotational_impulse(impulse_data_rotational_impulse)    );
+
     // Logic for determining next state
+    logic is_collision;
     obb_updater obb1_updater(
+        .impulse_en(is_collision),
+        .update_en(1'b1),
+        .impulse_x(impulse_data_impulse_x),
+.impulse_y(impulse_data_impulse_y),
+.nudge_x(impulse_data_nudge_x),
+.nudge_y(impulse_data_nudge_y),
+.rotational_impulse(impulse_data_rotational_impulse),
         .next_width(obb1_ld_width),
 .next_height(obb1_ld_height),
 .next_pos_x(obb1_ld_pos_x),
@@ -246,7 +277,40 @@ logic signed [10 : 0] obb2_ld_omega;
 .prev_omega(obb1_omega)
     );
 
+logic signed [31 : 0] neg_impulse_data_impulse_x;
+logic signed [31 : 0] neg_impulse_data_impulse_y;
+logic signed [31 : 0] neg_impulse_data_nudge_x;
+logic signed [31 : 0] neg_impulse_data_nudge_y;
+logic signed [10 : 0] neg_impulse_data_rotational_impulse;
+logic signed [31 : 0] opnet_307;
+assign opnet_307 = ~(impulse_data_impulse_x) + 1'b1;
+
+logic signed [31 : 0] opnet_308;
+assign opnet_308 = ~(impulse_data_impulse_y) + 1'b1;
+
+assign neg_impulse_data_impulse_x = opnet_307;
+assign neg_impulse_data_impulse_y = opnet_308;
+logic signed [31 : 0] opnet_309;
+assign opnet_309 = ~(impulse_data_nudge_x) + 1'b1;
+
+logic signed [31 : 0] opnet_310;
+assign opnet_310 = ~(impulse_data_nudge_y) + 1'b1;
+
+assign neg_impulse_data_nudge_x = opnet_309;
+assign neg_impulse_data_nudge_y = opnet_310;
+logic signed [10 : 0] opnet_311;
+assign opnet_311 = ~(impulse_data_rotational_impulse) + 1'b1;
+
+assign neg_impulse_data_rotational_impulse = opnet_311;
+
     obb_updater obb2_updater(
+        .impulse_en(is_collision),
+        .update_en(1'b1),
+        .impulse_x(neg_impulse_data_impulse_x),
+.impulse_y(neg_impulse_data_impulse_y),
+.nudge_x(neg_impulse_data_nudge_x),
+.nudge_y(neg_impulse_data_nudge_y),
+.rotational_impulse(neg_impulse_data_rotational_impulse),
         .next_width(obb2_ld_width),
 .next_height(obb2_ld_height),
 .next_pos_x(obb2_ld_pos_x),
@@ -350,7 +414,61 @@ logic signed [6 : 0] obb2_halfHeight;
 .halfHeight(obb2_halfHeight)
     );
 
-    //Color Mapper Module   
+    // Collision data between boxes
+    collision_detector cd_inst(
+        .obb1_width(obb1_width),
+.obb1_height(obb1_height),
+.obb1_pos_x(obb1_pos_x),
+.obb1_pos_y(obb1_pos_y),
+.obb1_vel_x(obb1_vel_x),
+.obb1_vel_y(obb1_vel_y),
+.obb1_angle(obb1_angle),
+.obb1_omega(obb1_omega),
+.obb1_u_x(obb1_u_x),
+.obb1_u_y(obb1_u_y),
+.obb1_v_x(obb1_v_x),
+.obb1_v_y(obb1_v_y),
+.obb1_Point0_x(obb1_Point0_x),
+.obb1_Point0_y(obb1_Point0_y),
+.obb1_Point1_x(obb1_Point1_x),
+.obb1_Point1_y(obb1_Point1_y),
+.obb1_Point2_x(obb1_Point2_x),
+.obb1_Point2_y(obb1_Point2_y),
+.obb1_Point3_x(obb1_Point3_x),
+.obb1_Point3_y(obb1_Point3_y),
+.obb1_halfWidth(obb1_halfWidth),
+.obb1_halfHeight(obb1_halfHeight),
+        .obb2_width(obb2_width),
+.obb2_height(obb2_height),
+.obb2_pos_x(obb2_pos_x),
+.obb2_pos_y(obb2_pos_y),
+.obb2_vel_x(obb2_vel_x),
+.obb2_vel_y(obb2_vel_y),
+.obb2_angle(obb2_angle),
+.obb2_omega(obb2_omega),
+.obb2_u_x(obb2_u_x),
+.obb2_u_y(obb2_u_y),
+.obb2_v_x(obb2_v_x),
+.obb2_v_y(obb2_v_y),
+.obb2_Point0_x(obb2_Point0_x),
+.obb2_Point0_y(obb2_Point0_y),
+.obb2_Point1_x(obb2_Point1_x),
+.obb2_Point1_y(obb2_Point1_y),
+.obb2_Point2_x(obb2_Point2_x),
+.obb2_Point2_y(obb2_Point2_y),
+.obb2_Point3_x(obb2_Point3_x),
+.obb2_Point3_y(obb2_Point3_y),
+.obb2_halfWidth(obb2_halfWidth),
+.obb2_halfHeight(obb2_halfHeight),
+        .is_collision(is_collision),
+        .normal_x(contact_data_normal_x),
+.normal_y(contact_data_normal_y),
+.location_x(contact_data_location_x),
+.location_y(contact_data_location_y),
+.penetration(contact_data_penetration)
+    );
+
+    //Color Mapper Module
     color_mapper color_instance(
         .obb1_width(obb1_width),
 .obb1_height(obb1_height),
@@ -396,6 +514,8 @@ logic signed [6 : 0] obb2_halfHeight;
 .obb2_Point3_y(obb2_Point3_y),
 .obb2_halfWidth(obb2_halfWidth),
 .obb2_halfHeight(obb2_halfHeight),
+        .drawPoint_x(contact_data_location_x),
+.drawPoint_y(contact_data_location_y),
         .DrawX(drawX),
         .DrawY(drawY),
         .Red(red),

@@ -2,6 +2,11 @@
 
 // Calculates the next state for a given OBB
 module obb_updater(
+    input logic impulse_en,     // Whether impulses should be applied
+    input logic update_en,      // Whether position/rotation should be updated
+    input logic signed [31 : 0] impulse_x, input logic signed [31 : 0] impulse_y,
+input logic signed [31 : 0] nudge_x, input logic signed [31 : 0] nudge_y,
+input logic signed [10 : 0] rotational_impulse,
     input logic signed [7 : 0] prev_width,
 input logic signed [7 : 0] prev_height,
 input logic signed [31 : 0] prev_pos_x, input logic signed [31 : 0] prev_pos_y,
@@ -16,49 +21,81 @@ output logic signed [10 : 0] next_angle,
 output logic signed [10 : 0] next_omega
 );
 
-logic signed [31 : 0] opnet_217;
-assign opnet_217 = prev_pos_x + (next_vel_x >>> 2);
-logic signed [31 : 0] opnet_218;
-assign opnet_218 = prev_pos_y + (next_vel_y >>> 2);
-assign next_pos_x = opnet_217;
-assign next_pos_y = opnet_218;
-assign next_omega = prev_omega;
-assign next_width = prev_width;
-assign next_height = prev_height;
+logic signed [31 : 0] n_vel_x;
+logic signed [31 : 0] n_vel_y;
+
+// Apply impulse if enabled
+always_comb begin
+n_vel_x = prev_vel_x;
+n_vel_y = prev_vel_y;
+next_omega = prev_omega;
+if (impulse_en) begin
+opnet_312 = prev_vel_x + impulse_x;
+opnet_313 = prev_vel_y + impulse_y;
+n_vel_x = opnet_312;
+n_vel_y = opnet_313;
+    ///////// TO-DO: MAKE IT SO OMEGA IS UPDATED WITH IMPULSE AS WELL
+    ////////  ALSO TO-DO: Apply shift here
+end
+end
+logic signed [31 : 0] opnet_312;
+logic signed [31 : 0] opnet_313;
+
+// DELETE THIS LATER
+//   - Over simplified wall bouncing
+always_comb begin
+next_vel_x = n_vel_x;
+if(prev_pos_x < 0 || prev_pos_x > 32'sb01000000000000000000000000000000) begin
+opnet_314 = ~(n_vel_x) + 1'b1;
+
+next_vel_x = opnet_314;
+end
+
+next_vel_y = n_vel_y;
+if(prev_pos_y < 0 || prev_pos_y > 32'sb01000000000000000000000000000000) begin
+opnet_315 = ~(n_vel_y) + 1'b1;
+
+next_vel_y = opnet_315;
+end
+end
+logic signed [31 : 0] opnet_314;
+logic signed [31 : 0] opnet_315;
+
+// Update pos/rotation if enabled
+
+logic signed [10 : 0] next_angle_uncorrected;
 
 always_comb begin
-next_vel_x = prev_vel_x;
-if(prev_pos_x < 0 || prev_pos_x > 32'sb01000000000000000000000000000000) begin
-opnet_219 = ~(prev_vel_x) + 1'b1;
-
-next_vel_x = opnet_219;
-end
-
-next_vel_y = prev_vel_y;
-if(prev_pos_y < 0 || prev_pos_y > 32'sb01000000000000000000000000000000) begin
-opnet_220 = ~(prev_vel_y) + 1'b1;
-
-next_vel_y = opnet_220;
+next_pos_x = prev_pos_x;
+next_pos_y = prev_pos_y;
+next_angle_uncorrected = prev_angle;
+if (update_en) begin
+opnet_316 = prev_pos_x + (next_vel_x >>> 2);
+opnet_317 = prev_pos_y + (next_vel_y >>> 2);
+next_pos_x = opnet_316;
+next_pos_y = opnet_317;
+    ////////// TO-DO: UPDATE ROTATION WITH UPDATED VALUE FROM IMPULSE
 end
 end
-logic signed [31 : 0] opnet_219;
-logic signed [31 : 0] opnet_220;
+logic signed [31 : 0] opnet_316;
+logic signed [31 : 0] opnet_317;
 
 // Ensure next state angle is within bounds of [0, 2pi] 
-logic signed [10 : 0] opnet_221;
-assign opnet_221 = prev_angle + prev_omega;
-
 always_comb begin
-next_angle = opnet_221;
-    if (opnet_221 > 11'sb01100100100) begin
-opnet_222 = opnet_221 - 11'sb01100100100;
-next_angle = opnet_222;
-    end else if (opnet_221 < 11'sb0) begin
-opnet_223 = opnet_221 + 11'sb01100100100;
-next_angle = opnet_223;
+next_angle = next_angle_uncorrected;
+    if (next_angle_uncorrected > 11'sb01100100100) begin
+opnet_318 = next_angle_uncorrected - 11'sb01100100100;
+next_angle = opnet_318;
+    end else if (next_angle_uncorrected < 11'sb0) begin
+opnet_319 = next_angle_uncorrected + 11'sb01100100100;
+next_angle = opnet_319;
     end
 end
-logic signed [10 : 0] opnet_222;
-logic signed [10 : 0] opnet_223;
+logic signed [10 : 0] opnet_318;
+logic signed [10 : 0] opnet_319;
+
+// Keep other things the same
+assign next_width = prev_width;
+assign next_height = prev_height;
 
 endmodule
