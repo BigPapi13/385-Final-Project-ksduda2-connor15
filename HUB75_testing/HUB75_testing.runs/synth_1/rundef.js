@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log controller_stillframe_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source controller_stillframe_test.tcl" );
+         "-log frame_manager_tb.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source frame_manager_tb.tcl" );
 
 
 

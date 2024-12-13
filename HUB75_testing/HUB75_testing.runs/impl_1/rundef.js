@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log controller_stillframe_test.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source controller_stillframe_test.tcl -notrace" );
+         "-log frame_manager_tb.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source frame_manager_tb.tcl -notrace" );
 
 
 
